@@ -24,6 +24,7 @@ def _format_recording_sheet(script: dict) -> str:
     filename = _escape(script.get("filename_hint", "script_XX_topic.mp4"))
     word_count = script.get("word_count", "?")
     est_sec = script.get("estimated_seconds", "?")
+    length_warn = script.get("length_warning")
     template = _escape(script.get("edit_template", "THREE_STEP_HOT_TAKE"))
     crust = _escape(
         (script.get("video_triggers") or {}).get("beat_phrases", {}).get("crust", "")
@@ -35,6 +36,10 @@ def _format_recording_sheet(script: dict) -> str:
         "🎬 <b>RECORDING SHEET</b>",
         f"📁 Save as: <code>{filename}</code>",
         f"⏱️ Target: ~{est_sec}s ({word_count} words) | Template: {template}",
+    ]
+    if length_warn:
+        lines.append(f"⚠️ {_escape(length_warn)}")
+    lines.extend([
         "",
         "<b>Before you hit record:</b>",
         "• Stand close to camera, chest-up framing",
@@ -44,7 +49,7 @@ def _format_recording_sheet(script: dict) -> str:
         f"• Hit fun phrases: {fun_line}",
         "",
         "<b>Beat sheet:</b>",
-    ]
+    ])
     for cue in cues[:8]:
         sec = cue.get("second", "?")
         action = _escape(cue.get("action", ""))

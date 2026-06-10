@@ -159,6 +159,8 @@ def _normalize_script(script: dict) -> dict:
     word_count = len(script.get("spoken_script", "").split())
     script["word_count"] = word_count
     script["estimated_seconds"] = round(word_count / 2.6)
+    if word_count > 150:
+        script["length_warning"] = f"OVER TARGET: {word_count} words (max 145). Trim before recording."
 
     return script
 
@@ -243,14 +245,15 @@ def _growth_requirements() -> str:
         "   NEVER reuse any opening line from recent_hooks list provided.\n\n"
         "2. OPEN LOOP (Zeigarnik Effect) — plant an unresolved question in\n"
         "   the first 10 seconds. Resolve it near the end. Mandatory.\n\n"
-        "3. THREE ACTION STEPS — specific, doable THIS WEEK. At least one real\n"
-        "   statistic with source named out loud. Not awareness — ACTION.\n\n"
+        "3. EXACTLY THREE ACTION STEPS — never four or five. Specific, doable THIS WEEK.\n"
+        "   At least one real statistic with source named out loud. Not awareness — ACTION.\n\n"
         '4. CASCADING PAYOFFS — each step resolves AND tees up the next\n'
         '   ("that fixes X, but now you have Y — which is step two").\n\n'
         "5. RHYTHM VARIATION — alternate sentence length. Short. Longer. Short.\n\n"
         "6. LOOP-BACK CLOSER — final line connects back to the opening hook.\n\n"
-        "7. LENGTH — 120-145 words (~45-55 seconds). TikTok/Reels sweet spot.\n"
-        "   Short punchy sentences. Cut filler. Every line earns its second.\n\n"
+        "7. LENGTH — HARD MAX 145 words (~50-55 seconds). Count before returning.\n"
+        "   Short punchy sentences. Cut filler. Every line earns its second.\n"
+        "   If draft exceeds 145 words, delete the weakest sentence and tighten.\n\n"
         "8. VISUAL — populate visual_moments (3-5) + video_triggers with broll_phrases.\n\n"
         "9. RECORDING CUES — 5-8 teleprompter beats (second, phrase, action).\n"
         "   Include: hook energy, crust pause, stat pauses, step punches, fun phrases, closer.\n\n"
