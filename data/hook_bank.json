@@ -98,5 +98,45 @@
     "opening_line": "Sixty-two percent of tech job postings now mention AI skills even when they're not AI roles.",
     "hook_type": "CONTRARIAN STRIKE",
     "date": "2026-06-10"
+  },
+  {
+    "opening_line": "I just analyzed two hundred AI engineering job posts and seventy four percent want the same five skills that most engineers are completely ignoring.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Data engineering interviews got harder, but not where you think.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Senior engineers who can't explain their work in sixty seconds get passed over for promotion every single time.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Real-time data engineers are making forty percent more than traditional batch engineers at the same company \u2014 but here's what's wild.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "AI engineering roles stopped rewarding PhD researchers and started paying engineers who ship code to production.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Senior data engineers who aren't using AI tools daily are getting left behind \u2014 and the gap is widening fast.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Senior engineers who build full-stack AI systems are getting hired faster than anyone else right now.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Three industries are hiring AI engineers faster than they can interview them \u2014 and it's not the ones you think.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
   }
 ]
