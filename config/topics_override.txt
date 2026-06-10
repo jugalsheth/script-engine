@@ -1,0 +1,7 @@
+# INTRO PHASE — your first 4 brand-building videos (one topic per line).
+# After 4 videos are published, clear the 4 lines below and leave this file
+# with only these comment lines for full automation.
+Who I am and what I actually build as an AI data engineer
+What my day looks like building production data systems
+The biggest skill mistake I made early in my career
+How I approach learning and growing as an engineer in NYC
