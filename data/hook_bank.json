@@ -38,5 +38,25 @@
     "opening_line": "Four skills that can get you to $180K within two years \u2014 but most engineers are learning the wrong ones.",
     "hook_type": "OPEN LOOP",
     "date": "2026-06-08"
+  },
+  {
+    "opening_line": "If you've been wondering what an AI data engineer actually does all day, I'm about to break it down.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "If you've ever wondered what a data engineer actually does all day, I'm about to break it down.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "I focused on building the wrong thing for the first two years of my career.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Five years building systems in NYC taught me that learning as an engineer isn't about consuming more content.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-10"
   }
 ]
