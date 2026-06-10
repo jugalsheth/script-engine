@@ -19,6 +19,43 @@ def _format_hashtags(hashtags: list | str) -> str:
     return str(hashtags)
 
 
+def _format_recording_sheet(script: dict) -> str:
+    cues = script.get("recording_cues") or []
+    filename = _escape(script.get("filename_hint", "script_XX_topic.mp4"))
+    word_count = script.get("word_count", "?")
+    est_sec = script.get("estimated_seconds", "?")
+    template = _escape(script.get("edit_template", "THREE_STEP_HOT_TAKE"))
+    crust = _escape(
+        (script.get("video_triggers") or {}).get("beat_phrases", {}).get("crust", "")
+    )
+    fun = (script.get("video_triggers") or {}).get("fun_phrases") or []
+    fun_line = _escape(", ".join(f'"{p}"' for p in fun[:3]))
+
+    lines = [
+        "🎬 <b>RECORDING SHEET</b>",
+        f"📁 Save as: <code>{filename}</code>",
+        f"⏱️ Target: ~{est_sec}s ({word_count} words) | Template: {template}",
+        "",
+        "<b>Before you hit record:</b>",
+        "• Stand close to camera, chest-up framing",
+        "• First line = punch, not presentation voice",
+        "• Read spoken_script verbatim — ad-lib breaks overlays",
+        f"• Crust beat (~5s): say <b>{crust}</b> with energy",
+        f"• Hit fun phrases: {fun_line}",
+        "",
+        "<b>Beat sheet:</b>",
+    ]
+    for cue in cues[:8]:
+        sec = cue.get("second", "?")
+        action = _escape(cue.get("action", ""))
+        phrase = cue.get("phrase")
+        if phrase:
+            lines.append(f"  <b>{sec}s</b> [{_escape(phrase)}] — {action}")
+        else:
+            lines.append(f"  <b>{sec}s</b> — {action}")
+    return "\n".join(lines)
+
+
 def _format_script_block(script: dict) -> str:
     number = script.get("script_number", "?")
     territory = _escape(script.get("territory", "General"))
@@ -150,7 +187,9 @@ async def send_via_telegram(
         messages = [_truncate_if_needed(message)]
     else:
         messages = [header.rstrip()]
-        messages.extend(_format_script_block(s) for s in scripts)
+        for s in scripts:
+            messages.append(_format_recording_sheet(s))
+            messages.append(_format_script_block(s))
         messages.append(footer)
 
     try:

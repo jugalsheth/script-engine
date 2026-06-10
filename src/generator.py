@@ -12,7 +12,14 @@ from src.content_phase import get_phase, get_videos_published
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 SONNET_MODEL = "claude-sonnet-4-20250514"
-MAX_TOKENS = 2800
+MAX_TOKENS = 3200
+
+HOOK_TO_TEMPLATE = {
+    "OPEN LOOP": "THREE_STEP_HOT_TAKE",
+    "IDENTITY CALL": "THREE_STEP_HOT_TAKE",
+    "CONTRARIAN STRIKE": "THREE_STEP_HOT_TAKE",
+    "CONFESSION": "CONFESSION_STAT",
+}
 
 JSON_FIELDS = """
   "title_overlay": "THE BOLD TITLE IN CAPS",
@@ -38,6 +45,15 @@ JSON_FIELDS = """
     "broll_phrases": ["data pipeline", "python script"],
     "beat_phrases": {"crust": "pure building", "payoff": "here's what makes it worth it"}
   },
+  "edit_template": "THREE_STEP_HOT_TAKE or CONFESSION_STAT",
+  "recording_cues": [
+    {"second": 0, "action": "HOOK — lean in, fast, confident. No smile warmup."},
+    {"second": 5, "phrase": "here's what's wild", "action": "PAUSE 0.3s then ENERGY UP — crust zoom fires"},
+    {"second": 12, "phrase": "seventy four percent", "action": "PAUSE before number, speak clearly"},
+    {"second": 22, "action": "STEP 1 — point at camera, punch the word 'first'"},
+    {"second": 35, "phrase": "secret", "action": "Hit fun phrase hard"},
+    {"second": 48, "action": "CLOSER — slow down, land the loop-back line"}
+  ],
   "delivery_notes": "pace, pause, and emphasis cues for recording",
   "retention_notes": "where the loop plants and pays off, rhythm break, mid-video re-hook moment"
 """
@@ -57,6 +73,57 @@ def _load_config_file(filename: str) -> str:
         return ""
 
 
+def _slug_words(text: str, max_words: int = 4) -> str:
+    words = re.sub(r"[^a-zA-Z0-9 ]", "", text.lower()).split()
+    return "_".join(words[:max_words]) or "topic"
+
+
+def _build_recording_cues(script: dict) -> list[dict]:
+    """Fallback teleprompter cues when the model omits recording_cues."""
+    triggers = script.get("video_triggers") or {}
+    beats = triggers.get("beat_phrases") or {}
+    crust = beats.get("crust") or "step one"
+    fun_phrases = triggers.get("fun_phrases") or ["wild", "truth"]
+    stat_phrases = triggers.get("stat_phrases") or []
+
+    cues: list[dict] = [
+        {
+            "second": 0,
+            "action": "HOOK — lean in, fast, confident. First line with energy, not presentation voice.",
+        },
+        {
+            "second": 5,
+            "phrase": crust,
+            "action": "PAUSE 0.3s → ENERGY UP. Crust zoom + flash fires here.",
+        },
+    ]
+
+    sec = 12
+    for stat in stat_phrases[:2]:
+        phrase = stat.get("phrase", "") if isinstance(stat, dict) else ""
+        if phrase:
+            cues.append({
+                "second": sec,
+                "phrase": phrase,
+                "action": "PAUSE before number. Speak as words, not digits.",
+            })
+            sec += 10
+
+    for i, phrase in enumerate(fun_phrases[:2], start=1):
+        cues.append({
+            "second": sec,
+            "phrase": phrase,
+            "action": f"FUN FX #{i} — hit this phrase hard.",
+        })
+        sec += 8
+
+    cues.append({
+        "second": max(sec, 42),
+        "action": "CLOSER — slow down, land loopback_closer with confidence.",
+    })
+    return cues
+
+
 def _normalize_script(script: dict) -> dict:
     """Ensure video-engine contract fields exist with sane defaults."""
     triggers = script.get("video_triggers") or {}
@@ -66,12 +133,33 @@ def _normalize_script(script: dict) -> dict:
     triggers.setdefault("fun_phrases", [])
     triggers.setdefault("energy_words", ["right", "truth"])
     triggers.setdefault("broll_phrases", [])
-    triggers.setdefault("beat_phrases", {})
+    beats = triggers.get("beat_phrases") or {}
+    if not isinstance(beats, dict):
+        beats = {}
+    if not beats.get("crust"):
+        beats["crust"] = "here's what's wild"
+    triggers["beat_phrases"] = beats
     script["video_triggers"] = triggers
 
     moments = script.get("visual_moments")
     if not isinstance(moments, list):
         script["visual_moments"] = []
+
+    hook = script.get("hook_type", "OPEN LOOP")
+    script.setdefault("edit_template", HOOK_TO_TEMPLATE.get(hook, "THREE_STEP_HOT_TAKE"))
+
+    cues = script.get("recording_cues")
+    if not isinstance(cues, list) or len(cues) < 4:
+        script["recording_cues"] = _build_recording_cues(script)
+
+    num = script.get("script_number", 1)
+    title = script.get("title_overlay", "video")
+    script["filename_hint"] = f"script_{int(num):02d}_{_slug_words(title)}.mp4"
+
+    word_count = len(script.get("spoken_script", "").split())
+    script["word_count"] = word_count
+    script["estimated_seconds"] = round(word_count / 2.6)
+
     return script
 
 
@@ -101,7 +189,9 @@ def _video_contract_block() -> str:
         f"fun_phrases must include 2-3 items from: {FUN_PHRASE_POOL}\n"
         "Each fun_phrase MUST appear verbatim in spoken_script.\n"
         "visual_moments: 2-4 items. stat_phrases: 1-2 items with spoken number phrases.\n"
-        "beat_phrases.crust = phrase where energy picks up (e.g. 'pure building', 'the truth is').\n"
+        "beat_phrases.crust MUST be spoken in the first 15 seconds (e.g. 'here's what's wild', 'step one').\n"
+        "recording_cues: 5-8 items — teleprompter sheet with second targets, phrases, and actions.\n"
+        "edit_template: THREE_STEP_HOT_TAKE for 3-step scripts, CONFESSION_STAT for confession hooks.\n"
     )
 
 
@@ -159,8 +249,11 @@ def _growth_requirements() -> str:
         '   ("that fixes X, but now you have Y — which is step two").\n\n'
         "5. RHYTHM VARIATION — alternate sentence length. Short. Longer. Short.\n\n"
         "6. LOOP-BACK CLOSER — final line connects back to the opening hook.\n\n"
-        "7. LENGTH — 150-160 words (~60 seconds). Conversational, never a lecture.\n\n"
+        "7. LENGTH — 120-145 words (~45-55 seconds). TikTok/Reels sweet spot.\n"
+        "   Short punchy sentences. Cut filler. Every line earns its second.\n\n"
         "8. VISUAL — populate visual_moments (3-5) + video_triggers with broll_phrases.\n\n"
+        "9. RECORDING CUES — 5-8 teleprompter beats (second, phrase, action).\n"
+        "   Include: hook energy, crust pause, stat pauses, step punches, fun phrases, closer.\n\n"
         f'{_video_contract_block()}'
         "- Written in first person, casual, direct\n"
         "- No bullet points in spoken_script — continuous speech\n"

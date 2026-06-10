@@ -1,6 +1,8 @@
 VIDEO-ENGINE CONTRACT — every script must include these machine-readable fields.
 The creator speaks spoken_script aloud; video-engine matches phrases in the Whisper transcript.
 
+edit_template: THREE_STEP_HOT_TAKE (default) or CONFESSION_STAT (confession hooks)
+
 visual_moments (array, 2-5 items):
   Each item triggers a timed on-screen graphic when the phrase is spoken.
   {
@@ -20,10 +22,15 @@ video_triggers (object):
     "energy_words": ["right", "truth", "unless"],
     "broll_phrases": ["data pipeline", "python script", "finance team"],
     "beat_phrases": {
-      "crust": "phrase where energy picks up",
-      "payoff": "phrase where loop resolves"
+      "crust": "phrase in FIRST 15 SECONDS where energy picks up (e.g. here's what's wild, step one)",
+      "payoff": "phrase where loop resolves near the end"
     }
   }
+
+recording_cues (array, 5-8 items) — teleprompter sheet for the creator:
+  {"second": 0, "action": "HOOK — lean in, fast, confident"}
+  {"second": 5, "phrase": "here's what's wild", "action": "PAUSE → ENERGY UP (crust zoom)"}
+  {"second": 12, "phrase": "seventy four percent", "action": "PAUSE before number"}
 
 FUN PHRASE RULES — include 2-3 fun_phrases verbatim in spoken_script from:
   that's normal, finally, wrong, secret, truth, pure building, failed, insane, wild
@@ -34,3 +41,5 @@ STAT PHRASE RULES:
   - stat_phrases.phrase must match spoken_script exactly
 
 RECORDING TIP must include: "Pause before numbers. First line with energy, not presentation voice."
+
+LENGTH: 120-145 words (~45-55 seconds). Every line earns its second.
