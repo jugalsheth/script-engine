@@ -12,7 +12,7 @@ from src.content_phase import get_phase, get_videos_published
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 SONNET_MODEL = "claude-sonnet-4-20250514"
-MAX_TOKENS = 2000
+MAX_TOKENS = 2800
 
 JSON_FIELDS = """
   "title_overlay": "THE BOLD TITLE IN CAPS",
@@ -21,16 +21,31 @@ JSON_FIELDS = """
   "caption_hook": "One compelling sentence for Instagram/LinkedIn caption",
   "hashtags": ["#Tag1", "#Tag2", "#Tag3", "#Tag4", "#Tag5"],
   "series_note": "Episode X of 4: Building the Brand — or null if standalone",
-  "recording_tip": "One sentence tip for delivery",
-  "hook_type": "which of the 4 patterns used",
+  "recording_tip": "Pause before numbers. First line with energy, not presentation voice. One more specific tip.",
+  "hook_type": "IDENTITY CALL | CONFESSION | OPEN LOOP | CONTRARIAN STRIKE",
   "opening_line": "the exact first sentence spoken",
   "open_loop_plant": "the teaser line planted early in the script",
   "open_loop_payoff": "how and where the loop resolves",
   "loopback_closer": "final line that connects back to the hook",
-  "visual_cues": "3-4 specific on-screen graphic moments tied to exact moments in the script",
+  "visual_cues": "human-readable summary of graphics (legacy, keep for Telegram)",
+  "visual_moments": [
+    {"at_phrase": "exact spoken phrase", "graphic": "23", "label": "LABEL CAPS", "type": "stat", "side": "right"}
+  ],
+  "video_triggers": {
+    "stat_phrases": [{"phrase": "twenty three workflows", "display": "23", "label": "AUTOMATED WORKFLOWS"}],
+    "fun_phrases": ["that's normal", "pure building"],
+    "energy_words": ["right", "truth"],
+    "broll_phrases": ["data pipeline", "python script"],
+    "beat_phrases": {"crust": "pure building", "payoff": "here's what makes it worth it"}
+  },
   "delivery_notes": "pace, pause, and emphasis cues for recording",
   "retention_notes": "where the loop plants and pays off, rhythm break, mid-video re-hook moment"
 """
+
+FUN_PHRASE_POOL = (
+    "that's normal, finally, wrong, secret, truth, pure building, failed, "
+    "insane, wild, listen, unless, really"
+)
 
 
 def _load_config_file(filename: str) -> str:
@@ -40,6 +55,24 @@ def _load_config_file(filename: str) -> str:
     except OSError as exc:
         print(f"⚠️ Could not read {filename}: {exc}")
         return ""
+
+
+def _normalize_script(script: dict) -> dict:
+    """Ensure video-engine contract fields exist with sane defaults."""
+    triggers = script.get("video_triggers") or {}
+    if not isinstance(triggers, dict):
+        triggers = {}
+    triggers.setdefault("stat_phrases", [])
+    triggers.setdefault("fun_phrases", [])
+    triggers.setdefault("energy_words", ["right", "truth"])
+    triggers.setdefault("broll_phrases", [])
+    triggers.setdefault("beat_phrases", {})
+    script["video_triggers"] = triggers
+
+    moments = script.get("visual_moments")
+    if not isinstance(moments, list):
+        script["visual_moments"] = []
+    return script
 
 
 def _parse_script_json(content: str) -> dict | None:
@@ -60,11 +93,23 @@ def _parse_script_json(content: str) -> dict | None:
     return None
 
 
+def _video_contract_block() -> str:
+    contract = _load_config_file("video_contract.txt")
+    return (
+        "VIDEO-ENGINE CONTRACT (mandatory — video pipeline reads these fields):\n"
+        f"{contract}\n\n"
+        f"fun_phrases must include 2-3 items from: {FUN_PHRASE_POOL}\n"
+        "Each fun_phrase MUST appear verbatim in spoken_script.\n"
+        "visual_moments: 2-4 items. stat_phrases: 1-2 items with spoken number phrases.\n"
+        "beat_phrases.crust = phrase where energy picks up (e.g. 'pure building', 'the truth is').\n"
+    )
+
+
 def _intro_requirements(brand_episode: int) -> str:
     return (
         f"CONTENT PHASE: INTRO (Brand episode {brand_episode} of 4)\n"
         "This is a brand-building video for a creator just starting out.\n"
-        "Goal: build trust and relatability — NOT hot takes or contrarian punches yet.\n\n"
+        "Goal: build trust AND be reel-energetic — warm but not flat.\n\n"
         "SPOKEN SCRIPT REQUIREMENTS — INTRO MODE:\n"
         "Follow Hook → Problem → Solution → CTA. Include ALL:\n\n"
         "1. HOOK — use ONLY one of these patterns:\n"
@@ -72,19 +117,19 @@ def _intro_requirements(brand_episode: int) -> str:
         "   - CONFESSION: admit something real and specific\n"
         "   - OPEN LOOP: pose a question, answer it later (use sparingly)\n"
         "   Do NOT use CONTRARIAN STRIKE in intro phase.\n"
+        "   Prefer opening with a mini-conflict or number, not 'If you've ever wondered...'\n"
         '   NEVER open with "Hey guys", "In this video", or any warmup.\n'
         "   NEVER reuse any opening line from recent_hooks list provided.\n\n"
         "2. OPEN LOOP — plant a soft question in the first 10 seconds.\n"
         "   Resolve it near the end. Keep it personal, not aggressive.\n\n"
         "3. THREE ACTION STEPS — simple and doable. At least one doable TODAY.\n"
-        "   Stats optional in intro — personal experience beats data here.\n\n"
-        "4. TONE — warm, honest, peer-to-peer. 'I'm sharing what I've learned'\n"
-        "   not 'I'm the expert broadcasting wisdom'.\n\n"
+        "   Include at least ONE spoken stat (number as words) for stat_phrases.\n\n"
+        "4. TONE — warm, honest, peer-to-peer with ONE energy spike mid-script.\n"
+        "   Include signature phrase: 'Right?' or 'That's all it is.' or 'The truth is'\n\n"
         "5. LOOP-BACK CLOSER — final line connects back to the opening hook.\n\n"
-        "6. LENGTH — 120-140 words (~45-55 seconds). Shorter is fine for intro.\n\n"
-        "7. VISUAL CUES — keep simple: talking head + bold text overlays only.\n"
-        "   No b-roll, no screen recordings, no complex animations.\n"
-        "   Suggest: title card at 0:00, subtitle at 0:05, step cards at steps.\n\n"
+        "6. LENGTH — 120-150 words (~50-60 seconds).\n\n"
+        "7. VISUAL — populate visual_moments + video_triggers (see contract below).\n\n"
+        f'{_video_contract_block()}'
         f'- series_note must be: "Brand intro {brand_episode} of 4"\n'
         "- Written in first person, casual, direct\n"
         "- No bullet points in spoken_script — continuous speech\n"
@@ -115,8 +160,8 @@ def _growth_requirements() -> str:
         "5. RHYTHM VARIATION — alternate sentence length. Short. Longer. Short.\n\n"
         "6. LOOP-BACK CLOSER — final line connects back to the opening hook.\n\n"
         "7. LENGTH — 150-160 words (~60 seconds). Conversational, never a lecture.\n\n"
-        "8. VISUAL CUES — include stat pop, step cards, and optional b-roll moments\n"
-        "   (blurred LinkedIn screenshot, terminal, etc.) tied to exact timestamps.\n\n"
+        "8. VISUAL — populate visual_moments (3-5) + video_triggers with broll_phrases.\n\n"
+        f'{_video_contract_block()}'
         "- Written in first person, casual, direct\n"
         "- No bullet points in spoken_script — continuous speech\n"
         "- opening_line must match the first sentence of spoken_script exactly\n"
@@ -209,6 +254,8 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
             if not script:
                 print(f"⚠️ Failed to parse JSON for script {i}")
                 continue
+
+            script = _normalize_script(script)
 
             script["script_number"] = script.get("script_number", i)
             script["territory"] = script.get("territory", topic.get("territory", "General"))

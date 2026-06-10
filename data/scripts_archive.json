@@ -1,6 +1,744 @@
 [
   {
     "script_number": 1,
+    "territory": "Career + Money",
+    "title_overlay": "SKILLS HIRING MANAGERS WANT NOW",
+    "subtitle_overlay": "the checklist for 2025",
+    "spoken_script": "Three skills are separating the candidates getting offers from the ones getting ghosted, and I'm about to show you exactly what they are. Here's what's wild \u2014 most people are still optimizing their resumes for 2022 job requirements while hiring managers moved on completely. According to LinkedIn's latest hiring report, seventy four percent of companies now prioritize AI workflow automation over traditional coding skills. That's the secret. Step one \u2014 learn to automate business processes, not just write code. Build one workflow this week that connects your company's data to an actual business decision. Step two \u2014 get comfortable with AI governance frameworks. Unless you can explain model risk and data lineage, you're not ready for senior roles. Finally, develop product thinking around data. Finance teams don't care about your Python optimization \u2014 they care about the business question you answered. Pure building without business context won't cut it anymore. The truth is, these three skills turn you from a cost center into a revenue driver, and that's exactly what separating those getting offers from those getting ghosted.",
+    "caption_hook": "Three skills are separating the candidates getting offers from the ones getting ghosted.",
+    "hashtags": [
+      "#TechJobs",
+      "#AIEngineering",
+      "#DataEngineering",
+      "#CareerAdvice",
+      "#TechCareers"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'wild' and 'secret' with extra emphasis.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Three skills are separating the candidates getting offers from the ones getting ghosted, and I'm about to show you exactly what they are.",
+    "open_loop_plant": "Three skills are separating the candidates getting offers from the ones getting ghosted, and I'm about to show you exactly what they are.",
+    "open_loop_payoff": "The truth is, these three skills turn you from a cost center into a revenue driver, and that's exactly what separating those getting offers from those getting ghosted.",
+    "loopback_closer": "The truth is, these three skills turn you from a cost center into a revenue driver, and that's exactly what separating those getting offers from those getting ghosted.",
+    "visual_cues": "human-readable summary of graphics (legacy, keep for Telegram)",
+    "visual_moments": [
+      {
+        "at_phrase": "seventy four percent of companies",
+        "graphic": "74%",
+        "label": "PRIORITIZE AI WORKFLOWS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "AUTOMATE PROCESSES",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "AI GOVERNANCE",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "develop product thinking",
+        "graphic": "3",
+        "label": "PRODUCT THINKING",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "seventy four percent of companies",
+          "display": "74%",
+          "label": "PRIORITIZE AI WORKFLOWS"
+        }
+      ],
+      "fun_phrases": [
+        "wild",
+        "secret",
+        "finally",
+        "pure building",
+        "truth"
+      ],
+      "energy_words": [
+        "unless",
+        "truth"
+      ],
+      "broll_phrases": [
+        "business processes",
+        "data lineage",
+        "finance teams",
+        "python optimization"
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "the truth is"
+      }
+    },
+    "delivery_notes": "Build energy through the list, pause before each step number, emphasize 'wild' and 'secret', slow down on the final loop-back",
+    "retention_notes": "Loop plants immediately with 'three skills' question, pays off in final sentence. Rhythm breaks at 'Here's what's wild' and 'That's the secret'. Mid-video re-hook at 'Pure building without business context won't cut it anymore.'",
+    "source_topic": "The skills hiring managers want right now",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 2,
+    "territory": "Career + Money",
+    "title_overlay": "AI FLUENCY > TOOL LISTS",
+    "subtitle_overlay": "what hiring managers actually want",
+    "spoken_script": "Companies are hiring AI engineers who think in systems, not those who memorize ChatGPT prompts. Here's the difference that's costing engineers six-figure opportunities. I've reviewed over forty engineering resumes this month, and the pattern is wild. Everyone lists the same tools \u2014 Python, TensorFlow, OpenAI API. But the engineers landing offers at two hundred K plus? They demonstrate fluency. Step one \u2014 show integration work, not demos. Instead of 'built chatbot with GPT-4', write 'integrated LLM reasoning into customer support pipeline, reducing ticket resolution time by thirty percent.' That's systems thinking. Step two \u2014 highlight the business impact of your AI work. Finance teams care about cost reduction, not model accuracy. Connect your technical work to dollars saved or revenue generated. Step three \u2014 learn to speak both languages fluently. Technical depth for the engineering interview, business value for the hiring manager. The secret is that AI fluency means understanding where AI fits into existing systems, not just how to call an API. Most engineers are building toy projects when they should be solving real integration challenges. Companies need people who can think in systems \u2014 and that thinking is what separates six-figure engineers from the rest.",
+    "caption_hook": "AI fluency beats tool-chasing every time \u2014 here's how to position yourself as someone who thinks in systems.",
+    "hashtags": [
+      "#AIEngineer",
+      "#TechCareers",
+      "#DataEngineer",
+      "#AIFluency",
+      "#TechSalary"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'wild' with surprise emphasis.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Companies are hiring AI engineers who think in systems, not those who memorize ChatGPT prompts.",
+    "open_loop_plant": "Here's the difference that's costing engineers six-figure opportunities.",
+    "open_loop_payoff": "The secret is that AI fluency means understanding where AI fits into existing systems, not just how to call an API.",
+    "loopback_closer": "Companies need people who can think in systems \u2014 and that thinking is what separates six-figure engineers from the rest.",
+    "visual_cues": "human-readable summary of graphics (legacy, keep for Telegram)",
+    "visual_moments": [
+      {
+        "at_phrase": "forty engineering resumes",
+        "graphic": "40",
+        "label": "RESUMES REVIEWED",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "two hundred k plus",
+        "graphic": "200K+",
+        "label": "TOP SALARIES",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "thirty percent",
+        "graphic": "30%",
+        "label": "TIME REDUCED",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "SHOW INTEGRATION",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty engineering resumes",
+          "display": "40",
+          "label": "RESUMES REVIEWED"
+        },
+        {
+          "phrase": "thirty percent",
+          "display": "30%",
+          "label": "TIME REDUCED"
+        }
+      ],
+      "fun_phrases": [
+        "wild",
+        "secret",
+        "finally"
+      ],
+      "energy_words": [
+        "fluency",
+        "systems",
+        "truth"
+      ],
+      "broll_phrases": [
+        "customer support pipeline",
+        "finance teams",
+        "engineering interview"
+      ],
+      "beat_phrases": {
+        "crust": "the secret is",
+        "payoff": "that thinking is what separates"
+      }
+    },
+    "delivery_notes": "Build energy through the three steps. Drop voice on 'secret' reveal. Conversational pace, not rushed.",
+    "retention_notes": "Loop plants at 'costing engineers opportunities', pays off at 'the secret is'. Mid-video re-hook at step transitions. Rhythm breaks at numbered steps.",
+    "source_topic": "AI fluency beats tool-chasing",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 3,
+    "territory": "Career + Money",
+    "title_overlay": "NEW RESUME FORMAT FOR 2026",
+    "subtitle_overlay": "what recruiters actually want now",
+    "spoken_script": "Tech recruiters just changed how they read resumes and ninety percent of engineers missed the memo. Here's the secret \u2014 they're not scanning for job titles anymore. They want capabilities first, impact second, then maybe your previous role. The old format? Company, title, bullet points. That's dead. The new format starts with what you can do, backed by numbers that prove it. Step one \u2014 lead with your stack and scale. Python, AWS, systems handling ten million requests daily. That goes at the top, not buried under experience. Step two \u2014 quantify every project impact. Not built a data pipeline \u2014 built a pipeline that reduced processing time by forty percent and saved the organization twelve hours weekly. Finally \u2014 list transferable skills explicitly. Machine learning, automation, cloud architecture. Recruiters search for keywords, not job history. This format works because hiring managers spend six seconds on your resume. Lead with what they need, prove it with numbers, make it impossible to miss. That's the memo most engineers are still missing.",
+    "caption_hook": "Tech recruiters just changed how they read resumes and 90% of engineers missed the memo.",
+    "hashtags": [
+      "#TechResumes",
+      "#CareerAdvice",
+      "#TechJobs",
+      "#DataEngineering",
+      "#CareerGrowth"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'finally' with slight emphasis.",
+    "hook_type": "CONFESSION",
+    "opening_line": "Tech recruiters just changed how they read resumes and ninety percent of engineers missed the memo.",
+    "open_loop_plant": "Here's the secret \u2014 they're not scanning for job titles anymore.",
+    "open_loop_payoff": "This format works because hiring managers spend six seconds on your resume.",
+    "loopback_closer": "That's the memo most engineers are still missing.",
+    "visual_cues": "Show 90% stat, highlight capabilities vs titles, display resume format examples",
+    "visual_moments": [
+      {
+        "at_phrase": "ninety percent of engineers",
+        "graphic": "90%",
+        "label": "ENGINEERS MISSED IT",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "ten million requests daily",
+        "graphic": "10M",
+        "label": "DAILY REQUESTS",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "forty percent",
+        "graphic": "40%",
+        "label": "TIME REDUCTION",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "six seconds",
+        "graphic": "6",
+        "label": "SECONDS ON RESUME",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "ninety percent of engineers",
+          "display": "90%",
+          "label": "ENGINEERS MISSED IT"
+        },
+        {
+          "phrase": "ten million requests daily",
+          "display": "10M",
+          "label": "DAILY REQUESTS"
+        },
+        {
+          "phrase": "forty percent",
+          "display": "40%",
+          "label": "TIME REDUCTION"
+        },
+        {
+          "phrase": "six seconds",
+          "display": "6",
+          "label": "SECONDS ON RESUME"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "finally",
+        "that's dead"
+      ],
+      "energy_words": [
+        "memo",
+        "capabilities",
+        "impact"
+      ],
+      "broll_phrases": [
+        "data pipeline",
+        "resume",
+        "job titles",
+        "hiring managers"
+      ],
+      "beat_phrases": {
+        "crust": "secret",
+        "payoff": "this format works"
+      }
+    },
+    "delivery_notes": "Start strong on 'recruiters just changed', pause before each number, emphasize 'secret' and 'finally', build energy through the three steps",
+    "retention_notes": "Loop plants with 'secret' at 8 seconds, pays off at 'this format works', rhythm breaks at each step number, mid-video re-hook at 'that's dead'",
+    "source_topic": "The new resume format for tech in 2026",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 4,
+    "territory": "Career + Money",
+    "title_overlay": "MOST-SHARED LINKEDIN JOB ADVICE",
+    "subtitle_overlay": "the 3 tactics everyone's copying",
+    "spoken_script": "The three most-shared pieces of tech job advice on LinkedIn right now \u2014 and why only one of them actually works. I've been tracking what gets reposted in my feed, and it's always the same three things. First, everyone says tailor your resume to each job post. That's normal advice, but here's the truth \u2014 ninety two percent of tech hiring managers spend less than six seconds scanning resumes anyway. So step one is different. Build your GitHub portfolio to tell a story. Three projects that show progression, not just random code. Each README should explain the business problem you solved. Second thing everyone shares is network your way in. Wrong approach. Instead of cold messaging strangers, contribute to open source projects where your target company's engineers already hang out. That's pure building \u2014 and they notice. Third is the big one that actually works. Position yourself as skills-first, not experience-first. Don't lead with years at companies. Lead with specific technologies you've shipped to production. Unless you're doing this backwards, you're fighting an uphill battle. The secret isn't just following advice \u2014 it's knowing which advice actually moves the needle.",
+    "caption_hook": "Tracked the most-shared LinkedIn job advice for 30 days \u2014 only one strategy actually works.",
+    "hashtags": [
+      "#TechJobs",
+      "#SoftwareEngineers",
+      "#JobSearch",
+      "#LinkedInTips",
+      "#TechCareers"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' with emphasis.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "The three most-shared pieces of tech job advice on LinkedIn right now \u2014 and why only one of them actually works.",
+    "open_loop_plant": "and why only one of them actually works",
+    "open_loop_payoff": "Third is the big one that actually works",
+    "loopback_closer": "The secret isn't just following advice \u2014 it's knowing which advice actually moves the needle.",
+    "visual_cues": "human-readable summary of graphics (legacy, keep for Telegram)",
+    "visual_moments": [
+      {
+        "at_phrase": "ninety two percent of tech hiring managers",
+        "graphic": "92%",
+        "label": "SCAN TIME UNDER 6 SEC",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "build your github portfolio",
+        "graphic": "1",
+        "label": "STEP ONE",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "contribute to open source projects",
+        "graphic": "2",
+        "label": "STEP TWO",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "position yourself as skills-first",
+        "graphic": "3",
+        "label": "STEP THREE",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "ninety two percent of tech hiring managers",
+          "display": "92%",
+          "label": "SCAN TIME UNDER 6 SEC"
+        }
+      ],
+      "fun_phrases": [
+        "that's normal",
+        "wrong",
+        "pure building",
+        "secret",
+        "truth",
+        "unless"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "unless"
+      ],
+      "broll_phrases": [
+        "github portfolio",
+        "open source projects",
+        "linkedin"
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "third is the big one that actually works"
+      }
+    },
+    "delivery_notes": "Open with curiosity, not authority. Pause after each numbered point. Build energy toward 'pure building' moment. Close quietly.",
+    "retention_notes": "Loop plants at 'why only one works' \u2014 resolves at 'third is the big one.' Rhythm breaks at each step. Re-hook at 'wrong approach.'",
+    "source_topic": "The most-shared tech job search advice on LinkedIn",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 5,
+    "territory": "Career + Money",
+    "title_overlay": "MULTI-SKILLED ENGINEERS WIN",
+    "subtitle_overlay": "why depth plus breadth beats specialization",
+    "spoken_script": "Companies are hiring multi-skilled engineers at twenty five percent higher salaries than pure specialists \u2014 but most engineers are still building resumes the wrong way. Here's the secret nobody talks about. The market shifted. AI automation means one engineer now handles what used to require three different roles. At my company, our best performer builds data pipelines in Python, deploys ML models, and talks directly to product managers about feature requirements. That's normal now. Here's what you need to do this week. Step one \u2014 pick one adjacent skill to your main expertise. If you're a data engineer, learn basic ML model deployment. If you're a backend developer, understand data pipelines. Step two \u2014 build one project that combines both skills. A REST API that serves ML predictions, or a data pipeline that feeds a web dashboard. Document everything on GitHub. Step three \u2014 update your LinkedIn headline to reflect both capabilities. Don't say 'data engineer' \u2014 say 'data and ML engineer' or 'full-stack data professional.' The truth is, hiring managers scan for keywords that show you can work across boundaries. Companies need engineers who can bridge gaps, not just execute in silos. That twenty five percent salary premium? It's because you become the person who can translate between teams and solve problems end-to-end. Multi-skilled engineers aren't just getting hired faster \u2014 they're the ones companies actually fight to keep.",
+    "caption_hook": "Companies are paying multi-skilled engineers 25% more than specialists \u2014 here's how to position yourself.",
+    "hashtags": [
+      "#DataEngineering",
+      "#CareerGrowth",
+      "#TechSalary",
+      "#MLEngineering",
+      "#TechCareer"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that's normal' with casual confidence like it's obvious.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Companies are hiring multi-skilled engineers at twenty five percent higher salaries than pure specialists \u2014 but most engineers are still building resumes the wrong way.",
+    "open_loop_plant": "Here's the secret nobody talks about.",
+    "open_loop_payoff": "That twenty five percent salary premium? It's because you become the person who can translate between teams and solve problems end-to-end.",
+    "loopback_closer": "Multi-skilled engineers aren't just getting hired faster \u2014 they're the ones companies actually fight to keep.",
+    "visual_cues": "Show 25% stat, highlight GitHub documentation, display LinkedIn headline examples",
+    "visual_moments": [
+      {
+        "at_phrase": "twenty five percent higher salaries",
+        "graphic": "25%",
+        "label": "HIGHER SALARIES",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "LEARN ADJACENT",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "BUILD PROJECT",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "UPDATE HEADLINE",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "twenty five percent higher salaries",
+          "display": "25%",
+          "label": "HIGHER SALARIES"
+        }
+      ],
+      "fun_phrases": [
+        "that's normal",
+        "the truth is",
+        "secret"
+      ],
+      "energy_words": [
+        "wrong",
+        "shifted",
+        "fight"
+      ],
+      "broll_phrases": [
+        "data pipelines",
+        "python",
+        "github",
+        "linkedin headline"
+      ],
+      "beat_phrases": {
+        "crust": "the truth is",
+        "payoff": "that twenty five percent salary premium"
+      }
+    },
+    "delivery_notes": "Start strong on 'companies are hiring'. Pause before 25%. Casual confidence on 'that's normal'. Build energy through the three steps. Land the final line quietly but firmly.",
+    "retention_notes": "Loop plants at 'secret nobody talks about' (8 seconds), pays off at 'that 25% salary premium' (45 seconds). Rhythm breaks with 'that's normal' and step enumeration. Mid-video re-hook at 'the truth is' drives to finish.",
+    "source_topic": "The hidden job-market advantage of multi-skilled engineers",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 6,
+    "territory": "Tech Made Simple",
+    "title_overlay": "CLOUD + SECURITY + DATA = SENIOR",
+    "subtitle_overlay": "the new engineer career path",
+    "spoken_script": "Security engineers who understand cloud architecture are getting hired at senior levels with three years of experience. Meanwhile, engineers with eight years in just one domain are stuck at mid-level roles. Here's the secret that changed everything for me. The market stopped rewarding depth and started paying for the ability to connect systems. When a data breach happens, companies need someone who understands how data flows through cloud infrastructure and where the vulnerabilities actually live. That's not three separate people anymore \u2014 that's one engineer worth two hundred thousand plus. Step one, pick one cloud provider and learn their security services inside out. AWS has twenty three security tools but start with IAM, CloudTrail, and GuardDuty. Step two, build a data pipeline that handles sensitive information properly. Use encryption at rest, in transit, and practice data masking techniques. Step three, document every security decision you make in your projects. Show how you think about threat modeling, not just what you built. The truth is most engineers avoid security because it feels complex, but that complexity is exactly what makes you valuable. Companies are finally willing to pay senior salaries for engineers who can think across these three domains instead of hiring three specialists.",
+    "caption_hook": "Engineers with cloud, security, and data skills are jumping straight to senior roles \u2014 here's why.",
+    "hashtags": [
+      "#CloudSecurity",
+      "#DataEngineering",
+      "#TechCareers",
+      "#SeniorEngineer",
+      "#TechSkills"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Emphasize 'secret' and 'truth' with slight vocal drop.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Security engineers who understand cloud architecture are getting hired at senior levels with three years of experience.",
+    "open_loop_plant": "Here's the secret that changed everything for me.",
+    "open_loop_payoff": "The truth is most engineers avoid security because it feels complex, but that complexity is exactly what makes you valuable.",
+    "loopback_closer": "Companies are finally willing to pay senior salaries for engineers who can think across these three domains instead of hiring three specialists.",
+    "visual_cues": "Display '23 security tools' when mentioned, show step numbers 1-3, emphasize $200K+ salary figure",
+    "visual_moments": [
+      {
+        "at_phrase": "twenty three security tools",
+        "graphic": "23",
+        "label": "AWS SECURITY TOOLS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "two hundred thousand plus",
+        "graphic": "$200K+",
+        "label": "SENIOR SALARY",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "CLOUD SECURITY",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "DATA PIPELINE",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "DOCUMENT DECISIONS",
+        "type": "step",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "twenty three security tools",
+          "display": "23",
+          "label": "AWS SECURITY TOOLS"
+        },
+        {
+          "phrase": "two hundred thousand plus",
+          "display": "$200K+",
+          "label": "SENIOR SALARY"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "truth",
+        "finally"
+      ],
+      "energy_words": [
+        "secret",
+        "truth",
+        "complex"
+      ],
+      "broll_phrases": [
+        "cloud architecture",
+        "data pipeline",
+        "security services",
+        "threat modeling"
+      ],
+      "beat_phrases": {
+        "crust": "the truth is",
+        "payoff": "that complexity is exactly what makes you valuable"
+      }
+    },
+    "delivery_notes": "Start with authority, not excitement. Drop voice slightly on 'secret'. Build energy through the three steps. Land the closer with conviction.",
+    "retention_notes": "Loop plants at 15 seconds with 'secret', pays off at 50 seconds with 'truth'. Mid-video re-hook at step one with salary figure. Rhythm breaks after each step number.",
+    "source_topic": "Why cloud + security + data is the new senior combo",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 7,
+    "territory": "Career + Money",
+    "title_overlay": "AI VS ML VS DATA SCIENTIST",
+    "subtitle_overlay": "the roles that actually pay",
+    "spoken_script": "Three job titles are completely broken right now \u2014 AI engineer, ML engineer, and data scientist. Let me tell you which one actually gets you hired. Here's the truth: AI engineers build production systems that users touch. They're taking GPT-4 and Claude and building actual applications. Slack bots, customer service tools, content generators. Pure building. ML engineers, on the other hand, they're focused on training models from scratch. They're doing feature engineering, hyperparameter tuning, model validation. Data scientists? They're answering business questions with data. A/B tests, forecasting, reporting dashboards. Now here's what's wild \u2014 the market is paying AI engineers thirty percent more than ML engineers at most companies. Why? Because AI engineers ship products that generate revenue immediately. Step one this week: pick one lane and go deep. Don't try to be all three. Step two: build something users can actually interact with in that lane. Step three: document the business impact on your LinkedIn. Finally, that broken job title confusion? It's actually your opportunity to stand out by knowing exactly what each role does.",
+    "caption_hook": "The market is paying AI engineers 30% more than ML engineers \u2014 here's why and which path to choose.",
+    "hashtags": [
+      "#AIEngineer",
+      "#MLEngineer",
+      "#DataScientist",
+      "#TechCareers",
+      "#SalaryData"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' with conviction.",
+    "hook_type": "IDENTITY CALL",
+    "opening_line": "Three job titles are completely broken right now \u2014 AI engineer, ML engineer, and data scientist.",
+    "open_loop_plant": "Let me tell you which one actually gets you hired.",
+    "open_loop_payoff": "the market is paying AI engineers thirty percent more than ML engineers at most companies",
+    "loopback_closer": "Finally, that broken job title confusion? It's actually your opportunity to stand out by knowing exactly what each role does.",
+    "visual_cues": "Display '3 ROLES' at opening, '30%' at salary reveal, numbered steps 1-3",
+    "visual_moments": [
+      {
+        "at_phrase": "three job titles",
+        "graphic": "3",
+        "label": "CONFUSING ROLES",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "thirty percent more",
+        "graphic": "30%",
+        "label": "AI ENGINEER PREMIUM",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "PICK ONE LANE",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "BUILD & SHIP",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "DOCUMENT IMPACT",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "thirty percent more",
+          "display": "30%",
+          "label": "AI ENGINEER PREMIUM"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "truth",
+        "wild",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "wild"
+      ],
+      "broll_phrases": [
+        "slack bots",
+        "customer service tools",
+        "linkedin",
+        "business impact"
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "thirty percent more than ML engineers"
+      }
+    },
+    "delivery_notes": "Start strong on 'completely broken'. Pause before '30%'. Build energy through the three role definitions. Land the salary reveal with authority.",
+    "retention_notes": "Open loop plants at 8 seconds with 'which one gets you hired', pays off at 45 seconds with salary data. Rhythm breaks after each role definition. Mid-video re-hook at 'what's wild' before salary reveal.",
+    "source_topic": "AI engineer vs ML engineer vs data scientist",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 8,
+    "territory": "Career + Money",
+    "title_overlay": "AI SKILLS IN EVERY HIRING CONVERSATION",
+    "subtitle_overlay": "why this happened and what to learn",
+    "spoken_script": "Sixty-two percent of tech job postings now mention AI skills even when they're not AI roles. That means data engineers, backend engineers, even DevOps engineers are getting asked about machine learning in interviews. Here's what most people are missing about this trend. Companies aren't actually looking for AI experts in every role \u2014 they're looking for engineers who can work alongside AI systems. The truth is, hiring managers need people who understand how to integrate with AI APIs, validate AI outputs, and build systems that can handle AI-generated data. So here's what you actually need to learn. First, get comfortable with at least one AI API \u2014 OpenAI, Anthropic, or AWS Bedrock. Spend this week building something small that calls an API and handles the response. Second, learn prompt engineering basics. Not the advanced stuff \u2014 just how to write clear prompts and validate outputs programmatically. Third, understand AI data patterns. AI systems generate different data shapes than traditional applications, and you need to know how to store and process them. That's how you become the engineer who can bridge traditional systems with AI capabilities. And that's exactly what sixty-two percent of companies are really hiring for.",
+    "caption_hook": "Most tech jobs now require AI skills \u2014 but not the ones you think.",
+    "hashtags": [
+      "#AISkills",
+      "#TechJobs",
+      "#CareerAdvice",
+      "#Engineering",
+      "#HiringTrends"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'truth is' with emphasis.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Sixty-two percent of tech job postings now mention AI skills even when they're not AI roles.",
+    "open_loop_plant": "Here's what most people are missing about this trend.",
+    "open_loop_payoff": "Companies aren't actually looking for AI experts in every role \u2014 they're looking for engineers who can work alongside AI systems.",
+    "loopback_closer": "And that's exactly what sixty-two percent of companies are really hiring for.",
+    "visual_cues": "62% stat, API integration graphic, prompt engineering visual, data patterns diagram",
+    "visual_moments": [
+      {
+        "at_phrase": "sixty-two percent of tech job postings",
+        "graphic": "62%",
+        "label": "TECH JOBS WITH AI",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "first, get comfortable with at least one AI API",
+        "graphic": "1",
+        "label": "LEARN ONE API",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "second, learn prompt engineering basics",
+        "graphic": "2",
+        "label": "PROMPT ENGINEERING",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "third, understand AI data patterns",
+        "graphic": "3",
+        "label": "AI DATA PATTERNS",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "sixty-two percent of tech job postings",
+          "display": "62%",
+          "label": "TECH JOBS WITH AI"
+        }
+      ],
+      "fun_phrases": [
+        "truth",
+        "finally",
+        "wrong"
+      ],
+      "energy_words": [
+        "truth",
+        "actually",
+        "exactly"
+      ],
+      "broll_phrases": [
+        "AI API",
+        "prompt engineering",
+        "data patterns",
+        "traditional systems"
+      ],
+      "beat_phrases": {
+        "crust": "the truth is",
+        "payoff": "that's how you become the engineer who can bridge traditional systems"
+      }
+    },
+    "delivery_notes": "Start strong on the stat. Pause before revealing the insight. Build energy through the three steps. Land the closer with conviction.",
+    "retention_notes": "Loop plants at 'what most people are missing' and pays off at 'companies aren't actually looking for AI experts'. Rhythm breaks at each numbered step. Mid-video re-hook at 'the truth is'.",
+    "source_topic": "Why AI skills are showing up in every hiring conversation",
+    "content_phase": "growth",
+    "date_generated": "2026-06-10"
+  },
+  {
+    "script_number": 1,
     "territory": "Tech Made Simple",
     "title_overlay": "WHO I ACTUALLY AM",
     "subtitle_overlay": "what an AI data engineer really builds",
@@ -50,6 +788,70 @@
     "open_loop_payoff": "It sounds chaotic, but here's what makes it worth it",
     "loopback_closer": "It sounds chaotic, but here's what makes it worth it.",
     "visual_cues": "Title card at 0:00, subtitle at 0:05, '3 AM FAILURE' text at pipeline mention, 'PURE BUILDING' text at afternoon section",
+    "visual_moments": [
+      {
+        "at_phrase": "automated workflows run overnight",
+        "graphic": "23",
+        "label": "AUTOMATED WORKFLOWS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "three of them",
+        "graphic": "3",
+        "label": "FAILED OVERNIGHT",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "3 am",
+        "graphic": "3",
+        "label": "AM FAILURE",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "afternoon is clear",
+        "graphic": "!",
+        "label": "PURE BUILDING",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "automated workflows",
+          "display": "23",
+          "label": "AUTOMATED WORKFLOWS"
+        },
+        {
+          "phrase": "three of them",
+          "display": "3",
+          "label": "FAILED OVERNIGHT"
+        }
+      ],
+      "fun_phrases": [
+        "that's normal",
+        "afternoon is clear",
+        "3 am"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "normal",
+        "chaotic"
+      ],
+      "broll_phrases": [
+        "data pipeline",
+        "python scripts",
+        "finance team"
+      ],
+      "beat_phrases": {
+        "crust": "afternoon is clear",
+        "payoff": "here's what makes it worth it"
+      }
+    },
     "delivery_notes": "Start conversational and curious, pick up energy at 'pure building', slow down and get thoughtful at the closer",
     "retention_notes": "Loop plants immediately with curiosity hook, rhythm break at 'That's normal', payoff teases value without revealing it",
     "source_topic": "What my day looks like building production data systems",

@@ -58,5 +58,45 @@
     "opening_line": "Five years building systems in NYC taught me that learning as an engineer isn't about consuming more content.",
     "hook_type": "CONFESSION",
     "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Three skills are separating the candidates getting offers from the ones getting ghosted, and I'm about to show you exactly what they are.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Companies are hiring AI engineers who think in systems, not those who memorize ChatGPT prompts.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Tech recruiters just changed how they read resumes and ninety percent of engineers missed the memo.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "The three most-shared pieces of tech job advice on LinkedIn right now \u2014 and why only one of them actually works.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Companies are hiring multi-skilled engineers at twenty five percent higher salaries than pure specialists \u2014 but most engineers are still building resumes the wrong way.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Security engineers who understand cloud architecture are getting hired at senior levels with three years of experience.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Three job titles are completely broken right now \u2014 AI engineer, ML engineer, and data scientist.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Sixty-two percent of tech job postings now mention AI skills even when they're not AI roles.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-10"
   }
 ]

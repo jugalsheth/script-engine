@@ -1,0 +1,36 @@
+VIDEO-ENGINE CONTRACT — every script must include these machine-readable fields.
+The creator speaks spoken_script aloud; video-engine matches phrases in the Whisper transcript.
+
+visual_moments (array, 2-5 items):
+  Each item triggers a timed on-screen graphic when the phrase is spoken.
+  {
+    "at_phrase": "exact words spoken in spoken_script (lowercase ok)",
+    "graphic": "23" or "!" for stat number display,
+    "label": "SHORT LABEL IN CAPS",
+    "type": "stat" | "step",
+    "side": "left" | "right"
+  }
+
+video_triggers (object):
+  {
+    "stat_phrases": [
+      {"phrase": "twenty three automated workflows", "display": "23", "label": "AUTOMATED WORKFLOWS"}
+    ],
+    "fun_phrases": ["that's normal", "pure building", "finally"],
+    "energy_words": ["right", "truth", "unless"],
+    "broll_phrases": ["data pipeline", "python script", "finance team"],
+    "beat_phrases": {
+      "crust": "phrase where energy picks up",
+      "payoff": "phrase where loop resolves"
+    }
+  }
+
+FUN PHRASE RULES — include 2-3 fun_phrases verbatim in spoken_script from:
+  that's normal, finally, wrong, secret, truth, pure building, failed, insane, wild
+
+STAT PHRASE RULES:
+  - Speak numbers as words ("twenty three" not rushed "23")
+  - Pause 0.3s before each number
+  - stat_phrases.phrase must match spoken_script exactly
+
+RECORDING TIP must include: "Pause before numbers. First line with energy, not presentation voice."
