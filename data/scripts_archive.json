@@ -2,6 +2,1074 @@
   {
     "script_number": 1,
     "territory": "Career + Money",
+    "script_type": "NEWS_REACTION",
+    "creator_take_anchor": "AI is a tool like a calculator \u2014 tools don't go away, markets just haven't caught up",
+    "work_pattern_id": null,
+    "title_overlay": "AI SKILLS IN 38% OF TECH JOBS",
+    "subtitle_overlay": "what this week's numbers mean for your career",
+    "spoken_script": "Thirty eight percent of tech job postings mentioned AI skills in June \u2014 up from thirty six percent last month. Here's the truth: most engineers are learning AI wrong. According to this week's hiring report, companies want engineers who ship AI features to production, not those who chat with Claude all day. Step one: pick one AI tool for your daily workflow \u2014 Cursor for coding, Claude for planning, or GitHub Copilot for autocomplete. Don't jump between five tools. Step two: build something small this week that uses AI to solve a real problem. Deploy it. Document the pipeline. Step three: add one line to your resume about shipping AI-powered features to users. Not AI research \u2014 shipping. The engineers getting hired aren't the ones who memorize prompts. They're the ones who figure out how to deploy models and integrate them into systems that actually work. That's the gap in those thirty eight percent of job postings.",
+    "caption_hook": "38% of tech jobs now mention AI skills \u2014 here's how to actually stand out from the prompt engineers.",
+    "hashtags": [
+      "#AIEngineering",
+      "#TechCareers",
+      "#SoftwareEngineering",
+      "#CareerAdvice",
+      "#TechJobs"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'truth' and 'wrong' with conviction.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Thirty eight percent of tech job postings mentioned AI skills in June \u2014 up from thirty six percent last month.",
+    "open_loop_plant": "Here's the truth: most engineers are learning AI wrong.",
+    "open_loop_payoff": "The engineers getting hired aren't the ones who memorize prompts. They're the ones who figure out how to deploy models and integrate them into systems that actually work.",
+    "loopback_closer": "That's the gap in those thirty eight percent of job postings.",
+    "visual_cues": "38% statistic display, three numbered steps with icons, deployment pipeline graphic",
+    "visual_moments": [
+      {
+        "at_phrase": "thirty eight percent",
+        "graphic": "38%",
+        "label": "TECH JOBS WITH AI",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "PICK ONE TOOL",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "BUILD & DEPLOY",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "UPDATE RESUME",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "thirty eight percent",
+          "display": "38%",
+          "label": "TECH JOBS WITH AI"
+        },
+        {
+          "phrase": "thirty six percent",
+          "display": "36%",
+          "label": "LAST MONTH"
+        }
+      ],
+      "fun_phrases": [
+        "truth",
+        "wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "truth",
+        "wrong",
+        "really"
+      ],
+      "broll_phrases": [
+        "cursor for coding",
+        "claude for planning",
+        "deploy it",
+        "resume"
+      ],
+      "beat_phrases": {
+        "crust": "here's the truth",
+        "payoff": "that's the gap"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
+      },
+      {
+        "second": 3,
+        "phrase": "thirty eight percent",
+        "action": "PAUSE before number, speak clearly"
+      },
+      {
+        "second": 8,
+        "phrase": "here's the truth",
+        "action": "ENERGY UP \u2014 crust moment"
+      },
+      {
+        "second": 15,
+        "phrase": "wrong",
+        "action": "Hit fun phrase with conviction"
+      },
+      {
+        "second": 25,
+        "phrase": "step one",
+        "action": "Point at camera, punch the word 'one'"
+      },
+      {
+        "second": 35,
+        "phrase": "step two",
+        "action": "Gesture build/deploy motion"
+      },
+      {
+        "second": 42,
+        "phrase": "step three",
+        "action": "Confident pointing gesture"
+      },
+      {
+        "second": 52,
+        "phrase": "that's the gap",
+        "action": "CLOSER \u2014 slow down, land the loop-back"
+      }
+    ],
+    "delivery_notes": "Strong hook energy, pause before all percentages, build momentum through three steps, confident finish",
+    "retention_notes": "Loop plants at 'learning AI wrong', resolves with 'memorize prompts vs deploy models', crust at 'here's the truth' for mid-hook energy",
+    "filename_hint": "script_01_ai_skills_in_38.mp4",
+    "word_count": 157,
+    "estimated_seconds": 60,
+    "length_warning": "OVER TARGET: 157 words (max 145). Trim before recording.",
+    "source_topic": "AI Skills Are Now in a Large Share of Tech Job Postings",
+    "source_type": "news",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 2,
+    "territory": "Career + Money",
+    "script_type": "NEWS_REACTION",
+    "creator_take_anchor": "AI is not a bubble like dot-com; it's a tool. Tools don't go away.",
+    "work_pattern_id": null,
+    "title_overlay": "HIRING MANAGERS WANT AI FLUENCY",
+    "subtitle_overlay": "not just ChatGPT prompts",
+    "spoken_script": "This week Meta announced they're hiring five hundred AI infrastructure engineers by March \u2014 and every job posting mentions one skill that eighty percent of candidates are missing. They want engineers who integrate AI into production systems, not just prompt engineers who copy-paste from ChatGPT. Here's the truth \u2014 companies are done with AI theater. Step one: learn one production AI framework this month. Pick LangChain, LlamaIndex, or build with OpenAI API directly. Don't just read tutorials \u2014 ship something small to production. Step two: understand where AI breaks in real systems. Context windows fill up, models hallucinate, APIs rate limit. Build error handling and fallback logic. That's what separates builders from prompt collectors. Step three: document your AI work like infrastructure. Show monitoring, show costs, show performance metrics. Hiring managers want proof you can scale AI, not just demo it. Finally \u2014 the engineers getting hired right now treat AI like any other tool in the stack. They know when to use it and when not to. That's the fluency companies actually need.",
+    "caption_hook": "Meta is hiring 500 AI infrastructure engineers and 80% of candidates are missing the one skill they actually want.",
+    "hashtags": [
+      "#AIEngineering",
+      "#TechJobs",
+      "#SoftwareEngineering",
+      "#ProductionAI",
+      "#TechCareer"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Punch the word 'truth' hard.",
+    "hook_type": "OPEN_LOOP",
+    "opening_line": "This week Meta announced they're hiring five hundred AI infrastructure engineers by March \u2014 and every job posting mentions one skill that eighty percent of candidates are missing.",
+    "open_loop_plant": "one skill that eighty percent of candidates are missing",
+    "open_loop_payoff": "They want engineers who integrate AI into production systems, not just prompt engineers",
+    "loopback_closer": "That's the fluency companies actually need.",
+    "visual_cues": "Meta hiring announcement, 80% stat, three numbered steps with icons, production system diagrams",
+    "visual_moments": [
+      {
+        "at_phrase": "five hundred AI infrastructure engineers",
+        "graphic": "500",
+        "label": "AI ENGINEERS HIRED",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "eighty percent of candidates",
+        "graphic": "80%",
+        "label": "MISSING KEY SKILL",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "LEARN FRAMEWORK",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "HANDLE FAILURES",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "five hundred AI infrastructure engineers",
+          "display": "500",
+          "label": "AI ENGINEERS HIRED"
+        },
+        {
+          "phrase": "eighty percent of candidates",
+          "display": "80%",
+          "label": "MISSING KEY SKILL"
+        }
+      ],
+      "fun_phrases": [
+        "truth",
+        "finally",
+        "wrong"
+      ],
+      "energy_words": [
+        "truth",
+        "really"
+      ],
+      "broll_phrases": [
+        "production systems",
+        "OpenAI API",
+        "error handling",
+        "infrastructure"
+      ],
+      "beat_phrases": {
+        "crust": "here's the truth",
+        "payoff": "that's the fluency companies actually need"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
+      },
+      {
+        "second": 3,
+        "phrase": "five hundred",
+        "action": "PAUSE before number, speak clearly"
+      },
+      {
+        "second": 8,
+        "phrase": "eighty percent",
+        "action": "PAUSE before stat"
+      },
+      {
+        "second": 15,
+        "phrase": "here's the truth",
+        "action": "ENERGY UP \u2014 crust zoom fires"
+      },
+      {
+        "second": 20,
+        "phrase": "step one",
+        "action": "Point at camera, punch 'one'"
+      },
+      {
+        "second": 32,
+        "phrase": "step two",
+        "action": "Punch 'two', lean forward"
+      },
+      {
+        "second": 44,
+        "phrase": "finally",
+        "action": "Hit fun phrase hard"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 slow down, land the loop-back line"
+      }
+    ],
+    "delivery_notes": "Open with urgency on Meta announcement. Pause before all numbers. Emphasize 'production systems' vs 'prompt engineers'. Strong energy on 'truth' and 'finally'.",
+    "retention_notes": "Loop plants at 8 seconds with missing skill mystery, pays off at 15 seconds. Crust moment hits at 'here's the truth'. Mid-video re-engagement with 'finally' at step three.",
+    "filename_hint": "script_02_hiring_managers_want_ai.mp4",
+    "word_count": 174,
+    "estimated_seconds": 67,
+    "length_warning": "OVER TARGET: 174 words (max 145). Trim before recording.",
+    "source_topic": "What Hiring Managers Want Right Now: AI Fluency",
+    "source_type": "news",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 3,
+    "territory": "Tech Made Simple",
+    "script_type": "NEWS_REACTION",
+    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck.",
+    "work_pattern_id": null,
+    "title_overlay": "KAFKA AND DATABRICKS HIRING SURGE",
+    "subtitle_overlay": "why these two skills are everywhere",
+    "spoken_script": "This week's hiring reports show Kafka and Databricks in seventy percent more job posts than six months ago. Here's the secret \u2014 companies finally figured out that real-time data beats yesterday's reports. Most engineers are still building batch pipelines while hiring managers want streaming systems. That's wrong. Step one: learn Kafka basics this week \u2014 topics, producers, consumers. Build a simple event stream. Step two: connect it to Databricks for analytics. The combo shows you think in real-time, not just daily ETL jobs. Step three: document one streaming use case you built. Even a toy project beats zero streaming experience on your resume. Truth is, hiring managers see Kafka plus Databricks and think systems engineer, not just code writer. That's the difference between getting interviews and getting ignored.",
+    "caption_hook": "Hiring managers are looking for Kafka and Databricks skills in 70% more job posts this quarter.",
+    "hashtags": [
+      "#Kafka",
+      "#Databricks",
+      "#DataEngineering",
+      "#StreamingData",
+      "#TechSkills"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'wrong' with emphasis.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "This week's hiring reports show Kafka and Databricks in seventy percent more job posts than six months ago.",
+    "open_loop_plant": "Here's the secret \u2014 companies finally figured out that real-time data beats yesterday's reports.",
+    "open_loop_payoff": "Truth is, hiring managers see Kafka plus Databricks and think systems engineer, not just code writer.",
+    "loopback_closer": "That's the difference between getting interviews and getting ignored.",
+    "visual_cues": "Show 70% statistic, Kafka logo, Databricks interface, streaming diagram",
+    "visual_moments": [
+      {
+        "at_phrase": "seventy percent more job posts",
+        "graphic": "70%",
+        "label": "MORE JOB POSTS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "LEARN KAFKA",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "ADD DATABRICKS",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "DOCUMENT PROJECT",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "seventy percent more job posts",
+          "display": "70%",
+          "label": "MORE JOB POSTS"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "wrong",
+        "truth"
+      ],
+      "energy_words": [
+        "finally",
+        "real-time"
+      ],
+      "broll_phrases": [
+        "Kafka",
+        "Databricks",
+        "streaming systems",
+        "event stream",
+        "analytics"
+      ],
+      "beat_phrases": {
+        "crust": "here's the secret",
+        "payoff": "truth is"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident energy"
+      },
+      {
+        "second": 5,
+        "phrase": "seventy percent",
+        "action": "PAUSE before number, clear delivery"
+      },
+      {
+        "second": 10,
+        "phrase": "here's the secret",
+        "action": "ENERGY UP \u2014 crust moment"
+      },
+      {
+        "second": 20,
+        "phrase": "that's wrong",
+        "action": "Hit fun phrase with conviction"
+      },
+      {
+        "second": 25,
+        "phrase": "step one",
+        "action": "Point at camera, punch the word"
+      },
+      {
+        "second": 35,
+        "phrase": "step two",
+        "action": "Gesture transition, confident tone"
+      },
+      {
+        "second": 45,
+        "phrase": "truth is",
+        "action": "Slow down for payoff line"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 land the final line with authority"
+      }
+    ],
+    "delivery_notes": "Start fast, pause at numbers, build energy through steps, land the closer with confidence",
+    "retention_notes": "Open loop plants at 'secret', resolves at 'truth is'. Crust energy at 'here's the secret'. Three-step cascade keeps momentum.",
+    "filename_hint": "script_03_kafka_and_databricks_hiring.mp4",
+    "word_count": 128,
+    "estimated_seconds": 49,
+    "source_topic": "What Hiring Managers Want Right Now: Apache Kafka and Databricks",
+    "source_type": "news",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 4,
+    "territory": "Tech Made Simple",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "AI massively increased his productivity in the last two years \u2014 projects, products, delivery",
+    "work_pattern_id": "boring_automation_wins",
+    "title_overlay": "DATA ENGINEERS LEAD 2026",
+    "subtitle_overlay": "why everyone wants this stack",
+    "spoken_script": "Data engineers are getting hired faster than any other tech role in twenty twenty six. Here's the secret \u2014 while everyone else chases AI engineering titles, companies need people who can actually move data at scale. According to LinkedIn's latest hiring report, data engineering roles increased forty seven percent this year alone. The unsexy automation \u2014 queues, retries, dead letter handling \u2014 is where enterprise time gets saved. But here's what's wild. Most engineers are building the wrong skills. Step one \u2014 learn real time data processing with Kafka or Pulsar this week. Not just batch jobs. Step two \u2014 get hands on with modern data stacks. Snowflake, dbt, Airflow together. Companies pay premium for engineers who connect these tools in production. Step three \u2014 automate one manual data workflow at your current job. Export, transform, load \u2014 something boring that saves hours. That's how you prove value before the interview. Truth is, data engineering pays well because it's pure building. No meetings about meetings. Just systems that work. Data engineers who ship automation are getting hired faster than anyone else right now.",
+    "caption_hook": "Data engineers are getting hired faster than any other tech role in 2026.",
+    "hashtags": [
+      "#DataEngineering",
+      "#TechCareers",
+      "#SoftwareEngineering",
+      "#DataScience",
+      "#TechJobs"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'wild' with extra punch.",
+    "hook_type": "IDENTITY CALL",
+    "opening_line": "Data engineers are getting hired faster than any other tech role in twenty twenty six.",
+    "open_loop_plant": "Here's the secret \u2014 while everyone else chases AI engineering titles, companies need people who can actually move data at scale.",
+    "open_loop_payoff": "Truth is, data engineering pays well because it's pure building.",
+    "loopback_closer": "Data engineers who ship automation are getting hired faster than anyone else right now.",
+    "visual_cues": "Show 47% stat, highlight three steps with numbers, display tech stack logos",
+    "visual_moments": [
+      {
+        "at_phrase": "forty seven percent",
+        "graphic": "47%",
+        "label": "HIRING INCREASE",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "REAL-TIME DATA",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "MODERN STACK",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "AUTOMATE WORKFLOW",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty seven percent",
+          "display": "47%",
+          "label": "HIRING INCREASE"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "wild",
+        "truth",
+        "pure building"
+      ],
+      "energy_words": [
+        "faster",
+        "premium",
+        "automation"
+      ],
+      "broll_phrases": [
+        "data processing",
+        "Kafka",
+        "Snowflake",
+        "data workflow"
+      ],
+      "beat_phrases": {
+        "crust": "here's the secret",
+        "payoff": "truth is"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No warmup."
+      },
+      {
+        "second": 8,
+        "phrase": "here's the secret",
+        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
+      },
+      {
+        "second": 18,
+        "phrase": "forty seven percent",
+        "action": "PAUSE before number, speak clearly"
+      },
+      {
+        "second": 28,
+        "phrase": "here's what's wild",
+        "action": "Hit energy spike, lean forward"
+      },
+      {
+        "second": 32,
+        "phrase": "step one",
+        "action": "Point at camera, punch the word 'one'"
+      },
+      {
+        "second": 38,
+        "phrase": "step two",
+        "action": "Hand gesture, emphasis on 'premium'"
+      },
+      {
+        "second": 45,
+        "phrase": "step three",
+        "action": "Final step punch, slower pace"
+      },
+      {
+        "second": 50,
+        "phrase": "pure building",
+        "action": "Hit fun phrase hard, building to closer"
+      }
+    ],
+    "delivery_notes": "Fast hook, pause before stats, punch each step number, slow down for closer",
+    "retention_notes": "Secret loop plants at 8s, wild re-hooks at 28s, truth resolves at 50s, loopback closer connects to opening pace",
+    "filename_hint": "script_04_data_engineers_lead_2026.mp4",
+    "word_count": 183,
+    "estimated_seconds": 70,
+    "length_warning": "OVER TARGET: 183 words (max 145). Trim before recording.",
+    "source_topic": "Data Engineering Is One of the Leading Tech Career Paths for 2026",
+    "source_type": "trend",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 5,
+    "territory": "Career + Money",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck.",
+    "work_pattern_id": "inbox_is_backlog",
+    "title_overlay": "LINKEDIN OUTREACH BEATS APPLICATIONS",
+    "subtitle_overlay": "target hiring managers directly",
+    "spoken_script": "Ninety-two percent of engineers are wasting time on manual job applications when they should be messaging hiring managers directly. Here's the secret most people miss \u2014 applications go to HR, but outreach goes to the person who actually decides. The best feature specs I ever got were angry user emails \u2014 not roadmap decks. Step one: automate your basic applications using tools like Simplify or LinkedIn Easy Apply for volume. Step two: identify three hiring managers at companies you actually want. Check their LinkedIn, find their GitHub, understand what they're building. Step three: send a two-sentence message about their recent project or tech stack. No ask, just genuine interest in their work. That's how you get conversations instead of rejections. Stop applying and start connecting \u2014 that's where the real opportunities live.",
+    "caption_hook": "Ninety-two percent of engineers waste time on applications when they should message hiring managers directly.",
+    "hashtags": [
+      "#TechCareers",
+      "#LinkedInStrategy",
+      "#SoftwareJobs",
+      "#CareerAdvice",
+      "#TechNetworking"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'really' with emphasis.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Ninety-two percent of engineers are wasting time on manual job applications when they should be messaging hiring managers directly.",
+    "open_loop_plant": "Here's the secret most people miss",
+    "open_loop_payoff": "applications go to HR, but outreach goes to the person who actually decides",
+    "loopback_closer": "Stop applying and start connecting \u2014 that's where the real opportunities live.",
+    "visual_cues": "92% stat display, three numbered steps overlay, LinkedIn interface screenshots",
+    "visual_moments": [
+      {
+        "at_phrase": "ninety-two percent",
+        "graphic": "92%",
+        "label": "WASTED APPLICATIONS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "AUTOMATE BASIC APPS",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "TARGET HIRING MANAGERS",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "GENUINE OUTREACH",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "ninety-two percent",
+          "display": "92%",
+          "label": "WASTED APPLICATIONS"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "really"
+      ],
+      "energy_words": [
+        "directly",
+        "actually"
+      ],
+      "broll_phrases": [
+        "LinkedIn",
+        "GitHub",
+        "tech stack",
+        "hiring managers"
+      ],
+      "beat_phrases": {
+        "crust": "secret",
+        "payoff": "real opportunities"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident"
+      },
+      {
+        "second": 3,
+        "phrase": "ninety-two percent",
+        "action": "PAUSE before number, speak clearly"
+      },
+      {
+        "second": 8,
+        "phrase": "secret",
+        "action": "ENERGY UP \u2014 hit fun phrase hard"
+      },
+      {
+        "second": 18,
+        "phrase": "step one",
+        "action": "Point at camera, punch 'one'"
+      },
+      {
+        "second": 28,
+        "phrase": "step two",
+        "action": "Gesture to right, emphasize 'actually want'"
+      },
+      {
+        "second": 38,
+        "phrase": "step three",
+        "action": "Forward lean, serious tone"
+      },
+      {
+        "second": 48,
+        "action": "CLOSER \u2014 slow down, land the loop-back"
+      }
+    ],
+    "delivery_notes": "Fast hook with conviction. Pause before stat. Build energy through steps. Land the closer with authority.",
+    "retention_notes": "Loop plants at 'secret' (8s), pays off at 'actually decides' (15s). Energy crest at step one. Mid-video re-hook with step two specificity.",
+    "filename_hint": "script_05_linkedin_outreach_beats_applications.mp4",
+    "word_count": 132,
+    "estimated_seconds": 51,
+    "source_topic": "Why LinkedIn Outreach Beats Manual Job Applications",
+    "source_type": "social",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 6,
+    "territory": "Build Mindset",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck",
+    "work_pattern_id": "solo_end_to_end",
+    "title_overlay": "SKILLS THAT GET YOU HIRED IN 2026",
+    "subtitle_overlay": "what hiring managers actually want",
+    "spoken_script": "Companies are paying twenty percent more for engineers who connect code to business outcomes \u2014 but most candidates are learning the wrong skills. Here's the secret: hiring managers aren't looking for pure coding anymore. They want builders who think in systems. One engineer who owns frontend, backend, and deploy beats three who only own tickets. Step one: learn AI workflow automation this month. Pick Claude or Cursor, build one end-to-end project that solves a real problem. Step two: practice explaining technical decisions in business terms. Why did you choose that database? How does it save time or money? Step three: ship something with modern data tools \u2014 real-time pipelines, event streaming, or ML ops. The market rewards engineers who deliver value, not just features. That's how you stand out when everyone else is grinding LeetCode.",
+    "caption_hook": "Companies are paying 20% more for engineers who connect code to business outcomes.",
+    "hashtags": [
+      "#SoftwareEngineering",
+      "#TechCareers",
+      "#AIEngineering",
+      "#TechHiring",
+      "#BuildMindset"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'pure coding' with emphasis.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Companies are paying twenty percent more for engineers who connect code to business outcomes \u2014 but most candidates are learning the wrong skills.",
+    "open_loop_plant": "Here's the secret: hiring managers aren't looking for pure coding anymore.",
+    "open_loop_payoff": "The market rewards engineers who deliver value, not just features.",
+    "loopback_closer": "That's how you stand out when everyone else is grinding LeetCode.",
+    "visual_cues": "20% stat, three numbered action steps, tech stack visuals",
+    "visual_moments": [
+      {
+        "at_phrase": "twenty percent more",
+        "graphic": "20%",
+        "label": "SALARY PREMIUM",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "AI AUTOMATION",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "BUSINESS THINKING",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "MODERN DATA",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "twenty percent more",
+          "display": "20%",
+          "label": "SALARY PREMIUM"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "pure coding",
+        "wrong"
+      ],
+      "energy_words": [
+        "right",
+        "finally"
+      ],
+      "broll_phrases": [
+        "frontend backend",
+        "database",
+        "data tools",
+        "ML ops"
+      ],
+      "beat_phrases": {
+        "crust": "here's the secret",
+        "payoff": "the market rewards engineers"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident energy"
+      },
+      {
+        "second": 3,
+        "phrase": "twenty percent more",
+        "action": "PAUSE before number, clear delivery"
+      },
+      {
+        "second": 8,
+        "phrase": "here's the secret",
+        "action": "ENERGY UP \u2014 crust moment"
+      },
+      {
+        "second": 12,
+        "phrase": "pure coding",
+        "action": "Hit fun phrase with emphasis"
+      },
+      {
+        "second": 20,
+        "phrase": "step one",
+        "action": "Point at camera, punch the word"
+      },
+      {
+        "second": 30,
+        "phrase": "step two",
+        "action": "Gesture shift, maintain energy"
+      },
+      {
+        "second": 40,
+        "phrase": "step three",
+        "action": "Final step emphasis"
+      },
+      {
+        "second": 48,
+        "action": "CLOSER \u2014 slow down, land the loop-back line"
+      }
+    ],
+    "delivery_notes": "Fast hook with authority. Pause before stats. Hit action steps with clear gestures. End with confident closer.",
+    "retention_notes": "Secret hook plants in first 10 seconds, resolves at 'market rewards' near end. Crust energy spike at 'here's the secret'. Three-step cascade keeps momentum.",
+    "filename_hint": "script_06_skills_that_get_you.mp4",
+    "word_count": 135,
+    "estimated_seconds": 52,
+    "source_topic": "What to Learn Next if You Want Hired in 2026",
+    "source_type": "trend",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 7,
+    "territory": "Build Mindset",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Boring automation \u2014 queues, retries, dead-letter handling \u2014 is where enterprise time gets saved",
+    "work_pattern_id": "boring_automation_wins",
+    "title_overlay": "BUILD, BUY, OR AUTOMATE?",
+    "subtitle_overlay": "the engineering decision framework",
+    "spoken_script": "Every engineering team faces this question wrong. Build custom, buy tools, or automate with AI? Here's the secret most teams miss. Seventy three percent of engineering decisions fail because teams optimize for the wrong metric, according to Stack Overflow's latest survey. The unsexy automation \u2014 queues, retries, dead-letter handling \u2014 is where enterprise time gets saved. Step one: map your current manual work. List every recurring task your team does weekly. That's your automation target list. Step two: buy for anything customers see directly. UI libraries, payment processing, auth systems. Build for your core differentiator only. Step three: automate the boring stuff first. The five-minute task you do daily beats the complex feature you'll use once. Wrong priorities kill velocity every time. Start with step one today and you'll finally know what deserves your team's time.",
+    "caption_hook": "Most engineering teams optimize for the wrong metric when deciding build vs buy vs automate.",
+    "hashtags": [
+      "#Engineering",
+      "#AI",
+      "#Automation",
+      "#TechLeadership",
+      "#BuildVsBuy"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'wrong' hard for emphasis.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Every engineering team faces this question wrong.",
+    "open_loop_plant": "Here's the secret most teams miss.",
+    "open_loop_payoff": "Wrong priorities kill velocity every time.",
+    "loopback_closer": "Start with step one today and you'll finally know what deserves your team's time.",
+    "visual_cues": "Display stats, step numbers, and automation icons at key moments",
+    "visual_moments": [
+      {
+        "at_phrase": "seventy three percent",
+        "graphic": "73%",
+        "label": "FAILED DECISIONS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "MAP MANUAL WORK",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "BUY CUSTOMER-FACING",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "AUTOMATE BORING FIRST",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "seventy three percent",
+          "display": "73%",
+          "label": "FAILED DECISIONS"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "wrong",
+        "fails",
+        "beats"
+      ],
+      "broll_phrases": [
+        "manual work",
+        "payment processing",
+        "auth systems",
+        "five-minute task"
+      ],
+      "beat_phrases": {
+        "crust": "secret",
+        "payoff": "wrong priorities kill velocity"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, contrarian energy, no warmup"
+      },
+      {
+        "second": 5,
+        "phrase": "secret",
+        "action": "PAUSE \u2192 ENERGY UP for crust moment"
+      },
+      {
+        "second": 12,
+        "phrase": "seventy three percent",
+        "action": "PAUSE 0.3s before number, speak clearly"
+      },
+      {
+        "second": 25,
+        "phrase": "step one",
+        "action": "Point at camera, punch the word 'one'"
+      },
+      {
+        "second": 35,
+        "phrase": "step two",
+        "action": "Authority tone, clear step transition"
+      },
+      {
+        "second": 45,
+        "phrase": "step three",
+        "action": "Final step energy, building to payoff"
+      },
+      {
+        "second": 50,
+        "phrase": "wrong",
+        "action": "Hit fun phrase hard before closer"
+      },
+      {
+        "second": 55,
+        "action": "CLOSER \u2014 slow down, land the loop-back confidently"
+      }
+    ],
+    "delivery_notes": "Fast contrarian opening, pause before stats, punch each step number, slow authoritative closer",
+    "retention_notes": "Secret loop plants at 5s, resolves with 'wrong priorities' at 50s. Crust energy spike at 'secret'. Three-step cascade keeps momentum.",
+    "filename_hint": "script_07_build_buy_or_automate.mp4",
+    "word_count": 136,
+    "estimated_seconds": 52,
+    "source_topic": "The Engineering Debate: Build, Buy, or Automate with AI?",
+    "source_type": "social",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 8,
+    "territory": "Career + Money",
+    "script_type": "HOT_TAKE",
+    "creator_take_anchor": "Hates DSA interview rounds \u2014 partly because they're a grind, partly because they miss builders",
+    "work_pattern_id": "solo_end_to_end",
+    "title_overlay": "SKILLS BEAT TITLES",
+    "subtitle_overlay": "why builders are winning",
+    "spoken_script": "DSA interviews are finally dying and hiring managers are panicking. Here's the truth \u2014 companies realized that engineers who memorized LeetCode can't actually ship products. Step one, stop optimizing your resume for titles and start showcasing real delivery. One engineer who owns frontend, backend, and deploy beats three who only own tickets. Build something end to end this week, even if it's small. Step two, learn across the stack instead of going deep in one language. AI tools, cloud systems, and data pipelines are converging. Companies need engineers who think in systems, not those who grind algorithms. Step three, document what you built and why it mattered. Wrong approach is listing technologies. Right approach is explaining the problem you solved and the impact you delivered. That's how skills-first hiring actually works \u2014 prove you can figure it out and ship.",
+    "caption_hook": "DSA interviews are finally dying and hiring managers are panicking.",
+    "hashtags": [
+      "#TechCareers",
+      "#SoftwareEngineer",
+      "#SkillsFirst",
+      "#TechHiring",
+      "#CareerGrowth"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'truth' and 'wrong' with extra punch.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "DSA interviews are finally dying and hiring managers are panicking.",
+    "open_loop_plant": "Here's the truth \u2014 companies realized that engineers who memorized LeetCode can't actually ship products.",
+    "open_loop_payoff": "That's how skills-first hiring actually works \u2014 prove you can figure it out and ship.",
+    "loopback_closer": "That's how skills-first hiring actually works \u2014 prove you can figure it out and ship.",
+    "visual_cues": "Stats on skills vs titles, step numbers, delivery impact graphics",
+    "visual_moments": [
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "SHOWCASE DELIVERY",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "LEARN ACROSS STACK",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "DOCUMENT IMPACT",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [],
+      "fun_phrases": [
+        "truth",
+        "wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "truth"
+      ],
+      "broll_phrases": [
+        "frontend, backend",
+        "AI tools",
+        "cloud systems",
+        "data pipelines"
+      ],
+      "beat_phrases": {
+        "crust": "step one",
+        "payoff": "figure it out and ship"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
+      },
+      {
+        "second": 3,
+        "phrase": "truth",
+        "action": "Hit hard, pause 0.2s"
+      },
+      {
+        "second": 12,
+        "phrase": "step one",
+        "action": "ENERGY UP \u2014 crust zoom fires, point at camera"
+      },
+      {
+        "second": 22,
+        "phrase": "step two",
+        "action": "Punch the word 'two', strong gesture"
+      },
+      {
+        "second": 32,
+        "phrase": "wrong approach",
+        "action": "Hit 'wrong' with emphasis"
+      },
+      {
+        "second": 38,
+        "phrase": "step three",
+        "action": "Final step energy, point again"
+      },
+      {
+        "second": 48,
+        "action": "CLOSER \u2014 slow down, land the loop-back line with authority"
+      }
+    ],
+    "delivery_notes": "Strong contrarian energy on hook, pause before each step number, hit fun phrases with punch",
+    "retention_notes": "Loop plants at 'truth' resolves with 'figure it out and ship', crust energy at 'step one', mid-video re-hook at 'wrong approach'",
+    "filename_hint": "script_08_skills_beat_titles.mp4",
+    "word_count": 140,
+    "estimated_seconds": 54,
+    "source_topic": "The New Hiring Filter: Skills-First, Not Title-First",
+    "source_type": "trend",
+    "content_phase": "growth",
+    "date_generated": "2026-06-11"
+  },
+  {
+    "script_number": 1,
+    "territory": "Career + Money",
     "title_overlay": "5 SKILLS THAT GET AI ENGINEERS HIRED",
     "subtitle_overlay": "what job posts actually want in 2025",
     "spoken_script": "I just analyzed two hundred AI engineering job posts and seventy four percent want the same five skills that most engineers are completely ignoring. Here's what's wild \u2014 the highest paying roles aren't asking for the latest models. They want engineers who can build systems that don't break. First skill is cloud fluency. Not just AWS basics \u2014 I'm talking about designing for failure, understanding cost optimization, and knowing when to use serverless versus containers. That's secret number one. Second is streaming data. Real-time pipelines are everywhere now and companies are desperate for engineers who understand Kafka, event sourcing, and backpressure handling. Unless you can handle data in motion, you're stuck building batch jobs. Third skill is observability. Your models need monitoring, your pipelines need alerts, and your infrastructure needs dashboards that actually help during outages. Fourth is data governance. Companies are finally taking privacy seriously and they need engineers who understand lineage tracking, access controls, and compliance frameworks. Fifth skill is communication. The engineers making the most money can explain complex systems to non-technical stakeholders without losing them in the weeds. Here's the truth \u2014 master these five skills and you'll skip the junior engineer grind completely.",

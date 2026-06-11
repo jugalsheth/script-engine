@@ -138,5 +138,45 @@
     "opening_line": "Three industries are hiring AI engineers faster than they can interview them \u2014 and it's not the ones you think.",
     "hook_type": "CONTRARIAN STRIKE",
     "date": "2026-06-10"
+  },
+  {
+    "opening_line": "Thirty eight percent of tech job postings mentioned AI skills in June \u2014 up from thirty six percent last month.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "This week Meta announced they're hiring five hundred AI infrastructure engineers by March \u2014 and every job posting mentions one skill that eighty percent of candidates are missing.",
+    "hook_type": "OPEN_LOOP",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "This week's hiring reports show Kafka and Databricks in seventy percent more job posts than six months ago.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Data engineers are getting hired faster than any other tech role in twenty twenty six.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Ninety-two percent of engineers are wasting time on manual job applications when they should be messaging hiring managers directly.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Companies are paying twenty percent more for engineers who connect code to business outcomes \u2014 but most candidates are learning the wrong skills.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Every engineering team faces this question wrong.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "DSA interviews are finally dying and hiring managers are panicking.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-11"
   }
 ]
