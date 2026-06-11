@@ -21,6 +21,7 @@ video_triggers (object):
     "fun_phrases": ["that's normal", "pure building", "finally"],
     "energy_words": ["right", "truth", "unless"],
     "broll_phrases": ["data pipeline", "python script", "finance team"],
+    "logo_phrases": [{"phrase": "cursor for coding", "brand": "cursor"}, {"phrase": "langchain", "brand": "langchain"}, {"phrase": "openai api", "brand": "openai"}],
     "beat_phrases": {
       "crust": "phrase in FIRST 15 SECONDS where energy picks up (e.g. here's what's wild, step one)",
       "payoff": "phrase where loop resolves near the end"

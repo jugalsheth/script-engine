@@ -193,6 +193,7 @@ def _normalize_script(script: dict) -> dict:
     triggers.setdefault("fun_phrases", [])
     triggers.setdefault("energy_words", ["right", "truth"])
     triggers.setdefault("broll_phrases", [])
+    triggers.setdefault("logo_phrases", [])
     beats = triggers.get("beat_phrases") or {}
     if not isinstance(beats, dict):
         beats = {}
@@ -315,7 +316,8 @@ def _growth_requirements() -> str:
         "7. LENGTH — HARD MAX 145 words (~50-55 seconds). Count before returning.\n"
         "   Short punchy sentences. Cut filler. Every line earns its second.\n"
         "   If draft exceeds 145 words, delete the weakest sentence and tighten.\n\n"
-        "8. VISUAL — populate visual_moments (3-5) + video_triggers with broll_phrases.\n\n"
+        "8. VISUAL — populate visual_moments (3-5) + video_triggers with broll_phrases "
+        "and logo_phrases [{phrase, brand}] when brand tools are named.\n\n"
         "9. VALUE FIRST — 80% of scripts have work_pattern_id: null. No niche internal features.\n"
         "   Optional: ONE generalized credibility line from work_patterns.txt (see TRANSLATION EXAMPLES).\n\n"
         "10. RECORDING CUES — 5-8 teleprompter beats (second, phrase, action).\n"
