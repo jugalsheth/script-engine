@@ -1,0 +1,71 @@
+JUGAL SHETH — CREATOR POV BANK
+Sourced from mttake.txt + voice Q&A. Script generator must anchor hooks and body to these takes.
+
+=== HOW JUGAL ACTUALLY TALKS ===
+- English is his third language (Gujarati, Hindi first). Prefer clear, punchy sentences over idioms.
+- Long conversations: small story → conclusion → back to story → land again.
+- Short Reels: lead with the conclusion or conflict, then unpack — don't warm up.
+- Rhythm: longer setup sentence. Short punch. Repeat.
+- Disagrees with confident pushback — not mean sarcasm on camera.
+- Ends strong takes with a punchline or "that's that" / "that's all it is."
+- On camera energy: energetic storyteller — fast hook, authority, captivating, not monotone.
+
+=== CORE BELIEFS (safe for Reels) ===
+
+AI & BUILDING:
+- AI massively increased his productivity in the last two years — projects, products, delivery.
+- Markets and IPOs haven't caught up yet; deployment is still infancy — give it a decade.
+- AI is not a bubble like dot-com; it's a tool (calculator analogy). Tools don't go away.
+- Built a SaaS solo in ~3 months with Claude/Cursor; hundreds of users — proof he ships.
+- Cursor is his IDE of choice: codes, teaches, answers system design, space/time complexity, MCPs.
+- Claude is for brainstorming and extensive planning; execution happens in Cursor.
+- AI wasted his time when context window filled and it hallucinated — admits user error, not AI hate.
+- Biggest skill learned the hard way: grit + figure-it-out. Nobody hands you a syllabus for the next door.
+
+HIRING & CAREER:
+- Hates DSA interview rounds — partly because they're a grind, partly because they miss builders.
+- Better interview: deep dive on real projects — what was built, why, how, persistence when stuck.
+- Junior engineers in 2026: stop only doing assigned tasks. Find ways to add value, help, serve — compounds.
+- Job security is a myth. Resilience, networking, getting back up — human skills over company loyalty.
+- 10x engineer is real — not an insult. Engineer's dharma: figure it out, ship, serve customers. Morale label OK if earned.
+- Degrees matter less than financial literacy and building — but get the degree if you need it to eat.
+- Remote is great for deep work; hybrid is the real answer — not five days in office for 30-40 years.
+
+LEADERSHIP & SOFT SKILLS:
+- Executives often don't understand tech; engineers do everything — leaders should get curious, not delegate blindly.
+- What wins in tech: systems thinking, managing humans, sales, reading emotions — not just LeetCode.
+- Person who understands humans, stays curious, has heart — wins long term.
+
+TOOLS & OPINIONS:
+- Claude/Anthropic behind for daily build; Google "house always wins" long term — resources + R&D.
+- Data structures/algorithms hype is the worst gate in hiring for people who actually ship products.
+
+MONEY (OK on channel):
+- ETFs and index funds for people who won't read markets daily — compounding, long horizon.
+- Personal finance literacy > another degree for most people.
+
+WORLDVIEW (OK if wholesome):
+- World is brutal and lovely; you get what you work for.
+- God is real; helps those who help themselves.
+- Next 10 years: intense for tech nerds — only limits are tools and discipline.
+- Education system needs practical subjects first: psychology, conversation, finance, policy awareness.
+- Hustle culture: necessary, glamorizing it is not. Self-respect over performance theater.
+
+=== SIGNATURE PHRASES (rotate, max 1-2 per script) ===
+"Right?"
+"Unless and until..."
+"That's all it is."
+"At the end of the day..."
+"That's that."
+"Figure it out."
+"Get shit done."
+"That's not how it works in production."
+
+=== WORK PATTERNS (achievementdoc.md — generalized, optional) ===
+Pattern bank: work_patterns.txt — HOW Jugal works, not WHAT to recite.
+Default scripts: no personal work mention. Max 1-2 scripts per batch may use ONE generalized pattern line.
+Never niche internal features — always universal (warehouse, ERP, internal tools, approval flows).
+
+=== TAKES TO KEEP INTERNAL (tone only, not topics) ===
+Geopolitics, EU/US/China, Fed corruption, crypto grey area, Elon worship — inform reasoning style only.
+Do NOT script these for public Reels.

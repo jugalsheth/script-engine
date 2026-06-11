@@ -22,6 +22,9 @@ HOOK_TO_TEMPLATE = {
 }
 
 JSON_FIELDS = """
+  "script_type": "NEWS_REACTION | EVERGREEN_VALUE | HOT_TAKE",
+  "creator_take_anchor": "one-line POV from creator_takes.txt (opinion angle, not work story)",
+  "work_pattern_id": "null or optional id from work_patterns.txt — only if generalized credibility fits",
   "title_overlay": "THE BOLD TITLE IN CAPS",
   "subtitle_overlay": "short descriptive subtitle",
   "spoken_script": "The complete word-for-word script the creator reads...",
@@ -71,6 +74,63 @@ def _load_config_file(filename: str) -> str:
     except OSError as exc:
         print(f"⚠️ Could not read {filename}: {exc}")
         return ""
+
+
+def _build_system_prompt() -> str:
+    """Combine voice profile, creator POV bank, and hard content boundaries."""
+    parts = [
+        _load_config_file("content_philosophy.txt"),
+        _load_config_file("voice_profile.txt"),
+        _load_config_file("creator_takes.txt"),
+        _load_config_file("work_patterns.txt"),
+        _load_config_file("content_boundaries.txt"),
+    ]
+    combined = "\n\n---\n\n".join(p for p in parts if p.strip())
+    if not combined.strip():
+        print("❌ voice_profile.txt missing — cannot generate scripts")
+    return combined
+
+
+def _script_type_for_topic(topic: dict) -> str:
+    if topic.get("source_type") == "news":
+        return "NEWS_REACTION"
+    title = f"{topic.get('topic_title', '')} {topic.get('topic_summary', '')}".lower()
+    hot_keywords = ("wrong", "myth", "overhyped", "hate", "stop", "don't", "shouldn't", "contrarian")
+    if any(kw in title for kw in hot_keywords):
+        return "HOT_TAKE"
+    return "EVERGREEN_VALUE"
+
+
+def _script_type_requirements(script_type: str, script_number: int, batch_size: int) -> str:
+    if script_type == "NEWS_REACTION":
+        return (
+            "SCRIPT TYPE: NEWS_REACTION\n"
+            "- Hook names what happened THIS WEEK in AI/tech (model, layoff trend, hiring shift, tool release)\n"
+            "- Explain what it means for engineers, PMs, and builders — broad practitioner value\n"
+            "- One actionable step for this week because of the news\n"
+            "- Cite source for any fact ('according to...', 'this week's announcement...')\n"
+            "- Do NOT imply the creator is job searching\n"
+            "- NO niche personal work stories — this is about the NEWS and the VIEWER\n"
+            "- work_pattern_id: null\n"
+        )
+    if script_type == "HOT_TAKE":
+        return (
+            "SCRIPT TYPE: HOT_TAKE\n"
+            "- Open with contrarian claim anchored to a creator_take (DSA, hybrid, builders vs grinders)\n"
+            "- Defend with universal logic + optional ONE generalized pattern line from work_patterns.txt\n"
+            "- Confident pushback, not biting sarcasm\n"
+            "- Never cite fake 'I analyzed N posts' research\n"
+        )
+    return (
+        "SCRIPT TYPE: EVERGREEN_VALUE\n"
+        "- Informative first: universal lesson any engineer/PM can use Monday\n"
+        "- Hook = pain or insight the VIEWER has — not 'at my company...'\n"
+        "- 3 actionable steps — specific tools/skills/habits, not vague awareness\n"
+        "- creator_take_anchor = your opinion angle, not a work anecdote\n"
+        "- work_pattern_id: null unless script {script_number} is the ONE optional credibility script in batch\n"
+        f"- Batch size {batch_size}: at most 1-2 scripts may set work_pattern_id; this is script #{script_number}\n"
+        "- If using work_pattern_id: ONE generalized sentence only — see TRANSLATION EXAMPLES in work_patterns.txt\n"
+    )
 
 
 def _slug_words(text: str, max_words: int = 4) -> str:
@@ -137,7 +197,7 @@ def _normalize_script(script: dict) -> dict:
     if not isinstance(beats, dict):
         beats = {}
     if not beats.get("crust"):
-        beats["crust"] = "here's what's wild"
+        beats["crust"] = "step one"
     triggers["beat_phrases"] = beats
     script["video_triggers"] = triggers
 
@@ -191,7 +251,7 @@ def _video_contract_block() -> str:
         f"fun_phrases must include 2-3 items from: {FUN_PHRASE_POOL}\n"
         "Each fun_phrase MUST appear verbatim in spoken_script.\n"
         "visual_moments: 2-4 items. stat_phrases: 1-2 items with spoken number phrases.\n"
-        "beat_phrases.crust MUST be spoken in the first 15 seconds (e.g. 'here's what's wild', 'step one').\n"
+        "beat_phrases.crust MUST be spoken in the first 15 seconds (e.g. 'step one', 'here's the thing', 'that's not how it works').\n"
         "recording_cues: 5-8 items — teleprompter sheet with second targets, phrases, and actions.\n"
         "edit_template: THREE_STEP_HOT_TAKE for 3-step scripts, CONFESSION_STAT for confession hooks.\n"
     )
@@ -221,6 +281,7 @@ def _intro_requirements(brand_episode: int) -> str:
         "5. LOOP-BACK CLOSER — final line connects back to the opening hook.\n\n"
         "6. LENGTH — 120-150 words (~50-60 seconds).\n\n"
         "7. VISUAL — populate visual_moments + video_triggers (see contract below).\n\n"
+        "8. VALUE FIRST — universal lesson for the viewer. No niche internal work stories.\n\n"
         f'{_video_contract_block()}'
         f'- series_note must be: "Brand intro {brand_episode} of 4"\n'
         "- Written in first person, casual, direct\n"
@@ -255,7 +316,9 @@ def _growth_requirements() -> str:
         "   Short punchy sentences. Cut filler. Every line earns its second.\n"
         "   If draft exceeds 145 words, delete the weakest sentence and tighten.\n\n"
         "8. VISUAL — populate visual_moments (3-5) + video_triggers with broll_phrases.\n\n"
-        "9. RECORDING CUES — 5-8 teleprompter beats (second, phrase, action).\n"
+        "9. VALUE FIRST — 80% of scripts have work_pattern_id: null. No niche internal features.\n"
+        "   Optional: ONE generalized credibility line from work_patterns.txt (see TRANSLATION EXAMPLES).\n\n"
+        "10. RECORDING CUES — 5-8 teleprompter beats (second, phrase, action).\n"
         "   Include: hook energy, crust pause, stat pauses, step punches, fun phrases, closer.\n\n"
         f'{_video_contract_block()}'
         "- Written in first person, casual, direct\n"
@@ -265,12 +328,34 @@ def _growth_requirements() -> str:
     )
 
 
+def _resolve_batch_script_types(topics: list[dict]) -> list[str]:
+    """Assign NEWS / EVERGREEN / HOT_TAKE mix across a batch."""
+    n = len(topics)
+    if n == 0:
+        return []
+    hot_index = next(
+        (i for i, t in enumerate(topics) if _script_type_for_topic(t) == "HOT_TAKE"),
+        n - 1,
+    )
+    types: list[str] = []
+    for i, topic in enumerate(topics):
+        if topic.get("source_type") == "news":
+            types.append("NEWS_REACTION")
+        elif i == hot_index:
+            types.append("HOT_TAKE")
+        else:
+            types.append("EVERGREEN_VALUE")
+    return types
+
+
 def _build_user_prompt(
     topic: dict,
     script_number: int,
     recent_hooks: list[str],
     phase: str,
     brand_episode: int,
+    script_type: str,
+    batch_size: int,
 ) -> str:
     territory = topic.get("territory", "General")
     hooks_block = (
@@ -288,7 +373,10 @@ def _build_user_prompt(
         f"Generate a complete video script for the following topic:\n"
         f"TOPIC: {topic['topic_title']}\n"
         f"CONTEXT: {topic.get('topic_summary', '')}\n"
-        f"TERRITORY: {territory}\n\n"
+        f"TERRITORY: {territory}\n"
+        f"SOURCE TYPE: {topic.get('source_type', 'trend')}\n\n"
+        f"{_script_type_requirements(script_type, script_number, batch_size)}\n"
+        f"creator_take_anchor must name the specific POV this script embodies.\n\n"
         f"Avoid reusing any of these recent opening lines: {hooks_block}\n\n"
         f"Return a JSON object with exactly these fields:\n"
         "{\n"
@@ -308,9 +396,8 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
         print("❌ ANTHROPIC_API_KEY not set — cannot generate scripts")
         return []
 
-    voice_profile = _load_config_file("voice_profile.txt")
-    if not voice_profile:
-        print("❌ voice_profile.txt missing — cannot generate scripts")
+    system_prompt = _build_system_prompt()
+    if not system_prompt.strip():
         return []
 
     phase = phase or get_phase()
@@ -323,23 +410,27 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
 
     client = anthropic.AsyncAnthropic(api_key=api_key)
     scripts: list[dict] = []
+    batch_size = len(topics)
+    batch_types = _resolve_batch_script_types(topics)
 
     for i, topic in enumerate(topics, start=1):
         brand_episode = videos_published + i if phase == "intro" else i
+        script_type = batch_types[i - 1]
         print(
             f"   Generating script {i}/{len(topics)} "
-            f"[{phase}] {topic['topic_title'][:45]}..."
+            f"[{phase}/{script_type}] {topic['topic_title'][:45]}..."
         )
         try:
             response = await client.messages.create(
                 model=SONNET_MODEL,
                 max_tokens=MAX_TOKENS,
-                system=voice_profile,
+                system=system_prompt,
                 messages=[
                     {
                         "role": "user",
                         "content": _build_user_prompt(
-                            topic, i, recent_hooks, phase, brand_episode
+                            topic, i, recent_hooks, phase, brand_episode,
+                            script_type, batch_size,
                         ),
                     }
                 ],
@@ -354,8 +445,10 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
             script = _normalize_script(script)
 
             script["script_number"] = script.get("script_number", i)
+            script["script_type"] = script.get("script_type", script_type)
             script["territory"] = script.get("territory", topic.get("territory", "General"))
             script["source_topic"] = topic["topic_title"]
+            script["source_type"] = topic.get("source_type", "trend")
             script["content_phase"] = phase
             if phase == "intro":
                 script["brand_episode"] = f"{brand_episode} of 4"

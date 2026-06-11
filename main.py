@@ -12,6 +12,23 @@ load_dotenv(_root.parent / ".env")
 from src.research import fetch_topics
 from src.safety_filter import filter_topics
 from src.matcher import score_topics
+
+
+def _select_growth_topics(scored_topics: list[dict], count: int = 8, news_slots: int = 3) -> list[dict]:
+    """Reserve slots for timely news topics; fill rest with highest-scored evergreen."""
+    news = sorted(
+        [t for t in scored_topics if t.get("source_type") == "news"],
+        key=lambda t: t.get("match_score", 0),
+        reverse=True,
+    )[:news_slots]
+    news_titles = {t["topic_title"] for t in news}
+    evergreen = sorted(
+        [t for t in scored_topics if t["topic_title"] not in news_titles],
+        key=lambda t: t.get("match_score", 0),
+        reverse=True,
+    )
+    batch = news + evergreen
+    return batch[:count]
 from src.generator import generate_scripts
 from src.deliver import send_via_telegram
 from src.content_phase import get_phase, get_phase_label
@@ -44,7 +61,10 @@ async def main():
         topic_pool = manual if manual else scored_topics
         scripts = await generate_scripts(topic_pool[:4], phase="intro")
     else:
-        scripts = await generate_scripts(scored_topics[:8], phase="growth")
+        growth_topics = _select_growth_topics(scored_topics, count=8, news_slots=3)
+        news_count = sum(1 for t in growth_topics if t.get("source_type") == "news")
+        print(f"   Batch mix: {news_count} news + {len(growth_topics) - news_count} evergreen")
+        scripts = await generate_scripts(growth_topics, phase="growth")
     print(f"   Generated {len(scripts)} scripts")
 
     # Step 5: Deliver

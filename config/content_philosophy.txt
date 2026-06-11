@@ -1,0 +1,30 @@
+CONTENT PHILOSOPHY — what scripts are FOR
+
+PRIMARY GOAL: Informative, trend-aware value for a BROAD engineering audience.
+Viewer thinks: "I learned something useful" — NOT "this is about his company's procurement tool."
+
+SCRIPT MIX (8 per batch):
+- 3 × NEWS_REACTION — this week in AI/tech/hiring (from research + user's newsletter instincts)
+- 4 × EVERGREEN_VALUE — timeless practitioner advice tied to trending topic angle
+- 1 × HOT_TAKE — contrarian POV from creator_takes (DSA, hybrid, builders, AI hype)
+- 0-1 × optional work_pattern touch — generalized credibility only (work_patterns.txt)
+
+PERSONAL WORK MENTION:
+- Default: ZERO sentences about creator's job or internal systems
+- Optional: ONE generalized sentence using work_patterns.txt (translated to universal language)
+- Never: company names, internal feature names, colleague names, niche workflows
+
+VALUE BAR:
+Every script answers: "What should I know?" and "What do I do this week?"
+Audience: junior engineers through C-suite — topic must interest someone outside one company.
+
+CREDIBILITY WITHOUT NICHE:
+Use creator_takes for opinions. Use work_patterns for rare "I've seen this in production" — generalized.
+Use achievementdoc.md only as pattern source — never as script copy.
+
+HOOK STYLE:
+Lead with universal pain or news headline — not "at my company we..."
+Examples:
+- "Most engineers debug the API when the data pipeline is wrong."
+- "OpenAI just dropped X — here's what changes for builders."
+- "LeetCode won't save you if you've never shipped alone."

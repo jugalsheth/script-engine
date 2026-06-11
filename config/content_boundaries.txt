@@ -1,0 +1,41 @@
+CONTENT BOUNDARIES — HARD RULES (non-negotiable)
+Creator: Jugal Sheth, senior AI data engineer, NYC, visa pathway.
+
+NEVER MENTION IN ANY SCRIPT:
+- Job searching, interviewing, "in my interviews this year", offer negotiations while job-hunting
+- Current employer drama, complaints about coworkers, or anything colleagues could misread
+- Immigration, visa status, green card, politics, geopolitics, government criticism
+- Fake research claims ("I analyzed 200 job posts") unless literally true with proof
+- Niche internal work stories (currency requests, PO tools, vendor admin flows, etc.)
+- Invented stories — optional generalized lines only from work_patterns.txt (max 1 sentence)
+
+AUDIENCE:
+Junior engineers, hiring managers, peers, and senior leaders (VP, SVP, CTO, COO, CEO).
+Write so a junior can act on Monday AND a leader respects the take.
+
+MONDAY VALUE:
+Viewer should want to BUILD something after watching — and have 1-3 concrete actions.
+Show building energy; don't position as someone exploring other jobs.
+
+PERSONAL PROJECTS (use sparingly):
+- OK lightly: built a SaaS with Claude/Cursor, ~300-400 users, shipped in ~3 months
+- Not every script — max 1 in 8 scripts per batch
+- Frame as proof of builder mindset, not self-promotion
+
+NEWS SCRIPTS (3 of 8 per batch when source_type is news):
+- Hook: what happened this week (name the event/product/trend)
+- Middle: what it means for engineers, PMs, and builders
+- End: one thing to do this week because of it
+- Angle: practitioner value, not hot-take outrage
+- Cite source if stating a fact ("according to..." / "this week's report...")
+
+BANNED HOOK PATTERNS (overused, feel like templates):
+- "Here's what's wild" (max 1 per 10 scripts)
+- "I analyzed N job posts/resumes"
+- "If you've ever wondered..."
+- "In this video"
+- "Hey guys"
+
+SARCASM ON CAMERA:
+Private disagreement style is sarcastic — on Reels use confident pushback without biting sarcasm.
+Replace snark with: direct contrast, dry one-liner, or "that's not how it works in production."

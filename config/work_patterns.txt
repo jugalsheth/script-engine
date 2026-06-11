@@ -1,0 +1,110 @@
+WORK PATTERNS — generalized from achievementdoc.md (internal reference only)
+These are HOW Jugal works, NOT what to read verbatim on camera.
+Use to add 0-1 sentences of credibility — always translated to universal language.
+
+RULES:
+- NEVER read niche internal features (currency requests, vendor dropdowns, PO tools, etc.)
+- Generalize stack: Snowflake → "your warehouse", NetSuite → "your ERP", HiBob → "your HRIS"
+- Generalize domain: procurement → "internal tools", "approval workflows", "ops systems"
+- Max ONE pattern touch per script. Max TWO pattern scripts per 8-script batch.
+- 80% of scripts: zero personal work mention — pure value for the viewer.
+
+---
+
+id: figure_it_out_integration
+internal_source: ERP OAuth, undocumented APIs
+generalized_line: "Nobody hands you a syllabus for the hard integration — you read the docs, fail, ship anyway."
+universal_lesson: Grit on ugly integrations separates seniors from tutorial followers.
+plug_when: API design, career growth, learning, legacy systems
+
+---
+
+id: trace_data_not_api
+internal_source: vendor dimension out of sync with app
+generalized_line: "If the UI looks wrong, trace the data pipeline before you rewrite the frontend."
+universal_lesson: Data lineage debugging beats random code changes.
+plug_when: debugging, data engineering, full-stack, SQL
+
+---
+
+id: context_before_buttons
+internal_source: admins approving without vendor context
+generalized_line: "Most bad decisions in internal tools are missing context, not missing features."
+universal_lesson: Ship the context layer before optimizing the UI.
+plug_when: product, UX, B2B tools, PM audience
+
+---
+
+id: self_service_beats_slack
+internal_source: duplicate requests, no status visibility
+generalized_line: "If users can't see status, they'll duplicate work in Slack and email."
+universal_lesson: Self-service visibility reduces ops load everywhere.
+plug_when: product, workflow, startup, internal tools
+
+---
+
+id: preserve_user_work
+internal_source: resubmit re-entering entire form
+generalized_line: "Never make users re-type data you already have — pre-fill and preserve state."
+universal_lesson: Friction kills adoption on any form-heavy product.
+plug_when: UX, frontend, product design
+
+---
+
+id: observability_is_product
+internal_source: logging gaps, notification holes
+generalized_line: "You don't own a system in production until you can see what broke and who got notified."
+universal_lesson: Logging and alerts are features, not afterthoughts.
+plug_when: SRE, monitoring, production, on-call culture
+
+---
+
+id: boring_automation_wins
+internal_source: automated PO creation, queues, DLQ
+generalized_line: "The unsexy automation — queues, retries, dead-letter handling — is where enterprise time gets saved."
+universal_lesson: Boring infra work has the highest ROI.
+plug_when: AWS, backend, automation, career advice
+
+---
+
+id: inbox_is_backlog
+internal_source: features from user emails in January 2026
+generalized_line: "The best feature specs I ever got were angry user emails — not roadmap decks."
+universal_lesson: Talk to users before prioritizing.
+plug_when: product, indie hacking, junior career advice
+
+---
+
+id: ai_brainstorm_ship_split
+internal_source: Claude + Cursor workflow, side SaaS
+generalized_line: "I plan in one AI tool and ship in my IDE — brainstorm wide, execute narrow."
+universal_lesson: Separate thinking from building when using AI.
+plug_when: AI tools, Cursor, Claude, productivity
+
+---
+
+id: context_window_discipline
+internal_source: hallucination when context full
+generalized_line: "When AI starts hallucinating, check your context window before you blame the model."
+universal_lesson: AI needs scoped tasks and human verification.
+plug_when: AI engineering, prompting, junior mistakes
+
+---
+
+id: solo_end_to_end
+internal_source: full procurement platform alone
+generalized_line: "One engineer who owns frontend, backend, and deploy beats three who only own tickets."
+universal_lesson: End-to-end ownership is a career multiplier.
+plug_when: career, full-stack, leadership, hiring managers
+
+---
+
+TRANSLATION EXAMPLES (always do this):
+BAD: "Currency requests had zero vendor context"
+GOOD: "Internal approval tools fail when decision-makers can't see the data they need"
+
+BAD: "I built NetSuite PO automation with SQS"
+GOOD: "Automate handoffs to your ERP with a queue and retry logic"
+
+BAD: "Snowflake dimension was wrong"
+GOOD: "Your warehouse dimension and your app were out of sync"
