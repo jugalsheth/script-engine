@@ -178,5 +178,45 @@
     "opening_line": "DSA interviews are finally dying and hiring managers are panicking.",
     "hook_type": "CONTRARIAN STRIKE",
     "date": "2026-06-11"
+  },
+  {
+    "opening_line": "This week's jobs report shows data engineers getting hired at twice the rate of other tech roles \u2014 and there's a simple reason why.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "GitHub just released their developer survey and eighty seven percent of engineers are using AI tools daily \u2014 but here's what's wild.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "This week's hiring reports dropped and three skills are dominating every tech job posting \u2014 but ninety percent of engineers are preparing for the wrong interviews.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "While everyone's panicking about tech layoffs, here's the signal most engineers are completely missing.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Databricks, Kafka, and Azure show up in seventy percent of data engineering job posts \u2014 but here's what's wild.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Senior engineers are drowning in new tools but can't stop learning or they'll get left behind.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Eighty three percent of engineers are experimenting with AI tools but only twenty percent are actually shipping faster.",
+    "hook_type": "CONTRARIAN_STRIKE",
+    "date": "2026-06-11"
+  },
+  {
+    "opening_line": "The most valuable engineers in twenty twenty six aren't the ones grinding LeetCode \u2014 they're building full systems with AI, cloud, and data.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-11"
   }
 ]
