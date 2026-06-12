@@ -26,6 +26,14 @@ def _format_recording_sheet(script: dict) -> str:
     est_sec = script.get("estimated_seconds", "?")
     length_warn = script.get("length_warning")
     template = _escape(script.get("edit_template", "THREE_STEP_HOT_TAKE"))
+    validation_score = script.get("validation_score")
+    validation_passed = script.get("validation_passed")
+    validation_line = ""
+    if validation_score is not None:
+        status = "✅" if validation_passed else "⚠️"
+        validation_line = f"{status} Validation: {validation_score}/100"
+        if script.get("validation_errors"):
+            validation_line += f" — {_escape(script['validation_errors'][0][:80])}"
     crust = _escape(
         (script.get("video_triggers") or {}).get("beat_phrases", {}).get("crust", "")
     )
@@ -37,6 +45,8 @@ def _format_recording_sheet(script: dict) -> str:
         f"📁 Save as: <code>{filename}</code>",
         f"⏱️ Target: ~{est_sec}s ({word_count} words) | Template: {template}",
     ]
+    if validation_line:
+        lines.append(validation_line)
     if length_warn:
         lines.append(f"⚠️ {_escape(length_warn)}")
     lines.extend([
@@ -119,15 +129,22 @@ def _format_header(
     topics_researched: int,
     topics_dropped: int,
     content_phase: str = "growth",
+    scripts: list | None = None,
 ) -> str:
     phase_line = (
         "🌱 <b>INTRO PHASE</b> — brand-building scripts. Record these first.\n"
         if content_phase == "intro"
         else "🔥 <b>GROWTH PHASE</b> — full power scripts. Go hard.\n"
     )
+    validation_line = ""
+    if scripts:
+        passed = sum(1 for s in scripts if s.get("validation_passed"))
+        avg_score = round(sum(s.get("validation_score", 0) for s in scripts) / len(scripts))
+        validation_line = f"Validation: {passed}/{len(scripts)} passed | avg {avg_score}/100\n"
     return (
         f"🎬 <b>YOUR {script_count} SCRIPTS</b> — {date_str}\n"
         f"{phase_line}"
+        f"{validation_line}"
         f"Generated from {topics_researched} topics researched\n"
         f"{topics_dropped} dropped by safety filter\n"
     )
@@ -179,7 +196,7 @@ async def send_via_telegram(
 
     date_str = datetime.now().strftime("%B %d, %Y")
     header = _format_header(
-        len(scripts), date_str, topics_researched, topics_dropped, content_phase
+        len(scripts), date_str, topics_researched, topics_dropped, content_phase, scripts,
     )
     footer = _format_footer()
 

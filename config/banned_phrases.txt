@@ -1,0 +1,22 @@
+# Machine-readable banned phrases for script_validator.py
+# One pattern per line. Lines starting with # are comments.
+# Use regex: prefix with "regex:" for pattern matching.
+
+here's what's wild
+hey guys
+in this video
+if you've ever wondered
+i analyzed
+i've analyzed
+i reviewed over
+getting interviews
+technical interviews
+job searching
+job search
+in my interviews
+offer negotiation
+at my company
+
+regex:i analyzed \d+
+regex:i've reviewed over \d+
+regex:\bat my company\b

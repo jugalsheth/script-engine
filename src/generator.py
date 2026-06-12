@@ -9,10 +9,14 @@ import anthropic
 
 from src import hook_bank
 from src.content_phase import get_phase, get_videos_published
+from src.script_validator import ValidationResult, validate_script
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 SONNET_MODEL = "claude-sonnet-4-20250514"
+HAIKU_MODEL = "claude-3-5-haiku-20241022"
 MAX_TOKENS = 3200
+MAX_GENERATION_ATTEMPTS = 3
+MAX_WORDS = 145
 
 HOOK_TO_TEMPLATE = {
     "OPEN LOOP": "THREE_STEP_HOT_TAKE",
@@ -220,8 +224,149 @@ def _normalize_script(script: dict) -> dict:
     word_count = len(script.get("spoken_script", "").split())
     script["word_count"] = word_count
     script["estimated_seconds"] = round(word_count / 2.6)
-    if word_count > 150:
-        script["length_warning"] = f"OVER TARGET: {word_count} words (max 145). Trim before recording."
+    if word_count > MAX_WORDS:
+        script["length_warning"] = f"OVER TARGET: {word_count} words (max {MAX_WORDS}). Trim before recording."
+
+    return script
+
+
+def _attach_validation(script: dict, topic: dict, result: ValidationResult) -> dict:
+    script["validation_score"] = result.score
+    script["validation_passed"] = result.passed
+    script["validation_errors"] = result.errors
+    script["validation_warnings"] = result.warnings
+    if not result.passed:
+        script["length_warning"] = script.get("length_warning") or result.errors[0]
+    return script
+
+
+def _validation_feedback(result: ValidationResult) -> str:
+    lines = ["Fix ALL of the following validation errors:"]
+    for err in result.errors:
+        lines.append(f"- {err}")
+    for warn in result.warnings[:5]:
+        lines.append(f"- WARNING: {warn}")
+    lines.append(f"Hard max {MAX_WORDS} words. Keep all trigger phrases verbatim in spoken_script.")
+    return "\n".join(lines)
+
+
+async def _voice_rewrite_pass(
+    client: anthropic.AsyncAnthropic,
+    script: dict,
+    topic: dict,
+    validation: ValidationResult,
+) -> dict | None:
+    """Second pass: tighten spoken_script while preserving trigger phrases."""
+    triggers = script.get("video_triggers") or {}
+    trigger_json = json.dumps(
+        {
+            "stat_phrases": triggers.get("stat_phrases", []),
+            "fun_phrases": triggers.get("fun_phrases", []),
+            "beat_phrases": triggers.get("beat_phrases", {}),
+            "visual_moments": script.get("visual_moments", []),
+        },
+        indent=2,
+    )
+    voice_samples = _load_config_file("voice_samples.txt")
+    creator_takes = _load_config_file("creator_takes.txt")
+    prompt = (
+        "Rewrite ONLY the spoken_script field for a verbatim teleprompter read.\n"
+        f"Target: 130-{MAX_WORDS} words. Short punchy sentences. Alternate long and short.\n"
+        "Sound like Jugal: third-language clarity, energetic storyteller, not essay.\n"
+        "Keep EVERY trigger phrase EXACTLY as listed — do not paraphrase them.\n"
+        "Update opening_line, loopback_closer, open_loop_plant, open_loop_payoff to match.\n"
+        "Include 1-2 signature phrases from: Right?, That's all it is., The truth is, Figure it out.\n"
+        "No banned phrases: here's what's wild, hey guys, I analyzed N posts, interview prep language.\n\n"
+        f"VALIDATION ISSUES TO FIX:\n{_validation_feedback(validation)}\n\n"
+        f"TRIGGERS (must appear verbatim in spoken_script):\n{trigger_json}\n\n"
+        f"VOICE SAMPLES:\n{voice_samples[:2500]}\n\n"
+        f"CREATOR VOICE:\n{creator_takes[:1500]}\n\n"
+        f"CURRENT spoken_script ({len((script.get('spoken_script') or '').split())} words):\n"
+        f"{script.get('spoken_script', '')}\n\n"
+        "Return ONLY JSON: {\"spoken_script\", \"opening_line\", \"loopback_closer\", "
+        "\"open_loop_plant\", \"open_loop_payoff\"}"
+    )
+    try:
+        response = await client.messages.create(
+            model=HAIKU_MODEL,
+            max_tokens=1200,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        parsed = _parse_script_json(response.content[0].text)
+        if not parsed or not parsed.get("spoken_script"):
+            return None
+        for key in (
+            "spoken_script",
+            "opening_line",
+            "loopback_closer",
+            "open_loop_plant",
+            "open_loop_payoff",
+        ):
+            if parsed.get(key):
+                script[key] = parsed[key]
+        return script
+    except Exception as exc:
+        print(f"   Voice rewrite failed: {exc}")
+        return None
+
+
+async def _generate_one_script(
+    client: anthropic.AsyncAnthropic,
+    system_prompt: str,
+    topic: dict,
+    script_number: int,
+    recent_hooks: list[str],
+    phase: str,
+    brand_episode: int,
+    script_type: str,
+    batch_size: int,
+) -> dict | None:
+    """Generate, validate, retry, and voice-rewrite a single script."""
+    user_prompt = _build_user_prompt(
+        topic, script_number, recent_hooks, phase, brand_episode, script_type, batch_size,
+    )
+    script: dict | None = None
+    last_result: ValidationResult | None = None
+
+    for attempt in range(1, MAX_GENERATION_ATTEMPTS + 1):
+        feedback = ""
+        if last_result and not last_result.passed:
+            feedback = f"\n\nPREVIOUS ATTEMPT FAILED VALIDATION:\n{_validation_feedback(last_result)}"
+
+        response = await client.messages.create(
+            model=SONNET_MODEL,
+            max_tokens=MAX_TOKENS,
+            system=system_prompt,
+            messages=[{"role": "user", "content": user_prompt + feedback}],
+        )
+        script = _parse_script_json(response.content[0].text)
+        if not script:
+            print(f"   Attempt {attempt}: JSON parse failed")
+            continue
+
+        script = _normalize_script(script)
+        last_result = validate_script(script, topic)
+        script = _attach_validation(script, topic, last_result)
+
+        if last_result.passed:
+            print(f"   Validation PASS ({last_result.score}/100) on attempt {attempt}")
+            break
+        print(f"   Attempt {attempt} FAIL ({last_result.score}/100): {last_result.errors[0]}")
+
+    if not script or not last_result:
+        return None
+
+    if not last_result.passed:
+        print("   Running voice rewrite pass...")
+        rewritten = await _voice_rewrite_pass(client, script, topic, last_result)
+        if rewritten:
+            script = _normalize_script(rewritten)
+            last_result = validate_script(script, topic)
+            script = _attach_validation(script, topic, last_result)
+            if last_result.passed:
+                print(f"   Voice rewrite PASS ({last_result.score}/100)")
+            else:
+                print(f"   Voice rewrite still FAIL: {last_result.errors[0]}")
 
     return script
 
@@ -280,7 +425,7 @@ def _intro_requirements(brand_episode: int) -> str:
         "4. TONE — warm, honest, peer-to-peer with ONE energy spike mid-script.\n"
         "   Include signature phrase: 'Right?' or 'That's all it is.' or 'The truth is'\n\n"
         "5. LOOP-BACK CLOSER — final line connects back to the opening hook.\n\n"
-        "6. LENGTH — 120-150 words (~50-60 seconds).\n\n"
+        "6. LENGTH — HARD MAX 145 words (~50-55 seconds).\n\n"
         "7. VISUAL — populate visual_moments + video_triggers (see contract below).\n\n"
         "8. VALUE FIRST — universal lesson for the viewer. No niche internal work stories.\n\n"
         f'{_video_contract_block()}'
@@ -423,28 +568,21 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
             f"[{phase}/{script_type}] {topic['topic_title'][:45]}..."
         )
         try:
-            response = await client.messages.create(
-                model=SONNET_MODEL,
-                max_tokens=MAX_TOKENS,
-                system=system_prompt,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": _build_user_prompt(
-                            topic, i, recent_hooks, phase, brand_episode,
-                            script_type, batch_size,
-                        ),
-                    }
-                ],
+            script = await _generate_one_script(
+                client,
+                system_prompt,
+                topic,
+                i,
+                recent_hooks,
+                phase,
+                brand_episode,
+                script_type,
+                batch_size,
             )
-            content = response.content[0].text
-            script = _parse_script_json(content)
 
             if not script:
-                print(f"⚠️ Failed to parse JSON for script {i}")
+                print(f"⚠️ Failed to generate script {i}")
                 continue
-
-            script = _normalize_script(script)
 
             script["script_number"] = script.get("script_number", i)
             script["script_type"] = script.get("script_type", script_type)

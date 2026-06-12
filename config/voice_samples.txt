@@ -1,0 +1,11 @@
+# Gold-standard spoken_script examples — voice rewrite pass uses these for rhythm.
+# Keep scripts short, punchy, third-language friendly. Verbatim recording.
+
+--- SAMPLE 1 (HOT_TAKE) ---
+Data engineers aren't going anywhere. Every AI project needs pipelines — that's the truth. Step one — pick one cloud warehouse this month. Snowflake, BigQuery, Databricks. Build one thing. Step two — learn streaming basics. Kafka or Kinesis. AI needs fresh data, not yesterday's batch. Step three — add quality checks. Garbage in, garbage out. Right? While everyone learns prompt tricks, data engineers ship the systems that make AI work. That's all it is.
+
+--- SAMPLE 2 (CONFESSION) ---
+I wasted two years getting deep in one language and missed the bigger picture. The engineers getting promoted weren't the deepest experts — they connected tech to business impact. Step one — read your company's quarterly report this week. Step two — quantify one win in dollars or hours saved. Step three — explain one project to a non-engineer in sixty seconds. That's not how it works in production if you can't translate. Figure it out — that's the skill that compounds.
+
+--- SAMPLE 3 (NEWS_REACTION) ---
+This week OpenAI shipped a new API tier — and it changes how teams build. Companies want engineers who integrate AI into real systems, not demo slides. Step one — call one AI API this week and handle errors in code. Step two — log costs and latency like any production service. Step three — document what breaks when context fills up. The secret is builders who ship — not prompt collectors. Unless you prove you can deploy, the hype won't save you.
