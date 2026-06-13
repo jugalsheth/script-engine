@@ -3,6 +3,7 @@
   "whisper_model": "base",
   "dedup_lookback_days": 14,
   "keyword_overlap_threshold": 0.6,
+  "min_text_chars": 80,
   "reserved_slots": {
     "intro": 1,
     "growth": 3

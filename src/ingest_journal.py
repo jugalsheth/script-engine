@@ -145,43 +145,20 @@ def _voice_message_from_update(update: dict) -> dict | None:
     return None
 
 
-def _process_voice_update(
-    update: dict,
-    token: str,
-    chat_id: str,
+def _finalize_journal_entry(
+    update_id: int,
+    timestamp: str,
+    raw_text: str,
+    duration_sec: int,
+    input_type: str,
     config: dict,
     queue: list[dict],
     journal_recent: list[dict],
-) -> tuple[dict | None, bool]:
-    """Returns (journal_entry, queue_changed)."""
-    msg = update.get("message") or update.get("edited_message")
-    if not msg:
-        return None, False
-
-    if str(msg.get("chat", {}).get("id")) != str(chat_id):
-        return None, False
-
-    voice = _voice_message_from_update(update)
-    if not voice:
-        return None, False
-
-    update_id = update["update_id"]
-    duration = int(voice.get("duration", 0))
-    file_id = voice["file_id"]
-    timestamp = datetime.fromtimestamp(
-        msg.get("date", 0), tz=timezone.utc,
-    ).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    oversized = duration > config.get("max_duration_sec", 300)
-    raw_text = ""
-
-    with tempfile.TemporaryDirectory() as tmpdir:
-        media_path = Path(tmpdir) / "note"
-        media_path = _download_voice_file(token, file_id, media_path)
-        raw_text = _transcribe_media(media_path, config.get("whisper_model", "base"))
-
+) -> tuple[dict, bool]:
+    """Dedup, queue insert, and build journal line."""
+    oversized = duration_sec > config.get("max_duration_sec", 300)
     if not raw_text:
-        print(f"   ⚠️ Empty transcript for update {update_id}, skipping queue")
+        print(f"   ⚠️ Empty content for update {update_id}, skipping queue")
 
     domain_tags = domain_tags_for_text(raw_text) if raw_text else []
     queue_id = None
@@ -208,15 +185,67 @@ def _process_voice_update(
     entry = {
         "timestamp": timestamp,
         "telegram_update_id": update_id,
-        "duration_sec": duration,
+        "duration_sec": duration_sec,
+        "input_type": input_type,
         "raw_text": raw_text,
         "domain_tags": domain_tags,
         "queue_id": queue_id,
         "oversized": oversized,
     }
     if oversized:
-        print(f"   ⚠️ Oversized voice note ({duration}s) — archived only, not queued")
+        print(f"   ⚠️ Oversized note ({duration_sec}s) — archived only, not queued")
     return entry, queue_changed
+
+
+def _process_journal_update(
+    update: dict,
+    token: str,
+    chat_id: str,
+    config: dict,
+    queue: list[dict],
+    journal_recent: list[dict],
+) -> tuple[dict | None, bool]:
+    """Returns (journal_entry, queue_changed)."""
+    msg = update.get("message") or update.get("edited_message")
+    if not msg:
+        return None, False
+
+    if str(msg.get("chat", {}).get("id")) != str(chat_id):
+        return None, False
+
+    update_id = update["update_id"]
+    timestamp = datetime.fromtimestamp(
+        msg.get("date", 0), tz=timezone.utc,
+    ).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    voice = _voice_message_from_update(update)
+    if voice:
+        duration = int(voice.get("duration", 0))
+        file_id = voice["file_id"]
+        input_type = (
+            "video_note" if msg.get("video_note")
+            else "audio" if msg.get("audio")
+            else "voice"
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            media_path = Path(tmpdir) / "note"
+            media_path = _download_voice_file(token, file_id, media_path)
+            raw_text = _transcribe_media(media_path, config.get("whisper_model", "base"))
+        return _finalize_journal_entry(
+            update_id, timestamp, raw_text, duration, input_type,
+            config, queue, journal_recent,
+        )
+
+    text = (msg.get("text") or "").strip()
+    min_chars = int(config.get("min_text_chars", 80))
+    if text and len(text) >= min_chars:
+        print(f"   📝 Text journal entry ({len(text)} chars)")
+        return _finalize_journal_entry(
+            update_id, timestamp, text, 0, "text",
+            config, queue, journal_recent,
+        )
+
+    return None, False
 
 
 def run() -> dict:
@@ -245,7 +274,7 @@ def run() -> dict:
 
     for update in updates:
         max_update_id = max(max_update_id, update["update_id"])
-        entry, changed = _process_voice_update(
+        entry, changed = _process_journal_update(
             update, token, chat_id, config, queue, journal_recent,
         )
         if entry is None:
