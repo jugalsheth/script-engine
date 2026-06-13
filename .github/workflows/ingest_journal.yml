@@ -36,8 +36,8 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/journal/*.jsonl
           git add data/personal_topics_queue.json
           git add data/telegram_offset.json
+          find data/journal -name '*.jsonl' -print -exec git add {} +
           git diff --staged --quiet || git commit -m "chore: journal ingest $(date +%Y-%m-%d-%H%M)"
           git push || echo "Nothing to push"

@@ -101,12 +101,12 @@ def _download_voice_file(token: str, file_id: str, dest: Path) -> None:
         dest.write_bytes(resp.content)
 
 
-def _transcribe_ogg(ogg_path: Path, model_name: str) -> str:
-    wav_path = ogg_path.with_suffix(".wav")
+def _transcribe_media(media_path: Path, model_name: str) -> str:
+    wav_path = media_path.with_suffix(".wav")
     try:
         subprocess.run(
             [
-                "ffmpeg", "-i", str(ogg_path),
+                "ffmpeg", "-i", str(media_path),
                 "-ar", "16000", "-ac", "1", "-y", str(wav_path),
             ],
             capture_output=True,
@@ -117,7 +117,7 @@ def _transcribe_ogg(ogg_path: Path, model_name: str) -> str:
         text = " ".join(seg.text.strip() for seg in segments).strip()
         return text
     finally:
-        ogg_path.unlink(missing_ok=True)
+        media_path.unlink(missing_ok=True)
         wav_path.unlink(missing_ok=True)
 
 
@@ -129,6 +129,8 @@ def _voice_message_from_update(update: dict) -> dict | None:
         return msg["voice"]
     if msg.get("audio"):
         return msg["audio"]
+    if msg.get("video_note"):
+        return msg["video_note"]
     return None
 
 
@@ -163,9 +165,9 @@ def _process_voice_update(
     raw_text = ""
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        ogg_path = Path(tmpdir) / "voice.ogg"
-        _download_voice_file(token, file_id, ogg_path)
-        raw_text = _transcribe_ogg(ogg_path, config.get("whisper_model", "base"))
+        media_path = Path(tmpdir) / "note.bin"
+        _download_voice_file(token, file_id, media_path)
+        raw_text = _transcribe_media(media_path, config.get("whisper_model", "base"))
 
     if not raw_text:
         print(f"   ⚠️ Empty transcript for update {update_id}, skipping queue")
@@ -207,8 +209,8 @@ def _process_voice_update(
 
 
 def run() -> dict:
-    token = os.getenv("TELEGRAM_BOT_TOKEN")
-    chat_id = os.getenv("TELEGRAM_CHAT_ID")
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
     if not token or not chat_id:
         raise RuntimeError("TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID must be set")
 
@@ -218,8 +220,11 @@ def run() -> dict:
 
     updates = _telegram_api(token, "getUpdates", offset=offset + 1, timeout=30)
     if not updates:
-        print("   No new voice updates")
+        print("   No new updates from Telegram")
         return {"processed": 0, "queued": 0, "merged": 0, "oversized": 0}
+
+    print(f"   Received {len(updates)} update(s) from Telegram")
+    skipped = 0
 
     queue = _load_queue()
     journal_recent = load_recent_journal_entries()
@@ -233,6 +238,7 @@ def run() -> dict:
             update, token, chat_id, config, queue, journal_recent,
         )
         if entry is None:
+            skipped += 1
             continue
         _append_journal_line(entry)
         stats["processed"] += 1
@@ -250,6 +256,9 @@ def run() -> dict:
         if changed:
             queue_changed = True
             journal_recent = load_recent_journal_entries()
+
+    if skipped:
+        print(f"   Skipped {skipped} non-voice update(s) (text/replies/etc.)")
 
     if max_update_id > offset:
         _save_offset(max_update_id)
