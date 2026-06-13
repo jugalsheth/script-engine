@@ -89,31 +89,42 @@ def _telegram_api(token: str, method: str, **params) -> dict:
     return data["result"]
 
 
-def _download_voice_file(token: str, file_id: str, dest: Path) -> None:
+def _download_voice_file(token: str, file_id: str, dest: Path) -> Path:
     file_info = _telegram_api(token, "getFile", file_id=file_id)
     file_path = file_info.get("file_path")
     if not file_path:
         raise RuntimeError("Telegram getFile returned no file_path")
+    suffix = Path(file_path).suffix or ".ogg"
+    if dest.suffix != suffix:
+        dest = dest.with_suffix(suffix)
     url = f"https://api.telegram.org/file/bot{token}/{file_path}"
     with httpx.Client(timeout=120.0) as client:
         resp = client.get(url)
         resp.raise_for_status()
         dest.write_bytes(resp.content)
+    return dest
 
 
 def _transcribe_media(media_path: Path, model_name: str) -> str:
     wav_path = media_path.with_suffix(".wav")
     try:
-        subprocess.run(
+        result = subprocess.run(
             [
                 "ffmpeg", "-i", str(media_path),
                 "-ar", "16000", "-ac", "1", "-y", str(wav_path),
             ],
             capture_output=True,
-            check=True,
+            text=True,
         )
+        if result.returncode != 0:
+            print(f"   ⚠️ ffmpeg failed: {result.stderr[-300:]}")
+            return ""
         model = WhisperModel(model_name, device="cpu", compute_type="int8")
-        segments, _ = model.transcribe(str(wav_path), beam_size=5, vad_filter=True)
+        segments, _ = model.transcribe(
+            str(wav_path),
+            beam_size=5,
+            vad_filter=False,
+        )
         text = " ".join(seg.text.strip() for seg in segments).strip()
         return text
     finally:
@@ -165,8 +176,8 @@ def _process_voice_update(
     raw_text = ""
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        media_path = Path(tmpdir) / "note.bin"
-        _download_voice_file(token, file_id, media_path)
+        media_path = Path(tmpdir) / "note"
+        media_path = _download_voice_file(token, file_id, media_path)
         raw_text = _transcribe_media(media_path, config.get("whisper_model", "base"))
 
     if not raw_text:
