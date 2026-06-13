@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "682b7b6c-b965-4009-b3f6-a3a45f258adb",
+    "first_captured": "2026-06-13T17:38:54Z",
+    "raw_text": "first topic so you remember this matrix that we have seen where 90% or 80% of the dots are grade are white. then there is a green area where people actually just use AI for asking chat. what kind of questions when there's a red area where we all people who are building automations building cloud like doing Claude codes and courses and building SAS applications, deploying shipping, selling whatever are living in right? when you look at this picture it gives you a sense of relief and complacency. it's a good and a bad, but at the same time it feels like what there's a world out there who is not using this. so one of the good things and the bad things that I feel is that perception creates reality and I do not want to perceive that we are a small minority who's doing this and because everyone around me at least is doing this and so which shows me in my head 100% of the people who are around me and the world is actually building products and that kind of keeps pushing me so that I do not stay complacent and do not bend things properly. that's first and because of that I am building XYZ app build creator Auto. I build viral engines script engines about CIO terminal which is like a Bloomberg terminal for myself and I keep building the same kind of on better much better production level things inside my company which are real-time integrations etc. so don't let anything lie to you. try to purse you more so that you push yourself more and I think that's the secret to success",
+    "related_mentions": [],
+    "domain_tags": [
+      "ai_ml",
+      "full_stack",
+      "cloud_aws",
+      "productivity"
+    ],
+    "custom_visual_requests": [],
+    "processed": false,
+    "used_in_script": null
+  },
+  {
+    "id": "58d8a6c4-52f7-4047-9cb3-eed355fbb52e",
+    "first_captured": "2026-06-13T17:38:59Z",
+    "raw_text": "I go to g. I got a Gmail notification from GitHub that my pipeline failed. this pipeline was and when I went into the GitHub actions Chrome it showed me that everything mostly passed. except the mailer check mailer lights API. while it was working for the last 14 days and on deeper digging, I realized that they gave me a 14 days free trial to experience what the full version should feel like I I felt so betrayed because I have built a whole dependency of creating custom HTML newsletters and then putting it inside my draft and then sending it over this kind of ends today, right? and because it ends is because of the free tier limitations. now what I had to do either I had to upgrade it. my options were to upgrade it or to create an automation where it sends an HTML automatically on my Gmail. I copy paste it inside mailerlite and then I send it out for me for the few subscribers that I have and me just starting out. I want my systems to be frugal, robust, scalable and something. even if with a manual intervention the ROI is less and so that's what I did this. this is actually practical example. what a production grade system when it fails, how it feels like and how you pivot things",
+    "related_mentions": [],
+    "domain_tags": [
+      "ai_ml",
+      "productivity",
+      "data_engineering",
+      "cloud_aws"
+    ],
+    "custom_visual_requests": [],
+    "processed": false,
+    "used_in_script": null
+  }
+]
