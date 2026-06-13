@@ -371,6 +371,51 @@ async def _generate_one_script(
     return script
 
 
+async def _extract_visual_requests(
+    client: anthropic.AsyncAnthropic,
+    raw_transcript: str,
+) -> list[dict]:
+    """Extract explicit visual/diagram requests from journal ramble via Haiku."""
+    if not raw_transcript.strip():
+        return []
+    prompt = (
+        "Extract any explicit visual or diagram requests from this creator transcript.\n"
+        "Look for phrases like 'show a diagram of X', 'put up a before/after of Y', "
+        "'display the architecture here', 'visualize this'.\n\n"
+        f"TRANSCRIPT:\n{raw_transcript}\n\n"
+        'Return ONLY a JSON array: [{"trigger_phrase": "exact spoken phrase", '
+        '"description": "what visual to show"}] or [] if none.'
+    )
+    try:
+        response = await client.messages.create(
+            model=HAIKU_MODEL,
+            max_tokens=800,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        content = response.content[0].text.strip()
+        if content.startswith("```"):
+            content = re.sub(r"^```(?:json)?\s*", "", content)
+            content = re.sub(r"\s*```$", "", content)
+        match = re.search(r"\[[\s\S]*\]", content)
+        if not match:
+            return []
+        parsed = json.loads(match.group())
+        if not isinstance(parsed, list):
+            return []
+        results = []
+        for item in parsed:
+            if isinstance(item, dict) and item.get("trigger_phrase"):
+                results.append({
+                    "trigger_phrase": item["trigger_phrase"],
+                    "description": item.get("description", ""),
+                    "asset_status": "needs_creation",
+                })
+        return results
+    except Exception as exc:
+        print(f"   ⚠️ Visual request extraction failed: {exc}")
+        return []
+
+
 def _parse_script_json(content: str) -> dict | None:
     cleaned = content.strip()
     if cleaned.startswith("```"):
@@ -516,6 +561,28 @@ def _build_user_prompt(
         else _growth_requirements()
     )
 
+    if topic.get("source_type") == "journal":
+        raw_transcript = topic.get("raw_transcript", topic.get("topic_summary", ""))
+        return (
+            "Generate a complete video script FROM the creator's verbatim journal ramble below.\n"
+            "Preserve his angle, specifics, and framing — do not genericize into a trend piece.\n"
+            "Apply Hook → Problem → Solution → CTA structure on top of HIS words and ideas.\n\n"
+            f"CREATOR RAMBLE (verbatim — primary source material):\n{raw_transcript}\n\n"
+            f"TERRITORY: {territory}\n"
+            f"DOMAIN TAGS: {', '.join(topic.get('domain_tags', []))}\n\n"
+            f"{_script_type_requirements(script_type, script_number, batch_size)}\n"
+            f"creator_take_anchor must reflect the creator's actual angle from the ramble.\n\n"
+            f"Avoid reusing any of these recent opening lines: {hooks_block}\n\n"
+            f"Return a JSON object with exactly these fields:\n"
+            "{\n"
+            f'"script_number": {script_number},\n'
+            f'"territory": "{territory}",\n'
+            f"{JSON_FIELDS.strip()}\n"
+            "}\n\n"
+            f"{requirements}\n\n"
+            "Return ONLY the JSON object. No markdown, no explanation, no backticks."
+        )
+
     return (
         f"Generate a complete video script for the following topic:\n"
         f"TOPIC: {topic['topic_title']}\n"
@@ -589,6 +656,18 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
             script["territory"] = script.get("territory", topic.get("territory", "General"))
             script["source_topic"] = topic["topic_title"]
             script["source_type"] = topic.get("source_type", "trend")
+            script["source"] = "journal" if topic.get("source_type") == "journal" else "trending"
+            script["custom_visual_overrides"] = []
+            if topic.get("queue_id"):
+                script["queue_id"] = topic["queue_id"]
+            if topic.get("source_type") == "journal":
+                raw = topic.get("raw_transcript", "")
+                overrides = await _extract_visual_requests(client, raw)
+                script["custom_visual_overrides"] = overrides
+                if overrides:
+                    print(f"   Found {len(overrides)} custom visual request(s)")
+                    from src.matcher import update_queue_visual_requests
+                    update_queue_visual_requests(topic.get("queue_id", ""), overrides)
             script["content_phase"] = phase
             if phase == "intro":
                 script["brand_episode"] = f"{brand_episode} of 4"

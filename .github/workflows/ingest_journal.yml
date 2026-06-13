@@ -1,19 +1,22 @@
-name: Generate Weekly Scripts
+name: Ingest Content Journal
 
 on:
   schedule:
-    - cron: '17 12 * * 0'  # Sundays 8:17am ET (12:17 UTC)
-  workflow_dispatch:  # Allow manual trigger
+    - cron: '0 13,1 * * *'  # 8am and 8pm ET (1:00 and 13:00 UTC)
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  generate:
+  ingest:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,20 +26,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Script Engine
+      - name: Run journal ingest
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py
+        run: python -m src.ingest_journal
 
       - name: Commit updated data files
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/hook_bank.json
-          git add data/scripts_archive.json
+          git add data/journal/*.jsonl
           git add data/personal_topics_queue.json
-          git diff --staged --quiet || git commit -m "chore: update data files $(date +%Y-%m-%d)"
+          git add data/telegram_offset.json
+          git diff --staged --quiet || git commit -m "chore: journal ingest $(date +%Y-%m-%d-%H%M)"
           git push || echo "Nothing to push"

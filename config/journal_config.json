@@ -1,0 +1,11 @@
+{
+  "max_duration_sec": 300,
+  "whisper_model": "base",
+  "dedup_lookback_days": 14,
+  "keyword_overlap_threshold": 0.6,
+  "reserved_slots": {
+    "intro": 1,
+    "growth": 3
+  },
+  "cron_note": "0 13,1 * * * — 8am/8pm ET"
+}

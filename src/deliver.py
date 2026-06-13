@@ -3,6 +3,7 @@ from __future__ import annotations
 import html
 import os
 from datetime import datetime
+from pathlib import Path
 
 import httpx
 
@@ -49,6 +50,21 @@ def _format_recording_sheet(script: dict) -> str:
         lines.append(validation_line)
     if length_warn:
         lines.append(f"⚠️ {_escape(length_warn)}")
+
+    overrides = script.get("custom_visual_overrides") or []
+    needs_creation = [o for o in overrides if o.get("asset_status") == "needs_creation"]
+    if needs_creation:
+        script_id = Path(script.get("filename_hint", "script_XX_topic.mp4")).stem
+        lines.extend(["", "<b>Custom visuals needed:</b>"])
+        for ov in needs_creation:
+            trigger = _escape(ov.get("trigger_phrase", ""))
+            desc = _escape(ov.get("description", ""))
+            lines.append(f"• At <b>{trigger}</b> — {desc}")
+            lines.append(
+                f"  Drop asset in <code>video-engine/raw_videos/custom_assets/{script_id}/</code>"
+            )
+            lines.append("  Then set asset_status to \"ready\" in scripts_archive.json")
+
     lines.extend([
         "",
         "<b>Before you hit record:</b>",
