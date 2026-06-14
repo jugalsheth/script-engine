@@ -218,5 +218,45 @@
     "opening_line": "The most valuable engineers in twenty twenty six aren't the ones grinding LeetCode \u2014 they're building full systems with AI, cloud, and data.",
     "hook_type": "CONTRARIAN STRIKE",
     "date": "2026-06-11"
+  },
+  {
+    "opening_line": "Ninety percent of engineers think they're behind on AI when really they're in the majority doing nothing.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-14"
+  },
+  {
+    "opening_line": "Your automated system just broke and you have two choices \u2014 panic or pivot like a senior engineer.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-14"
+  },
+  {
+    "opening_line": "Hiring managers stopped caring if you know Pandas and started asking if you understand embeddings in production.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-14"
+  },
+  {
+    "opening_line": "Data engineers are getting hired faster than any other tech role right now \u2014 but ninety percent are preparing for the wrong interview.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-14"
+  },
+  {
+    "opening_line": "Most engineers deploy to AWS and immediately regret three things they didn't set up first.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-14"
+  },
+  {
+    "opening_line": "Your LinkedIn profile is invisible to recruiters and you have no idea why.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-14"
+  },
+  {
+    "opening_line": "Data engineers who aren't using AI daily are about to get replaced by engineers who are.",
+    "hook_type": "IDENTITY CALL",
+    "date": "2026-06-14"
+  },
+  {
+    "opening_line": "Most engineers write SQL that works in tutorials but fails in production.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-14"
   }
 ]

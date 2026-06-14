@@ -11,8 +11,8 @@
       "productivity"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_01_the_ai_building_reality.mp4"
   },
   {
     "id": "58d8a6c4-52f7-4047-9cb3-eed355fbb52e",
@@ -26,7 +26,7 @@
       "cloud_aws"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_02_when_your_pipeline_fails.mp4"
   }
 ]
