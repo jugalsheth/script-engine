@@ -96,7 +96,13 @@
     "id": "d747edda-fbd1-423c-b011-6594886ac81c",
     "first_captured": "2026-06-16T21:52:31Z",
     "raw_text": "videos are very very modern tool for our modern tech stack in order to do our data transformations etc. it is something which is very well known but I'll not take the names. the issue is that they were teaching us from ground up in the day and age of AI and on the screen they were showing us. hey, how do you do this and how do you do that? and it started to get frustrated? I started to get very frustrated because these days the number of tools that I have picked up and the number of things that I have built using the CLI while using mcps and using natural languages in AI. once I built the whole thing then I reverse engineer it and I try to learn what actually happened and I learn as much as much depth that I want to go into. and I step back right now when in the age of AI in 2026 when people are still teaching you from ground up without knowing that all of this could have been done in like the last 10 minutes while just doing a practical hackathon kind of challenge, it it. it's almost funny so I don't know what to do what we do with this right",
-    "related_mentions": [],
+    "related_mentions": [
+      {
+        "timestamp": "2026-06-16T21:52:31Z",
+        "raw_text": "A vre very very modern tool for our modern tech stack in order to do our data transformations etc. it is something which is very well known but I'll not take the names. the issue is that they were teaching us from ground up in the day and age of AI and on the screen they were showing us. hey, how do you do this and how do you do that? and it started to get frustrated? I started to get very frustrated because these days the number of tools that I have picked up and the number of things that I have built using the CLI while using mcps and using natural languages in AI. once I built the whole thing then I reverse engineer it and I try to learn what actually happened and I learn as much as much depth that I want to go into. and I step back right now when in the age of AI in 2026 when people are still teaching you from ground up without knowing that all of this could have been done in like the last 10 minutes while just doing a practical hackathon kind of challenge, it it. it's almost funny so I don't know what to do what we do with this right",
+        "telegram_update_id": 83742101
+      }
+    ],
     "domain_tags": [
       "data_engineering",
       "full_stack",
@@ -104,6 +110,16 @@
       "ai_ml",
       "productivity"
     ],
+    "custom_visual_requests": [],
+    "processed": false,
+    "used_in_script": null
+  },
+  {
+    "id": "dd065e53-3b06-48a8-9324-41262cfcdf07",
+    "first_captured": "2026-06-17T12:11:55Z",
+    "raw_text": "I know I made a big mistake by not not not trying to get SpaceX. especially I realize that when the cursor deal went through, cursor is my go-to and I think it should be for everyone go to enough that I'm pushing my company to buy it for us as a tech stack and if SpaceX is buying it, I don't know how good the future of cursor is. one thing might maybe are you scared about is the pricing. I hope that does not change or maybe they improve it a lot because Elon has the capabilities to do that. but I'm sure it's going to just keep improving and any spear is going to the moon",
+    "related_mentions": [],
+    "domain_tags": [],
     "custom_visual_requests": [],
     "processed": false,
     "used_in_script": null
