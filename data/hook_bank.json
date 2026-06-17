@@ -258,5 +258,45 @@
     "opening_line": "Most engineers write SQL that works in tutorials but fails in production.",
     "hook_type": "CONFESSION",
     "date": "2026-06-14"
+  },
+  {
+    "opening_line": "One engineer with AI is doing what used to take an entire team.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-17"
+  },
+  {
+    "opening_line": "You do not need a machine gun to kill a fly.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-17"
+  },
+  {
+    "opening_line": "I finished a three-to-four-week project in under a day.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-17"
+  },
+  {
+    "opening_line": "RAG is showing up in sixty percent of senior AI engineering job posts right now \u2014 according to this month's LinkedIn Talent Insights report.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-17"
+  },
+  {
+    "opening_line": "Everyone's studying vector databases \u2014 but that's wrong.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-17"
+  },
+  {
+    "opening_line": "Job postings for senior data engineers changed this year \u2014 and most engineers don't know what's on the new checklist.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-17"
+  },
+  {
+    "opening_line": "Most data engineers think the gap is just learning Python and calling an API.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-17"
+  },
+  {
+    "opening_line": "Batch pipelines won't cut it for AI agents \u2014 and that's finally showing up in hiring data.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-17"
   }
 ]

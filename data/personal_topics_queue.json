@@ -42,8 +42,8 @@
       "career_growth"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_01_one_engineer_whole_team.mp4"
   },
   {
     "id": "d61dfafa-0c63-4c84-87fe-4ac6b6423d05",
@@ -55,8 +55,8 @@
       "productivity"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_02_stop_overpaying_for_ai.mp4"
   },
   {
     "id": "0aa3f5cc-e134-4f55-a5a8-e452693327b7",
@@ -75,8 +75,8 @@
       "data_engineering"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_03_mcp_changed_how_i.mp4"
   },
   {
     "id": "d52715cb-48cc-4ffc-8a8d-0f181b536c9e",
