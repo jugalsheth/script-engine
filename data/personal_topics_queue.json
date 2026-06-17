@@ -89,8 +89,8 @@
       "ai_ml"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_01_cursor_is_worth_the.mp4"
   },
   {
     "id": "d747edda-fbd1-423c-b011-6594886ac81c",
@@ -111,8 +111,8 @@
       "productivity"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_02_stop_learning_tools_from.mp4"
   },
   {
     "id": "dd065e53-3b06-48a8-9324-41262cfcdf07",
