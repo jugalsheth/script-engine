@@ -10,6 +10,7 @@ load_dotenv(_root.parent / ".env")
 
 from src.research import fetch_topics
 from src.safety_filter import filter_topics
+from src.journal_enrich import enrich_journal_topics
 from src.matcher import (
     mark_queue_consumed,
     pull_queue_entries,
@@ -44,6 +45,35 @@ def _reserved_journal_slots(phase: str) -> int:
     return int(slots.get(phase, 1 if phase == "intro" else 3))
 
 
+async def _build_trending_batch(remaining: int, phase: str) -> tuple[list[dict], list[dict], int]:
+    """Fetch, filter, and score trending topics. Returns (batch, raw_topics, dropped)."""
+    if remaining <= 0:
+        return [], [], 0
+
+    print("📡 Fetching trending topics...")
+    raw_topics = await fetch_topics()
+    print(f"   Found {len(raw_topics)} raw topics")
+
+    print("🛡️ Applying safety filter...")
+    safe_topics = await filter_topics(raw_topics)
+    dropped = len(raw_topics) - len(safe_topics)
+    print(f"   {len(safe_topics)} safe topics ({dropped} dropped)")
+
+    print("🎯 Matching to knowledge base...")
+    scored_topics = score_topics(safe_topics)
+
+    if phase == "intro":
+        manual = [t for t in scored_topics if t.get("estimated_virality") == "manual"]
+        topic_pool = manual if manual else scored_topics
+        trending_batch = topic_pool[:remaining]
+    else:
+        trending_batch = _select_growth_topics(
+            scored_topics, count=remaining, news_slots=min(3, remaining),
+        )
+
+    return trending_batch, raw_topics, dropped
+
+
 async def main():
     print(f"🚀 Script Engine starting — {datetime.now()}")
     phase = get_phase()
@@ -74,26 +104,17 @@ async def main():
         if journal_dropped:
             print(f"   {journal_dropped} journal topic(s) dropped by safety filter")
 
-    if remaining > 0:
-        print("📡 Fetching trending topics...")
-        raw_topics = await fetch_topics()
-        print(f"   Found {len(raw_topics)} raw topics")
-
-        print("🛡️ Applying safety filter...")
-        safe_topics = await filter_topics(raw_topics)
-        perplexity_dropped = len(raw_topics) - len(safe_topics)
-        dropped += perplexity_dropped
-        print(f"   {len(safe_topics)} safe topics ({perplexity_dropped} dropped)")
-
-        print("🎯 Matching to knowledge base...")
-        scored_topics = score_topics(safe_topics)
-
-        if phase == "intro":
-            manual = [t for t in scored_topics if t.get("estimated_virality") == "manual"]
-            topic_pool = manual if manual else scored_topics
-            trending_batch = topic_pool[:remaining]
-        else:
-            trending_batch = _select_growth_topics(scored_topics, count=remaining, news_slots=min(3, remaining))
+    if journal_topics and remaining > 0:
+        journal_topics, (trending_batch, raw_topics, trend_dropped) = await asyncio.gather(
+            enrich_journal_topics(journal_topics),
+            _build_trending_batch(remaining, phase),
+        )
+        dropped += trend_dropped
+    elif journal_topics:
+        journal_topics = await enrich_journal_topics(journal_topics)
+    elif remaining > 0:
+        trending_batch, raw_topics, trend_dropped = await _build_trending_batch(remaining, phase)
+        dropped += trend_dropped
 
     combined = journal_topics + trending_batch
     topics_researched = len(raw_topics) + len(journal_topics)

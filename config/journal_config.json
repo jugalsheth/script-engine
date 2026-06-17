@@ -8,5 +8,6 @@
     "intro": 1,
     "growth": 3
   },
+  "enrich_journal": true,
   "cron_note": "0 13,1 * * * — 8am/8pm ET"
 }

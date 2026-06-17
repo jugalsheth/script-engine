@@ -12,8 +12,8 @@ from src.content_phase import get_phase, get_videos_published
 from src.script_validator import ValidationResult, validate_script
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
-SONNET_MODEL = "claude-sonnet-4-20250514"
-HAIKU_MODEL = "claude-3-5-haiku-20241022"
+SONNET_MODEL = "claude-sonnet-4-6"
+HAIKU_MODEL = "claude-haiku-4-5-20251001"
 MAX_TOKENS = 3200
 MAX_GENERATION_ATTEMPTS = 3
 MAX_WORDS = 145
@@ -563,11 +563,32 @@ def _build_user_prompt(
 
     if topic.get("source_type") == "journal":
         raw_transcript = topic.get("raw_transcript", topic.get("topic_summary", ""))
+        enrichment = topic.get("journal_enrichment") or {}
+        enrich_block = ""
+        if enrichment.get("timely_context"):
+            hooks = enrichment.get("hook_angles") or []
+            stats = enrichment.get("stats_to_weave") or []
+            enrich_block = (
+                "TIMELY NEWS CONTEXT (from research — weave lightly, do not override the ramble):\n"
+                f"{enrichment['timely_context']}\n"
+            )
+            if hooks:
+                enrich_block += f"Optional hook angles: {json.dumps(hooks)}\n"
+            if stats:
+                enrich_block += (
+                    "Verifiable stats you MAY cite if they fit naturally: "
+                    f"{json.dumps(stats)}\n"
+                )
+            enrich_block += (
+                "Use this only to sharpen hooks or cite one timely stat — "
+                "the creator's ramble remains the primary story.\n\n"
+            )
         return (
             "Generate a complete video script FROM the creator's verbatim journal ramble below.\n"
             "Preserve his angle, specifics, and framing — do not genericize into a trend piece.\n"
             "Apply Hook → Problem → Solution → CTA structure on top of HIS words and ideas.\n\n"
             f"CREATOR RAMBLE (verbatim — primary source material):\n{raw_transcript}\n\n"
+            f"{enrich_block}"
             f"TERRITORY: {territory}\n"
             f"DOMAIN TAGS: {', '.join(topic.get('domain_tags', []))}\n\n"
             f"{_script_type_requirements(script_type, script_number, batch_size)}\n"
