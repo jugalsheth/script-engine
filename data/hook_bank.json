@@ -338,5 +338,45 @@
     "opening_line": "AWS, Google, and Microsoft all dropped security-AI updates this month \u2014 and finally, the job market caught up.",
     "hook_type": "OPEN LOOP",
     "date": "2026-06-17"
+  },
+  {
+    "opening_line": "SpaceX just bought Cursor for sixty billion dollars \u2014 and honestly, I called this wrong.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-21"
+  },
+  {
+    "opening_line": "The job title 'AI Data Engineer' is showing up everywhere \u2014 and most engineers don't know if they qualify.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-21"
+  },
+  {
+    "opening_line": "Everyone thinks AI replaced the SQL and Spark stack.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-21"
+  },
+  {
+    "opening_line": "Hiring signals shifted this quarter \u2014 and most engineers are still prepping for the wrong thing.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-21"
+  },
+  {
+    "opening_line": "Everyone keeps asking which title to chase \u2014 data engineer or AI engineer. Wrong question.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-21"
+  },
+  {
+    "opening_line": "Most data engineers are building pipelines nobody trusts.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-21"
+  },
+  {
+    "opening_line": "Anthropic's latest research report says AI now automates up to forty percent of repetitive ETL and boilerplate coding tasks.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-21"
+  },
+  {
+    "opening_line": "Four moves every data engineer should make this year \u2014 and most are skipping three of them.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-21"
   }
 ]

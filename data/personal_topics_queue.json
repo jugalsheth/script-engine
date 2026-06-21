@@ -121,7 +121,7 @@
     "related_mentions": [],
     "domain_tags": [],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_01_spacex_just_bought_my.mp4"
   }
 ]
