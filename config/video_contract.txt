@@ -5,6 +5,10 @@ edit_template: THREE_STEP_HOT_TAKE (default) or CONFESSION_STAT (confession hook
 
 visual_moments (array, 2-5 items):
   Each item triggers a timed on-screen graphic when the phrase is spoken.
+  type "stat" | "step" (default overlays) OR viral formats:
+  type "tweet" | "headline" | "chat" | "reaction" (native Remotion social graphics)
+
+  Stat/step example:
   {
     "at_phrase": "exact words spoken in spoken_script (lowercase ok)",
     "graphic": "23" or "!" for stat number display,
@@ -12,6 +16,18 @@ visual_moments (array, 2-5 items):
     "type": "stat" | "step",
     "side": "left" | "right"
   }
+
+  Headline example (news reaction):
+  {"at_phrase": "...", "type": "headline", "source": "FORBES", "headline": "...", "subheadline": "..."}
+
+  Tweet example:
+  {"at_phrase": "...", "type": "tweet", "handle": "@user", "display_name": "Name", "text": "..."}
+
+  Chat example:
+  {"at_phrase": "...", "type": "chat", "platform": "imessage", "messages": [{"sender": "them", "text": "..."}]}
+
+  Reaction example:
+  {"at_phrase": "that is wild", "type": "reaction", "emoji": "🤯", "label": "NO WAY"}
 
 video_triggers (object):
   {
@@ -21,6 +37,8 @@ video_triggers (object):
     "fun_phrases": ["that's normal", "pure building", "finally"],
     "energy_words": ["right", "truth", "unless"],
     "broll_phrases": ["data pipeline", "python script", "finance team"],
+    "broll_image_descriptions": ["REQUIRED — one specific AI scene per broll_phrase, same array length"],
+    "broll_layouts": ["presenter_on_bg", "presenter_on_bg", "presenter_cutout"],
     "logo_phrases": [{"phrase": "cursor for coding", "brand": "cursor"}, {"phrase": "langchain", "brand": "langchain"}, {"phrase": "openai api", "brand": "openai"}],
     "beat_phrases": {
       "crust": "phrase in FIRST 15 SECONDS where energy picks up (e.g. here's what's wild, step one)",
@@ -36,7 +54,12 @@ recording_cues (array, 5-8 items) — teleprompter sheet for the creator:
 FUN PHRASE RULES — include 2-3 fun_phrases verbatim in spoken_script from:
   that's normal, finally, wrong, secret, truth, pure building, failed, insane, wild
 
-STAT PHRASE RULES:
+BROLL IMAGE RULES (required when broll_phrases present):
+  - broll_image_descriptions MUST have the same length as broll_phrases
+  - One concrete visual per phrase: product UI, metaphor, diagram — NOT generic "data center" or stock humans
+  - Compositor-safe: dark lower third empty for speaker, no faces, no legible text
+  - Match step/stat labels when phrase aligns (e.g. FREE MODELS FIRST → pricing tier UI)
+
   - Speak numbers as words ("twenty three" not rushed "23")
   - Pause 0.3s before each number
   - stat_phrases.phrase must match spoken_script exactly

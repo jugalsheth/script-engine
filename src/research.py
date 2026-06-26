@@ -13,24 +13,35 @@ PERPLEXITY_MODEL = "sonar"
 PERPLEXITY_MAX_TOKENS = 2000
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 
-BATCHED_RESEARCH_PROMPT = """Research trending video topics for a senior AI/data engineer creating
-60-90 second Instagram Reels and LinkedIn videos. Cover ALL of these angles in one pass:
+BATCHED_RESEARCH_PROMPT = """Research captivating STORY SEEDS for a senior AI/data engineer creating
+60-90 second Instagram Reels and LinkedIn videos. NOT listicles or job-market roundups.
 
-1. Trending tech career advice this week
-2. What software engineers discuss on Reddit/social this week
-3. Viral tech content on Instagram, LinkedIn, YouTube
-4. Job market stats for data engineering and AI engineering
-5. Skills hiring managers want in tech right now
+Find 20 distinct story seeds across:
+- Builder journeys and indie launches (AI tools, RAG systems, data pipelines)
+- Surprising engineering pivots, post-mortems, and "how X actually works" narratives
+- Underreported wins in AI, data engineering, software engineering, generative AI, MCPs, RAG
+- Timely tech moments with a HUMAN angle (not press-release summaries)
+- Reddit/HN engineering stories engineers are debating this week
 
-Return exactly 20 distinct topic ideas as a JSON array. Each object must have:
-- topic_title (string)
-- topic_summary (2-3 sentences)
-- source_type ("news", "social", or "trend")
+Each topic must feel like something people WANT to listen to — a story with tension and payoff.
+
+Return exactly 20 distinct topics as a JSON array. Each object must have:
+- topic_title (string — compelling, not a headline clone)
+- topic_summary (2-3 sentences — the narrative spine)
+- story_hook (one sentence — the opening moment that grabs attention)
+- protagonist (who: "a startup engineer", "an indie builder", "a data team", "you")
+- tension (what went wrong, what's at stake, or what's surprising)
+- payoff (what the viewer learns or does differently)
+- source_type ("story", "news", "social", or "trend")
+  - Use "story" for narrative-driven timely pieces (preferred for 12+ of 20)
+  - Use "news" only for major announcements worth a human-angle reaction (max 3 of 20)
+  - Use "trend" for evergreen practitioner angles
+  - Use "social" for viral discourse with a story behind it
 - estimated_virality ("high", "medium", or "low")
 
-Return ONLY valid JSON array, no markdown."""
+Reject pure job-stats listicles without a human story. Return ONLY valid JSON array, no markdown."""
 
-SOURCE_TYPES = ["news", "social", "trend"]
+SOURCE_TYPES = ["news", "social", "trend", "story"]
 
 FALLBACK_TOPICS = [
     {
@@ -181,6 +192,10 @@ def _normalize_topic(raw: dict, default_source: str) -> dict | None:
         "topic_summary": summary,
         "source_type": source_type,
         "estimated_virality": virality,
+        "story_hook": (raw.get("story_hook") or "").strip(),
+        "protagonist": (raw.get("protagonist") or "").strip(),
+        "tension": (raw.get("tension") or "").strip(),
+        "payoff": (raw.get("payoff") or "").strip(),
     }
 
 

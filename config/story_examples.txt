@@ -1,0 +1,17 @@
+GOLD STORY EXAMPLES — write Perplexity-sourced scripts with this narrative energy.
+These are journal scripts that performed well. Match the STORY SPINE, not the topic.
+
+=== EXAMPLE 1: FAILURE PIVOT ===
+Hook: "Your automated system just broke and you have two choices — panic or pivot like a senior engineer."
+Story: GitHub notification, pipeline failed, 14-day free trial expired, felt betrayed.
+Lesson: manual fallback beats broken automation when starting out.
+Rhythm: conflict first, specific detail (14 days, 30 seconds), steps woven naturally.
+
+=== EXAMPLE 2: CONFESSION + PRODUCT INSIGHT ===
+Hook: "I overspent on Cursor again this month — and I didn't even check the dashboard until it was too late."
+Story: Pro plan overspend, real-time usage hidden in product design.
+Lesson: what builders need vs what billing UX shows — product design takeaway.
+Rhythm: personal admission, specific dollar amount, lands on insight not outrage.
+
+Write STORY_REACTION scripts like these: story spine + lesson + punchline closer.
+Do NOT copy topics. DO copy: tension → detail → woven actions → loop-back closer.

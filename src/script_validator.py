@@ -40,6 +40,80 @@ EXPERIENCE_FRAMING = [
     "engineers i know",
 ]
 
+EMOTION_WORDS = [
+    "betrayed", "relieved", "stunned", "frustrated", "shocked", "surprised",
+    "panicked", "excited", "worried", "proud", "embarrassed", "grateful",
+]
+
+LISTICLE_STEP_PATTERN = re.compile(
+    r"step\s+(?:one|two|three|1|2|3)\b",
+    re.I,
+)
+
+NEWSINESS_PATTERN = re.compile(
+    r"according to (?:this week|the latest|a report)",
+    re.I,
+)
+
+STORY_SCORE_THRESHOLD = 60
+
+
+def score_story_quality(script: dict, topic: dict | None = None) -> int:
+    """Score 0-100 for narrative richness (higher = more story-like)."""
+    spoken = (script.get("spoken_script") or "").strip()
+    if not spoken:
+        return 0
+
+    score = 50
+    spoken_lower = spoken.lower()
+    source = (topic or {}).get("source_type", "")
+    script_type = script.get("script_type", "")
+
+    if source == "journal":
+        return 100
+
+    hook_type = (script.get("hook_type") or "").upper()
+    if hook_type in ("CONFESSION", "OPEN LOOP"):
+        score += 15
+
+    if any(word in spoken_lower for word in EMOTION_WORDS):
+        score += 12
+
+    sentences = _sentences(spoken)
+    step_opener_count = sum(
+        1 for s in sentences[:6]
+        if LISTICLE_STEP_PATTERN.match(s.strip())
+    )
+    if step_opener_count >= 3:
+        score -= 25
+    elif step_opener_count >= 2:
+        score -= 12
+
+    if NEWSINESS_PATTERN.search(spoken_lower):
+        first_third = spoken_lower[: max(1, len(spoken_lower) // 3)]
+        has_human_open = any(
+            w in first_third
+            for w in ("i ", "my ", "we ", "felt", "turns out", "wrong", "failed")
+        )
+        if not has_human_open:
+            score -= 15
+
+    if topic and (topic.get("story_hook") or topic.get("tension")):
+        story_terms = " ".join(
+            filter(None, [
+                topic.get("story_hook", ""),
+                topic.get("tension", ""),
+                topic.get("payoff", ""),
+            ])
+        ).lower()
+        if any(term in spoken_lower for term in story_terms.split() if len(term) > 5):
+            score += 8
+
+    if script_type in ("STORY_REACTION", "NEWS_REACTION") and len(sentences) >= 4:
+        score += 5
+
+    return max(0, min(100, score))
+
 
 @dataclass
 class ValidationResult:
@@ -190,6 +264,20 @@ def validate_script(
             errors.append(f"Trigger {label} not found verbatim in spoken_script: '{phrase}'")
             score -= 8
 
+    triggers = script.get("video_triggers") or {}
+    broll_phrases = triggers.get("broll_phrases") or []
+    broll_descs = triggers.get("broll_image_descriptions") or []
+    if broll_phrases:
+        if len(broll_descs) != len(broll_phrases):
+            errors.append(
+                f"broll_image_descriptions length ({len(broll_descs)}) must match broll_phrases ({len(broll_phrases)})"
+            )
+            score -= 12
+        for i, phrase in enumerate(broll_phrases):
+            if i >= len(broll_descs) or not str(broll_descs[i]).strip():
+                errors.append(f"Missing broll_image_descriptions[{i}] for phrase '{phrase}'")
+                score -= 8
+
     sentences = _sentences(spoken)
     if sentences:
         lengths = [len(s.split()) for s in sentences]
@@ -222,6 +310,12 @@ def validate_script(
     if has_fake_stat and not has_experience and not topic_summary:
         warnings.append("Stat cites external source without research context — use experience framing")
         score -= 5
+
+    if topic and topic.get("source_type") != "journal":
+        story_score = score_story_quality(script, topic)
+        if story_score < STORY_SCORE_THRESHOLD:
+            warnings.append(f"Low story score ({story_score}/100) — reads listicle/newsy")
+            score -= max(0, (STORY_SCORE_THRESHOLD - story_score) // 3)
 
     score = max(0, min(100, score))
     passed = len(errors) == 0

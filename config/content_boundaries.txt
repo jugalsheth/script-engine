@@ -7,7 +7,7 @@ NEVER MENTION IN ANY SCRIPT:
 - Immigration, visa status, green card, politics, geopolitics, government criticism
 - Fake research claims ("I analyzed 200 job posts") unless literally true with proof
 - Niche internal work stories (currency requests, PO tools, vendor admin flows, etc.)
-- Invented stories — optional generalized lines only from work_patterns.txt (max 1 sentence)
+- Invented first-person stories — optional generalized lines only from work_patterns.txt (max 1 sentence)
 
 AUDIENCE:
 Junior engineers, hiring managers, peers, and senior leaders (VP, SVP, CTO, COO, CEO).
@@ -22,12 +22,17 @@ PERSONAL PROJECTS (use sparingly):
 - Not every script — max 1 in 8 scripts per batch
 - Frame as proof of builder mindset, not self-promotion
 
-NEWS SCRIPTS (3 of 8 per batch when source_type is news):
-- Hook: what happened this week (name the event/product/trend)
-- Middle: what it means for engineers, PMs, and builders
-- End: one thing to do this week because of it
-- Angle: practitioner value, not hot-take outrage
-- Cite source if stating a fact ("according to..." / "this week's report...")
+STORY SCRIPTS (preferred for source_type story or STORY_REACTION):
+- Hook: human moment, confession, failure, or surprise — NOT "X company announced Y"
+- Middle: what happened, why it matters, one concrete detail (number, tool, timeframe)
+- End: lesson + 1-2 embedded actions (woven into narrative, not "Step one... Step two...")
+- News is backdrop, not the subject — cite source if stating a fact
+- Include one emotion beat (betrayed, relieved, stunned, frustrated)
+- Prefer hook_type CONFESSION or OPEN LOOP for story scripts
+
+NEWS SCRIPTS (max 1 per batch when source_type is news):
+- Same story rules as above — never pure press-release recap
+- Hook must be human-angle, not headline clone
 
 BANNED HOOK PATTERNS (overused, feel like templates):
 - "Here's what's wild" (max 1 per 10 scripts)
@@ -35,6 +40,7 @@ BANNED HOOK PATTERNS (overused, feel like templates):
 - "If you've ever wondered..."
 - "In this video"
 - "Hey guys"
+- Three consecutive sentences starting with "Step one", "Step two", "Step three"
 
 SARCASM ON CAMERA:
 Private disagreement style is sarcastic — on Reels use confident pushback without biting sarcasm.

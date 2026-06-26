@@ -2,12 +2,19 @@ from __future__ import annotations
 
 import html
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 
 import httpx
 
 TELEGRAM_MAX_LENGTH = 4096
+
+
+def get_delivery_mode() -> str:
+    """Return 'minimal' (default) or 'full' from TELEGRAM_DELIVERY env."""
+    mode = os.getenv("TELEGRAM_DELIVERY", "minimal").strip().lower()
+    return mode if mode in ("minimal", "full") else "minimal"
 
 
 def _escape(text: str) -> str:
@@ -18,6 +25,59 @@ def _format_hashtags(hashtags: list | str) -> str:
     if isinstance(hashtags, list):
         return " ".join(str(tag) for tag in hashtags)
     return str(hashtags)
+
+
+def _format_spoken_readable(spoken: str) -> str:
+    """One sentence per line for easier reading in Telegram."""
+    text = spoken.strip()
+    if not text:
+        return ""
+    parts = re.split(r"(?<=[.!?])\s+", text)
+    return "\n".join(_escape(p.strip()) for p in parts if p.strip())
+
+
+def _format_minimal_script(script: dict) -> str:
+    number = script.get("script_number", "?")
+    territory = _escape(script.get("territory", "General"))
+    hook_type = _escape(script.get("hook_type", ""))
+    title = _escape(script.get("title_overlay", ""))
+    spoken = _format_spoken_readable(script.get("spoken_script", ""))
+    filename = _escape(script.get("filename_hint", "script_XX_topic.mp4"))
+    est_sec = script.get("estimated_seconds", "?")
+
+    hook_suffix = f" · {hook_type}" if hook_type else ""
+    lines = [
+        f"<b>SCRIPT {number}</b> · {territory}{hook_suffix}",
+        f"<b>{title}</b>",
+        "",
+        spoken,
+        "",
+        f"📁 <code>{filename}</code> · ~{est_sec}s",
+    ]
+    return "\n".join(lines)
+
+
+def _batch_mix_counts(scripts: list[dict]) -> tuple[int, int, int, int]:
+    personal = sum(1 for s in scripts if s.get("source_type") == "journal")
+    story = sum(
+        1 for s in scripts
+        if s.get("source_type") == "story" and s.get("source") != "journal"
+    )
+    news = sum(
+        1 for s in scripts
+        if s.get("source_type") == "news" and s.get("source") != "journal"
+    )
+    evergreen = len(scripts) - personal - story - news
+    return personal, story, news, evergreen
+
+
+def _format_minimal_header(scripts: list[dict], date_str: str) -> str:
+    count = len(scripts)
+    personal, story, news, evergreen = _batch_mix_counts(scripts)
+    return (
+        f"🎬 <b>{count} scripts</b> · {date_str} · "
+        f"{personal} personal · {story} story · {news} news · {evergreen} evergreen"
+    )
 
 
 def _format_recording_sheet(script: dict) -> str:
@@ -174,6 +234,47 @@ def _format_footer() -> str:
     )
 
 
+def build_telegram_messages(
+    scripts: list[dict],
+    topics_researched: int = 0,
+    topics_dropped: int = 0,
+    content_phase: str = "growth",
+    *,
+    delivery_mode: str | None = None,
+) -> list[str]:
+    """Build Telegram message bodies without sending (for tests and delivery)."""
+    mode = delivery_mode or get_delivery_mode()
+    date_str = datetime.now().strftime("%B %d, %Y")
+
+    if not scripts:
+        if mode == "minimal":
+            return [
+                _truncate_if_needed(
+                    f"🎬 <b>0 scripts</b> · {date_str}\n"
+                    "⚠️ No scripts were generated this run. Check API keys and logs."
+                )
+            ]
+        header = _format_header(0, date_str, topics_researched, topics_dropped, content_phase, scripts)
+        return [_truncate_if_needed(f"{header}\n⚠️ No scripts were generated this run.\n{_format_footer()}")]
+
+    if mode == "minimal":
+        messages = [_format_minimal_header(scripts, date_str)]
+        for script in scripts:
+            messages.append(_format_minimal_script(script))
+        return messages
+
+    header = _format_header(
+        len(scripts), date_str, topics_researched, topics_dropped, content_phase, scripts,
+    )
+    footer = _format_footer()
+    messages = [header.rstrip()]
+    for script in scripts:
+        messages.append(_format_recording_sheet(script))
+        messages.append(_format_script_block(script))
+    messages.append(footer)
+    return messages
+
+
 async def _send_telegram_message(
     client: httpx.AsyncClient, token: str, chat_id: str, text: str
 ) -> None:
@@ -202,7 +303,7 @@ async def send_via_telegram(
     topics_dropped: int,
     content_phase: str = "growth",
 ) -> None:
-    """Format and deliver script batch via Telegram bot (one message per script)."""
+    """Format and deliver script batch via Telegram bot."""
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
@@ -210,31 +311,16 @@ async def send_via_telegram(
         print("❌ TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set — skipping delivery")
         return
 
-    date_str = datetime.now().strftime("%B %d, %Y")
-    header = _format_header(
-        len(scripts), date_str, topics_researched, topics_dropped, content_phase, scripts,
+    mode = get_delivery_mode()
+    messages = build_telegram_messages(
+        scripts, topics_researched, topics_dropped, content_phase, delivery_mode=mode,
     )
-    footer = _format_footer()
-
-    if not scripts:
-        message = (
-            f"{header}\n"
-            "⚠️ No scripts were generated this run. Check API keys and logs.\n"
-            f"{footer}"
-        )
-        messages = [_truncate_if_needed(message)]
-    else:
-        messages = [header.rstrip()]
-        for s in scripts:
-            messages.append(_format_recording_sheet(s))
-            messages.append(_format_script_block(s))
-        messages.append(footer)
 
     try:
         async with httpx.AsyncClient() as client:
             for i, message in enumerate(messages, start=1):
                 message = _truncate_if_needed(message)
-                print(f"   Sending Telegram message {i}/{len(messages)}...")
+                print(f"   Sending Telegram message {i}/{len(messages)} ({mode} mode)...")
                 await _send_telegram_message(client, token, chat_id, message)
         print(f"   Delivered {len(messages)} Telegram message(s)")
     except Exception as exc:

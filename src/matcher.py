@@ -305,6 +305,11 @@ def journal_topic_from_queue(entry: dict) -> dict:
     }
 
 
+def count_pending_queue() -> int:
+    """Count unprocessed personal topic queue entries."""
+    return sum(1 for e in _load_queue() if not e.get("processed", False))
+
+
 def pull_queue_entries(n: int) -> list[dict]:
     """Oldest unprocessed queue entries first."""
     queue = _load_queue()

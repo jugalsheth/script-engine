@@ -122,19 +122,48 @@ class TestOversizedJournalEntry(unittest.TestCase):
 class TestMainOrchestration(unittest.TestCase):
     def test_empty_queue_fills_all_slots(self):
         with patch("src.matcher._load_queue", return_value=[]):
-            entries = pull_queue_entries(3)
+            entries = pull_queue_entries(8)
             self.assertEqual(entries, [])
             total_slots = 8
             remaining = total_slots - len(entries)
             self.assertEqual(remaining, 8)
 
-    def test_reserved_slots_growth(self):
-        from main import _reserved_journal_slots
-        self.assertEqual(_reserved_journal_slots("growth"), 3)
+    def test_journal_slots_fill_up_to_pending(self):
+        from main import _journal_slots_for_batch
 
-    def test_reserved_slots_intro(self):
-        from main import _reserved_journal_slots
-        self.assertEqual(_reserved_journal_slots("intro"), 1)
+        with patch("main.count_pending_queue", return_value=5):
+            self.assertEqual(_journal_slots_for_batch("growth", 8), 5)
+
+    def test_journal_slots_capped_at_batch_size(self):
+        from main import _journal_slots_for_batch
+
+        with patch("main.count_pending_queue", return_value=12):
+            self.assertEqual(_journal_slots_for_batch("growth", 8), 8)
+
+    def test_news_slots_zero_when_three_journal(self):
+        from main import _news_slots_for_batch
+
+        self.assertEqual(_news_slots_for_batch(3, 5, "growth"), 0)
+
+    def test_news_slots_three_when_no_journal(self):
+        from main import _news_slots_for_batch
+
+        self.assertEqual(_news_slots_for_batch(0, 8, "growth"), 3)
+
+    def test_news_slots_zero_when_intro(self):
+        from main import _news_slots_for_batch
+
+        self.assertEqual(_news_slots_for_batch(0, 4, "intro"), 0)
+
+    def test_batch_size_growth(self):
+        from main import _batch_size_for_phase
+
+        self.assertEqual(_batch_size_for_phase("growth"), 8)
+
+    def test_batch_size_intro(self):
+        from main import _batch_size_for_phase
+
+        self.assertEqual(_batch_size_for_phase("intro"), 4)
 
 
 if __name__ == "__main__":

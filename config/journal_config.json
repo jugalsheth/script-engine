@@ -6,8 +6,12 @@
   "min_text_chars": 80,
   "reserved_slots": {
     "intro": 1,
-    "growth": 3
+    "growth": 8
   },
+  "max_batch_size": 8,
+  "intro_batch_size": 4,
+  "full_override_at": 4,
+  "skip_news_when_journal_at_least": 3,
   "enrich_journal": true,
   "cron_note": "0 13,1 * * * — 8am/8pm ET"
 }

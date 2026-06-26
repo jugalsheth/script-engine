@@ -9,7 +9,9 @@ import anthropic
 
 from src import hook_bank
 from src.content_phase import get_phase, get_videos_published
-from src.script_validator import ValidationResult, validate_script
+from src.script_validator import ValidationResult, score_story_quality, validate_script
+
+STORY_SCORE_THRESHOLD = 60
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 SONNET_MODEL = "claude-sonnet-4-6"
@@ -26,7 +28,7 @@ HOOK_TO_TEMPLATE = {
 }
 
 JSON_FIELDS = """
-  "script_type": "NEWS_REACTION | EVERGREEN_VALUE | HOT_TAKE",
+  "script_type": "STORY_REACTION | NEWS_REACTION | EVERGREEN_VALUE | HOT_TAKE",
   "creator_take_anchor": "one-line POV from creator_takes.txt (opinion angle, not work story)",
   "work_pattern_id": "null or optional id from work_patterns.txt — only if generalized credibility fits",
   "title_overlay": "THE BOLD TITLE IN CAPS",
@@ -43,13 +45,18 @@ JSON_FIELDS = """
   "loopback_closer": "final line that connects back to the hook",
   "visual_cues": "human-readable summary of graphics (legacy, keep for Telegram)",
   "visual_moments": [
-    {"at_phrase": "exact spoken phrase", "graphic": "23", "label": "LABEL CAPS", "type": "stat", "side": "right"}
+    {"at_phrase": "exact spoken phrase", "graphic": "23", "label": "LABEL CAPS", "type": "stat", "side": "right"},
+    {"at_phrase": "sixty billion dollars", "type": "headline", "source": "FORBES", "headline": "SPACEX ACQUIRES CURSOR FOR $60B", "subheadline": "Deal reshapes AI tooling"},
+    {"at_phrase": "recruiters keep saying", "type": "tweet", "handle": "@techcrunch", "display_name": "TechCrunch", "text": "The hiring bar just moved again."},
+    {"at_phrase": "my manager texted", "type": "chat", "platform": "imessage", "messages": [{"sender": "them", "text": "Can you ship this tonight?"}, {"sender": "me", "text": "Already done."}]},
+    {"at_phrase": "that is wild", "type": "reaction", "emoji": "🤯", "label": "NO WAY"}
   ],
   "video_triggers": {
     "stat_phrases": [{"phrase": "twenty three workflows", "display": "23", "label": "AUTOMATED WORKFLOWS"}],
     "fun_phrases": ["that's normal", "pure building"],
     "energy_words": ["right", "truth"],
     "broll_phrases": ["data pipeline", "python script"],
+    "broll_image_descriptions": ["Cursor IDE dashboard with code suggestions", "Pricing tier UI with free badge, dark teal"],
     "beat_phrases": {"crust": "pure building", "payoff": "here's what makes it worth it"}
   },
   "edit_template": "THREE_STEP_HOT_TAKE or CONFESSION_STAT",
@@ -88,6 +95,7 @@ def _build_system_prompt() -> str:
         _load_config_file("creator_takes.txt"),
         _load_config_file("work_patterns.txt"),
         _load_config_file("content_boundaries.txt"),
+        _load_config_file("story_examples.txt"),
     ]
     combined = "\n\n---\n\n".join(p for p in parts if p.strip())
     if not combined.strip():
@@ -96,8 +104,9 @@ def _build_system_prompt() -> str:
 
 
 def _script_type_for_topic(topic: dict) -> str:
-    if topic.get("source_type") == "news":
-        return "NEWS_REACTION"
+    source = topic.get("source_type", "trend")
+    if source in ("story", "news"):
+        return "STORY_REACTION"
     title = f"{topic.get('topic_title', '')} {topic.get('topic_summary', '')}".lower()
     hot_keywords = ("wrong", "myth", "overhyped", "hate", "stop", "don't", "shouldn't", "contrarian")
     if any(kw in title for kw in hot_keywords):
@@ -105,16 +114,44 @@ def _script_type_for_topic(topic: dict) -> str:
     return "EVERGREEN_VALUE"
 
 
+def _story_context_block(topic: dict) -> str:
+    """Format Perplexity story seed fields for the generator prompt."""
+    parts = []
+    for key, label in (
+        ("story_hook", "STORY HOOK"),
+        ("protagonist", "PROTAGONIST"),
+        ("tension", "TENSION"),
+        ("payoff", "PAYOFF"),
+    ):
+        value = (topic.get(key) or "").strip()
+        if value:
+            parts.append(f"{label}: {value}")
+    if not parts:
+        return ""
+    return "STORY SEED (use as narrative spine — do not turn into a listicle):\n" + "\n".join(parts) + "\n\n"
+
+
 def _script_type_requirements(script_type: str, script_number: int, batch_size: int) -> str:
+    if script_type == "STORY_REACTION":
+        return (
+            "SCRIPT TYPE: STORY_REACTION\n"
+            "- Hook = human moment, confession, failure, or surprise — NOT a press-release headline\n"
+            "- Middle = what happened, why it matters, one concrete detail (number, tool, timeframe)\n"
+            "- End = lesson + 1-2 actions WOVEN into the narrative (not 'Step one... Step two... Step three')\n"
+            "- Timely news (if any) is backdrop context — the STORY is the subject\n"
+            "- Include one emotion beat (betrayed, relieved, stunned, frustrated)\n"
+            "- Prefer hook_type CONFESSION or OPEN LOOP\n"
+            "- ONE generalized builder line OK ('teams I've seen...', 'a builder I know...')\n"
+            "- Cite source only if stating a verifiable fact from the topic\n"
+            "- work_pattern_id: null unless one optional credibility line fits naturally\n"
+        )
     if script_type == "NEWS_REACTION":
         return (
-            "SCRIPT TYPE: NEWS_REACTION\n"
-            "- Hook names what happened THIS WEEK in AI/tech (model, layoff trend, hiring shift, tool release)\n"
-            "- Explain what it means for engineers, PMs, and builders — broad practitioner value\n"
-            "- One actionable step for this week because of the news\n"
-            "- Cite source for any fact ('according to...', 'this week's announcement...')\n"
+            "SCRIPT TYPE: NEWS_REACTION (use STORY_REACTION rules — news is backdrop only)\n"
+            "- Hook names the human angle on this week's news — not the headline alone\n"
+            "- Explain what it means for engineers, PMs, and builders through a narrative spine\n"
+            "- One actionable insight woven into the story ending\n"
             "- Do NOT imply the creator is job searching\n"
-            "- NO niche personal work stories — this is about the NEWS and the VIEWER\n"
             "- work_pattern_id: null\n"
         )
     if script_type == "HOT_TAKE":
@@ -127,11 +164,11 @@ def _script_type_requirements(script_type: str, script_number: int, batch_size: 
         )
     return (
         "SCRIPT TYPE: EVERGREEN_VALUE\n"
-        "- Informative first: universal lesson any engineer/PM can use Monday\n"
-        "- Hook = pain or insight the VIEWER has — not 'at my company...'\n"
-        "- 3 actionable steps — specific tools/skills/habits, not vague awareness\n"
-        "- creator_take_anchor = your opinion angle, not a work anecdote\n"
-        "- work_pattern_id: null unless script {script_number} is the ONE optional credibility script in batch\n"
+        "- Open with a story beat or universal pain — not a generic advice headline\n"
+        "- Hook = pain or insight the VIEWER has — weave 2-3 actions into narrative\n"
+        "- Avoid three consecutive 'Step one/two/three' sentence openers\n"
+        "- creator_take_anchor = your opinion angle from creator_takes.txt\n"
+        f"- work_pattern_id: null unless script {script_number} is the ONE optional credibility script in batch\n"
         f"- Batch size {batch_size}: at most 1-2 scripts may set work_pattern_id; this is script #{script_number}\n"
         "- If using work_pattern_id: ONE generalized sentence only — see TRANSLATION EXAMPLES in work_patterns.txt\n"
     )
@@ -320,11 +357,19 @@ async def _generate_one_script(
     brand_episode: int,
     script_type: str,
     batch_size: int,
+    force_story_archetype: str | None = None,
+    story_retry_done: bool = False,
 ) -> dict | None:
     """Generate, validate, retry, and voice-rewrite a single script."""
     user_prompt = _build_user_prompt(
         topic, script_number, recent_hooks, phase, brand_episode, script_type, batch_size,
     )
+    if force_story_archetype:
+        user_prompt += (
+            f"\n\nRETRY — previous draft was too bland/listicle-like.\n"
+            f"Force archetype: {force_story_archetype}. Open with CONFESSION or a specific human moment.\n"
+            "Weave actions into the story. No consecutive Step one/two/three openers.\n"
+        )
     script: dict | None = None
     last_result: ValidationResult | None = None
 
@@ -348,8 +393,32 @@ async def _generate_one_script(
         last_result = validate_script(script, topic)
         script = _attach_validation(script, topic, last_result)
 
+        story_score = score_story_quality(script, topic)
+        script["story_score"] = story_score
+        needs_story = (
+            script_type in ("STORY_REACTION", "NEWS_REACTION", "EVERGREEN_VALUE")
+            and topic.get("source_type") != "journal"
+            and story_score < STORY_SCORE_THRESHOLD
+            and not story_retry_done
+        )
+        if needs_story:
+            print(f"   Story score {story_score}/100 too low — retrying with confession archetype")
+            return await _generate_one_script(
+                client,
+                system_prompt,
+                topic,
+                script_number,
+                recent_hooks,
+                phase,
+                brand_episode,
+                script_type,
+                batch_size,
+                force_story_archetype="confession",
+                story_retry_done=True,
+            )
+
         if last_result.passed:
-            print(f"   Validation PASS ({last_result.score}/100) on attempt {attempt}")
+            print(f"   Validation PASS ({last_result.score}/100, story {story_score}/100) on attempt {attempt}")
             break
         print(f"   Attempt {attempt} FAIL ({last_result.score}/100): {last_result.errors[0]}")
 
@@ -441,7 +510,12 @@ def _video_contract_block() -> str:
         f"{contract}\n\n"
         f"fun_phrases must include 2-3 items from: {FUN_PHRASE_POOL}\n"
         "Each fun_phrase MUST appear verbatim in spoken_script.\n"
-        "visual_moments: 2-4 items. stat_phrases: 1-2 items with spoken number phrases.\n"
+        "visual_moments: 2-4 items (stat/step required). Optional 0-2 viral formats: "
+        "type tweet|headline|chat|reaction with exact at_phrase in spoken_script.\n"
+        "stat_phrases: 1-2 items with spoken number phrases.\n"
+        "broll_image_descriptions: REQUIRED when broll_phrases present — same array length. "
+        "Specific topical scene per phrase (product UI, metaphor, diagram — not generic stock). "
+        "broll_layouts: optional parallel array — presenter_on_bg (default), presenter_cutout (hook hero), immersive_flash (0.5s punch-in).\n"
         "beat_phrases.crust MUST be spoken in the first 15 seconds (e.g. 'step one', 'here's the thing', 'that's not how it works').\n"
         "recording_cues: 5-8 items — teleprompter sheet with second targets, phrases, and actions.\n"
         "edit_template: THREE_STEP_HOT_TAKE for 3-step scripts, CONFESSION_STAT for confession hooks.\n"
@@ -506,8 +580,11 @@ def _growth_requirements() -> str:
         "7. LENGTH — HARD MAX 145 words (~50-55 seconds). Count before returning.\n"
         "   Short punchy sentences. Cut filler. Every line earns its second.\n"
         "   If draft exceeds 145 words, delete the weakest sentence and tighten.\n\n"
-        "8. VISUAL — populate visual_moments (3-5) + video_triggers with broll_phrases "
-        "and logo_phrases [{phrase, brand}] when brand tools are named.\n\n"
+        "8. VISUAL — populate visual_moments (3-5) + video_triggers with 3-5 broll_phrases, "
+        "broll_image_descriptions, broll_layouts, and logo_phrases [{phrase, brand}] when brand tools are named. "
+        "Include one headline or tweet visual_moment in the first 5 seconds for NEWS/HOT_TAKE hooks.\n\n"
+        "Add 0-2 viral visual_moments (tweet/headline/chat/reaction) when the script references "
+        "news, social posts, or a punchy reaction beat.\n\n"
         "9. VALUE FIRST — 80% of scripts have work_pattern_id: null. No niche internal features.\n"
         "   Optional: ONE generalized credibility line from work_patterns.txt (see TRANSLATION EXAMPLES).\n\n"
         "10. RECORDING CUES — 5-8 teleprompter beats (second, phrase, action).\n"
@@ -521,7 +598,7 @@ def _growth_requirements() -> str:
 
 
 def _resolve_batch_script_types(topics: list[dict]) -> list[str]:
-    """Assign NEWS / EVERGREEN / HOT_TAKE mix across a batch."""
+    """Assign STORY / EVERGREEN / HOT_TAKE mix across a batch."""
     n = len(topics)
     if n == 0:
         return []
@@ -531,8 +608,11 @@ def _resolve_batch_script_types(topics: list[dict]) -> list[str]:
     )
     types: list[str] = []
     for i, topic in enumerate(topics):
-        if topic.get("source_type") == "news":
-            types.append("NEWS_REACTION")
+        inferred = _script_type_for_topic(topic)
+        if topic.get("source_type") == "journal":
+            types.append(inferred if inferred != "STORY_REACTION" else "EVERGREEN_VALUE")
+        elif inferred == "STORY_REACTION":
+            types.append("STORY_REACTION")
         elif i == hot_index:
             types.append("HOT_TAKE")
         else:
@@ -610,6 +690,7 @@ def _build_user_prompt(
         f"CONTEXT: {topic.get('topic_summary', '')}\n"
         f"TERRITORY: {territory}\n"
         f"SOURCE TYPE: {topic.get('source_type', 'trend')}\n\n"
+        f"{_story_context_block(topic)}"
         f"{_script_type_requirements(script_type, script_number, batch_size)}\n"
         f"creator_take_anchor must name the specific POV this script embodies.\n\n"
         f"Avoid reusing any of these recent opening lines: {hooks_block}\n\n"
