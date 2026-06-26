@@ -378,5 +378,45 @@
     "opening_line": "Four moves every data engineer should make this year \u2014 and most are skipping three of them.",
     "hook_type": "OPEN LOOP",
     "date": "2026-06-21"
+  },
+  {
+    "opening_line": "I bombed a data engineering interview once \u2014 and I had the right answers.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-26"
+  },
+  {
+    "opening_line": "Nobody warned me \u2014 and my first AWS bill was three hundred dollars for a weekend project.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-26"
+  },
+  {
+    "opening_line": "RAG pipelines don't hallucinate because the model is bad.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-26"
+  },
+  {
+    "opening_line": "Your RAG system just told a client the wrong policy \u2014 legal is involved.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-26"
+  },
+  {
+    "opening_line": "I once rewrote a query three times before realizing I never needed to rewrite it.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-26"
+  },
+  {
+    "opening_line": "Nobody told me what an AI data engineer actually does \u2014 I had to figure it out by shipping things.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-26"
+  },
+  {
+    "opening_line": "Your RAG app is confidently giving wrong answers \u2014 and the fix is not what you think.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-26"
+  },
+  {
+    "opening_line": "Nobody told me that building production data systems means half your day is just reading broken logs.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-26"
   }
 ]
