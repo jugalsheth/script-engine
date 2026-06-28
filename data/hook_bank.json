@@ -418,5 +418,45 @@
     "opening_line": "Nobody told me that building production data systems means half your day is just reading broken logs.",
     "hook_type": "CONFESSION",
     "date": "2026-06-26"
+  },
+  {
+    "opening_line": "Hiring managers told me they see two hundred resumes that look identical.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-28"
+  },
+  {
+    "opening_line": "My first AWS deployment cost me three hundred dollars in a single weekend.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-28"
+  },
+  {
+    "opening_line": "A solo builder shipped a RAG system in three weeks.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-28"
+  },
+  {
+    "opening_line": "The best AI engineers I've worked with didn't go to Ivy League schools.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-06-28"
+  },
+  {
+    "opening_line": "I bombed a query review because I wrote six nested subqueries \u2014 and my senior just stared at me.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-28"
+  },
+  {
+    "opening_line": "People keep asking what an AI data engineer actually does \u2014 and honestly, most answers are wrong.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-06-28"
+  },
+  {
+    "opening_line": "The engineer who finally shipped a real product last year \u2014 no Ivy League, no fancy bootcamp.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-28"
+  },
+  {
+    "opening_line": "I collected certifications once. Then lost a project to someone with zero badges.",
+    "hook_type": "CONFESSION",
+    "date": "2026-06-28"
   }
 ]

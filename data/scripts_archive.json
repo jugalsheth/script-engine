@@ -3,6 +3,1313 @@
     "script_number": 1,
     "territory": "Career + Money",
     "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck. DSA rounds miss builders.",
+    "work_pattern_id": "solo_end_to_end",
+    "title_overlay": "STAND OUT IN DATA ENGINEERING INTERVIEWS",
+    "subtitle_overlay": "What hiring managers actually remember",
+    "spoken_script": "Hiring managers told me they see two hundred resumes that look identical. Same tools, same buzzwords \u2014 insane. Here's the thing: most candidates never mention a real decision they made. That's wrong. So here is what actually works. First, lead with a pipeline story \u2014 not the tech, the tradeoff. Why did you choose batch over streaming? What broke? That one engineer who owns the whole system, front to back, always gets the callback. Second, quantify the pain you solved. Not 'I built a pipeline' \u2014 'ingestion took four hours, I got it to twelve minutes.' LinkedIn Talent Insights says candidates with demonstrated outcomes are three times more likely to advance past the first round. Finally, show a GitHub repo. Even one clean project. Hiring managers skip resumes, they open links. Give them something to click. That's all it is.",
+    "caption_hook": "Hiring managers see 200 identical resumes \u2014 here's the one thing that makes yours impossible to skip.",
+    "hashtags": [
+      "#DataEngineering",
+      "#TechCareers",
+      "#DataEngineerLife",
+      "#HiringTips",
+      "#CareerGrowth"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that's wrong' with real conviction \u2014 slight lean forward, then slow down for the three payoffs.",
+    "hook_type": "CONFESSION",
+    "opening_line": "Hiring managers told me they see two hundred resumes that look identical.",
+    "open_loop_plant": "most candidates never mention a real decision they made",
+    "open_loop_payoff": "resolved at 'lead with a pipeline story \u2014 not the tech, the tradeoff'",
+    "loopback_closer": "That's all it is.",
+    "visual_cues": "Stat overlay at '200 resumes' and 'three times more likely'. Step overlays for pipeline story, quantify pain, GitHub repo. B-roll of GitHub repo page and pipeline diagram.",
+    "visual_moments": [
+      {
+        "at_phrase": "two hundred resumes that look identical",
+        "graphic": "200",
+        "label": "RESUMES \u2014 SAME STACK",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "three times more likely to advance past the first round",
+        "graphic": "3\u00d7",
+        "label": "LINKEDIN TALENT INSIGHTS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "lead with a pipeline story",
+        "graphic": "1",
+        "label": "PIPELINE STORY",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "quantify the pain you solved",
+        "graphic": "2",
+        "label": "QUANTIFY THE WIN",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "show a GitHub repo",
+        "graphic": "3",
+        "label": "SHIP A REPO",
+        "type": "step",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "two hundred resumes that look identical",
+          "display": "200",
+          "label": "IDENTICAL RESUMES"
+        },
+        {
+          "phrase": "three times more likely to advance past the first round",
+          "display": "3\u00d7",
+          "label": "LINKEDIN TALENT INSIGHTS"
+        }
+      ],
+      "fun_phrases": [
+        "insane",
+        "that's wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "tradeoff",
+        "broke",
+        "click"
+      ],
+      "broll_phrases": [
+        "pipeline story",
+        "four hours to twelve minutes",
+        "GitHub repo"
+      ],
+      "broll_image_descriptions": [
+        "Whiteboard diagram of a data pipeline with batch vs streaming decision node \u2014 dark background, no faces",
+        "Terminal output showing job runtime dropping from 4h to 12m, dark theme, green text \u2014 no legible names",
+        "GitHub repository page with clean README, green contribution graph, dark lower third clear for speaker"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "immersive_flash",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [],
+      "beat_phrases": {
+        "crust": "here is what actually works",
+        "payoff": "hiring managers skip resumes, they open links"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast delivery, no smile warmup"
+      },
+      {
+        "second": 5,
+        "phrase": "insane",
+        "action": "PAUSE 0.3s \u2014 hit 'insane' with mild disbelief, then reset energy"
+      },
+      {
+        "second": 8,
+        "phrase": "that's wrong",
+        "action": "ENERGY UP \u2014 slight lean forward, conviction, crust zoom fires on 'here is what actually works'"
+      },
+      {
+        "second": 18,
+        "phrase": "lead with a pipeline story",
+        "action": "STEP 1 \u2014 point forward, punch 'tradeoff' and 'broke'"
+      },
+      {
+        "second": 30,
+        "phrase": "four hours",
+        "action": "PAUSE before number \u2014 speak clearly: 'four hours... twelve minutes'"
+      },
+      {
+        "second": 38,
+        "phrase": "three times more likely",
+        "action": "PAUSE before stat, slow and clear \u2014 cite LinkedIn Talent Insights"
+      },
+      {
+        "second": 48,
+        "phrase": "give them something to click",
+        "action": "PAYOFF \u2014 slow down, land the loop"
+      },
+      {
+        "second": 53,
+        "phrase": "that's all it is",
+        "action": "CLOSER \u2014 quiet confidence, slight nod, hold camera"
+      }
+    ],
+    "delivery_notes": "Open fast and direct \u2014 no warmup. Hit 'insane' and 'that's wrong' with real emotion. Slow down on numbers: pause before 'four hours' and 'twelve minutes' and 'three times'. Final line 'that's all it is' lands quiet and confident \u2014 don't rush it.",
+    "retention_notes": "Open loop planted at second 7: 'most candidates never mention a real decision they made.' Resolved at second 18 with the pipeline story step. Rhythm break at the quantify step \u2014 contrast between 'four hours' and 'twelve minutes' creates a micro-tension payoff. Mid-video re-hook: the LinkedIn Talent Insights stat at second 38 resets attention before the GitHub closer.",
+    "filename_hint": "script_01_stand_out_in_data.mp4",
+    "word_count": 140,
+    "estimated_seconds": 54,
+    "validation_score": 94,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "1 sentence(s) exceed 25 words",
+      "Signature phrase overused recently: 'that's all it is'"
+    ],
+    "story_score": 65,
+    "source_topic": "How to stand out in a data engineering interview",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 2,
+    "territory": "Tech Made Simple",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Grit and figure-it-out separate seniors from tutorial followers \u2014 nobody hands you a syllabus for the next door",
+    "work_pattern_id": "observability_is_product",
+    "title_overlay": "FIRST AWS DEPLOYMENT",
+    "subtitle_overlay": "What nobody warns you about before you ship",
+    "spoken_script": "My first AWS deployment cost me three hundred dollars in a single weekend. No alerts. No rollback. Just a bill and a lesson. Here's the thing \u2014 three mistakes almost every first-timer makes, and they're all avoidable. First, IAM permissions. Most beginners give every service admin access just to make it work. Wrong. Least-privilege from day one \u2014 scope each role to exactly what it needs. That fixes security, but now you're flying blind on cost \u2014 which is step two. Set a billing alert at ten dollars in AWS Cost Explorer before you deploy anything. Seriously. Finally, step three \u2014 your rollback plan. Before you push to production, document how you undo it in under five minutes. You don't own a system until you can see what broke and recover fast. That's all it is. Don't learn these the hard way.",
+    "caption_hook": "My first AWS bill was $300 for a weekend project \u2014 here's the three things nobody warns you about before you deploy.",
+    "hashtags": [
+      "#AWS",
+      "#CloudEngineering",
+      "#DataEngineering",
+      "#TechMadeSimple",
+      "#SoftwareEngineering"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Wrong' hard and fast \u2014 let it land before moving on.",
+    "hook_type": "CONFESSION",
+    "opening_line": "My first AWS deployment cost me three hundred dollars in a single weekend.",
+    "open_loop_plant": "Here's the thing \u2014 three mistakes almost every first-timer makes, and they're all avoidable.",
+    "open_loop_payoff": "Step three closes the loop \u2014 rollback plan means you own the system, not the other way around.",
+    "loopback_closer": "Don't learn these the hard way.",
+    "visual_cues": "Stat overlay for $300 bill at open. Step overlays for IAM, billing alert, rollback. Broll: AWS console, cost explorer UI, IAM policy editor.",
+    "visual_moments": [
+      {
+        "at_phrase": "three hundred dollars in a single weekend",
+        "graphic": "$300",
+        "label": "WEEKEND BILL",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "least-privilege from day one",
+        "graphic": "1",
+        "label": "IAM LEAST PRIVILEGE",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "billing alert at ten dollars",
+        "graphic": "$10",
+        "label": "COST ALERT THRESHOLD",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "document how you undo it in under five minutes",
+        "graphic": "3",
+        "label": "ROLLBACK PLAN",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "three hundred dollars in a single weekend",
+          "display": "$300",
+          "label": "WEEKEND BILL"
+        },
+        {
+          "phrase": "billing alert at ten dollars",
+          "display": "$10",
+          "label": "COST ALERT"
+        }
+      ],
+      "fun_phrases": [
+        "wrong",
+        "finally",
+        "that's all it is"
+      ],
+      "energy_words": [
+        "right",
+        "wrong",
+        "unless"
+      ],
+      "broll_phrases": [
+        "IAM permissions",
+        "AWS Cost Explorer",
+        "rollback plan"
+      ],
+      "broll_image_descriptions": [
+        "AWS IAM console showing policy editor with least-privilege role scopes, dark UI, no faces",
+        "AWS Cost Explorer billing alert setup screen with $10 threshold highlighted, dark teal accent",
+        "Terminal or deployment script showing rollback command with green success state, dark background"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "AWS Cost Explorer",
+          "brand": "aws"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "you don't own a system until you can see what broke"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confessional energy. No smile warmup."
+      },
+      {
+        "second": 4,
+        "phrase": "no alerts. no rollback.",
+        "action": "SHORT PUNCHY \u2014 slight pause between each. Let shame land."
+      },
+      {
+        "second": 8,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
+      },
+      {
+        "second": 16,
+        "phrase": "wrong",
+        "action": "Hit hard. Short stop. Let it breathe."
+      },
+      {
+        "second": 25,
+        "phrase": "billing alert at ten dollars",
+        "action": "PAUSE before number, speak clearly"
+      },
+      {
+        "second": 35,
+        "phrase": "finally",
+        "action": "Fun phrase \u2014 slight smile, confident"
+      },
+      {
+        "second": 48,
+        "phrase": "that's all it is",
+        "action": "Slow down, signature phrase, land the closer with quiet authority"
+      }
+    ],
+    "delivery_notes": "Open fast and honest \u2014 confession energy, not shame. Hit 'Wrong' as a one-word gut punch. Step two transitions with 'but now' \u2014 keep momentum. Final two lines slow down 20% for authority close.",
+    "retention_notes": "Open loop plants at second 8 ('three mistakes... all avoidable') \u2014 payoff at second 40 with rollback ownership line. Rhythm break after 'Wrong' creates mid-script re-hook. Cascading payoff: IAM fixes security \u2192 billing alert fixes visibility \u2192 rollback closes ownership loop.",
+    "filename_hint": "script_02_first_aws_deployment.mp4",
+    "word_count": 142,
+    "estimated_seconds": 55,
+    "validation_score": 97,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'that's all it is'"
+    ],
+    "story_score": 65,
+    "source_topic": "What I wish I knew before my first AWS deployment",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 3,
+    "territory": "Tech Made Simple",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Better interview than DSA: deep dive on real projects \u2014 what was built, why, how, and persistence when stuck. Scrappy builders outperform credential chasers.",
+    "work_pattern_id": null,
+    "title_overlay": "SCRAPPY BEATS CREDENTIALS",
+    "subtitle_overlay": "What top AI engineers actually have in common",
+    "spoken_script": "A solo builder shipped a RAG system in three weeks. A PhD team took four months on the same problem. Same tools. Wildly different outcomes. Here's the thing \u2014 Adam Mosseri said top AI engineers aren't defined by degrees. They're scrappy and they learn fast. That's it. So what does scrappy actually look like? First, they scope small and ship ugly. Minimum viable RAG before perfect RAG. Every time. Then they debug in production, not in theory \u2014 they read actual error logs, not documentation chapters. Finally, they steal patterns from open-source repos before writing anything from scratch. Thirty minutes of reading saves thirty hours of reinventing. The PhD team was optimizing. The solo builder was shipping. Wrong move to optimize before you have something running. Scrappiness isn't chaos \u2014 it's speed with intention. That solo builder proved it.",
+    "caption_hook": "A solo dev shipped a RAG system in 3 weeks. A PhD team took 4 months. Same tools \u2014 completely different mindset.",
+    "hashtags": [
+      "#AIEngineering",
+      "#BuildInPublic",
+      "#DataEngineering",
+      "#TechCareer",
+      "#AITools"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'That's it' like a period \u2014 drop your voice, let it land before moving.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "A solo builder shipped a RAG system in three weeks.",
+    "open_loop_plant": "Same tools. Wildly different outcomes.",
+    "open_loop_payoff": "Loop resolves at 'Scrappiness isn't chaos \u2014 it's speed with intention' \u2014 the answer to why outcomes diverged despite same tools.",
+    "loopback_closer": "That solo builder proved it.",
+    "visual_cues": "Stat overlay: 3 WEEKS vs 4 MONTHS side-by-side. Step overlays for each scrappy trait. Reaction emoji on 'That's it' beat.",
+    "visual_moments": [
+      {
+        "at_phrase": "three weeks. a phd team took four months",
+        "type": "stat",
+        "graphic": "3W vs 4M",
+        "label": "SOLO VS TEAM",
+        "side": "right"
+      },
+      {
+        "at_phrase": "adam mosseri said top ai engineers",
+        "type": "tweet",
+        "handle": "@mosseri",
+        "display_name": "Adam Mosseri",
+        "text": "The best AI engineers I've seen aren't defined by prestigious degrees \u2014 they're scrappy and learn incredibly fast."
+      },
+      {
+        "at_phrase": "scope small and ship ugly",
+        "type": "step",
+        "graphic": "1",
+        "label": "SHIP UGLY FIRST",
+        "side": "left"
+      },
+      {
+        "at_phrase": "thirty minutes of reading saves thirty hours",
+        "type": "stat",
+        "graphic": "30",
+        "label": "MIN SAVES 30 HRS",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "three weeks",
+          "display": "3 WKS",
+          "label": "SOLO BUILDER"
+        },
+        {
+          "phrase": "four months",
+          "display": "4 MO",
+          "label": "PHD TEAM"
+        }
+      ],
+      "fun_phrases": [
+        "that's it",
+        "wrong move",
+        "finally"
+      ],
+      "energy_words": [
+        "scrappy",
+        "shipping",
+        "really"
+      ],
+      "broll_phrases": [
+        "rag system",
+        "error logs",
+        "open-source repos"
+      ],
+      "broll_image_descriptions": [
+        "Dark terminal UI showing vector embedding pipeline with chunked document nodes and retrieval score outputs \u2014 no faces, dark lower third clear",
+        "IDE error log panel with red traceback lines, Python stack trace on dark background \u2014 no faces, lower third empty",
+        "GitHub repository page showing a popular LangChain or LlamaIndex repo with star count and recent commits \u2014 dark mode, no legible personal info, lower third clear"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "immersive_flash"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "rag system",
+          "brand": "langchain"
+        },
+        {
+          "phrase": "open-source repos",
+          "brand": "github"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "scrappiness isn't chaos \u2014 it's speed with intention"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast pace, no smile warmup. Punch 'three weeks' clearly."
+      },
+      {
+        "second": 5,
+        "phrase": "wildly different outcomes",
+        "action": "PAUSE 0.5s \u2014 let it hang. Then hit 'Here's the thing' as crust energy spike."
+      },
+      {
+        "second": 10,
+        "phrase": "here's the thing",
+        "action": "ENERGY UP \u2014 crust zoom fires here. Slow down slightly on Mosseri name."
+      },
+      {
+        "second": 18,
+        "phrase": "that's it",
+        "action": "Drop voice. Hard stop. Let silence breathe 0.4s. This is the fun phrase \u2014 land it like a verdict."
+      },
+      {
+        "second": 25,
+        "phrase": "scope small and ship ugly",
+        "action": "Point at camera on 'ship ugly' \u2014 punch the word"
+      },
+      {
+        "second": 35,
+        "phrase": "wrong move",
+        "action": "Slight head shake, dry delivery \u2014 fun phrase energy"
+      },
+      {
+        "second": 45,
+        "phrase": "scrappiness isn't chaos",
+        "action": "Slow down \u2014 this is the loop payoff. Clear and deliberate."
+      },
+      {
+        "second": 52,
+        "phrase": "that solo builder proved it",
+        "action": "CLOSER \u2014 quiet confidence, drop energy, full stop. Loop-back lands here."
+      }
+    ],
+    "delivery_notes": "Fast on the hook, slow on the 'That's it' verdict. Medium pace through the three actions \u2014 don't rush them into a listicle. Pause before 'thirty minutes' and 'four months' \u2014 let numbers register. The closer is quiet, not loud.",
+    "retention_notes": "Open loop planted at 'Same tools. Wildly different outcomes' \u2014 viewer stays to find out why. Mid-video re-hook at 'The PhD team was optimizing. The solo builder was shipping.' \u2014 contrast beat resets attention. Loop resolves at 'Scrappiness isn't chaos \u2014 it's speed with intention.' Rhythm alternates: long setup \u2192 short punch \u2192 repeat throughout.",
+    "filename_hint": "script_03_scrappy_beats_credentials.mp4",
+    "word_count": 139,
+    "estimated_seconds": 53,
+    "validation_score": 95,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Missing signature phrase (Right?, That's all it is., etc.)"
+    ],
+    "story_score": 65,
+    "source_topic": "\"topic_summary\"",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 4,
+    "territory": "Tech Made Simple",
+    "script_type": "HOT_TAKE",
+    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck. Degrees matter less than financial literacy and building.",
+    "work_pattern_id": "solo_end_to_end",
+    "title_overlay": "THE IVY LEAGUE MYTH IN AI HIRING",
+    "subtitle_overlay": "Scrappy beats prestigious \u2014 here's the truth",
+    "spoken_script": "The best AI engineers I've worked with didn't go to Ivy League schools. That's the truth. And here's what nobody tells you \u2014 hiring managers are finally figuring this out. Step one: build something real. A working project beats a Stanford credential in any technical interview, every time. Step two: be scrappy with tools. One engineer who owns frontend, backend, and deploy beats three engineers who only own tickets. That's not wrong \u2014 that's just production. Step three: document your decisions. Why you built it, what broke, how you fixed it. That story is worth more than your GPA. The engineers shipping AI products in 2026 didn't wait for permission. They figured it out. Unless and until you have a repo that proves you can build \u2014 a degree is just paper. That's all it is.",
+    "caption_hook": "The Ivy League flex won't get you hired in AI \u2014 but this will.",
+    "hashtags": [
+      "#AIEngineering",
+      "#TechCareer",
+      "#SoftwareEngineering",
+      "#AITools",
+      "#CareerAdvice"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that's the truth' slow and deliberate \u2014 let it land before moving.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "The best AI engineers I've worked with didn't go to Ivy League schools.",
+    "open_loop_plant": "And here's what nobody tells you \u2014 hiring managers are finally figuring this out.",
+    "open_loop_payoff": "The loop resolves near the end: 'Unless and until you have a repo that proves you can build \u2014 a degree is just paper.'",
+    "loopback_closer": "That's all it is.",
+    "visual_cues": "Open with contrarian text overlay. Step overlays for three action steps. Stat graphic for solo ownership beat. Reaction emoji on 'that's not wrong' line.",
+    "visual_moments": [
+      {
+        "at_phrase": "that's the truth",
+        "type": "reaction",
+        "emoji": "\ud83d\udca5",
+        "label": "HOT TAKE"
+      },
+      {
+        "at_phrase": "step one",
+        "graphic": "1",
+        "label": "BUILD SOMETHING REAL",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step two",
+        "graphic": "2",
+        "label": "OWN END TO END",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "step three",
+        "graphic": "3",
+        "label": "DOCUMENT YOUR DECISIONS",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "a degree is just paper",
+        "type": "reaction",
+        "emoji": "\ud83d\udcc4",
+        "label": "JUST PAPER"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "one engineer who owns frontend, backend, and deploy beats three engineers who only own tickets",
+          "display": "1 > 3",
+          "label": "END-TO-END OWNERSHIP"
+        }
+      ],
+      "fun_phrases": [
+        "that's the truth",
+        "wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "unless"
+      ],
+      "broll_phrases": [
+        "working project",
+        "scrappy with tools",
+        "repo that proves you can build"
+      ],
+      "broll_image_descriptions": [
+        "GitHub repository page with green commit activity graph, dark background, no faces",
+        "Split-screen Cursor IDE showing frontend and backend files open simultaneously, dark teal UI",
+        "GitHub profile page showing pinned repositories with README badges, dark mode, no legible names"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [],
+      "beat_phrases": {
+        "crust": "that's the truth",
+        "payoff": "a degree is just paper"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, no smile warmup. Confident, almost confrontational energy."
+      },
+      {
+        "second": 4,
+        "phrase": "that's the truth",
+        "action": "PAUSE 0.5s \u2014 let it land. Slow and deliberate. Crust zoom fires here."
+      },
+      {
+        "second": 9,
+        "phrase": "finally figuring this out",
+        "action": "Slight energy rise \u2014 this is the open loop plant"
+      },
+      {
+        "second": 18,
+        "phrase": "step one",
+        "action": "Point at camera, punch 'one' \u2014 step overlay fires"
+      },
+      {
+        "second": 28,
+        "phrase": "step two",
+        "action": "Quick pause before 'two', then slightly faster \u2014 builds momentum"
+      },
+      {
+        "second": 38,
+        "phrase": "step three",
+        "action": "Lean back slightly \u2014 this is the wisdom beat, not a shout"
+      },
+      {
+        "second": 50,
+        "phrase": "a degree is just paper",
+        "action": "PAUSE before 'paper' \u2014 payoff loop closes here. Calm, not angry."
+      },
+      {
+        "second": 55,
+        "phrase": "that's all it is",
+        "action": "SLOW DOWN \u2014 final line, loop-back closer, let silence follow"
+      }
+    ],
+    "delivery_notes": "Open fast and confident \u2014 no warmup. Hit 'truth' and 'wrong' as energy spikes. Steps should feel like you're coaching someone, not lecturing. Slow down on the closer \u2014 that's the money line.",
+    "retention_notes": "Open loop planted at second 7: 'hiring managers are finally figuring this out' \u2014 unresolved until 'a degree is just paper' near end. Mid-video re-hook is the '1 > 3 engineers' line \u2014 punchy, re-engages scrollers. Loop-back closer 'that's all it is' mirrors the opening contrarian energy.",
+    "filename_hint": "script_04_the_ivy_league_myth.mp4",
+    "word_count": 136,
+    "estimated_seconds": 52,
+    "validation_score": 90,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'that's all it is'",
+      "Low story score (38/100) \u2014 reads listicle/newsy"
+    ],
+    "story_score": 38,
+    "source_topic": "\"story_hook\"",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 5,
+    "territory": "Tech Made Simple",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Most bootcamps train you to pass tutorials \u2014 not to ship production systems. The patterns that matter are the ones they skip.",
+    "work_pattern_id": "trace_data_not_api",
+    "title_overlay": "3 SQL PATTERNS THAT ACTUALLY MATTER",
+    "subtitle_overlay": "Window functions, CTEs, and indexing \u2014 the ones bootcamps skip",
+    "spoken_script": "I bombed a query review because I wrote six nested subqueries \u2014 and my senior just stared at me. That's wrong. Here's the thing: three patterns solve eighty percent of real production problems. First \u2014 window functions. Instead of grouping and losing row context, RANK and LAG let you compare rows without collapsing your dataset. That's insane how often this gets missed. Second \u2014 CTEs. Stop nesting. Name your logic, chain your steps, read it like a sentence. Debugging becomes instant. Third \u2014 and this one actually ships \u2014 proper indexing. A Stack Overflow survey found slow queries are the top database complaint. Index your JOIN columns and WHERE filters before you optimize anything else. If your query is slow, trace the data before you rewrite the logic. That's not how it works in production to skip these. That's all it is.",
+    "caption_hook": "Bootcamps teach you SQL. Production will humble you \u2014 unless you know these three patterns.",
+    "hashtags": [
+      "#SQL",
+      "#DataEngineering",
+      "#TechMadeSimple",
+      "#SoftwareEngineering",
+      "#LearnToCode"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that's wrong' like you mean it \u2014 slight lean in, short pause after.",
+    "hook_type": "CONFESSION",
+    "opening_line": "I bombed a query review because I wrote six nested subqueries \u2014 and my senior just stared at me.",
+    "open_loop_plant": "Here's the thing: three patterns solve eighty percent of real production problems.",
+    "open_loop_payoff": "Third step \u2014 proper indexing \u2014 resolves the loop: this is what actually ships in production.",
+    "loopback_closer": "That's all it is.",
+    "visual_cues": "Show stat graphic at Stack Overflow survey mention. Step overlays for window functions, CTEs, indexing. Reaction emoji at 'that's insane'.",
+    "visual_moments": [
+      {
+        "at_phrase": "six nested subqueries",
+        "type": "reaction",
+        "emoji": "\ud83d\ude2c",
+        "label": "BEEN THERE"
+      },
+      {
+        "at_phrase": "window functions",
+        "graphic": "1",
+        "label": "WINDOW FUNCTIONS",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "stop nesting",
+        "graphic": "2",
+        "label": "CTES",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "stack overflow survey found slow queries",
+        "type": "headline",
+        "source": "STACK OVERFLOW SURVEY",
+        "headline": "SLOW QUERIES = #1 DATABASE COMPLAINT",
+        "subheadline": "Index before you optimize anything else"
+      },
+      {
+        "at_phrase": "proper indexing",
+        "graphic": "3",
+        "label": "INDEXING",
+        "type": "step",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "eighty percent of real production problems",
+          "display": "80%",
+          "label": "PRODUCTION PROBLEMS SOLVED"
+        }
+      ],
+      "fun_phrases": [
+        "that's wrong",
+        "that's insane",
+        "that's not how it works in production"
+      ],
+      "energy_words": [
+        "wrong",
+        "insane",
+        "right"
+      ],
+      "broll_phrases": [
+        "nested subqueries",
+        "window functions",
+        "proper indexing"
+      ],
+      "broll_image_descriptions": [
+        "Dark IDE showing deeply nested SQL subquery with red squiggle warnings, no faces, dark lower third clear",
+        "SQL editor split view: left side messy subquery, right side clean RANK OVER PARTITION window function, syntax highlighted",
+        "Database schema diagram showing JOIN columns highlighted in yellow with index icons, dark background, no text legible"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "trace the data before you rewrite the logic"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, confessional energy. No smile. Own the failure."
+      },
+      {
+        "second": 4,
+        "phrase": "that's wrong",
+        "action": "PAUSE 0.3s \u2014 short, punchy, stare at camera"
+      },
+      {
+        "second": 7,
+        "phrase": "here's the thing",
+        "action": "ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 14,
+        "phrase": "window functions",
+        "action": "Point slightly, step one energy \u2014 step overlay triggers"
+      },
+      {
+        "second": 26,
+        "phrase": "stop nesting",
+        "action": "Quick confident chop \u2014 step two energy"
+      },
+      {
+        "second": 36,
+        "phrase": "eighty percent",
+        "action": "PAUSE before number, speak slowly and clearly"
+      },
+      {
+        "second": 44,
+        "phrase": "trace the data",
+        "action": "Slow down \u2014 this is the payoff, land it"
+      },
+      {
+        "second": 52,
+        "phrase": "that's all it is",
+        "action": "CLOSER \u2014 slight smile, loop closed, hold for half second"
+      }
+    ],
+    "delivery_notes": "Open fast and raw \u2014 the confession should feel real, not performed. Hit 'that's wrong' like a correction, not a put-down. Steps should feel like you're handing tools over, not lecturing. Slow down at 'trace the data' \u2014 that's the earned moment. End quietly confident.",
+    "retention_notes": "Open loop planted at second 7 ('three patterns solve eighty percent') \u2014 resolved at step three with the indexing stat. Mid-video re-hook: 'stop nesting' is a verbal reset that snaps wandering attention. Rhythm: long confession opener \u2192 short punches per step \u2192 slow closer. Loop-back: 'that's all it is' mirrors the simplicity promised in the hook.",
+    "filename_hint": "script_05_3_sql_patterns_that.mp4",
+    "word_count": 142,
+    "estimated_seconds": 55,
+    "validation_score": 94,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'that's all it is'",
+      "Signature phrase overused recently: 'that's not how it works in production'"
+    ],
+    "story_score": 65,
+    "source_topic": "Three SQL patterns every engineer should know",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 6,
+    "territory": "Tech Made Simple",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "One engineer who owns frontend, backend, and deploy beats three who only own tickets \u2014 end-to-end ownership is a career multiplier.",
+    "work_pattern_id": "solo_end_to_end",
+    "title_overlay": "WHO I AM AND WHAT I ACTUALLY BUILD",
+    "subtitle_overlay": "AI data engineer \u2014 what that means in production",
+    "spoken_script": "People keep asking what an AI data engineer actually does \u2014 and honestly, most answers are wrong. So here is the truth. I build systems that move, clean, and serve data so AI can actually use it. That means pipelines, warehouses, embedding layers, retrieval systems \u2014 pure building, end to end, solo. And here is the open loop I want you to sit with: what does that look like on a Monday morning? First, I write Python that pulls data from somewhere broken. Second, I make sure it lands clean in a warehouse a model can query. Third, I wire that warehouse to an AI layer that actually answers something useful. One engineer who owns all three beats a committee every time. That is not insane \u2014 that is finally what the market wants. That is what an AI data engineer does.",
+    "caption_hook": "Most people describe this title wrong \u2014 here's what it actually looks like on a Monday morning.",
+    "hashtags": [
+      "#AIDataEngineer",
+      "#DataEngineering",
+      "#AIEngineering",
+      "#TechCareer",
+      "#BuildInPublic"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Lean into 'pure building' like it is a badge of honor \u2014 slow it down slightly so it lands.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "People keep asking what an AI data engineer actually does \u2014 and honestly, most answers are wrong.",
+    "open_loop_plant": "What does that look like on a Monday morning?",
+    "open_loop_payoff": "Resolved at step three \u2014 'wire that warehouse to an AI layer that actually answers something useful' closes the Monday morning question.",
+    "loopback_closer": "That is what an AI data engineer does.",
+    "visual_cues": "Stat overlay on 'pure building' phrase. Three step overlays for each Monday action. Reaction moment on 'not insane \u2014 that is finally what the market wants'.",
+    "visual_moments": [
+      {
+        "at_phrase": "pure building, end to end, solo",
+        "graphic": "!",
+        "label": "END-TO-END OWNERSHIP",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "i write python that pulls data from somewhere broken",
+        "graphic": "1",
+        "label": "STEP 1 \u2014 INGEST",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "lands clean in a warehouse a model can query",
+        "graphic": "2",
+        "label": "STEP 2 \u2014 WAREHOUSE",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "wire that warehouse to an ai layer",
+        "graphic": "3",
+        "label": "STEP 3 \u2014 AI LAYER",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "that is not insane",
+        "type": "reaction",
+        "emoji": "\ud83d\udca1",
+        "label": "FINALLY"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "pure building, end to end, solo",
+          "display": "E2E",
+          "label": "END-TO-END OWNERSHIP"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "wrong",
+        "finally",
+        "insane"
+      ],
+      "energy_words": [
+        "truth",
+        "really",
+        "unless"
+      ],
+      "broll_phrases": [
+        "python that pulls data",
+        "lands clean in a warehouse",
+        "wire that warehouse to an ai layer"
+      ],
+      "broll_image_descriptions": [
+        "Python script open in Cursor IDE, ingesting from a broken JSON API response, dark mode, no faces",
+        "Cloud data warehouse schema diagram with clean table rows highlighted, dark teal background, no text legible",
+        "Vector embedding layer diagram connecting warehouse to an LLM query box, minimal line art, dark background"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "python that pulls data",
+          "brand": "python"
+        },
+        {
+          "phrase": "wire that warehouse to an ai layer",
+          "brand": "openai"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here is the truth",
+        "payoff": "that is finally what the market wants"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean forward, fast delivery, no smile warmup. Land 'wrong' with weight."
+      },
+      {
+        "second": 4,
+        "phrase": "here is the truth",
+        "action": "PAUSE 0.3s \u2014 then slow down slightly, crust energy spike"
+      },
+      {
+        "second": 10,
+        "phrase": "pure building",
+        "action": "Hit hard and slow \u2014 this is a badge, not filler"
+      },
+      {
+        "second": 16,
+        "phrase": "what does that look like on a monday morning",
+        "action": "Slight raise in pitch \u2014 open loop planted here"
+      },
+      {
+        "second": 24,
+        "phrase": "i write python that pulls data from somewhere broken",
+        "action": "Point at camera, punch 'broken'"
+      },
+      {
+        "second": 35,
+        "phrase": "one engineer who owns all three",
+        "action": "Confident, slower \u2014 this is the thesis"
+      },
+      {
+        "second": 45,
+        "phrase": "that is finally what the market wants",
+        "action": "Payoff energy \u2014 loop resolves here, then land closer calm"
+      }
+    ],
+    "delivery_notes": "Open fast and punchy. Slow down on 'pure building' and 'one engineer who owns all three' \u2014 those are the thesis lines. Three steps should feel like a rhythm, not a list. Final two sentences: drop energy slightly, speak with quiet authority.",
+    "retention_notes": "Open loop planted at second 16 ('what does that look like on a Monday morning?') \u2014 payoff at step three around second 38. Rhythm break after 'pure building, end to end, solo' \u2014 natural pause before the open loop question. Mid-video re-hook: 'one engineer who owns all three beats a committee every time' resets attention before the closer.",
+    "filename_hint": "script_06_who_i_am_and.mp4",
+    "word_count": 142,
+    "estimated_seconds": 55,
+    "validation_score": 95,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Missing signature phrase (Right?, That's all it is., etc.)"
+    ],
+    "story_score": 65,
+    "source_topic": "Who I am and what I actually build as an AI data engineer",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 7,
+    "territory": "Tech Made Simple",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Degrees matter less than financial literacy and building \u2014 the scrappy builder who ships beats the credentialed grinder who waits for permission.",
+    "work_pattern_id": "solo_end_to_end",
+    "title_overlay": "THE SCRAPPY ENGINEER",
+    "subtitle_overlay": "Why skipping the Ivy League might be your advantage",
+    "spoken_script": "The engineer who finally shipped a real product last year \u2014 no Ivy League, no fancy bootcamp. Just pure building. And that's not a feel-good story. That's a pattern I keep seeing. Here's the truth: the credential signals effort. The shipped product proves capability. Recruiters finally know the difference. So here's what the scrappy engineer does. First \u2014 build one end-to-end project. Frontend, backend, deploy. Own the whole thing. Second \u2014 document the why, not just the what. Wrong decisions you recovered from matter more than clean demos. Third \u2014 one engineer who owns frontend, backend, and deploy beats three who only own tickets. Right? The open loop I planted: what does the scrappy engineer have that the Ivy grad doesn't? Skin in the game. That's all it is.",
+    "caption_hook": "You don't need the Ivy League \u2014 you need one shipped product and the scars to explain it.",
+    "hashtags": [
+      "#SoftwareEngineering",
+      "#TechCareer",
+      "#BuildInPublic",
+      "#AIEngineer",
+      "#CareerAdvice"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' fast and sharp \u2014 that's your crust moment.",
+    "hook_type": "CONFESSION",
+    "opening_line": "The engineer who finally shipped a real product last year \u2014 no Ivy League, no fancy bootcamp.",
+    "open_loop_plant": "Here's the truth: the credential signals effort. The shipped product proves capability.",
+    "open_loop_payoff": "What does the scrappy engineer have that the Ivy grad doesn't? Skin in the game.",
+    "loopback_closer": "That's all it is.",
+    "visual_cues": "Stat overlay at 'pure building' \u2014 energy spike graphic. Step overlays for build, document, own. Reaction emoji at 'skin in the game'.",
+    "visual_moments": [
+      {
+        "at_phrase": "pure building",
+        "type": "reaction",
+        "emoji": "\ud83d\udd28",
+        "label": "PURE BUILDING"
+      },
+      {
+        "at_phrase": "build one end-to-end project",
+        "graphic": "1",
+        "label": "OWN THE STACK",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "wrong decisions you recovered from",
+        "graphic": "2",
+        "label": "DOCUMENT THE WHY",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "skin in the game",
+        "type": "reaction",
+        "emoji": "\ud83d\udca1",
+        "label": "THAT'S THE EDGE"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "one engineer who owns frontend, backend, and deploy beats three",
+          "display": "1 > 3",
+          "label": "END-TO-END OWNERSHIP"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "finally"
+      ],
+      "broll_phrases": [
+        "shipped a real product",
+        "end-to-end project",
+        "skin in the game"
+      ],
+      "broll_image_descriptions": [
+        "Dark terminal screen showing a successful deployment log, green text, no faces, empty lower third",
+        "Diagram showing frontend arrow to backend arrow to deploy cloud icon, dark background, minimal text",
+        "Close-up of a laptop keyboard with a single sticky note reading 'SHIPPED', dark teal background, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "skin in the game"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, no warmup, say it like you've seen this a hundred times"
+      },
+      {
+        "second": 4,
+        "phrase": "pure building",
+        "action": "PAUSE 0.3s then HIT IT \u2014 crust zoom fires here"
+      },
+      {
+        "second": 9,
+        "phrase": "finally",
+        "action": "Slight nod, land 'finally' with quiet confidence"
+      },
+      {
+        "second": 18,
+        "phrase": "wrong decisions you recovered from",
+        "action": "Slow down \u2014 let this land, it's the real insight"
+      },
+      {
+        "second": 28,
+        "phrase": "one engineer who owns frontend, backend, and deploy",
+        "action": "PAUSE before 'beats three' \u2014 let the contrast hit"
+      },
+      {
+        "second": 38,
+        "phrase": "right",
+        "action": "Direct eye contact, slight smile \u2014 signature phrase"
+      },
+      {
+        "second": 48,
+        "phrase": "skin in the game",
+        "action": "SLOW DOWN \u2014 this is the loop payoff, let it breathe"
+      },
+      {
+        "second": 52,
+        "phrase": "that's all it is",
+        "action": "Quiet, confident, full stop \u2014 no smile after"
+      }
+    ],
+    "delivery_notes": "Open cold and confident \u2014 no warmup smile. Hit 'pure building' fast and punchy at second 4. Slow through 'wrong decisions' \u2014 that line is the real credibility moment. 'Right?' is conversational, not a question. Final two lines: slow, deliberate, quiet authority.",
+    "retention_notes": "Open loop plants at second 9 ('credential vs capability'). Payoff at second 48 ('skin in the game'). Mid-video re-hook at 'wrong decisions you recovered from' \u2014 counterintuitive line breaks the listicle rhythm. Rhythm alternates: short confession opener, longer setup, short punch, longer step, short punchline closer.",
+    "filename_hint": "script_07_the_scrappy_engineer.mp4",
+    "word_count": 129,
+    "estimated_seconds": 50,
+    "validation_score": 94,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'right?'",
+      "Signature phrase overused recently: 'that's all it is'"
+    ],
+    "story_score": 65,
+    "source_topic": "\"topic_title\"",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 8,
+    "territory": "Tech Made Simple",
+    "script_type": "EVERGREEN_VALUE",
+    "creator_take_anchor": "Certifications are gates, not proof \u2014 builders who ship beat grinders who collect badges every time.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "STOP CHASING CERTS",
+    "subtitle_overlay": "Experimentation beats credentials every time",
+    "spoken_script": "I collected certifications once. Then lost a project to someone with zero badges. That stung. Here is the truth \u2014 sixty eight percent of technical hiring decisions favor hands-on work over credentials. Sixty eight percent. Pure building wins, right? Step one: kill one course tab and open a blank project file instead. Build something ugly. Ship it. Step two: document the failure publicly. What broke, what you fixed, one paragraph on LinkedIn. That artifact outlasts any badge. Step three: brainstorm in one AI tool, ship in your IDE. Wide planning, narrow execution. The loop stays tight. Certifications? Finally becoming what they always were \u2014 a starting line. Stop collecting. Start shipping.",
+    "caption_hook": "You don't need another certification \u2014 you need one more shipped project.",
+    "hashtags": [
+      "#DataEngineering",
+      "#AIEngineering",
+      "#TechCareer",
+      "#BuildInPublic",
+      "#SoftwareEngineering"
+    ],
+    "series_note": null,
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that stung' quietly \u2014 let it land before moving on.",
+    "hook_type": "CONFESSION",
+    "opening_line": "I collected certifications once. Then lost a project to someone with zero badges.",
+    "open_loop_plant": "That stung.",
+    "open_loop_payoff": "That artifact outlasts any badge.",
+    "loopback_closer": "Stop collecting. Start shipping.",
+    "visual_cues": "Stat overlay at 68%. Step overlays for three actions. Reaction beat at 'that stung'. B-roll of blank IDE, LinkedIn post, AI brainstorm UI.",
+    "visual_moments": [
+      {
+        "at_phrase": "sixty eight percent of technical hiring decisions",
+        "graphic": "68%",
+        "label": "HANDS-ON BEATS CERTS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "kill one course tab and open a blank project file instead",
+        "graphic": "1",
+        "label": "SHIP SOMETHING UGLY",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "document the failure publicly",
+        "graphic": "2",
+        "label": "PUBLISH THE FAILURE",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "that stung",
+        "type": "reaction",
+        "emoji": "\ud83d\ude2c",
+        "label": "THAT STUNG"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "sixty eight percent of technical hiring decisions",
+          "display": "68%",
+          "label": "HANDS-ON BEATS CERTS"
+        }
+      ],
+      "fun_phrases": [
+        "truth",
+        "pure building",
+        "finally"
+      ],
+      "energy_words": [
+        "stung",
+        "nobody",
+        "ugly"
+      ],
+      "broll_phrases": [
+        "blank project file",
+        "linkedin post",
+        "ai brainstorm tool"
+      ],
+      "broll_image_descriptions": [
+        "Empty VS Code or Cursor IDE window open on a dark screen, cursor blinking, no code yet \u2014 clean and stark",
+        "LinkedIn post UI closeup showing short text paragraph with 'What broke and what I fixed' theme, no real name visible",
+        "Claude or similar AI chat interface with a brainstorm conversation thread visible, dark mode, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "one AI tool",
+          "brand": "claude"
+        },
+        {
+          "phrase": "ship in my IDE",
+          "brand": "cursor"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here is the truth",
+        "payoff": "stop collecting. start shipping."
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, confessional tone, no smile warmup. 'I spent three months' \u2014 make it personal."
+      },
+      {
+        "second": 4,
+        "phrase": "that stung",
+        "action": "Drop volume slightly. Let it sit 0.5s. This is the emotion beat."
+      },
+      {
+        "second": 8,
+        "phrase": "here is the truth",
+        "action": "PAUSE \u2192 ENERGY UP \u2014 crust zoom fires here. Confident shift."
+      },
+      {
+        "second": 12,
+        "phrase": "sixty eight percent",
+        "action": "PAUSE 0.3s before number. Say it clearly. Pause again after."
+      },
+      {
+        "second": 22,
+        "phrase": "kill one course tab",
+        "action": "Point or lean in. Punch 'kill' \u2014 this is the action beat."
+      },
+      {
+        "second": 33,
+        "phrase": "document the failure publicly",
+        "action": "Nod while saying it \u2014 conviction, not lecture."
+      },
+      {
+        "second": 44,
+        "phrase": "brainstorm wide, execute narrow",
+        "action": "Slower here \u2014 let the phrase stick."
+      },
+      {
+        "second": 52,
+        "phrase": "stop collecting. start shipping.",
+        "action": "CLOSER \u2014 slow down, hold eye contact, loop-back energy. Hard stop after 'shipping.'"
+      }
+    ],
+    "delivery_notes": "Confession energy at open \u2014 not sad, just honest. Mid-script speed picks up at step one. Slow back down for the closer. 'That stung' is the only soft moment; everything else is direct and confident.",
+    "retention_notes": "Loop plants at 'here is what nobody tells you' \u2014 resolves when certs are reframed as a starting line, not finish line. Mid-video re-hook at 'sixty eight percent' stat. Rhythm break: long confession sentence \u2192 short 'that stung' \u2192 stat punch \u2192 three fast actions \u2192 slow closer.",
+    "filename_hint": "script_08_stop_chasing_certs.mp4",
+    "word_count": 111,
+    "estimated_seconds": 43,
+    "validation_score": 77,
+    "validation_passed": false,
+    "validation_errors": [
+      "opening_line does not match first sentence of spoken_script",
+      "loopback_closer does not match final sentence of spoken_script"
+    ],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'right?'"
+    ],
+    "length_warning": "loopback_closer does not match final sentence of spoken_script",
+    "story_score": 65,
+    "source_topic": "\"payoff\"",
+    "source_type": "trend",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "date_generated": "2026-06-28"
+  },
+  {
+    "script_number": 1,
+    "territory": "Career + Money",
+    "script_type": "EVERGREEN_VALUE",
     "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck.",
     "work_pattern_id": "solo_end_to_end",
     "title_overlay": "STAND OUT IN DATA ENGINEERING INTERVIEWS",
@@ -8089,1130 +9396,5 @@
     "source_type": "news",
     "content_phase": "growth",
     "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 2,
-    "territory": "Career + Money",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "AI massively increased his productivity in the last two years \u2014 projects, products, delivery.",
-    "work_pattern_id": null,
-    "title_overlay": "AI SKILLS ARE BASELINE NOW",
-    "subtitle_overlay": "not a bonus in 2026",
-    "spoken_script": "GitHub just released their developer survey and eighty seven percent of engineers are using AI tools daily \u2014 but here's what's wild. Companies aren't hiring AI specialists anymore. They're expecting every engineer to show AI fluency. According to this week's hiring data, roles that used to never mention AI now list prompt engineering and model integration as core requirements. That's not normal. Step one \u2014 add one AI automation to your portfolio this week. Build a simple script that uses the OpenAI API or Claude to solve a real problem. Document the prompt strategy and the error handling. Step two \u2014 practice explaining AI decisions in interviews. Most engineers say they use ChatGPT for debugging but can't explain when it fails or how they verify outputs. Finally, show AI tools in your workflow during technical interviews. Use Cursor or Copilot live and explain your thought process. Companies want to see you're already productive with AI, not learning it on their dime. The truth is AI fluency isn't a nice-to-have anymore \u2014 it's table stakes for every engineering role in twenty twenty six.",
-    "caption_hook": "GitHub's latest survey reveals 87% of engineers use AI daily \u2014 but companies have moved beyond hiring AI specialists.",
-    "hashtags": [
-      "#AISkills",
-      "#TechCareers",
-      "#SoftwareEngineering",
-      "#CareerAdvice",
-      "#TechTrends"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'here's what's wild' with energy spike.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "GitHub just released their developer survey and eighty seven percent of engineers are using AI tools daily \u2014 but here's what's wild.",
-    "open_loop_plant": "but here's what's wild",
-    "open_loop_payoff": "Companies aren't hiring AI specialists anymore. They're expecting every engineer to show AI fluency.",
-    "loopback_closer": "The truth is AI fluency isn't a nice-to-have anymore \u2014 it's table stakes for every engineering role in twenty twenty six.",
-    "visual_cues": "GitHub survey stat, AI automation script, interview tips",
-    "visual_moments": [
-      {
-        "at_phrase": "eighty seven percent",
-        "graphic": "87%",
-        "label": "ENGINEERS USE AI DAILY",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "ADD AI TO PORTFOLIO",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "PRACTICE AI INTERVIEWS",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "finally",
-        "graphic": "3",
-        "label": "SHOW AI IN WORKFLOW",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "eighty seven percent of engineers",
-          "display": "87%",
-          "label": "USE AI DAILY"
-        }
-      ],
-      "fun_phrases": [
-        "wild",
-        "normal",
-        "truth",
-        "finally"
-      ],
-      "energy_words": [
-        "truth",
-        "wild"
-      ],
-      "broll_phrases": [
-        "openai api",
-        "cursor",
-        "copilot",
-        "technical interviews",
-        "ai automation"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "openai api",
-          "brand": "openai"
-        },
-        {
-          "phrase": "cursor",
-          "brand": "cursor"
-        },
-        {
-          "phrase": "copilot",
-          "brand": "github"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's what's wild",
-        "payoff": "the truth is ai fluency isn't a nice-to-have anymore"
-      },
-      "broll_image_descriptions": [
-        "Abstract API gateway visualization, glowing endpoints, dark UI, no logos or text",
-        "Dark IDE workspace with glowing code editor, moody teal lighting, no faces",
-        "Abstract cinematic metaphor for copilot, no people",
-        "Abstract cinematic metaphor for technical interviews, no people",
-        "Abstract cinematic metaphor for ai automation, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 5,
-        "phrase": "here's what's wild",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 12,
-        "phrase": "eighty seven percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 22,
-        "phrase": "step one",
-        "action": "POINT at camera, punch the word 'one'"
-      },
-      {
-        "second": 35,
-        "phrase": "step two",
-        "action": "POINT again, emphasize 'interviews'"
-      },
-      {
-        "second": 42,
-        "phrase": "finally",
-        "action": "Hit fun phrase hard, lean forward"
-      },
-      {
-        "second": 50,
-        "action": "CLOSER \u2014 slow down, land the truth line with conviction"
-      }
-    ],
-    "delivery_notes": "Fast hook with confidence, pause before all numbers, punch each step clearly, slow down for truth closer",
-    "retention_notes": "Loop plants at 5 seconds with 'wild' energy spike, payoff at 15 seconds, steps cascade with interview focus, closer loops back to baseline concept",
-    "filename_hint": "script_02_ai_skills_are_baseline.mp4",
-    "word_count": 182,
-    "estimated_seconds": 70,
-    "length_warning": "OVER TARGET: 182 words (max 145). Trim before recording.",
-    "source_topic": "AI skills are now a baseline, not a bonus",
-    "source_type": "news",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 2,
-    "territory": "Career + Money",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "AI is not a bubble like dot-com; it's a tool. Tools don't go away.",
-    "work_pattern_id": null,
-    "title_overlay": "HIRING MANAGERS WANT AI FLUENCY",
-    "subtitle_overlay": "not just ChatGPT prompts",
-    "spoken_script": "This week Meta announced they're hiring five hundred AI infrastructure engineers by March \u2014 and every job posting mentions one skill that eighty percent of candidates are missing. They want engineers who integrate AI into production systems, not just prompt engineers who copy-paste from ChatGPT. Here's the truth \u2014 companies are done with AI theater. Step one: learn one production AI framework this month. Pick LangChain, LlamaIndex, or build with OpenAI API directly. Don't just read tutorials \u2014 ship something small to production. Step two: understand where AI breaks in real systems. Context windows fill up, models hallucinate, APIs rate limit. Build error handling and fallback logic. That's what separates builders from prompt collectors. Step three: document your AI work like infrastructure. Show monitoring, show costs, show performance metrics. Hiring managers want proof you can scale AI, not just demo it. Finally \u2014 the engineers getting hired right now treat AI like any other tool in the stack. They know when to use it and when not to. That's the fluency companies actually need.",
-    "caption_hook": "Meta is hiring 500 AI infrastructure engineers and 80% of candidates are missing the one skill they actually want.",
-    "hashtags": [
-      "#AIEngineering",
-      "#TechJobs",
-      "#SoftwareEngineering",
-      "#ProductionAI",
-      "#TechCareer"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Punch the word 'truth' hard.",
-    "hook_type": "OPEN_LOOP",
-    "opening_line": "This week Meta announced they're hiring five hundred AI infrastructure engineers by March \u2014 and every job posting mentions one skill that eighty percent of candidates are missing.",
-    "open_loop_plant": "one skill that eighty percent of candidates are missing",
-    "open_loop_payoff": "They want engineers who integrate AI into production systems, not just prompt engineers",
-    "loopback_closer": "That's the fluency companies actually need.",
-    "visual_cues": "Meta hiring announcement, 80% stat, three numbered steps with icons, production system diagrams",
-    "visual_moments": [
-      {
-        "at_phrase": "five hundred AI infrastructure engineers",
-        "graphic": "500",
-        "label": "AI ENGINEERS HIRED",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "eighty percent of candidates",
-        "graphic": "80%",
-        "label": "MISSING KEY SKILL",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "LEARN FRAMEWORK",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "HANDLE FAILURES",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "five hundred AI infrastructure engineers",
-          "display": "500",
-          "label": "AI ENGINEERS HIRED"
-        },
-        {
-          "phrase": "eighty percent of candidates",
-          "display": "80%",
-          "label": "MISSING KEY SKILL"
-        }
-      ],
-      "fun_phrases": [
-        "truth",
-        "finally",
-        "wrong"
-      ],
-      "energy_words": [
-        "truth",
-        "really"
-      ],
-      "broll_phrases": [
-        "production systems",
-        "OpenAI API",
-        "error handling",
-        "infrastructure"
-      ],
-      "beat_phrases": {
-        "crust": "here's the truth",
-        "payoff": "that's the fluency companies actually need"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for production systems, no people",
-        "Abstract API gateway visualization, glowing endpoints, dark UI, no logos or text",
-        "Abstract cinematic metaphor for error handling, no people",
-        "Abstract cinematic metaphor for infrastructure, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 3,
-        "phrase": "five hundred",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 8,
-        "phrase": "eighty percent",
-        "action": "PAUSE before stat"
-      },
-      {
-        "second": 15,
-        "phrase": "here's the truth",
-        "action": "ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 20,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one'"
-      },
-      {
-        "second": 32,
-        "phrase": "step two",
-        "action": "Punch 'two', lean forward"
-      },
-      {
-        "second": 44,
-        "phrase": "finally",
-        "action": "Hit fun phrase hard"
-      },
-      {
-        "second": 50,
-        "action": "CLOSER \u2014 slow down, land the loop-back line"
-      }
-    ],
-    "delivery_notes": "Open with urgency on Meta announcement. Pause before all numbers. Emphasize 'production systems' vs 'prompt engineers'. Strong energy on 'truth' and 'finally'.",
-    "retention_notes": "Loop plants at 8 seconds with missing skill mystery, pays off at 15 seconds. Crust moment hits at 'here's the truth'. Mid-video re-engagement with 'finally' at step three.",
-    "filename_hint": "script_02_hiring_managers_want_ai.mp4",
-    "word_count": 174,
-    "estimated_seconds": 67,
-    "length_warning": "OVER TARGET: 174 words (max 145). Trim before recording.",
-    "source_topic": "What Hiring Managers Want Right Now: AI Fluency",
-    "source_type": "news",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 1,
-    "territory": "Career + Money",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "AI is not a bubble like dot-com; it's a tool. Tools don't go away.",
-    "work_pattern_id": null,
-    "title_overlay": "DATA ENGINEERS ARE RECESSION-PROOF",
-    "subtitle_overlay": "why every AI project needs them",
-    "spoken_script": "This week's jobs report shows data engineers getting hired at twice the rate of other tech roles \u2014 and there's a simple reason why. Every company launching AI projects finally realizes they need someone who can actually build the infrastructure. Here's the truth: you can't run machine learning on messy data, and you can't scale AI without reliable pipelines. According to this week's Bureau of Labor Statistics report, data engineering roles grew twenty three percent quarter over quarter while other tech hiring stayed flat. Step one \u2014 learn one cloud data warehouse this month. Snowflake, BigQuery, or Databricks. Pick one and build something. Step two \u2014 get comfortable with real-time streaming. Kafka, Kinesis, anything that moves data fast. Companies need engineers who can feed AI models fresh data, not batch jobs from yesterday. Step three \u2014 understand data governance and quality checks. AI teams are finally realizing garbage in means garbage out. That's the secret most engineers miss \u2014 data engineering isn't just about moving data anymore. It's about making AI actually work in production. While everyone else is learning prompt engineering, data engineers are building the systems that make the prompts possible.",
-    "caption_hook": "Data engineers are getting hired faster than any other tech role in 2026 \u2014 here's why AI changed everything.",
-    "hashtags": [
-      "#DataEngineering",
-      "#AIInfrastructure",
-      "#TechCareers",
-      "#DataJobs",
-      "#TechTrends"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'truth' and 'secret' with emphasis.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "This week's jobs report shows data engineers getting hired at twice the rate of other tech roles \u2014 and there's a simple reason why.",
-    "open_loop_plant": "and there's a simple reason why",
-    "open_loop_payoff": "That's the secret most engineers miss \u2014 data engineering isn't just about moving data anymore",
-    "loopback_closer": "While everyone else is learning prompt engineering, data engineers are building the systems that make the prompts possible.",
-    "visual_cues": "Jobs report data, growth stats, step graphics, tech logos",
-    "visual_moments": [
-      {
-        "at_phrase": "twenty three percent",
-        "graphic": "23%",
-        "label": "GROWTH RATE",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "LEARN WAREHOUSE",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "STREAMING DATA",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "DATA GOVERNANCE",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "twenty three percent",
-          "display": "23%",
-          "label": "GROWTH RATE"
-        }
-      ],
-      "fun_phrases": [
-        "truth",
-        "secret",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "truth",
-        "unless"
-      ],
-      "broll_phrases": [
-        "data warehouse",
-        "machine learning",
-        "AI models",
-        "data pipelines"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "snowflake",
-          "brand": "snowflake"
-        },
-        {
-          "phrase": "bigquery",
-          "brand": "google"
-        },
-        {
-          "phrase": "databricks",
-          "brand": "databricks"
-        },
-        {
-          "phrase": "kafka",
-          "brand": "kafka"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the truth",
-        "payoff": "that's the secret most engineers miss"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for data warehouse, no people",
-        "Neural network abstract visualization, nodes and edges, dark bg, no people",
-        "Abstract cinematic metaphor for AI models, no people",
-        "ETL flow diagram with warehouse nodes, dark cinematic, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, confident, matter-of-fact tone"
-      },
-      {
-        "second": 8,
-        "phrase": "here's the truth",
-        "action": "PAUSE \u2192 ENERGY UP (crust zoom)"
-      },
-      {
-        "second": 18,
-        "phrase": "twenty three percent",
-        "action": "PAUSE 0.3s before number, speak clearly"
-      },
-      {
-        "second": 28,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word 'one'"
-      },
-      {
-        "second": 38,
-        "phrase": "step two",
-        "action": "Lean forward, emphasize 'real-time'"
-      },
-      {
-        "second": 47,
-        "phrase": "step three",
-        "action": "Serious tone, slow down slightly"
-      },
-      {
-        "second": 55,
-        "phrase": "secret",
-        "action": "Hit fun phrase hard, slight smile"
-      },
-      {
-        "second": 62,
-        "action": "CLOSER \u2014 confident, land the contrast"
-      }
-    ],
-    "delivery_notes": "Start matter-of-fact, build energy at 'truth', pause before stats, punch each step number, land the closer with authority",
-    "retention_notes": "Loop plants at 'simple reason why', pays off at 'secret most engineers miss'. Mid-video re-hook at step transitions. Rhythm breaks with short sentences after longer setups.",
-    "filename_hint": "script_01_data_engineers_are_recessionproof.mp4",
-    "word_count": 193,
-    "estimated_seconds": 74,
-    "length_warning": "OVER TARGET: 193 words (max 145). Trim before recording.",
-    "source_topic": "Data engineering is one of the safest bets in tech right now",
-    "source_type": "news",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 1,
-    "territory": "Career + Money",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "AI is a tool like a calculator \u2014 tools don't go away, markets just haven't caught up",
-    "work_pattern_id": null,
-    "title_overlay": "AI SKILLS IN 38% OF TECH JOBS",
-    "subtitle_overlay": "what this week's numbers mean for your career",
-    "spoken_script": "Thirty eight percent of tech job postings mentioned AI skills in June \u2014 up from thirty six percent last month. Here's the truth: most engineers are learning AI wrong. According to this week's hiring report, companies want engineers who ship AI features to production, not those who chat with Claude all day. Step one: pick one AI tool for your daily workflow \u2014 Cursor for coding, Claude for planning, or GitHub Copilot for autocomplete. Don't jump between five tools. Step two: build something small this week that uses AI to solve a real problem. Deploy it. Document the pipeline. Step three: add one line to your resume about shipping AI-powered features to users. Not AI research \u2014 shipping. The engineers getting hired aren't the ones who memorize prompts. They're the ones who figure out how to deploy models and integrate them into systems that actually work. That's the gap in those thirty eight percent of job postings.",
-    "caption_hook": "38% of tech jobs now mention AI skills \u2014 here's how to actually stand out from the prompt engineers.",
-    "hashtags": [
-      "#AIEngineering",
-      "#TechCareers",
-      "#SoftwareEngineering",
-      "#CareerAdvice",
-      "#TechJobs"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'truth' and 'wrong' with conviction.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "Thirty eight percent of tech job postings mentioned AI skills in June \u2014 up from thirty six percent last month.",
-    "open_loop_plant": "Here's the truth: most engineers are learning AI wrong.",
-    "open_loop_payoff": "The engineers getting hired aren't the ones who memorize prompts. They're the ones who figure out how to deploy models and integrate them into systems that actually work.",
-    "loopback_closer": "That's the gap in those thirty eight percent of job postings.",
-    "visual_cues": "38% statistic display, three numbered steps with icons, deployment pipeline graphic",
-    "visual_moments": [
-      {
-        "at_phrase": "thirty eight percent",
-        "graphic": "38%",
-        "label": "TECH JOBS WITH AI",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "PICK ONE TOOL",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "BUILD & DEPLOY",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "UPDATE RESUME",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "thirty eight percent",
-          "display": "38%",
-          "label": "TECH JOBS WITH AI"
-        },
-        {
-          "phrase": "thirty six percent",
-          "display": "36%",
-          "label": "LAST MONTH"
-        }
-      ],
-      "fun_phrases": [
-        "truth",
-        "wrong",
-        "finally"
-      ],
-      "energy_words": [
-        "truth",
-        "wrong",
-        "really"
-      ],
-      "broll_phrases": [
-        "cursor for coding",
-        "claude for planning",
-        "deploy it",
-        "resume"
-      ],
-      "beat_phrases": {
-        "crust": "here's the truth",
-        "payoff": "that's the gap"
-      },
-      "broll_image_descriptions": [
-        "Dark IDE workspace with glowing code editor, moody teal lighting, no faces",
-        "Planning interface with floating sticky notes, brainstorm mood, dark background, no people",
-        "Abstract cinematic metaphor for deploy it, no people",
-        "Abstract cinematic metaphor for resume, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 3,
-        "phrase": "thirty eight percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 8,
-        "phrase": "here's the truth",
-        "action": "ENERGY UP \u2014 crust moment"
-      },
-      {
-        "second": 15,
-        "phrase": "wrong",
-        "action": "Hit fun phrase with conviction"
-      },
-      {
-        "second": 25,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word 'one'"
-      },
-      {
-        "second": 35,
-        "phrase": "step two",
-        "action": "Gesture build/deploy motion"
-      },
-      {
-        "second": 42,
-        "phrase": "step three",
-        "action": "Confident pointing gesture"
-      },
-      {
-        "second": 52,
-        "phrase": "that's the gap",
-        "action": "CLOSER \u2014 slow down, land the loop-back"
-      }
-    ],
-    "delivery_notes": "Strong hook energy, pause before all percentages, build momentum through three steps, confident finish",
-    "retention_notes": "Loop plants at 'learning AI wrong', resolves with 'memorize prompts vs deploy models', crust at 'here's the truth' for mid-hook energy",
-    "filename_hint": "script_01_ai_skills_in_38.mp4",
-    "word_count": 157,
-    "estimated_seconds": 60,
-    "length_warning": "OVER TARGET: 157 words (max 145). Trim before recording.",
-    "source_topic": "AI Skills Are Now in a Large Share of Tech Job Postings",
-    "source_type": "news",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 8,
-    "territory": "Tech Made Simple",
-    "title_overlay": "WHY HEALTHCARE & FINANCE ARE HIRING AI ENGINEERS",
-    "subtitle_overlay": "The three sectors driving demand right now",
-    "spoken_script": "Three industries are hiring AI engineers faster than they can interview them \u2014 and it's not the ones you think. Healthcare companies increased AI hiring by eighty six percent this year because patient data analysis is finally automated. Finance firms need engineers who can build fraud detection in real time, not next week. Cybersecurity teams are desperate for people who understand both threat analysis and machine learning pipelines. Here's what's wild \u2014 these aren't tech companies. They're traditional industries that finally have budgets for AI talent. Step one: pick one sector and learn their specific compliance requirements. Healthcare has HIPAA, finance has SOX, cybersecurity has frameworks like NIST. Step two: build one project that solves a real problem in that industry. A patient scheduling optimizer, a transaction anomaly detector, or a threat classification system. Step three: speak their language on LinkedIn. Use terms like patient outcomes, risk mitigation, or threat intelligence. Not just accuracy metrics. These industries pay premium salaries because they understand measurable impact. While everyone else chases generic AI roles, you'll be the engineer who actually understands healthcare workflows.",
-    "caption_hook": "Three industries are hiring AI engineers faster than they can interview them.",
-    "hashtags": [
-      "#AIJobs",
-      "#DataEngineering",
-      "#TechCareers",
-      "#Healthcare",
-      "#FinTech"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'wild' hard for crust energy.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Three industries are hiring AI engineers faster than they can interview them \u2014 and it's not the ones you think.",
-    "open_loop_plant": "and it's not the ones you think",
-    "open_loop_payoff": "these aren't tech companies \u2014 they're traditional industries",
-    "loopback_closer": "While everyone else chases generic AI roles, you'll be the engineer who actually understands healthcare workflows.",
-    "visual_cues": "Industry stats, compliance frameworks, project examples",
-    "visual_moments": [
-      {
-        "at_phrase": "eighty six percent",
-        "graphic": "86%",
-        "label": "HEALTHCARE AI HIRING",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "LEARN COMPLIANCE",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "BUILD PROJECT",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "SPEAK INDUSTRY",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "eighty six percent",
-          "display": "86%",
-          "label": "HEALTHCARE AI HIRING"
-        }
-      ],
-      "fun_phrases": [
-        "wild",
-        "finally",
-        "really"
-      ],
-      "energy_words": [
-        "right",
-        "truth",
-        "unless"
-      ],
-      "broll_phrases": [
-        "patient data analysis",
-        "fraud detection",
-        "machine learning pipelines",
-        "healthcare workflows"
-      ],
-      "beat_phrases": {
-        "crust": "here's what's wild",
-        "payoff": "these industries pay premium salaries"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for patient data analysis, no people",
-        "Abstract cinematic metaphor for fraud detection, no people",
-        "Neural network abstract visualization, nodes and edges, dark bg, no people",
-        "Abstract cinematic metaphor for healthcare workflows, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 8,
-        "phrase": "eighty six percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 20,
-        "phrase": "here's what's wild",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 28,
-        "phrase": "step one",
-        "action": "STEP 1 \u2014 point at camera, punch the word 'one'"
-      },
-      {
-        "second": 38,
-        "phrase": "step two",
-        "action": "STEP 2 \u2014 gesture building motion"
-      },
-      {
-        "second": 48,
-        "phrase": "step three",
-        "action": "STEP 3 \u2014 emphatic hand gesture"
-      },
-      {
-        "second": 58,
-        "phrase": "finally",
-        "action": "Hit fun phrase with emphasis"
-      },
-      {
-        "second": 65,
-        "action": "CLOSER \u2014 slow down, land the loop-back line"
-      }
-    ],
-    "delivery_notes": "Fast confident opening, pause before 86%, energy spike at 'wild', punch each step number, slow deliberate closer",
-    "retention_notes": "Loop plants with 'not the ones you think' at 0:03, pays off at 0:25 with 'traditional industries'. Crust at 'wild' (0:20), mid-video re-hook at 'premium salaries' (0:58).",
-    "filename_hint": "script_08_why_healthcare_finance_are.mp4",
-    "word_count": 181,
-    "estimated_seconds": 70,
-    "source_topic": "Why healthcare, finance, and cybersecurity are hiring more AI/data talent",
-    "content_phase": "growth",
-    "date_generated": "2026-06-10"
-  },
-  {
-    "script_number": 8,
-    "territory": "Career + Money",
-    "title_overlay": "AI SKILLS IN EVERY HIRING CONVERSATION",
-    "subtitle_overlay": "why this happened and what to learn",
-    "spoken_script": "Sixty-two percent of tech job postings now mention AI skills even when they're not AI roles. That means data engineers, backend engineers, even DevOps engineers are getting asked about machine learning in interviews. Here's what most people are missing about this trend. Companies aren't actually looking for AI experts in every role \u2014 they're looking for engineers who can work alongside AI systems. The truth is, hiring managers need people who understand how to integrate with AI APIs, validate AI outputs, and build systems that can handle AI-generated data. So here's what you actually need to learn. First, get comfortable with at least one AI API \u2014 OpenAI, Anthropic, or AWS Bedrock. Spend this week building something small that calls an API and handles the response. Second, learn prompt engineering basics. Not the advanced stuff \u2014 just how to write clear prompts and validate outputs programmatically. Third, understand AI data patterns. AI systems generate different data shapes than traditional applications, and you need to know how to store and process them. That's how you become the engineer who can bridge traditional systems with AI capabilities. And that's exactly what sixty-two percent of companies are really hiring for.",
-    "caption_hook": "Most tech jobs now require AI skills \u2014 but not the ones you think.",
-    "hashtags": [
-      "#AISkills",
-      "#TechJobs",
-      "#CareerAdvice",
-      "#Engineering",
-      "#HiringTrends"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'truth is' with emphasis.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Sixty-two percent of tech job postings now mention AI skills even when they're not AI roles.",
-    "open_loop_plant": "Here's what most people are missing about this trend.",
-    "open_loop_payoff": "Companies aren't actually looking for AI experts in every role \u2014 they're looking for engineers who can work alongside AI systems.",
-    "loopback_closer": "And that's exactly what sixty-two percent of companies are really hiring for.",
-    "visual_cues": "62% stat, API integration graphic, prompt engineering visual, data patterns diagram",
-    "visual_moments": [
-      {
-        "at_phrase": "sixty-two percent of tech job postings",
-        "graphic": "62%",
-        "label": "TECH JOBS WITH AI",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "first, get comfortable with at least one AI API",
-        "graphic": "1",
-        "label": "LEARN ONE API",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "second, learn prompt engineering basics",
-        "graphic": "2",
-        "label": "PROMPT ENGINEERING",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "third, understand AI data patterns",
-        "graphic": "3",
-        "label": "AI DATA PATTERNS",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "sixty-two percent of tech job postings",
-          "display": "62%",
-          "label": "TECH JOBS WITH AI"
-        }
-      ],
-      "fun_phrases": [
-        "truth",
-        "finally",
-        "wrong"
-      ],
-      "energy_words": [
-        "truth",
-        "actually",
-        "exactly"
-      ],
-      "broll_phrases": [
-        "AI API",
-        "prompt engineering",
-        "data patterns",
-        "traditional systems"
-      ],
-      "beat_phrases": {
-        "crust": "the truth is",
-        "payoff": "that's how you become the engineer who can bridge traditional systems"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for AI API, no people",
-        "Abstract cinematic metaphor for prompt engineering, no people",
-        "Abstract cinematic metaphor for data patterns, no people",
-        "Abstract cinematic metaphor for traditional systems, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "delivery_notes": "Start strong on the stat. Pause before revealing the insight. Build energy through the three steps. Land the closer with conviction.",
-    "retention_notes": "Loop plants at 'what most people are missing' and pays off at 'companies aren't actually looking for AI experts'. Rhythm breaks at each numbered step. Mid-video re-hook at 'the truth is'.",
-    "source_topic": "Why AI skills are showing up in every hiring conversation",
-    "content_phase": "growth",
-    "date_generated": "2026-06-10"
-  },
-  {
-    "script_number": 7,
-    "territory": "Tech Made Simple",
-    "title_overlay": "THE 2026 EMPLOYABILITY PLAYBOOK",
-    "subtitle_overlay": "what separates the hired from the ghosted",
-    "spoken_script": "Senior engineers who build full-stack AI systems are getting hired faster than anyone else right now. But here's what's wild \u2014 most candidates are still optimizing for the wrong skills. Seventy four percent of hiring managers say they need engineers who can take ownership from problem to production, not just write code. The secret? It's not about being perfect at everything. Step one \u2014 pick one cloud platform and learn their entire AI stack, not just the compute layer. AWS Bedrock, Azure OpenAI, or Google Vertex \u2014 but know storage, security, and billing too. That's normal for senior roles now. Step two \u2014 build one real system that touches data pipeline, model deployment, and user interface. Document everything. Show the business impact, not just the technical achievement. Step three \u2014 practice explaining complex systems to non-technical stakeholders. Record yourself describing your architecture in two minutes. The engineers getting offers in 2026 aren't the ones with the most certifications \u2014 they're the ones who can build complete solutions.",
-    "caption_hook": "The 2026 senior engineer playbook: why full-stack AI builders are getting hired faster than specialists.",
-    "hashtags": [
-      "#SeniorEngineer",
-      "#AIEngineering",
-      "#TechCareers",
-      "#CloudSkills",
-      "#CareerGrowth"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'that's normal' hard for fun phrase moments.",
-    "hook_type": "IDENTITY CALL",
-    "opening_line": "Senior engineers who build full-stack AI systems are getting hired faster than anyone else right now.",
-    "open_loop_plant": "here's what's wild \u2014 most candidates are still optimizing for the wrong skills",
-    "open_loop_payoff": "The engineers getting offers in 2026 aren't the ones with the most certifications \u2014 they're the ones who can build complete solutions",
-    "loopback_closer": "The engineers getting offers in 2026 aren't the ones with the most certifications \u2014 they're the ones who can build complete solutions.",
-    "visual_cues": "Display 74% stat when mentioned. Show step numbers 1-2-3. Highlight cloud platforms AWS/Azure/Google.",
-    "visual_moments": [
-      {
-        "at_phrase": "seventy four percent",
-        "graphic": "74%",
-        "label": "NEED FULL-STACK ENGINEERS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "PICK ONE CLOUD STACK",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "BUILD COMPLETE SYSTEM",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "PRACTICE EXPLAINING",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "seventy four percent",
-          "display": "74%",
-          "label": "NEED FULL-STACK ENGINEERS"
-        }
-      ],
-      "fun_phrases": [
-        "that's normal",
-        "secret",
-        "wild"
-      ],
-      "energy_words": [
-        "right",
-        "truth"
-      ],
-      "broll_phrases": [
-        "cloud platform",
-        "data pipeline",
-        "model deployment",
-        "user interface"
-      ],
-      "beat_phrases": {
-        "crust": "here's what's wild",
-        "payoff": "they're the ones who can build complete solutions"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for cloud platform, no people",
-        "ETL flow diagram with warehouse nodes, dark cinematic, no people",
-        "Abstract cinematic metaphor for model deployment, no people",
-        "Abstract cinematic metaphor for user interface, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. Target senior engineers directly."
-      },
-      {
-        "second": 6,
-        "phrase": "here's what's wild",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 15,
-        "phrase": "seventy four percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 20,
-        "phrase": "secret",
-        "action": "Hit fun phrase hard, slight smile"
-      },
-      {
-        "second": 28,
-        "action": "STEP 1 \u2014 point at camera, punch the word 'one'"
-      },
-      {
-        "second": 40,
-        "phrase": "that's normal",
-        "action": "Casual delivery, fun phrase moment"
-      },
-      {
-        "second": 44,
-        "action": "STEP 2 \u2014 energy reset, new gesture"
-      },
-      {
-        "second": 58,
-        "action": "STEP 3 \u2014 final step energy"
-      },
-      {
-        "second": 68,
-        "action": "CLOSER \u2014 slow down, land the loop-back line"
-      }
-    ],
-    "delivery_notes": "Start fast and confident targeting senior engineers. Pause before 74% stat. Hit fun phrases 'secret' and 'that's normal' with slight energy. Each step gets fresh gesture and energy reset.",
-    "retention_notes": "Loop plants at 6s with 'here's what's wild', resolves at 68s with complete solutions payoff. Rhythm breaks at each step. Mid-video re-hook at 'that's normal' around 40s mark.",
-    "filename_hint": "script_07_the_2026_employability_playbook.mp4",
-    "word_count": 167,
-    "estimated_seconds": 64,
-    "source_topic": "The senior AI/data engineer playbook for staying employable in 2026",
-    "content_phase": "growth",
-    "date_generated": "2026-06-10"
-  },
-  {
-    "script_number": 7,
-    "territory": "Career + Money",
-    "title_overlay": "AI VS ML VS DATA SCIENTIST",
-    "subtitle_overlay": "the roles that actually pay",
-    "spoken_script": "Three job titles are completely broken right now \u2014 AI engineer, ML engineer, and data scientist. Let me tell you which one actually gets you hired. Here's the truth: AI engineers build production systems that users touch. They're taking GPT-4 and Claude and building actual applications. Slack bots, customer service tools, content generators. Pure building. ML engineers, on the other hand, they're focused on training models from scratch. They're doing feature engineering, hyperparameter tuning, model validation. Data scientists? They're answering business questions with data. A/B tests, forecasting, reporting dashboards. Now here's what's wild \u2014 the market is paying AI engineers thirty percent more than ML engineers at most companies. Why? Because AI engineers ship products that generate revenue immediately. Step one this week: pick one lane and go deep. Don't try to be all three. Step two: build something users can actually interact with in that lane. Step three: document the business impact on your LinkedIn. Finally, that broken job title confusion? It's actually your opportunity to stand out by knowing exactly what each role does.",
-    "caption_hook": "The market is paying AI engineers 30% more than ML engineers \u2014 here's why and which path to choose.",
-    "hashtags": [
-      "#AIEngineer",
-      "#MLEngineer",
-      "#DataScientist",
-      "#TechCareers",
-      "#SalaryData"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' with conviction.",
-    "hook_type": "IDENTITY CALL",
-    "opening_line": "Three job titles are completely broken right now \u2014 AI engineer, ML engineer, and data scientist.",
-    "open_loop_plant": "Let me tell you which one actually gets you hired.",
-    "open_loop_payoff": "the market is paying AI engineers thirty percent more than ML engineers at most companies",
-    "loopback_closer": "Finally, that broken job title confusion? It's actually your opportunity to stand out by knowing exactly what each role does.",
-    "visual_cues": "Display '3 ROLES' at opening, '30%' at salary reveal, numbered steps 1-3",
-    "visual_moments": [
-      {
-        "at_phrase": "three job titles",
-        "graphic": "3",
-        "label": "CONFUSING ROLES",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "thirty percent more",
-        "graphic": "30%",
-        "label": "AI ENGINEER PREMIUM",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "PICK ONE LANE",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "BUILD & SHIP",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "DOCUMENT IMPACT",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "thirty percent more",
-          "display": "30%",
-          "label": "AI ENGINEER PREMIUM"
-        }
-      ],
-      "fun_phrases": [
-        "pure building",
-        "truth",
-        "wild",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "truth",
-        "wild"
-      ],
-      "broll_phrases": [
-        "slack bots",
-        "customer service tools",
-        "linkedin",
-        "business impact"
-      ],
-      "beat_phrases": {
-        "crust": "pure building",
-        "payoff": "thirty percent more than ML engineers"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for slack bots, no people",
-        "Abstract cinematic metaphor for customer service tools, no people",
-        "Abstract cinematic metaphor for linkedin, no people",
-        "Abstract cinematic metaphor for business impact, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "delivery_notes": "Start strong on 'completely broken'. Pause before '30%'. Build energy through the three role definitions. Land the salary reveal with authority.",
-    "retention_notes": "Open loop plants at 8 seconds with 'which one gets you hired', pays off at 45 seconds with salary data. Rhythm breaks after each role definition. Mid-video re-hook at 'what's wild' before salary reveal.",
-    "source_topic": "AI engineer vs ML engineer vs data scientist",
-    "content_phase": "growth",
-    "date_generated": "2026-06-10"
   }
 ]
