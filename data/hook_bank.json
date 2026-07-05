@@ -458,5 +458,45 @@
     "opening_line": "I collected certifications once. Then lost a project to someone with zero badges.",
     "hook_type": "CONFESSION",
     "date": "2026-06-28"
+  },
+  {
+    "opening_line": "My app hit three hundred users and started feeling broken.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-05"
+  },
+  {
+    "opening_line": "Two hundred resumes. Same SQL keywords. Same Spark bullet.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-05"
+  },
+  {
+    "opening_line": "A friend prepped six months and failed the panel anyway.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-05"
+  },
+  {
+    "opening_line": "My first AWS deployment \u2014 actually went live.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-05"
+  },
+  {
+    "opening_line": "I used to explain ETL and watch my stakeholder's eyes go completely blank.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-05"
+  },
+  {
+    "opening_line": "A recruiter scrolled past my profile in three seconds.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-05"
+  },
+  {
+    "opening_line": "Most engineers write SQL that works on a laptop and breaks in production.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-05"
+  },
+  {
+    "opening_line": "Most people think AI data engineering is just writing Python and praying.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-07-05"
   }
 ]

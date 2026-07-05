@@ -136,7 +136,7 @@
       "productivity"
     ],
     "custom_visual_requests": [],
-    "processed": false,
-    "used_in_script": null
+    "processed": true,
+    "used_in_script": "script_01_my_app_broke_at.mp4"
   }
 ]
