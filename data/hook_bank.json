@@ -498,5 +498,45 @@
     "opening_line": "Most people think AI data engineering is just writing Python and praying.",
     "hook_type": "CONTRARIAN STRIKE",
     "date": "2026-07-05"
+  },
+  {
+    "opening_line": "I bombed a panel interview once \u2014 and i had the right answers.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-12"
+  },
+  {
+    "opening_line": "My first AWS deployment taught me three lessons I wish someone had just told me.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-12"
+  },
+  {
+    "opening_line": "Your SQL works on your laptop and silently fails in production \u2014 and most engineers never figure out why.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-12"
+  },
+  {
+    "opening_line": "Nobody handed me a job description that matched what I actually do.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-12"
+  },
+  {
+    "opening_line": "A solo builder deployed a RAG pipeline for internal docs.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-12"
+  },
+  {
+    "opening_line": "AI just confidently told your leadership the wrong numbers \u2014 and they believed it.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-12"
+  },
+  {
+    "opening_line": "Your RAG system passes every test \u2014 and still gives users the wrong answer in production.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-12"
+  },
+  {
+    "opening_line": "Nobody tells you what a production data engineer actually does all day.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-12"
   }
 ]
