@@ -538,5 +538,45 @@
     "opening_line": "Nobody tells you what a production data engineer actually does all day.",
     "hook_type": "OPEN LOOP",
     "date": "2026-07-12"
+  },
+  {
+    "opening_line": "I bombed an interview once \u2014 and I had better skills than the person they hired.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-19"
+  },
+  {
+    "opening_line": "Your AI just told investors wrong numbers. Confidently.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-19"
+  },
+  {
+    "opening_line": "An indie builder deployed a RAG pipeline \u2014 it confidently gave leadership the wrong revenue numbers.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-19"
+  },
+  {
+    "opening_line": "I once reviewed a query so nested it took me five minutes just to find the SELECT.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-19"
+  },
+  {
+    "opening_line": "Three years ago I couldn't explain what I did without losing people in sixty seconds.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-19"
+  },
+  {
+    "opening_line": "I deployed a RAG system, demo was perfect, day three the user got completely wrong information back.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-19"
+  },
+  {
+    "opening_line": "Here's a confession \u2014 most of my day is not pure building.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-19"
+  },
+  {
+    "opening_line": "I spent two years collecting certifications.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-19"
   }
 ]
