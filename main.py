@@ -23,21 +23,28 @@ from src.matcher import (
 from src.generator import generate_scripts
 from src.deliver import send_via_telegram
 from src.content_phase import get_phase, get_phase_label
+from src.series_calendar import filter_topics_for_series, get_active_series
 
 
 def _select_growth_topics(scored_topics: list[dict], count: int = 8, news_slots: int = 3) -> list[dict]:
-    """Reserve timely slots (story preferred over news); fill rest with highest-scored evergreen."""
+    """Prefer series-aligned hacks/tips; reserve a few timely social/news slots."""
+    series = get_active_series()
+    if series:
+        print(f"📚 Series: {series.get('title')} — filtering topics to arc")
+        scored_topics = filter_topics_for_series(scored_topics, max_off_arc=2, series=series)
+
     timely_pool = sorted(
-        [t for t in scored_topics if t.get("source_type") in ("story", "news", "social")],
+        [t for t in scored_topics if t.get("source_type") in ("story", "news", "social", "hack")],
         key=lambda t: (
-            {"story": 0, "social": 1, "news": 2}.get(t.get("source_type", "trend"), 3),
+            {"hack": 0, "social": 1, "story": 2, "news": 3}.get(t.get("source_type", "trend"), 4),
             -t.get("match_score", 0),
+            -float(t.get("engagement_score") or 0),
         ),
     )[:news_slots]
     timely_titles = {t["topic_title"] for t in timely_pool}
     evergreen = sorted(
         [t for t in scored_topics if t["topic_title"] not in timely_titles],
-        key=lambda t: t.get("match_score", 0),
+        key=lambda t: (t.get("match_score", 0), float(t.get("engagement_score") or 0)),
         reverse=True,
     )
     batch = timely_pool + evergreen
@@ -118,7 +125,7 @@ async def main():
     if journal_topics:
         print(f"📓 Journal queue: {len(journal_topics)} personal topic(s) ({count_pending_queue()} pending)")
     else:
-        print("📓 Journal queue empty — all slots from Perplexity")
+        print("📓 Journal queue empty — all slots from community research")
 
     raw_topics: list[dict] = []
     dropped = 0
@@ -144,7 +151,7 @@ async def main():
     elif journal_topics:
         journal_topics = await enrich_journal_topics(journal_topics)
         if remaining <= 0:
-            print("📓 Personal queue filled all slots — skipping Perplexity")
+            print("📓 Personal queue filled all slots — skipping community research")
     elif remaining > 0:
         trending_batch, raw_topics, trend_dropped = await _build_trending_batch(
             remaining, phase, news_slots=news_slots,

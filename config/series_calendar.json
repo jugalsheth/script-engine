@@ -1,0 +1,118 @@
+{
+  "active_series_id": "cursor_claude_mashups_2026w30",
+  "series": [
+    {
+      "id": "cursor_claude_mashups_2026w30",
+      "title": "Cursor + Claude Mashups",
+      "theme_keywords": [
+        "cursor",
+        "claude code",
+        "claude",
+        "mcp",
+        "higgsfield",
+        "agent",
+        "tokens",
+        "vibe coding",
+        "composer",
+        "rules"
+      ],
+      "start_date": "2026-07-20",
+      "end_date": "2026-08-09",
+      "episode_count_target": 8,
+      "episodes_completed": 16,
+      "formats": [
+        "hack",
+        "tip",
+        "build",
+        "news",
+        "confession"
+      ],
+      "subreddits": [
+        "CursorAI",
+        "ClaudeAI",
+        "ChatGPTCoding",
+        "LocalLLaMA"
+      ],
+      "hn_queries": [
+        "Cursor",
+        "Claude Code",
+        "MCP",
+        "vibe coding"
+      ]
+    },
+    {
+      "id": "token_autopsy_2026w33",
+      "title": "Token Autopsy",
+      "theme_keywords": [
+        "token",
+        "cost",
+        "pricing",
+        "opus",
+        "sonnet",
+        "overspend",
+        "cache",
+        "model routing"
+      ],
+      "start_date": "2026-08-10",
+      "end_date": "2026-08-30",
+      "episode_count_target": 6,
+      "episodes_completed": 0,
+      "formats": [
+        "confession",
+        "tip",
+        "hack",
+        "news"
+      ],
+      "subreddits": [
+        "CursorAI",
+        "ClaudeAI",
+        "LocalLLaMA"
+      ],
+      "hn_queries": [
+        "Claude pricing",
+        "Cursor cost",
+        "LLM tokens"
+      ]
+    },
+    {
+      "id": "mcp_mashups_2026w36",
+      "title": "MCP Mashups",
+      "theme_keywords": [
+        "mcp",
+        "higgsfield",
+        "tool",
+        "connector",
+        "claude code",
+        "cursor",
+        "browser"
+      ],
+      "start_date": "2026-08-31",
+      "end_date": "2026-09-20",
+      "episode_count_target": 6,
+      "episodes_completed": 0,
+      "formats": [
+        "hack",
+        "build",
+        "tip",
+        "news"
+      ],
+      "subreddits": [
+        "ClaudeAI",
+        "CursorAI",
+        "ChatGPTCoding"
+      ],
+      "hn_queries": [
+        "MCP",
+        "Model Context Protocol",
+        "Higgsfield"
+      ]
+    }
+  ],
+  "mashup_watchlist": [
+    "Claude Code + Higgsfield",
+    "Cursor + MCP",
+    "Claude Code + browser MCP",
+    "Cursor rules + agent mode",
+    "plan in Claude, ship in Cursor"
+  ]
+}

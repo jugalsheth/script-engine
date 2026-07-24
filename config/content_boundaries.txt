@@ -1,5 +1,6 @@
 CONTENT BOUNDARIES — HARD RULES (non-negotiable)
 Creator: Jugal Sheth, senior AI data engineer, NYC, visa pathway.
+Niche: AI coding tools & vibe coding (Cursor, Claude Code, tokens, agents, MCP, hacks).
 
 NEVER MENTION IN ANY SCRIPT:
 - Job searching, interviewing, "in my interviews this year", offer negotiations while job-hunting
@@ -10,29 +11,25 @@ NEVER MENTION IN ANY SCRIPT:
 - Invented first-person stories — optional generalized lines only from work_patterns.txt (max 1 sentence)
 
 AUDIENCE:
-Junior engineers, hiring managers, peers, and senior leaders (VP, SVP, CTO, COO, CEO).
-Write so a junior can act on Monday AND a leader respects the take.
+Builders shipping with AI tools — juniors through seniors, indie builders, practitioners.
+Write so a junior can try the tip Monday AND a power user respects the stack detail.
 
 MONDAY VALUE:
-Viewer should want to BUILD something after watching — and have 1-3 concrete actions.
+Viewer should want to OPEN the tool after watching — and have 1 concrete action.
 Show building energy; don't position as someone exploring other jobs.
 
 PERSONAL PROJECTS (use sparingly):
-- OK lightly: built a SaaS with Claude/Cursor, ~300-400 users, shipped in ~3 months
-- Not every script — max 1 in 8 scripts per batch
-- Frame as proof of builder mindset, not self-promotion
+- OK: built with Claude/Cursor, users shipped, token bills, MCP mashups
+- Not every script — max 2 in 8 scripts per batch unless journal-sourced
+- Frame as proof of builder craft, not self-promotion
 
-STORY SCRIPTS (preferred for source_type story or STORY_REACTION):
-- Hook: human moment, confession, failure, or surprise — NOT "X company announced Y"
-- Middle: what happened, why it matters, one concrete detail (number, tool, timeframe)
-- End: lesson + 1-2 embedded actions (woven into narrative, not "Step one... Step two...")
-- News is backdrop, not the subject — cite source if stating a fact
-- Include one emotion beat (betrayed, relieved, stunned, frustrated)
-- Prefer hook_type CONFESSION or OPEN LOOP for story scripts
-
-NEWS SCRIPTS (max 1 per batch when source_type is news):
-- Same story rules as above — never pure press-release recap
-- Hook must be human-angle, not headline clone
+SCRIPT FORMATS (preferred):
+- HACK: tool A + tool B → outcome (e.g. Claude Code + Higgsfield)
+- TIP: one setting/shortcut/config
+- BUILD: micro ship story
+- ACTIONABLE_NEWS: changelog/thread + "do this today"
+- CONFESSION: spend/fail/theater → lesson
+- Prefer hook_type CONFESSION or OPEN LOOP for confession/hack scripts
 
 BANNED HOOK PATTERNS (overused, feel like templates):
 - "Here's what's wild" (max 1 per 10 scripts)
@@ -41,7 +38,9 @@ BANNED HOOK PATTERNS (overused, feel like templates):
 - "In this video"
 - "Hey guys"
 - Three consecutive sentences starting with "Step one", "Step two", "Step three"
+- Hiring-manager listicles ("5 skills hiring managers want") unless journal-sourced
+- Generic "learn AI" without a named tool stack
 
 SARCASM ON CAMERA:
 Private disagreement style is sarcastic — on Reels use confident pushback without biting sarcasm.
-Replace snark with: direct contrast, dry one-liner, or "that's not how it works in production."
+Replace snark with: direct contrast, dry one-liner, or "that's not how it works when you ship."

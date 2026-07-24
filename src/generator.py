@@ -28,7 +28,8 @@ HOOK_TO_TEMPLATE = {
 }
 
 JSON_FIELDS = """
-  "script_type": "STORY_REACTION | NEWS_REACTION | EVERGREEN_VALUE | HOT_TAKE",
+  "script_type": "HACK | TIP | BUILD | ACTIONABLE_NEWS | CONFESSION | STORY_REACTION | HOT_TAKE | EVERGREEN_VALUE",
+  "format_hint": "hack | tip | build | news | confession",
   "creator_take_anchor": "one-line POV from creator_takes.txt (opinion angle, not work story)",
   "work_pattern_id": "null or optional id from work_patterns.txt — only if generalized credibility fits",
   "title_overlay": "THE BOLD TITLE IN CAPS",
@@ -36,7 +37,8 @@ JSON_FIELDS = """
   "spoken_script": "The complete word-for-word script the creator reads...",
   "caption_hook": "One compelling sentence for Instagram/LinkedIn caption",
   "hashtags": ["#Tag1", "#Tag2", "#Tag3", "#Tag4", "#Tag5"],
-  "series_note": "Episode X of 4: Building the Brand — or null if standalone",
+  "series_note": "Series Title · Ep N/M — stamped by pipeline if missing",
+  "series_id": "optional — pipeline may overwrite",
   "recording_tip": "Pause before numbers. First line with energy, not presentation voice. One more specific tip.",
   "hook_type": "IDENTITY CALL | CONFESSION | OPEN LOOP | CONTRARIAN STRIKE",
   "opening_line": "the exact first sentence spoken",
@@ -44,6 +46,17 @@ JSON_FIELDS = """
   "open_loop_payoff": "how and where the loop resolves",
   "loopback_closer": "final line that connects back to the hook",
   "visual_cues": "human-readable summary of graphics (legacy, keep for Telegram)",
+  "hook_visual": {
+    "tier": "higgsfield | fal | remotion",
+    "kind": "image_or_short_clip",
+    "prompt": "9:16 scroll-stopping proof of the hack — show tool UI or mashup result, not purple AI brains",
+    "duration_s": 2.5,
+    "why": "prove the tip in the first 2 seconds"
+  },
+  "visual_briefs": [
+    {"tier": "fal", "at_phrase": "exact spoken phrase", "prompt": "specific topical still"},
+    {"tier": "remotion", "type": "stat", "display": "$47", "label": "TOKEN BILL"}
+  ],
   "visual_moments": [
     {"at_phrase": "exact spoken phrase", "graphic": "23", "label": "LABEL CAPS", "type": "stat", "side": "right"},
     {"at_phrase": "sixty billion dollars", "type": "headline", "source": "FORBES", "headline": "SPACEX ACQUIRES CURSOR FOR $60B", "subheadline": "Deal reshapes AI tooling"},
@@ -55,16 +68,15 @@ JSON_FIELDS = """
     "stat_phrases": [{"phrase": "twenty three workflows", "display": "23", "label": "AUTOMATED WORKFLOWS"}],
     "fun_phrases": ["that's normal", "pure building"],
     "energy_words": ["right", "truth"],
-    "broll_phrases": ["data pipeline", "python script"],
-    "broll_image_descriptions": ["Cursor IDE dashboard with code suggestions", "Pricing tier UI with free badge, dark teal"],
+    "broll_phrases": ["cursor agent", "claude code terminal"],
+    "broll_image_descriptions": ["Cursor IDE agent panel with code diff", "Claude Code terminal with MCP tool call"],
     "beat_phrases": {"crust": "pure building", "payoff": "here's what makes it worth it"}
   },
   "edit_template": "THREE_STEP_HOT_TAKE or CONFESSION_STAT",
   "recording_cues": [
     {"second": 0, "action": "HOOK — lean in, fast, confident. No smile warmup."},
     {"second": 5, "phrase": "here's what's wild", "action": "PAUSE 0.3s then ENERGY UP — crust zoom fires"},
-    {"second": 12, "phrase": "seventy four percent", "action": "PAUSE before number, speak clearly"},
-    {"second": 22, "action": "STEP 1 — point at camera, punch the word 'first'"},
+    {"second": 12, "phrase": "forty seven dollars", "action": "PAUSE before number, speak clearly"},
     {"second": 35, "phrase": "secret", "action": "Hit fun phrase hard"},
     {"second": 48, "action": "CLOSER — slow down, land the loop-back line"}
   ],
@@ -104,14 +116,27 @@ def _build_system_prompt() -> str:
 
 
 def _script_type_for_topic(topic: dict) -> str:
-    source = topic.get("source_type", "trend")
-    if source in ("story", "news"):
-        return "STORY_REACTION"
+    hint = (topic.get("format_hint") or topic.get("source_type") or "tip").lower()
+    mapping = {
+        "hack": "HACK",
+        "tip": "TIP",
+        "build": "BUILD",
+        "news": "ACTIONABLE_NEWS",
+        "confession": "CONFESSION",
+        "social": "HACK",
+        "story": "CONFESSION",
+        "trend": "TIP",
+    }
+    if hint in mapping:
+        return mapping[hint]
     title = f"{topic.get('topic_title', '')} {topic.get('topic_summary', '')}".lower()
-    hot_keywords = ("wrong", "myth", "overhyped", "hate", "stop", "don't", "shouldn't", "contrarian")
-    if any(kw in title for kw in hot_keywords):
+    if any(kw in title for kw in ("wrong", "myth", "overhyped", "hate", "stop", "don't")):
         return "HOT_TAKE"
-    return "EVERGREEN_VALUE"
+    if any(kw in title for kw in ("hack", "mcp", "higgsfield", "mashup")):
+        return "HACK"
+    if any(kw in title for kw in ("token", "overspend", "bill", "cost")):
+        return "CONFESSION"
+    return "TIP"
 
 
 def _story_context_block(topic: dict) -> str:
@@ -132,45 +157,67 @@ def _story_context_block(topic: dict) -> str:
 
 
 def _script_type_requirements(script_type: str, script_number: int, batch_size: int) -> str:
+    if script_type == "HACK":
+        return (
+            "SCRIPT TYPE: HACK\n"
+            "- Hook names tool A + tool B (or one sharp tool move)\n"
+            "- Middle = exact setup the viewer copies today\n"
+            "- End = visible outcome / receipt\n"
+            "- Prefer hook_type OPEN LOOP or CONFESSION\n"
+            "- edit_template: CONFESSION_STAT or THREE_STEP_HOT_TAKE\n"
+            "- hook_visual.tier: higgsfield when the hack produces a visual; else fal\n"
+        )
+    if script_type == "TIP":
+        return (
+            "SCRIPT TYPE: TIP\n"
+            "- One setting, shortcut, rule file, or prompt pattern\n"
+            "- No three-step career advice\n"
+            "- Receipt: time saved or error avoided\n"
+            "- hook_visual.tier: fal\n"
+        )
+    if script_type == "BUILD":
+        return (
+            "SCRIPT TYPE: BUILD\n"
+            "- Micro ship story — what you made, with which stack\n"
+            "- One constraint that forced shipping\n"
+            "- Prefer hook_type CONFESSION\n"
+        )
+    if script_type == "ACTIONABLE_NEWS":
+        return (
+            "SCRIPT TYPE: ACTIONABLE_NEWS\n"
+            "- Changelog or viral thread is backdrop\n"
+            "- End with 'do this today' — one feature to try\n"
+            "- Include one headline visual_moment if a real source exists\n"
+        )
+    if script_type == "CONFESSION":
+        return (
+            "SCRIPT TYPE: CONFESSION\n"
+            "- Admit a real fail: tokens, vibe theater, agent thrash\n"
+            "- Land the fix with a named tool move\n"
+            "- hook_type: CONFESSION; edit_template: CONFESSION_STAT\n"
+        )
     if script_type == "STORY_REACTION":
         return (
             "SCRIPT TYPE: STORY_REACTION\n"
-            "- Hook = human moment, confession, failure, or surprise — NOT a press-release headline\n"
-            "- Middle = what happened, why it matters, one concrete detail (number, tool, timeframe)\n"
-            "- End = lesson + 1-2 actions WOVEN into the narrative (not 'Step one... Step two... Step three')\n"
-            "- Timely news (if any) is backdrop context — the STORY is the subject\n"
-            "- Include one emotion beat (betrayed, relieved, stunned, frustrated)\n"
+            "- Hook = human moment — NOT a press-release headline\n"
+            "- Prefer tip/hack energy inside the story\n"
             "- Prefer hook_type CONFESSION or OPEN LOOP\n"
-            "- ONE generalized builder line OK ('teams I've seen...', 'a builder I know...')\n"
-            "- Cite source only if stating a verifiable fact from the topic\n"
-            "- work_pattern_id: null unless one optional credibility line fits naturally\n"
         )
     if script_type == "NEWS_REACTION":
         return (
-            "SCRIPT TYPE: NEWS_REACTION (use STORY_REACTION rules — news is backdrop only)\n"
-            "- Hook names the human angle on this week's news — not the headline alone\n"
-            "- Explain what it means for engineers, PMs, and builders through a narrative spine\n"
-            "- One actionable insight woven into the story ending\n"
-            "- Do NOT imply the creator is job searching\n"
-            "- work_pattern_id: null\n"
+            "SCRIPT TYPE: NEWS_REACTION — treat as ACTIONABLE_NEWS\n"
+            "- Human angle + one action today\n"
         )
     if script_type == "HOT_TAKE":
         return (
             "SCRIPT TYPE: HOT_TAKE\n"
-            "- Open with contrarian claim anchored to a creator_take (DSA, hybrid, builders vs grinders)\n"
-            "- Defend with universal logic + optional ONE generalized pattern line from work_patterns.txt\n"
-            "- Confident pushback, not biting sarcasm\n"
-            "- Never cite fake 'I analyzed N posts' research\n"
+            "- Contrarian but specific to AI coding tools\n"
+            "- One concrete alternative workflow\n"
         )
     return (
-        "SCRIPT TYPE: EVERGREEN_VALUE\n"
-        "- Open with a story beat or universal pain — not a generic advice headline\n"
-        "- Hook = pain or insight the VIEWER has — weave 2-3 actions into narrative\n"
-        "- Avoid three consecutive 'Step one/two/three' sentence openers\n"
-        "- creator_take_anchor = your opinion angle from creator_takes.txt\n"
-        f"- work_pattern_id: null unless script {script_number} is the ONE optional credibility script in batch\n"
-        f"- Batch size {batch_size}: at most 1-2 scripts may set work_pattern_id; this is script #{script_number}\n"
-        "- If using work_pattern_id: ONE generalized sentence only — see TRANSLATION EXAMPLES in work_patterns.txt\n"
+        "SCRIPT TYPE: EVERGREEN_VALUE — reframed as a tip/hack\n"
+        "- Named tools + one copyable move + receipt\n"
+        f"- Script {script_number}/{batch_size} in this batch\n"
     )
 
 
@@ -231,32 +278,89 @@ def _normalize_script(script: dict) -> dict:
     if not isinstance(triggers, dict):
         triggers = {}
     triggers.setdefault("stat_phrases", [])
-    triggers.setdefault("fun_phrases", [])
-    triggers.setdefault("energy_words", ["right", "truth"])
+    triggers.setdefault("energy_words", ["right", "truth", "wrong", "secret"])
     triggers.setdefault("broll_phrases", [])
     triggers.setdefault("logo_phrases", [])
+    fun = triggers.get("fun_phrases")
+    if not isinstance(fun, list) or len(fun) < 2:
+        spoken_l = (script.get("spoken_script") or "").lower()
+        pool = [p.strip() for p in FUN_PHRASE_POOL.split(",")]
+        found = [p for p in pool if p.lower() in spoken_l]
+        while len(found) < 2:
+            for p in ("wrong", "truth", "insane", "wild", "finally"):
+                if p not in found:
+                    found.append(p)
+                if len(found) >= 2:
+                    break
+        triggers["fun_phrases"] = found[:3]
     beats = triggers.get("beat_phrases") or {}
     if not isinstance(beats, dict):
         beats = {}
     if not beats.get("crust"):
-        beats["crust"] = "step one"
+        spoken = script.get("spoken_script") or ""
+        for candidate in ("here's the thing", "that's wrong", "one fix", "the move is", "listen"):
+            if candidate in spoken.lower():
+                beats["crust"] = candidate
+                break
+        else:
+            beats["crust"] = "here's the thing"
     triggers["beat_phrases"] = beats
+    # Ensure first broll layout is immersive for hook punch when layouts missing
+    layouts = triggers.get("broll_layouts")
+    phrases = triggers.get("broll_phrases") or []
+    if phrases and (not isinstance(layouts, list) or len(layouts) < len(phrases)):
+        layouts = list(layouts) if isinstance(layouts, list) else []
+        while len(layouts) < len(phrases):
+            layouts.append("presenter_on_bg" if layouts else "immersive_flash")
+        if layouts:
+            layouts[0] = "immersive_flash"
+        triggers["broll_layouts"] = layouts
     script["video_triggers"] = triggers
 
     moments = script.get("visual_moments")
     if not isinstance(moments, list):
         script["visual_moments"] = []
 
+    st = (script.get("script_type") or script.get("format_hint") or "").upper()
+    title = script.get("title_overlay") or script.get("source_topic") or "AI coding tip"
+    default_tier = "higgsfield" if st == "HACK" else "fal"
+    if not isinstance(script.get("hook_visual"), dict):
+        script["hook_visual"] = {
+            "tier": default_tier,
+            "kind": "image_or_short_clip",
+            "prompt": (
+                f"9:16 vertical still proving the tip: {title}. "
+                "Show Cursor or Claude Code UI or mashup result. No purple AI brains."
+            ),
+            "duration_s": 2.5,
+            "why": "scroll-stopping proof in first 2 seconds",
+        }
+    else:
+        hv = script["hook_visual"]
+        if st == "HACK" and (hv.get("tier") or "").lower() != "higgsfield":
+            hv["tier"] = "higgsfield"
+        hv.setdefault("duration_s", 2.5)
+        hv.setdefault("kind", "image_or_short_clip")
+        if not (hv.get("prompt") or "").strip():
+            hv["prompt"] = (
+                f"9:16 vertical still proving the tip: {title}. "
+                "Show tool UI or mashup result. No purple AI brains."
+            )
+    if not isinstance(script.get("visual_briefs"), list):
+        script["visual_briefs"] = []
+
     hook = script.get("hook_type", "OPEN LOOP")
     script.setdefault("edit_template", HOOK_TO_TEMPLATE.get(hook, "THREE_STEP_HOT_TAKE"))
+    if st:
+        script.setdefault("format_hint", st.lower() if st != "ACTIONABLE_NEWS" else "news")
 
     cues = script.get("recording_cues")
     if not isinstance(cues, list) or len(cues) < 4:
         script["recording_cues"] = _build_recording_cues(script)
 
     num = script.get("script_number", 1)
-    title = script.get("title_overlay", "video")
-    script["filename_hint"] = f"script_{int(num):02d}_{_slug_words(title)}.mp4"
+    title_overlay = script.get("title_overlay", "video")
+    script["filename_hint"] = f"script_{int(num):02d}_{_slug_words(title_overlay)}.mp4"
 
     word_count = len(script.get("spoken_script", "").split())
     script["word_count"] = word_count
@@ -558,37 +662,26 @@ def _intro_requirements(brand_episode: int) -> str:
 
 def _growth_requirements() -> str:
     return (
-        "CONTENT PHASE: GROWTH (Video 5+)\n"
-        "Full retention framework — this is where you go hard.\n\n"
-        "SPOKEN SCRIPT REQUIREMENTS — GROWTH MODE:\n"
-        "Every script must follow Hook → Problem → Solution → CTA. Include ALL:\n\n"
-        "1. HOOK (first 3 seconds) — use exactly ONE of these 4 proven patterns:\n"
-        "   - IDENTITY CALL: name exactly who this is for\n"
-        "   - CONTRARIAN STRIKE: state something against consensus\n"
-        "   - OPEN LOOP: pose a question, answer it later\n"
-        "   - CONFESSION: admit something real and specific\n"
-        '   NEVER open with "Hey guys", "In this video", or any warmup.\n'
+        "CONTENT PHASE: GROWTH — VIBE CODING / NEVER BORING\n"
+        "Weekly tips, hacks, builds, actionable news. Viewer acts in ≤10 minutes.\n\n"
+        "SPOKEN SCRIPT REQUIREMENTS (ViralTasteGate — hard fail if missing):\n"
+        "1. HOOK — named TOOL in the first sentence. NOT 'N points on Hacker News'.\n"
+        "   Patterns: CONFESSION | OPEN LOOP | CONTRARIAN STRIKE | IDENTITY CALL\n"
+        '   NEVER open with "Hey guys", "In this video", or hiring listicles.\n'
         "   NEVER reuse any opening line from recent_hooks list provided.\n\n"
-        "2. OPEN LOOP (Zeigarnik Effect) — plant an unresolved question in\n"
-        "   the first 10 seconds. Resolve it near the end. Mandatory.\n\n"
-        "3. EXACTLY THREE ACTION STEPS — never four or five. Specific, doable THIS WEEK.\n"
-        "   At least one real statistic with source named out loud. Not awareness — ACTION.\n\n"
-        '4. CASCADING PAYOFFS — each step resolves AND tees up the next\n'
-        '   ("that fixes X, but now you have Y — which is step two").\n\n'
-        "5. RHYTHM VARIATION — alternate sentence length. Short. Longer. Short.\n\n"
-        "6. LOOP-BACK CLOSER — final line connects back to the opening hook.\n\n"
-        "7. LENGTH — HARD MAX 145 words (~50-55 seconds). Count before returning.\n"
-        "   Short punchy sentences. Cut filler. Every line earns its second.\n"
-        "   If draft exceeds 145 words, delete the weakest sentence and tighten.\n\n"
-        "8. VISUAL — populate visual_moments (3-5) + video_triggers with 3-5 broll_phrases, "
-        "broll_image_descriptions, broll_layouts, and logo_phrases [{phrase, brand}] when brand tools are named. "
-        "Include one headline or tweet visual_moment in the first 5 seconds for NEWS/HOT_TAKE hooks.\n\n"
-        "Add 0-2 viral visual_moments (tweet/headline/chat/reaction) when the script references "
-        "news, social posts, or a punchy reaction beat.\n\n"
-        "9. VALUE FIRST — 80% of scripts have work_pattern_id: null. No niche internal features.\n"
-        "   Optional: ONE generalized credibility line from work_patterns.txt (see TRANSLATION EXAMPLES).\n\n"
-        "10. RECORDING CUES — 5-8 teleprompter beats (second, phrase, action).\n"
-        "   Include: hook energy, crust pause, stat pauses, step punches, fun phrases, closer.\n\n"
+        "2. ONE COPYABLE MOVE — command, setting, MCP wire, slash command, --model flag.\n"
+        "   Prefer ONE hard tip/hack. Max two steps if needed — never Step one/two/three spam.\n"
+        "3. RECEIPT — $, minutes saved, file created, ship, or 'do this today'.\n"
+        "4. FORMAT — script_type + format_hint must match assigned type for this slot.\n"
+        "5. OPEN LOOP — soft unresolved beat early; resolve near the end.\n"
+        "6. LENGTH — HARD MAX 145 words.\n"
+        "7. VISUAL — hook_visual REQUIRED. HACK → tier higgsfield. TIP/BUILD → fal OK.\n"
+        "   Prompt must show tool UI / mashup result — no purple AI brains.\n"
+        "   visual_briefs 1-3. visual_moments 3-5. Max ONE higgsfield asset.\n"
+        "8. PUNCH PACK — ≥2 fun_phrases from pool verbatim; beat_phrases.crust in first 15s;\n"
+        "   energy_words; optional early headline/tweet visual_moment for news/hack.\n"
+        "9. Rotate signatures — do NOT default every closer to 'that's all it is.'\n"
+        "10. RECORDING CUES — 5-8 teleprompter beats.\n\n"
         f'{_video_contract_block()}'
         "- Written in first person, casual, direct\n"
         "- No bullet points in spoken_script — continuous speech\n"
@@ -597,26 +690,38 @@ def _growth_requirements() -> str:
     )
 
 
+FORMAT_MIX_ORDER = [
+    "HACK",
+    "HACK",
+    "HACK",
+    "TIP",
+    "TIP",
+    "BUILD",
+    "ACTIONABLE_NEWS",
+    "CONFESSION",
+]
+
+
 def _resolve_batch_script_types(topics: list[dict]) -> list[str]:
-    """Assign STORY / EVERGREEN / HOT_TAKE mix across a batch."""
+    """Assign weekly format mix across the batch (journal keeps inferred type)."""
     n = len(topics)
     if n == 0:
         return []
-    hot_index = next(
-        (i for i, t in enumerate(topics) if _script_type_for_topic(t) == "HOT_TAKE"),
-        n - 1,
-    )
+    mix = (FORMAT_MIX_ORDER * ((n // len(FORMAT_MIX_ORDER)) + 1))[:n]
     types: list[str] = []
     for i, topic in enumerate(topics):
-        inferred = _script_type_for_topic(topic)
         if topic.get("source_type") == "journal":
-            types.append(inferred if inferred != "STORY_REACTION" else "EVERGREEN_VALUE")
-        elif inferred == "STORY_REACTION":
-            types.append("STORY_REACTION")
-        elif i == hot_index:
-            types.append("HOT_TAKE")
+            types.append(_script_type_for_topic(topic))
         else:
-            types.append("EVERGREEN_VALUE")
+            # Prefer mix slot; allow topic hint to swap within similar buckets
+            assigned = mix[i]
+            hinted = _script_type_for_topic(topic)
+            if hinted == assigned:
+                types.append(assigned)
+            elif assigned == "ACTIONABLE_NEWS" and hinted in ("ACTIONABLE_NEWS", "HOT_TAKE"):
+                types.append(hinted)
+            else:
+                types.append(assigned)
     return types
 
 
@@ -773,6 +878,12 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
             script["content_phase"] = phase
             if phase == "intro":
                 script["brand_episode"] = f"{brand_episode} of 4"
+            if topic.get("source_url"):
+                script["source_url"] = topic["source_url"]
+            if topic.get("source_platform"):
+                script["source_platform"] = topic["source_platform"]
+            if topic.get("format_hint"):
+                script.setdefault("format_hint", topic["format_hint"])
             scripts.append(script)
 
         except Exception as exc:
@@ -780,6 +891,19 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
             continue
 
     if scripts:
+        from src.series_calendar import (
+            get_active_series,
+            increment_episodes_completed,
+            stamp_script_series,
+        )
+
+        series = get_active_series()
+        start_ep = int((series or {}).get("episodes_completed") or 0) + 1
+        for idx, script in enumerate(scripts):
+            if script.get("source") != "journal" or not script.get("series_note"):
+                stamp_script_series(script, start_ep + idx, series)
+        if series:
+            increment_episodes_completed(len(scripts))
         hook_bank.save_hooks(scripts)
         save_scripts_archive(scripts)
 

@@ -1,36 +1,47 @@
-CONTENT PHILOSOPHY — what scripts are FOR
+CONTENT PHILOSOPHY — vibe coding / AI coding tools
 
-PRIMARY GOAL: Captivating practitioner stories that teach — trend-aware, broad value.
-Viewer thinks: "That was interesting AND I learned something" — NOT "this reads like a news article."
+PRIMARY GOAL: Weekly tips, tricks, hacks, builds, and actionable news that builders
+can try in the next 10 minutes. Viewer thinks: "I'm opening Cursor/Claude Code right now."
 
-SCRIPT MIX (8 per batch, after personal journal topics fill first):
-- 3-4 × STORY_REACTION — timely narratives with human tension (from Perplexity story seeds)
-- 0-1 × NEWS_REACTION — major headline only when no story angle exists
-- 3-4 × EVERGREEN_VALUE — timeless practitioner advice with story framing
-- 1 × HOT_TAKE — contrarian POV from creator_takes (DSA, hybrid, builders, AI hype)
-- 0-1 × optional work_pattern touch — generalized credibility only (work_patterns.txt)
+HOME NICHE (not a prison — series rotate inside this world):
+Cursor, Claude Code, tokens/cost, agents/MCP, vibe coding, shipping hacks, tool mashups
+(e.g. Claude Code + Higgsfield, Cursor + MCP).
 
-PERSONAL WORK MENTION:
-- Default: ZERO sentences about creator's job or internal systems
-- STORY_REACTION may use ONE generalized builder line ("teams I've seen...", "a builder I know...")
-- Journal scripts: preserve creator's personal angle from the ramble
-- Never: company names, internal feature names, colleague names, niche workflows
+SERIES FIRST:
+Every script belongs to the active series arc (2–3 weeks) unless it is a journal exception.
+Stamp series_note like "Cursor Deep · Ep 3/6". Off-arc fillers: max 1 per batch.
 
-VALUE BAR:
-Every script answers: "Why should I care?" and "What do I do this week?"
-Stories first, steps woven in — not three disconnected listicle steps.
+WEEKLY FRESHNESS:
+Prefer seeds from the last 7 days (changelog, Reddit/HN thread, new MCP, pricing change).
+Series = lens. Weekly = what's hot inside that lens.
 
-CREDIBILITY WITHOUT NICHE:
-Use creator_takes for opinions. Use work_patterns for rare "I've seen this in production" — generalized.
-Use achievementdoc.md only as pattern source — never as script copy.
+SCRIPT MIX (8 per batch, journal fills first):
+- 3 × HACK — one concrete combo (tool A + tool B → outcome)
+- 2 × TIP — one setting, shortcut, prompt pattern, or config detail
+- 1 × BUILD — micro ship story / what you made this week
+- 1–2 × ACTIONABLE_NEWS — changelog or viral thread with "do this today"
+- 0–1 × CONFESSION — token overspend, agent fail, vibe-coding theater
 
-HOOK STYLE:
-Lead with a human moment, conflict, or confession — not a press release.
-Examples:
-- "My pipeline failed at 2am — and the fix took thirty seconds."
-- "Everyone's studying vector DBs. That's wrong — and here's the story behind it."
-- "I overspent on Cursor again. That's not a billing problem."
+FORMAT RULES:
+- Named tools in the hook. Concrete action in the middle. Receipt at the end ($, minutes, file).
+- Prefer tip/hack/confession voice over "Step one / Step two / Step three" listicles.
+- One copyable move beats three vague career steps.
+- Mashups encouraged when true (Claude Code + Higgsfield, Cursor rules + MCP, etc.).
 
-STORYTELLING RHYTHM (from creator_takes):
-Story beat → land the point → optional second beat → punchline closer.
-Alternate sentence length. One feeling word beat (betrayed, relieved, stunned) per non-journal script.
+PERSONAL WORK:
+- Default: ZERO sentences about employer internal systems
+- Journal scripts: preserve the creator's personal angle from the ramble
+- OK lightly: SaaS/side builds, Cursor/Claude spend, shipping with AI tools
+
+CREDIBILITY:
+Use creator_takes for opinions. Use work_patterns sparingly and generalized.
+Never invent first-person war stories.
+
+HOOK STYLE (steal patterns from Alex Finn / Chris Raroque / Fireship energy — not their voice):
+- "Claude Code can call Higgsfield and spit the product render while it writes the page."
+- "I overspent on Cursor again — and the setting that fixed it took ten seconds."
+- "Everyone's vibe coding. Here's the one habit that makes it actually ship."
+
+STORYTELLING RHYTHM:
+Claim → one move → receipt. Alternate sentence length. One feeling word when it fits.
+Every piece answers: "What do I try in the next 10 minutes?"

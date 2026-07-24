@@ -176,6 +176,15 @@ def _format_script_block(script: dict) -> str:
     ]
     if series_note and str(series_note).lower() not in ("null", "none", ""):
         lines.append(_escape(series_note))
+    source_url = script.get("source_url")
+    if source_url:
+        lines.append(f"🔗 <b>SOURCE:</b> {_escape(str(source_url))}")
+    hook_visual = script.get("hook_visual") or {}
+    if isinstance(hook_visual, dict) and hook_visual.get("tier"):
+        lines.append(
+            f"🎬 <b>HOOK VISUAL:</b> {_escape(str(hook_visual.get('tier')))} — "
+            f"{_escape(str(hook_visual.get('prompt', ''))[:120])}"
+        )
     lines.extend(
         [
             f"📌 <b>TITLE OVERLAY:</b> {title}",

@@ -50,6 +50,34 @@ LISTICLE_STEP_PATTERN = re.compile(
     re.I,
 )
 
+HN_POINTS_HOOK = re.compile(
+    r"^(?:.{0,40})?(?:\d[\d,\s]*|\w+)\s+points?\s+on\s+hacker\s+news|"
+    r"just\s+hit\s+(?:\d[\d,\s]*|\w+)\s+points?|"
+    r"hit\s+(?:\d[\d,\s]*|\w+)\s+points?\s+on\s+hacker\s+news",
+    re.I,
+)
+
+TOOL_KEYWORDS = (
+    "cursor", "claude", "mcp", "higgsfield", "token", "agent", "composer",
+    "codex", "copilot", "sonnet", "opus", "claude code", "claude.md",
+)
+
+COPYABLE_MOVE = re.compile(
+    r"(?:run\s+|type\s+|open\s+|add\s+|wire\s+|install\s+|set\s+|flip\s+|"
+    r"enable\s+|use\s+|call\s+|paste\s+|slash\s+|/\w+|"
+    r"--model\b|claude\.md|\.cursorrules|mcp\.json|"
+    r"agent\s+mode|plan\s+mode|composer)",
+    re.I,
+)
+
+RECEIPT_PATTERN = re.compile(
+    r"(?:\$\d|\d+\s*(?:dollars?|minutes?|seconds?|hours?|credits?)|"
+    r"file\s+(?:created|saved|written)|ship(?:ped|ping)|deploy|"
+    r"do\s+this\s+today|try\s+(?:it|this)\s+today|ten\s+minutes|"
+    r"before\s+(?:you|the)\s+(?:bill|next)|receipt)",
+    re.I,
+)
+
 NEWSINESS_PATTERN = re.compile(
     r"according to (?:this week|the latest|a report)",
     re.I,
@@ -316,6 +344,72 @@ def validate_script(
         if story_score < STORY_SCORE_THRESHOLD:
             warnings.append(f"Low story score ({story_score}/100) — reads listicle/newsy")
             score -= max(0, (STORY_SCORE_THRESHOLD - story_score) // 3)
+
+    if not script.get("series_note") and not script.get("series_id"):
+        warnings.append("Missing series_note / series_id — batch should stamp series metadata")
+        score -= 2
+
+    if not isinstance(script.get("hook_visual"), dict):
+        warnings.append("Missing hook_visual — video-engine needs a tiered hero brief")
+        score -= 3
+
+    step_spam = len(re.findall(r"\bstep (one|two|three|1|2|3)\b", spoken_lower))
+    if step_spam >= 3:
+        warnings.append("Listicle step spam — prefer one hard tip/hack over Step one/two/three")
+        score -= 8
+
+    # --- ViralTasteGate (hard floor for non-journal growth scripts) ---
+    is_journal = (topic or {}).get("source_type") == "journal"
+    script_type = (script.get("script_type") or script.get("format_hint") or "").upper()
+    if not is_journal:
+        opening_check = opening or first
+        tool_hits = sum(1 for kw in TOOL_KEYWORDS if kw in spoken_lower)
+        if tool_hits < 1:
+            errors.append("ViralTasteGate: spoken_script must name a concrete AI coding tool")
+            score -= 20
+
+        if HN_POINTS_HOOK.search(opening_check or ""):
+            if script_type not in ("ACTIONABLE_NEWS", "NEWS_REACTION", "NEWS"):
+                errors.append(
+                    "ViralTasteGate: do not open with HN point counts — lead with the tip/hack"
+                )
+                score -= 18
+            elif not COPYABLE_MOVE.search(spoken):
+                errors.append(
+                    "ViralTasteGate: ACTIONABLE_NEWS may cite HN but must include a copyable move"
+                )
+                score -= 15
+
+        if not COPYABLE_MOVE.search(spoken):
+            errors.append(
+                "ViralTasteGate: missing copyable move "
+                "(command, setting, MCP wire, slash command, model flag)"
+            )
+            score -= 18
+
+        if not RECEIPT_PATTERN.search(spoken):
+            errors.append(
+                "ViralTasteGate: missing receipt "
+                "($, minutes, file, ship, or 'do this today')"
+            )
+            score -= 12
+
+        # Punch-pack seeds for video-engine
+        triggers = script.get("video_triggers") or {}
+        fun = triggers.get("fun_phrases") or []
+        if len(fun) < 2:
+            errors.append("ViralTasteGate: need ≥2 fun_phrases verbatim in spoken_script")
+            score -= 8
+        beats = triggers.get("beat_phrases") or {}
+        if not (isinstance(beats, dict) and beats.get("crust")):
+            errors.append("ViralTasteGate: beat_phrases.crust required for crust zoom")
+            score -= 6
+
+        st = script_type
+        hv = script.get("hook_visual") if isinstance(script.get("hook_visual"), dict) else {}
+        if st in ("HACK",) and (hv.get("tier") or "").lower() != "higgsfield":
+            warnings.append("HACK scripts should set hook_visual.tier=higgsfield")
+            score -= 2
 
     score = max(0, min(100, score))
     passed = len(errors) == 0

@@ -7,132 +7,150 @@ from pathlib import Path
 
 import httpx
 
+from src.community_research import fetch_community_topics
+from src.series_calendar import filter_topics_for_series, get_active_series
+
 PERPLEXITY_API_URL = "https://api.perplexity.ai/chat/completions"
 PERPLEXITY_MODEL = "sonar"
-# One batched query replaces 5 parallel calls — search fee is per request, not per topic.
-PERPLEXITY_MAX_TOKENS = 2000
+PERPLEXITY_MAX_TOKENS = 1200
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config"
 
-BATCHED_RESEARCH_PROMPT = """Research captivating STORY SEEDS for a senior AI/data engineer creating
-60-90 second Instagram Reels and LinkedIn videos. NOT listicles or job-market roundups.
+# Perplexity only enriches real community URLs — does not invent the topic list.
+ENRICH_PROMPT = """You enrich story seeds for a vibe-coding / AI coding tools creator
+(Cursor, Claude Code, tokens, MCP, shipping hacks).
 
-Find 20 distinct story seeds across:
-- Builder journeys and indie launches (AI tools, RAG systems, data pipelines)
-- Surprising engineering pivots, post-mortems, and "how X actually works" narratives
-- Underreported wins in AI, data engineering, software engineering, generative AI, MCPs, RAG
-- Timely tech moments with a HUMAN angle (not press-release summaries)
-- Reddit/HN engineering stories engineers are debating this week
+Given these real community threads (title + url + summary), return a JSON array with the
+SAME count of objects. For each:
+- topic_title (punchy, actionable — keep close to original)
+- topic_summary (2 sentences — tension + why builders care)
+- story_hook (one opening line with a named tool)
+- protagonist, tension, payoff
+- source_type: hack | tip | build | news | confession | social
+- estimated_virality: high | medium | low
+- keep source_url exactly as provided
 
-Each topic must feel like something people WANT to listen to — a story with tension and payoff.
+Return ONLY a JSON array. No markdown.
 
-Return exactly 20 distinct topics as a JSON array. Each object must have:
-- topic_title (string — compelling, not a headline clone)
-- topic_summary (2-3 sentences — the narrative spine)
-- story_hook (one sentence — the opening moment that grabs attention)
-- protagonist (who: "a startup engineer", "an indie builder", "a data team", "you")
-- tension (what went wrong, what's at stake, or what's surprising)
-- payoff (what the viewer learns or does differently)
-- source_type ("story", "news", "social", or "trend")
-  - Use "story" for narrative-driven timely pieces (preferred for 12+ of 20)
-  - Use "news" only for major announcements worth a human-angle reaction (max 3 of 20)
-  - Use "trend" for evergreen practitioner angles
-  - Use "social" for viral discourse with a story behind it
-- estimated_virality ("high", "medium", or "low")
+THREADS:
+{threads}
+"""
 
-Reject pure job-stats listicles without a human story. Return ONLY valid JSON array, no markdown."""
-
-SOURCE_TYPES = ["news", "social", "trend", "story"]
+SOURCE_TYPES = [
+    "news",
+    "social",
+    "trend",
+    "story",
+    "hack",
+    "tip",
+    "build",
+    "confession",
+]
 
 FALLBACK_TOPICS = [
     {
-        "topic_title": "How to stand out in a data engineering interview",
-        "topic_summary": "Hiring managers see hundreds of similar resumes. Specific portfolio projects and pipeline stories differentiate candidates in a crowded market.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "Three SQL patterns every engineer should know",
-        "topic_summary": "Window functions, CTEs, and proper indexing solve 80% of real-world query problems. Most bootcamps skip the patterns that matter in production.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "What I wish I knew before my first AWS deployment",
-        "topic_summary": "IAM permissions, cost alerts, and rollback plans prevent the painful lessons most engineers learn the hard way on their first cloud project.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "How to learn a new tech stack in 30 days",
-        "topic_summary": "Structured project-based learning beats tutorial hell. A single end-to-end build teaches more than weeks of passive video watching.",
-        "source_type": "trend",
+        "topic_title": "Claude Code + Higgsfield: generate the visual while the agent writes code",
+        "topic_summary": "Wire Higgsfield MCP into Claude Code so the agent can spit a product render while it ships the page. One mashup, visible proof.",
+        "source_type": "hack",
         "estimated_virality": "high",
+        "format_hint": "hack",
     },
     {
-        "topic_title": "The real difference between junior and senior engineers",
-        "topic_summary": "Senior engineers optimize for clarity, tradeoffs, and maintainability — not just getting code to work. The gap is decision-making, not syntax.",
-        "source_type": "trend",
+        "topic_title": "The Cursor setting that stops silent token overspend",
+        "topic_summary": "Most builders never check usage until the bill hits. One dashboard habit and model routing rule cuts waste without killing flow.",
+        "source_type": "tip",
         "estimated_virality": "high",
+        "format_hint": "tip",
     },
     {
-        "topic_title": "Why your LinkedIn profile is not getting recruiter views",
-        "topic_summary": "Most engineers list tools instead of outcomes. Recruiters search for impact keywords and project results, not a laundry list of technologies.",
-        "source_type": "trend",
+        "topic_title": "CLAUDE.md rules that make Claude Code ship instead of wander",
+        "topic_summary": "Vague CLAUDE.md files create agent thrash. Tight plan-then-execute rules plus a done definition change output quality.",
+        "source_type": "tip",
         "estimated_virality": "high",
+        "format_hint": "tip",
     },
     {
-        "topic_title": "The one habit that makes you a faster debugger",
-        "topic_summary": "Reproducing the bug in isolation before touching production code saves hours. Most engineers skip this step and chase symptoms instead.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "How to explain ETL to a non-technical stakeholder",
-        "topic_summary": "Business leaders do not care about pipelines — they care about timely reports. Framing data movement as business outcomes unlocks budget and buy-in.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "What hiring managers actually look for in AI engineers",
-        "topic_summary": "Beyond model buzzwords, teams need people who can ship reliable systems — evaluation, monitoring, and integration matter more than notebook demos.",
-        "source_type": "trend",
+        "topic_title": "Plan in Claude, ship in Cursor — the split that actually works",
+        "topic_summary": "Using one tool for everything blurs thinking and shipping. Separating plan vs execute is the builder stack that sticks.",
+        "source_type": "hack",
         "estimated_virality": "high",
+        "format_hint": "hack",
     },
     {
-        "topic_title": "How to prioritize learning when everything feels urgent",
-        "topic_summary": "Skill stacking beats chasing every new framework. Pick one high-leverage skill per quarter and build a project that proves you can use it.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "The hidden cost of over-engineering your side project",
-        "topic_summary": "Perfect architecture on a project nobody uses is wasted effort. Ship a minimal version first, then refactor based on real feedback.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "How to write a README that gets you hired",
-        "topic_summary": "Recruiters and hiring managers click through to GitHub. A clear README with setup steps, architecture diagram, and results tells a story resumes cannot.",
-        "source_type": "trend",
-        "estimated_virality": "medium",
-    },
-    {
-        "topic_title": "Why batch jobs fail at 2am and how to prevent it",
-        "topic_summary": "Silent data quality issues, memory limits, and missing alerts cause most overnight pipeline failures. Proactive monitoring beats reactive firefighting.",
-        "source_type": "trend",
-        "estimated_virality": "low",
-    },
-    {
-        "topic_title": "How to use Claude for real engineering work",
-        "topic_summary": "LLMs accelerate boilerplate and documentation but need guardrails. Pair AI output with tests and code review — never ship unverified generated code.",
-        "source_type": "trend",
+        "topic_title": "I vibe coded for three hours and shipped nothing",
+        "topic_summary": "Demo theater feels productive until you check git. One constraint — ship a vertical slice in 60 minutes — fixes it.",
+        "source_type": "confession",
         "estimated_virality": "high",
+        "format_hint": "confession",
     },
     {
-        "topic_title": "Three questions to ask before accepting a tech job offer",
-        "topic_summary": "Team structure, on-call expectations, and growth path matter as much as base salary. Clarity upfront prevents regret six months in.",
-        "source_type": "trend",
+        "topic_title": "One MCP every Cursor power user should add this week",
+        "topic_summary": "MCP turns the IDE into a tool router. Pick one connector that removes a daily copy-paste and wire it once.",
+        "source_type": "hack",
+        "estimated_virality": "medium",
+        "format_hint": "hack",
+    },
+    {
+        "topic_title": "When to use Sonnet vs Opus so you stop burning tokens",
+        "topic_summary": "Frontier models for ambiguous architecture; cheaper models for mechanical edits. Matching ammo to mission is token economics.",
+        "source_type": "tip",
         "estimated_virality": "high",
+        "format_hint": "tip",
+    },
+    {
+        "topic_title": "Cursor agent mode vs Claude Code — when each wins",
+        "topic_summary": "Honest tradeoffs: IDE-native agents vs terminal agents. Pick by task shape, not hype.",
+        "source_type": "tip",
+        "estimated_virality": "high",
+        "format_hint": "tip",
+    },
+    {
+        "topic_title": "Ship a landing page with Claude Code in one sitting",
+        "topic_summary": "Micro-build: scoped prompt, CLAUDE.md constraints, and a definition of done that includes deploy.",
+        "source_type": "build",
+        "estimated_virality": "medium",
+        "format_hint": "build",
+    },
+    {
+        "topic_title": "The changelog tip: turn a Cursor update into a Reel the same day",
+        "topic_summary": "Actionable news — read the release note, try one feature, film the receipt. Freshness beats evergreen listicles.",
+        "source_type": "news",
+        "estimated_virality": "medium",
+        "format_hint": "news",
+    },
+    {
+        "topic_title": "Stop pasting screenshots — use browser MCP from the agent",
+        "topic_summary": "Agents that can see the page debug faster. One MCP setup removes the screenshot loop.",
+        "source_type": "hack",
+        "estimated_virality": "medium",
+        "format_hint": "hack",
+    },
+    {
+        "topic_title": "Rules files that keep multi-file agents from rewriting your app",
+        "topic_summary": "Unscoped agents refactor everything. Boundary rules and allowlists keep vibe coding from becoming chaos.",
+        "source_type": "tip",
+        "estimated_virality": "medium",
+        "format_hint": "tip",
+    },
+    {
+        "topic_title": "How I review Claude Code diffs before I merge",
+        "topic_summary": "Trust but verify — a three-pass review habit catches confident wrong code before it ships.",
+        "source_type": "tip",
+        "estimated_virality": "medium",
+        "format_hint": "tip",
+    },
+    {
+        "topic_title": "Build a skill once — reuse it every session",
+        "topic_summary": "Skills beat re-prompting. Package a repeatable workflow so every session starts smarter.",
+        "source_type": "hack",
+        "estimated_virality": "high",
+        "format_hint": "hack",
+    },
+    {
+        "topic_title": "Vibe coding theater vs shipping — the 60-minute rule",
+        "topic_summary": "If there is no runnable demo in an hour, you were exploring, not building. Constraint creates shipping.",
+        "source_type": "confession",
+        "estimated_virality": "high",
+        "format_hint": "confession",
     },
 ]
 
@@ -161,8 +179,9 @@ def _load_manual_topics() -> list[dict]:
             {
                 "topic_title": stripped,
                 "topic_summary": f"Manual topic requested by creator: {stripped}",
-                "source_type": "trend",
+                "source_type": "hack",
                 "estimated_virality": "manual",
+                "format_hint": "hack",
             }
         )
 
@@ -177,7 +196,7 @@ def _normalize_topic(raw: dict, default_source: str) -> dict | None:
         return None
 
     if not summary:
-        summary = f"Trending discussion around {title} in tech and career communities."
+        summary = f"Builder discussion around {title} in AI coding tools communities."
 
     source_type = (raw.get("source_type") or default_source).lower()
     if source_type not in SOURCE_TYPES:
@@ -196,11 +215,14 @@ def _normalize_topic(raw: dict, default_source: str) -> dict | None:
         "protagonist": (raw.get("protagonist") or "").strip(),
         "tension": (raw.get("tension") or "").strip(),
         "payoff": (raw.get("payoff") or "").strip(),
+        "source_url": (raw.get("source_url") or "").strip(),
+        "source_platform": (raw.get("source_platform") or "").strip(),
+        "engagement_score": float(raw.get("engagement_score") or 0),
+        "format_hint": (raw.get("format_hint") or source_type or "hack").strip(),
     }
 
 
 def _parse_topics_from_response(content: str, source_type: str) -> list[dict]:
-    """Extract topic objects from Perplexity response text."""
     topics: list[dict] = []
 
     json_match = re.search(r"\[[\s\S]*\]", content)
@@ -218,34 +240,7 @@ def _parse_topics_from_response(content: str, source_type: str) -> list[dict]:
         except json.JSONDecodeError:
             pass
 
-    for line in content.splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-        cleaned = re.sub(r"^[\d\.\-\*]+\s*", "", line)
-        if len(cleaned) < 15:
-            continue
-        if ":" in cleaned:
-            title, summary = cleaned.split(":", 1)
-            topics.append(
-                {
-                    "topic_title": title.strip(),
-                    "topic_summary": summary.strip(),
-                    "source_type": source_type,
-                    "estimated_virality": "medium",
-                }
-            )
-        else:
-            topics.append(
-                {
-                    "topic_title": cleaned[:120],
-                    "topic_summary": f"Trending topic: {cleaned}",
-                    "source_type": source_type,
-                    "estimated_virality": "medium",
-                }
-            )
-
-    return topics[:20]
+    return topics
 
 
 def _dedupe_topics(topics: list[dict]) -> list[dict]:
@@ -271,7 +266,12 @@ def _ensure_topic_count(topics: list[dict]) -> list[dict]:
             if not any(t["topic_title"].lower() == title_key for t in topics):
                 topics.append(dict(fallback))
 
-    topics.sort(key=lambda t: VIRALITY_ORDER.get(t["estimated_virality"], 2))
+    topics.sort(
+        key=lambda t: (
+            VIRALITY_ORDER.get(t.get("estimated_virality", "low"), 2),
+            -float(t.get("engagement_score") or 0),
+        )
+    )
     return topics[:30]
 
 
@@ -280,13 +280,29 @@ def _log_perplexity_cost(data: dict) -> None:
     cost = usage.get("cost", {})
     total = cost.get("total_cost")
     if total is not None:
-        print(f"   Perplexity cost: ${total:.4f} (search_context: {usage.get('search_context_size', 'unknown')})")
+        print(f"   Perplexity enrich cost: ${total:.4f}")
 
 
-async def _query_perplexity_batch(client: httpx.AsyncClient, api_key: str) -> list[dict]:
+async def _enrich_with_perplexity(
+    client: httpx.AsyncClient,
+    api_key: str,
+    seeds: list[dict],
+) -> list[dict]:
+    """Optional enrich of top community seeds — never invents the list."""
+    top = [s for s in seeds if s.get("source_url")][:8]
+    if not top:
+        return seeds
+
+    thread_lines = []
+    for s in top:
+        thread_lines.append(
+            f"- title: {s['topic_title']}\n  url: {s.get('source_url')}\n  "
+            f"summary: {s.get('topic_summary', '')[:200]}"
+        )
+    prompt = ENRICH_PROMPT.format(threads="\n".join(thread_lines))
     payload = {
         "model": PERPLEXITY_MODEL,
-        "messages": [{"role": "user", "content": BATCHED_RESEARCH_PROMPT}],
+        "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.2,
         "max_tokens": PERPLEXITY_MAX_TOKENS,
         "web_search_options": {"search_context_size": "low"},
@@ -295,7 +311,6 @@ async def _query_perplexity_batch(client: httpx.AsyncClient, api_key: str) -> li
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
-
     response = await client.post(
         PERPLEXITY_API_URL, json=payload, headers=headers, timeout=90.0
     )
@@ -303,40 +318,69 @@ async def _query_perplexity_batch(client: httpx.AsyncClient, api_key: str) -> li
     data = response.json()
     _log_perplexity_cost(data)
     content = data["choices"][0]["message"]["content"]
-    return _parse_topics_from_response(content, "trend")
+    enriched = _parse_topics_from_response(content, "social")
+    if not enriched:
+        return seeds
+
+    # Merge enrich fields back onto originals by URL or title
+    by_url = {e.get("source_url"): e for e in enriched if e.get("source_url")}
+    by_title = {e["topic_title"].lower(): e for e in enriched}
+    merged: list[dict] = []
+    for s in seeds:
+        e = by_url.get(s.get("source_url")) or by_title.get(s["topic_title"].lower())
+        if e:
+            out = dict(s)
+            for key in (
+                "topic_title",
+                "topic_summary",
+                "story_hook",
+                "protagonist",
+                "tension",
+                "payoff",
+                "source_type",
+                "estimated_virality",
+            ):
+                if e.get(key):
+                    out[key] = e[key]
+            merged.append(out)
+        else:
+            merged.append(s)
+    return merged
 
 
 async def fetch_topics() -> list[dict]:
-    """Fetch trending topics from Perplexity and merge manual overrides."""
+    """Fetch topics from community signals; optionally enrich with Perplexity."""
     manual_topics = _load_manual_topics()
-    api_key = os.getenv("PERPLEXITY_API_KEY")
+    series = get_active_series()
+    if series:
+        print(f"   Active series: {series.get('title')} ({series.get('id')})")
 
-    if not api_key:
-        print("⚠️ PERPLEXITY_API_KEY not set — using fallback topics only")
-        combined = manual_topics + FALLBACK_TOPICS
-        return _ensure_topic_count(combined)
-
-    skip_perplexity = os.getenv("PERPLEXITY_SKIP", "").lower() in ("1", "true", "yes")
-    if skip_perplexity:
-        print("   PERPLEXITY_SKIP enabled — using fallbacks + manual topics only")
-        combined = manual_topics + FALLBACK_TOPICS[:5]
-        return _ensure_topic_count(combined)
-
-    researched_topics: list[dict] = []
-
+    community: list[dict] = []
     try:
-        async with httpx.AsyncClient() as client:
-            researched_topics = await _query_perplexity_batch(client, api_key)
-
-        if not researched_topics:
-            raise RuntimeError("Perplexity returned no topics")
-
+        community = await fetch_community_topics()
     except Exception as exc:
-        print(f"⚠️ Perplexity API failed: {exc}")
-        print("   Falling back to evergreen topics + manual overrides")
-        researched_topics = list(FALLBACK_TOPICS[:5])
+        print(f"⚠️ Community research failed: {exc}")
 
-    combined = manual_topics + researched_topics
+    api_key = os.getenv("PERPLEXITY_API_KEY")
+    skip_perplexity = os.getenv("PERPLEXITY_SKIP", "").lower() in ("1", "true", "yes")
+
+    if community and api_key and not skip_perplexity:
+        try:
+            async with httpx.AsyncClient() as client:
+                community = await _enrich_with_perplexity(client, api_key, community)
+        except Exception as exc:
+            print(f"⚠️ Perplexity enrich failed (using raw community seeds): {exc}")
+    elif not api_key:
+        print("   PERPLEXITY_API_KEY not set — community seeds only (no enrich)")
+    elif skip_perplexity:
+        print("   PERPLEXITY_SKIP — community seeds only")
+
+    combined = manual_topics + community
+    if len(combined) < 10:
+        print("   Padding with vibe-coding fallback topics")
+        combined = combined + list(FALLBACK_TOPICS)
+
+    combined = filter_topics_for_series(combined, max_off_arc=5)
     final = _ensure_topic_count(combined)
-    print(f"   Research complete: {len(final)} topics (min 15, max 30)")
+    print(f"   Research complete: {len(final)} topics (community-first, series-filtered)")
     return final

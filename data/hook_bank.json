@@ -380,203 +380,83 @@
     "date": "2026-06-21"
   },
   {
-    "opening_line": "I bombed a data engineering interview once \u2014 and I had the right answers.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-26"
+    "opening_line": "Browser MCP just hit Hacker News with six hundred points \u2014 and it's wild.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-23"
   },
   {
-    "opening_line": "Nobody warned me \u2014 and my first AWS bill was three hundred dollars for a weekend project.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-26"
+    "opening_line": "OpenAI just added MCP support to their Agents SDK \u2014 and that changes how you wire tools to agents.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-23"
   },
   {
-    "opening_line": "RAG pipelines don't hallucinate because the model is bad.",
+    "opening_line": "Claude 3.7 Sonnet inside Claude Code is pure building \u2014 and most people haven't flipped the right switch yet.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-23"
+  },
+  {
+    "opening_line": "Claude Code hit eleven hundred points on Hacker News this week \u2014 and most people missed the actually useful part.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-23"
+  },
+  {
+    "opening_line": "Claude Skills just hit seven hundred points on Hacker News.",
     "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-26"
+    "date": "2026-07-23"
   },
   {
-    "opening_line": "Your RAG system just told a client the wrong policy \u2014 legal is involved.",
+    "opening_line": "Claude Code isn't just for code anymore \u2014 and that's the secret most people miss.",
     "hook_type": "OPEN LOOP",
-    "date": "2026-06-26"
+    "date": "2026-07-23"
   },
   {
-    "opening_line": "I once rewrote a query three times before realizing I never needed to rewrite it.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-26"
-  },
-  {
-    "opening_line": "Nobody told me what an AI data engineer actually does \u2014 I had to figure it out by shipping things.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-26"
-  },
-  {
-    "opening_line": "Your RAG app is confidently giving wrong answers \u2014 and the fix is not what you think.",
+    "opening_line": "Vibe coding and agentic engineering are merging \u2014 and that is wild.",
     "hook_type": "OPEN LOOP",
-    "date": "2026-06-26"
+    "date": "2026-07-23"
   },
   {
-    "opening_line": "Nobody told me that building production data systems means half your day is just reading broken logs.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-26"
-  },
-  {
-    "opening_line": "Hiring managers told me they see two hundred resumes that look identical.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-28"
-  },
-  {
-    "opening_line": "My first AWS deployment cost me three hundred dollars in a single weekend.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-28"
-  },
-  {
-    "opening_line": "A solo builder shipped a RAG system in three weeks.",
+    "opening_line": "Gas Town just dropped their agent architecture on Hacker News \u2014 four hundred points in a day.",
     "hook_type": "OPEN LOOP",
-    "date": "2026-06-28"
+    "date": "2026-07-23"
   },
   {
-    "opening_line": "The best AI engineers I've worked with didn't go to Ivy League schools.",
+    "opening_line": "Browser MCP lets Cursor and Claude Code control your actual browser \u2014 clicking, filling forms, scraping \u2014 without you writing a single Playwright script.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-24"
+  },
+  {
+    "opening_line": "OpenAI's Agents SDK finally supports MCP \u2014 and that changes everything about how you wire tools to agents.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-24"
+  },
+  {
+    "opening_line": "Claude Code plus Claude 3.7 Sonnet is pure building \u2014 and most people skip the one flag that makes it actually fast.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-24"
+  },
+  {
+    "opening_line": "Claude Code has a secret most builders never open.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-24"
+  },
+  {
+    "opening_line": "Claude Skills might be bigger than MCP \u2014 and most builders are still sleeping on it.",
     "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-28"
+    "date": "2026-07-24"
   },
   {
-    "opening_line": "I bombed a query review because I wrote six nested subqueries \u2014 and my senior just stared at me.",
+    "opening_line": "Claude Code started failing me on complex tasks. And honestly \u2014 that's normal.",
     "hook_type": "CONFESSION",
-    "date": "2026-06-28"
+    "date": "2026-07-24"
   },
   {
-    "opening_line": "People keep asking what an AI data engineer actually does \u2014 and honestly, most answers are wrong.",
+    "opening_line": "Claude Code is not just a coding tool anymore \u2014 and that's the secret most people are sleeping on.",
     "hook_type": "OPEN LOOP",
-    "date": "2026-06-28"
+    "date": "2026-07-24"
   },
   {
-    "opening_line": "The engineer who finally shipped a real product last year \u2014 no Ivy League, no fancy bootcamp.",
+    "opening_line": "Vibe coding killed my project last week.",
     "hook_type": "CONFESSION",
-    "date": "2026-06-28"
-  },
-  {
-    "opening_line": "I collected certifications once. Then lost a project to someone with zero badges.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-28"
-  },
-  {
-    "opening_line": "My app hit three hundred users and started feeling broken.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "Two hundred resumes. Same SQL keywords. Same Spark bullet.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "A friend prepped six months and failed the panel anyway.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "My first AWS deployment \u2014 actually went live.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "I used to explain ETL and watch my stakeholder's eyes go completely blank.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "A recruiter scrolled past my profile in three seconds.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "Most engineers write SQL that works on a laptop and breaks in production.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "Most people think AI data engineering is just writing Python and praying.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-07-05"
-  },
-  {
-    "opening_line": "I bombed a panel interview once \u2014 and i had the right answers.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "My first AWS deployment taught me three lessons I wish someone had just told me.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "Your SQL works on your laptop and silently fails in production \u2014 and most engineers never figure out why.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "Nobody handed me a job description that matched what I actually do.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "A solo builder deployed a RAG pipeline for internal docs.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "AI just confidently told your leadership the wrong numbers \u2014 and they believed it.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "Your RAG system passes every test \u2014 and still gives users the wrong answer in production.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "Nobody tells you what a production data engineer actually does all day.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-12"
-  },
-  {
-    "opening_line": "I bombed an interview once \u2014 and I had better skills than the person they hired.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-19"
-  },
-  {
-    "opening_line": "Your AI just told investors wrong numbers. Confidently.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-19"
-  },
-  {
-    "opening_line": "An indie builder deployed a RAG pipeline \u2014 it confidently gave leadership the wrong revenue numbers.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-19"
-  },
-  {
-    "opening_line": "I once reviewed a query so nested it took me five minutes just to find the SELECT.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-19"
-  },
-  {
-    "opening_line": "Three years ago I couldn't explain what I did without losing people in sixty seconds.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-19"
-  },
-  {
-    "opening_line": "I deployed a RAG system, demo was perfect, day three the user got completely wrong information back.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-19"
-  },
-  {
-    "opening_line": "Here's a confession \u2014 most of my day is not pure building.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-19"
-  },
-  {
-    "opening_line": "I spent two years collecting certifications.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-19"
+    "date": "2026-07-24"
   }
 ]

@@ -30,56 +30,53 @@ STOPWORDS = {
 }
 
 KNOWLEDGE_DOMAINS = {
-    "data_engineering": [
-        "pipeline", "ETL", "data", "Snowflake", "warehouse",
-        "CDC", "stream", "batch", "query", "SQL", "database",
+    "cursor_craft": [
+        "Cursor", "Composer", "agent mode", "rules", ".cursorrules",
+        "IDE", "tab", "inline edit", "overspend",
     ],
-    "cloud_aws": [
-        "AWS", "Lambda", "serverless", "cloud", "infrastructure",
-        "SQS", "API", "deployment", "architecture",
+    "claude_code": [
+        "Claude Code", "CLAUDE.md", "Anthropic", "terminal agent",
+        "plan mode", "skills", "claude",
     ],
-    "full_stack": [
-        "full-stack", "app", "frontend", "backend", "Next.js",
-        "React", "TypeScript", "API endpoint", "application",
+    "tokens_cost": [
+        "token", "tokens", "pricing", "cost", "bill", "overspend",
+        "Sonnet", "Opus", "cache", "model routing",
     ],
-    "career_growth": [
-        "career", "salary", "job", "hiring", "recruiter",
-        "LinkedIn", "resume", "interview", "skill", "engineer",
+    "agent_workflows": [
+        "agent", "agents", "multi-agent", "harness", "review",
+        "parallel", "subagent", "workflow",
     ],
-    "ai_ml": [
-        "AI", "LLM", "machine learning", "Claude", "OpenAI", "agent",
-        "automation", "prompt", "model", "artificial intelligence",
+    "ship_hacks": [
+        "vibe coding", "ship", "hack", "tip", "build", "deploy",
+        "landing page", "MVP", "demo theater",
     ],
-    "productivity": [
-        "productivity", "workflow", "automation", "system",
-        "process", "efficiency", "tool", "framework",
+    "mcp_tools": [
+        "MCP", "Higgsfield", "connector", "tool", "browser MCP",
+        "Model Context Protocol",
     ],
-    "money_finance": [
-        "salary", "money", "income", "wealth", "invest",
-        "finance", "budget", "compensation", "pay",
+    "ai_coding": [
+        "AI", "LLM", "prompt", "codegen", "Copilot", "Codex",
+        "automation", "model",
     ],
 }
 
 DOMAIN_TO_TERRITORY = {
-    "data_engineering": "Tech Made Simple",
-    "cloud_aws": "Tech Made Simple",
-    "full_stack": "Tech Made Simple",
-    "career_growth": "Career + Money",
-    "ai_ml": "AI Demystified",
-    "productivity": "Build Mindset",
-    "money_finance": "Career + Money",
+    "cursor_craft": "Cursor Craft",
+    "claude_code": "Claude Code",
+    "tokens_cost": "Tokens & Cost",
+    "agent_workflows": "Agent Workflows",
+    "ship_hacks": "Ship Hacks",
+    "mcp_tools": "MCP & Tools",
+    "ai_coding": "Ship Hacks",
 }
 
 TERRITORY_KEYWORDS = {
-    "Tech Made Simple": ["technical", "explain", "simple", "sql", "code", "data", "api"],
-    "Career + Money": ["career", "salary", "job", "money", "compensation", "negotiate"],
-    "AI Demystified": ["ai", "llm", "machine learning", "model", "claude", "openai"],
-    "Build Mindset": ["mindset", "decision", "engineer", "think", "problem"],
-    "Learning Fast": ["learn", "skill", "study", "bootcamp", "course"],
-    "NYC + Ambition": ["nyc", "new york", "ambition", "competitive"],
-    "Practitioner Insider": ["team", "production", "insider", "workplace", "manager"],
-    "Future of Work": ["future", "jobs", "work", "automation", "disappear"],
-    "Systems Thinking": ["system", "framework", "process", "workflow"],
+    "Cursor Craft": ["cursor", "composer", "rules", "ide", "overspend"],
+    "Claude Code": ["claude code", "claude.md", "terminal", "anthropic", "skills"],
+    "Tokens & Cost": ["token", "cost", "pricing", "opus", "sonnet", "bill"],
+    "Agent Workflows": ["agent", "harness", "multi-agent", "parallel", "review"],
+    "Ship Hacks": ["vibe", "ship", "hack", "tip", "build", "deploy"],
+    "MCP & Tools": ["mcp", "higgsfield", "connector", "tool"],
 }
 
 
@@ -128,12 +125,15 @@ def _match_territory(text: str, best_domain: str | None) -> str:
 
 def score_topics(topics: list[dict]) -> list[dict]:
     """Score topics against knowledge domains and sort by relevance."""
+    from src.series_calendar import series_keyword_boost
+
     _load_territories()
     scored: list[dict] = []
 
     for topic in topics:
         text = f"{topic.get('topic_title', '')} {topic.get('topic_summary', '')}"
         score, best_domain = _count_keyword_matches(text)
+        score += series_keyword_boost(text) * 2
         territory = _match_territory(text, best_domain) if score >= 1 else "General"
 
         enriched = dict(topic)

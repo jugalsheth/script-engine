@@ -1,9 +1,6 @@
-Tech Made Simple — explaining technical concepts to non-technical people
-Career + Money — job decisions, salary math, skill stacking, growth
-AI Demystified — what AI can and cannot do, from someone who builds with it
-Build Mindset — how engineers think, make decisions, solve problems
-Learning Fast — how to learn new skills, what actually works
-NYC + Ambition — building a career in a competitive city
-Practitioner Insider — what actually happens inside tech teams
-Future of Work — AI, jobs, what skills matter, what is disappearing
-Systems Thinking — applying engineering frameworks to life and career
+Cursor Craft — rules, agents, context, Composer, overspend, IDE workflows
+Claude Code — terminal agents, CLAUDE.md, plan mode, skills, shipping in the CLI
+Tokens & Cost — model routing, bills, caching, when to use cheap vs frontier
+Agent Workflows — multi-agent, parallel tasks, harnesses, review loops
+Ship Hacks — vibe coding tips that actually ship, not demo theater
+MCP & Tools — tool wiring, Higgsfield, browser, design, mashups that unlock new builds
