@@ -458,5 +458,45 @@
     "opening_line": "Vibe coding killed my project last week.",
     "hook_type": "CONFESSION",
     "date": "2026-07-24"
+  },
+  {
+    "opening_line": "Browser MCP lets Cursor and Claude drive your actual browser without you writing a single Playwright script.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-26"
+  },
+  {
+    "opening_line": "OpenAI's Agents SDK now speaks MCP natively \u2014 and that changes how you wire tools.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-07-26"
+  },
+  {
+    "opening_line": "Nobody told me Claude Code had an extended thinking flag \u2014 and I wasted two weeks without it.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-26"
+  },
+  {
+    "opening_line": "Claude Code has a secret most builders walk right past \u2014 and it costs you ten extra minutes every single session.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-26"
+  },
+  {
+    "opening_line": "Claude Skills might be the secret nobody's talking about \u2014 and it's wild how much faster your Claude Code sessions get once you wire one in.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-07-26"
+  },
+  {
+    "opening_line": "I gave Claude Code a task that wasn't code \u2014 and it actually worked.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-26"
+  },
+  {
+    "opening_line": "Vibe coding and agentic engineering are colliding \u2014 and honestly, that's insane to watch in real time.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-07-26"
+  },
+  {
+    "opening_line": "My agent loop failed for forty minutes straight.",
+    "hook_type": "CONFESSION",
+    "date": "2026-07-26"
   }
 ]

@@ -4,6 +4,1550 @@
     "territory": "MCP & Tools",
     "script_type": "HACK",
     "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "BROWSER MCP CHANGES EVERYTHING",
+    "subtitle_overlay": "Cursor + Claude control your actual browser",
+    "spoken_script": "Browser MCP lets Cursor and Claude drive your actual browser \u2014 clicks, form fills, scraping \u2014 without you writing a single Playwright script. That's wild. Install it in thirty seconds: run npx browser-mcp in your terminal, then add the MCP server config to your Cursor settings JSON. Done. Now open Cursor agent and type 'go to this URL, fill this form, grab the table.' It just does it. No Selenium. No brittle selectors. The secret is it exposes browser actions as MCP tools \u2014 so your agent calls them like any other function. I saved probably two hours on a scraping task I kept putting off. Finally, do this today \u2014 grab the repo from GitHub, search Browser MCP, wire it into Cursor in under five minutes. That's all it is.",
+    "caption_hook": "Cursor + Browser MCP = your agent clicks, fills, and scrapes for you \u2014 no Playwright needed.",
+    "hashtags": [
+      "#CursorAI",
+      "#MCP",
+      "#VibeCoding",
+      "#AITools",
+      "#BrowserAutomation"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 17/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'That's wild' with genuine surprise \u2014 not performance.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Browser MCP lets Cursor and Claude drive your actual browser without you writing a single Playwright script.",
+    "open_loop_plant": "I kept putting off a scraping task.",
+    "open_loop_payoff": "I saved probably two hours on that task \u2014 wire it into Cursor in under five minutes.",
+    "loopback_closer": "That's all it is.",
+    "visual_cues": "Hook: Cursor agent panel with browser control command visible. Mid: terminal showing npx browser-mcp install. Stat: 2 hours saved. Closer: GitHub repo search for Browser MCP.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical \u2014 Cursor IDE agent chat panel, user types 'go to URL, fill form, grab table', browser window responds in split screen, dark UI, no faces, lower third empty for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Show the tool doing real browser work in the first 2 seconds \u2014 prove the hack immediately"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "run npx browser-mcp in your terminal",
+        "prompt": "Dark terminal window, npx browser-mcp command running, green success output, no faces, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "2 HRS",
+        "label": "TIME SAVED"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "grab the repo from GitHub",
+        "prompt": "GitHub repo page for Browser MCP, dark mode, star count visible, no faces, lower third empty"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "that's wild",
+        "type": "reaction",
+        "emoji": "\ud83e\udd2f",
+        "label": "NO PLAYWRIGHT"
+      },
+      {
+        "at_phrase": "run npx browser-mcp in your terminal",
+        "graphic": "30",
+        "label": "SECONDS TO INSTALL",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "i saved probably two hours",
+        "graphic": "2 HRS",
+        "label": "TIME SAVED",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "wire it into cursor in under five minutes",
+        "graphic": "5",
+        "label": "MINUTES TO SHIP",
+        "type": "stat",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "thirty seconds",
+          "display": "30s",
+          "label": "INSTALL TIME"
+        },
+        {
+          "phrase": "two hours",
+          "display": "2 HRS",
+          "label": "TIME SAVED"
+        }
+      ],
+      "fun_phrases": [
+        "that's wild",
+        "secret",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "done",
+        "wild"
+      ],
+      "broll_phrases": [
+        "cursor agent",
+        "npx browser-mcp",
+        "grab the repo from github"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE agent chat panel with browser automation command typed in, split screen showing browser responding, dark theme, no faces",
+        "Dark terminal running npx browser-mcp with green success output lines, no faces, lower third clear",
+        "GitHub dark mode repo page showing Browser MCP with star count and README visible, no legible body text"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "cursor agent",
+          "brand": "cursor"
+        },
+        {
+          "phrase": "claude",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "that's wild",
+        "payoff": "do this today"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast delivery, confident. No smile warmup. Name the tool immediately."
+      },
+      {
+        "second": 4,
+        "phrase": "that's wild",
+        "action": "PAUSE 0.3s before \u2014 hit this with genuine surprise, crust zoom fires here"
+      },
+      {
+        "second": 8,
+        "phrase": "thirty seconds",
+        "action": "PAUSE before number, speak clearly \u2014 'thirty' not rushed"
+      },
+      {
+        "second": 18,
+        "phrase": "right",
+        "action": "Short pause after \u2014 let it land, energy beat"
+      },
+      {
+        "second": 28,
+        "phrase": "secret",
+        "action": "Lower voice slightly, lean in \u2014 this is the insight moment"
+      },
+      {
+        "second": 38,
+        "phrase": "two hours",
+        "action": "PAUSE before 'two' \u2014 stat lands here"
+      },
+      {
+        "second": 44,
+        "phrase": "do this today",
+        "action": "Energy UP \u2014 payoff loop resolves, drive urgency"
+      },
+      {
+        "second": 52,
+        "phrase": "that's all it is",
+        "action": "SLOW DOWN \u2014 land the closer with quiet confidence, let it breathe"
+      }
+    ],
+    "delivery_notes": "Open fast and confident \u2014 Cursor in the first breath. 'That's wild' is your energy spike, not throwaway. Slow down on the three numbers: thirty, two hours, five minutes. 'Secret' gets a slight lean-in whisper energy. Close on 'that's all it is' with a calm pause before it \u2014 not rushed.",
+    "retention_notes": "Open loop planted at 'without you writing a single Playwright script' \u2014 how does it work without code? Resolves at 'exposes browser actions as MCP tools.' Mid-video re-hook: 'Right? No Selenium. No brittle selectors.' keeps skeptics engaged. Final receipt 'two hours saved' plus 'do this today' gives concrete payoff. Loopback: opens on what it replaces, closes confirming the simplicity.",
+    "filename_hint": "script_01_browser_mcp_changes_everything.mp4",
+    "word_count": 131,
+    "estimated_seconds": 50,
+    "validation_score": 90,
+    "validation_passed": false,
+    "validation_errors": [
+      "opening_line does not match first sentence of spoken_script"
+    ],
+    "validation_warnings": [],
+    "length_warning": "Trigger fun_phrases[2] not found verbatim in spoken_script: 'finally'",
+    "story_score": 73,
+    "source_topic": "Show HN: Browser MCP \u2013 Automate your browser using Cursor, Claude, VS Code",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=43613194",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 17,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 2,
+    "territory": "Agent Workflows",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "OPENAI AGENTS SDK + MCP",
+    "subtitle_overlay": "Wire any MCP server to your agent in minutes",
+    "spoken_script": "OpenAI's Agents SDK now speaks MCP natively \u2014 and that changes how you wire tools. Before this, you were writing custom tool wrappers every single time. Wrong. Now you call MCPServerStdio, point it at any MCP server, and your agent just picks up the tools automatically. That's wild. Here's the move \u2014 open your Agents SDK project, swap your manual tool list for an MCPServerStdio block, point it at a local or remote MCP server, run it. Done. Your agent discovers tools at runtime without you writing glue code. I wired a filesystem MCP server in under five minutes. Do this today \u2014 one MCPServerStdio call replaces a hundred lines of wrapper. That's the secret right there. Unless you enjoy writing boilerplate forever, this is the upgrade. Right?",
+    "caption_hook": "OpenAI's Agents SDK now supports MCP natively \u2014 one call replaces all your custom tool wrappers.",
+    "hashtags": [
+      "#MCPServer",
+      "#OpenAI",
+      "#AgentsSDK",
+      "#VibeCoding",
+      "#AIAgents"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 18/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Wrong' like you mean it \u2014 snap the viewer awake.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "OpenAI's Agents SDK now speaks MCP natively \u2014 and that changes how you wire tools.",
+    "open_loop_plant": "Before this, you were writing custom tool wrappers every single time.",
+    "open_loop_payoff": "Resolves when 'one MCPServerStdio call replaces a hundred lines of wrapper' lands near the end.",
+    "loopback_closer": "Right?",
+    "visual_cues": "Hook: Agents SDK terminal with MCPServerStdio call live. Mid: tool discovery log printing automatically. End: stat overlay \u2014 5 minutes, 1 call.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical \u2014 dark terminal window showing MCPServerStdio Python call wiring to a local MCP server, tool list auto-populating in the agent log, no faces, no legible names, code-first energy",
+      "duration_s": 2.5,
+      "why": "Prove the MCP wire is real in the first 2 seconds \u2014 tool list appearing is the receipt"
+    },
+    "visual_briefs": [
+      {
+        "tier": "higgsfield",
+        "at_phrase": "OpenAI's Agents SDK now speaks MCP natively",
+        "prompt": "Dark terminal, MCPServerStdio import, tools auto-populating in agent output \u2014 no faces, no legible names"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "your agent discovers tools at runtime",
+        "prompt": "Abstract flowchart: MCP server \u2192 SDK \u2192 agent, dark background, tool nodes lighting up sequentially"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "5 MIN",
+        "label": "WIRED + RUNNING"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "wrong",
+        "type": "reaction",
+        "emoji": "\u274c",
+        "label": "WRONG WAY"
+      },
+      {
+        "at_phrase": "that's wild",
+        "type": "reaction",
+        "emoji": "\ud83e\udd2f",
+        "label": "NATIVE MCP"
+      },
+      {
+        "at_phrase": "under five minutes",
+        "graphic": "5",
+        "label": "MINUTES TO WIRE",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "one MCPServerStdio call replaces a hundred lines of wrapper",
+        "graphic": "100x",
+        "label": "LESS BOILERPLATE",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "under five minutes",
+          "display": "5 MIN",
+          "label": "WIRED + RUNNING"
+        },
+        {
+          "phrase": "a hundred lines of wrapper",
+          "display": "100+",
+          "label": "LINES ELIMINATED"
+        }
+      ],
+      "fun_phrases": [
+        "wrong",
+        "that's wild",
+        "secret"
+      ],
+      "energy_words": [
+        "right",
+        "unless",
+        "finally"
+      ],
+      "broll_phrases": [
+        "MCPServerStdio block",
+        "agent discovers tools at runtime",
+        "wired a filesystem MCP server"
+      ],
+      "broll_image_descriptions": [
+        "Close-up of Python editor showing MCPServerStdio class instantiation with server path argument, dark theme, no faces",
+        "Terminal output scrolling \u2014 agent listing discovered MCP tools automatically, green text on dark background",
+        "File explorer pane open beside agent terminal, filesystem MCP tools listed in agent log, dark IDE layout"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "OpenAI's Agents SDK",
+          "brand": "openai"
+        },
+        {
+          "phrase": "MCPServerStdio",
+          "brand": "openai"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "wrong",
+        "payoff": "one MCPServerStdio call replaces a hundred lines of wrapper"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Eyes up."
+      },
+      {
+        "second": 5,
+        "phrase": "wrong",
+        "action": "SNAP delivery \u2014 one word, full stop. Crust zoom fires here."
+      },
+      {
+        "second": 12,
+        "phrase": "MCPServerStdio",
+        "action": "Slow down slightly \u2014 viewers are writing this down"
+      },
+      {
+        "second": 22,
+        "phrase": "that's wild",
+        "action": "PAUSE 0.3s before \u2014 then land it with energy"
+      },
+      {
+        "second": 30,
+        "phrase": "under five minutes",
+        "action": "PAUSE before 'five' \u2014 speak clearly, stat overlay fires"
+      },
+      {
+        "second": 40,
+        "phrase": "do this today",
+        "action": "Direct to camera \u2014 this is the receipt moment"
+      },
+      {
+        "second": 48,
+        "phrase": "right",
+        "action": "SLOWER \u2014 loopback closer, confident smirk, let it breathe"
+      }
+    ],
+    "delivery_notes": "Fast through the problem setup. Snap on 'Wrong.' Slow on the command name so viewers catch it. Energy spike on 'that's wild.' Quiet authority on the closer.",
+    "retention_notes": "Open loop planted at second 3 \u2014 'writing wrappers every time.' Pays off at second 40 \u2014 'one call replaces a hundred lines.' Mid-video re-hook: 'your agent discovers tools at runtime without you writing glue code' resets attention around the 20s mark.",
+    "filename_hint": "script_02_openai_agents_sdk_mcp.mp4",
+    "word_count": 128,
+    "estimated_seconds": 49,
+    "validation_score": 94,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "1 sentence(s) exceed 25 words",
+      "Signature phrase overused recently: 'right?'",
+      "Low story score (58/100) \u2014 reads listicle/newsy"
+    ],
+    "story_score": 58,
+    "source_topic": "OpenAI adds MCP support to Agents SDK",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=43485566",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 18,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 3,
+    "territory": "Claude Code",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE'S HIDDEN FLAG",
+    "subtitle_overlay": "One command. Faster builds. Do this today.",
+    "spoken_script": "Nobody told me Claude Code had an extended thinking flag \u2014 and I wasted two weeks without it. Here's the secret. When you're in Claude Code, run slash model and switch to claude-3-7-sonnet-20250219. Then add --thinking to your next prompt. That's it. Claude stops guessing and actually reasons through your architecture before it writes a line. I used this on a gnarly auth flow \u2014 pure building, no back-and-forth. Finished in forty minutes instead of two hours. The truth is most people run Claude Code on default settings and wonder why it hallucinates on complex tasks. Wrong move. Extended thinking costs a bit more per call \u2014 maybe a dollar extra on a heavy session \u2014 but you ship cleaner, faster. Do this today. Open Claude Code, switch the model, add the flag. That's that.",
+    "caption_hook": "Claude Code has a hidden thinking flag most builders never touch \u2014 here's the one command that changed my builds.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#AITools",
+      "#CursorIDE",
+      "#BuildWithAI"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 19/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' loud \u2014 that's your energy spike at second eight.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Nobody told me Claude Code had an extended thinking flag \u2014 and I wasted two weeks without it.",
+    "open_loop_plant": "Here's the secret \u2014 planted at second four before the flag is named.",
+    "open_loop_payoff": "Resolved at 'do this today' \u2014 the flag name, the model name, and the outcome land together.",
+    "loopback_closer": "That's that.",
+    "visual_cues": "Hook: Claude Code terminal with --thinking flag highlighted. Mid: split timer showing 40 min vs 2 hrs. Closer: dollar amount overlay on token usage panel.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical, dark terminal UI, Claude Code session open, command line shows '--thinking' flag typed after slash model switch, green cursor blinking, no faces, compositor-safe dark lower third",
+      "duration_s": 2.5,
+      "why": "Shows the exact flag in the first 2 seconds \u2014 proves the hack is real before the creator speaks"
+    },
+    "visual_briefs": [
+      {
+        "tier": "higgsfield",
+        "at_phrase": "nobody told me claude code had an extended thinking flag",
+        "prompt": "Claude Code terminal dark mode, slash model command visible, --thinking flag highlighted in amber, no faces, dark lower third clear"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "finished in forty minutes instead of two hours",
+        "prompt": "Split-screen timer graphic, left side shows 40 MIN in green, right side shows 2 HRS in red, minimal dark background, no faces"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "$1",
+        "label": "EXTRA PER HEAVY SESSION"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "here's the secret",
+        "type": "reaction",
+        "emoji": "\ud83d\udd10",
+        "label": "HIDDEN FLAG"
+      },
+      {
+        "at_phrase": "finished in forty minutes instead of two hours",
+        "graphic": "40",
+        "label": "MINUTES TO SHIP",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "maybe a dollar extra on a heavy session",
+        "graphic": "$1",
+        "label": "COST PER SESSION",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "wrong move",
+        "type": "reaction",
+        "emoji": "\u274c",
+        "label": "WRONG"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "finished in forty minutes instead of two hours",
+          "display": "40 MIN",
+          "label": "TIME TO SHIP"
+        },
+        {
+          "phrase": "maybe a dollar extra on a heavy session",
+          "display": "$1",
+          "label": "EXTRA COST"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "secret",
+        "wrong",
+        "truth"
+      ],
+      "energy_words": [
+        "finally",
+        "unless",
+        "insane"
+      ],
+      "broll_phrases": [
+        "claude code terminal",
+        "gnarly auth flow",
+        "default settings"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal dark UI with --thinking flag and model name visible, green cursor blinking, no legible personal data, dark lower third clear",
+        "Code diff view showing authentication flow logic, function names blurred, syntax highlighted in dark IDE, no faces",
+        "Claude Code settings panel open, model selector dropdown visible on default option, dark background, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "beat_phrases": {
+        "crust": "here's the secret",
+        "payoff": "do this today"
+      },
+      "logo_phrases": []
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast, no smile warmup. Confessional energy. 'Nobody told me' lands with weight."
+      },
+      {
+        "second": 4,
+        "phrase": "here's the secret",
+        "action": "PAUSE 0.3s \u2014 then slow and deliberate. Crust zoom fires here."
+      },
+      {
+        "second": 10,
+        "phrase": "pure building",
+        "action": "ENERGY UP \u2014 hit this phrase hard, it's the fun phrase spike."
+      },
+      {
+        "second": 18,
+        "phrase": "finished in forty minutes",
+        "action": "PAUSE before 'forty' \u2014 speak the number clearly for stat overlay."
+      },
+      {
+        "second": 28,
+        "phrase": "wrong move",
+        "action": "Short. Definitive. Drop the pitch slightly."
+      },
+      {
+        "second": 36,
+        "phrase": "maybe a dollar extra",
+        "action": "PAUSE before 'dollar' \u2014 casual, not dramatic. Receipt moment."
+      },
+      {
+        "second": 44,
+        "phrase": "do this today",
+        "action": "Speed up slightly \u2014 call to action energy, payoff loop resolves here."
+      },
+      {
+        "second": 50,
+        "phrase": "that's that",
+        "action": "SLOW DOWN. One beat of silence before. Confident close, not loud."
+      }
+    ],
+    "delivery_notes": "Confessional opener \u2014 speak like you're telling a friend what you missed. Mid section is instructional but casual, not tutorial-voice. 'Pure building' gets emphasis. Numbers get a pause before them. Closer is quiet and certain \u2014 not a hype ending.",
+    "retention_notes": "Open loop plants at second four ('here's the secret' \u2014 flag not named yet). Loop resolves at second forty-four when the exact three-part move lands: open Claude Code, switch model, add flag. Mid-video re-hook is 'wrong move' \u2014 resets attention before the receipt. Rhythm alternates: long confession sentence \u2192 short punchy instruction \u2192 short punch again.",
+    "filename_hint": "script_03_claude_codes_hidden_flag.mp4",
+    "word_count": 135,
+    "estimated_seconds": 52,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [],
+    "story_score": 73,
+    "source_topic": "Claude 3.7 Sonnet and Claude Code",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=43163011",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 19,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 4,
+    "territory": "Claude Code",
+    "script_type": "TIP",
+    "format_hint": "tip",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE UNPACKED",
+    "subtitle_overlay": "The one file that changes everything",
+    "spoken_script": "Claude Code has a secret most builders walk right past \u2014 and it costs you ten extra minutes every single session. Here's the thing: Claude Code reads a file called CLAUDE.md before it touches your project. Drop your stack, your rules, your naming conventions in there \u2014 and it never asks twice. Wrong approach: leaving it blank and re-explaining yourself every time. Right approach: thirty seconds to write it once. Do this today \u2014 open your project root, run touch CLAUDE.md, paste your stack context, and watch Claude Code become pure building from the first message. No more re-prompting. No more hallucinated imports. That's the receipt \u2014 thirty seconds saved on every future session. Finally, your AI actually knows your project. That's all it is.",
+    "caption_hook": "Claude Code reads one file before every session \u2014 most builders leave it blank.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#CursorIDE",
+      "#AITools",
+      "#BuildInPublic"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 20/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' with real enthusiasm \u2014 that's your energy spike moment.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Claude Code has a secret most builders walk right past \u2014 and it costs you ten extra minutes every single session.",
+    "open_loop_plant": "it costs you ten extra minutes every single session",
+    "open_loop_payoff": "thirty seconds saved on every future session \u2014 resolves near the end when the receipt lands",
+    "loopback_closer": "That's all it is.",
+    "visual_cues": "Hook: Claude Code terminal open, CLAUDE.md file highlighted in file tree. Mid: split screen \u2014 blank CLAUDE.md vs populated one. Closer: timer showing 0:30 saved.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 dark terminal \u2014 Claude Code project root file tree, CLAUDE.md file glowing highlighted in sidebar, clean minimal code editor, no faces, dark lower third empty for speaker overlay",
+      "duration_s": 2.5,
+      "why": "prove the file exists and is actionable in the first 2 seconds"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "Claude Code reads a file called CLAUDE.md",
+        "prompt": "Dark code editor showing CLAUDE.md file open with stack config text inside, file tree visible on left, no faces, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "0:30",
+        "label": "SECONDS TO SETUP"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "pure building from the first message",
+        "prompt": "Claude Code terminal showing first response instantly generating correct code with matching imports, dark background, no faces, lower third clear"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "claude code reads a file called claude.md",
+        "graphic": "CLAUDE.md",
+        "label": "PROJECT MEMORY FILE",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "thirty seconds to write it once",
+        "graphic": "0:30",
+        "label": "ONE-TIME SETUP",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "run touch claude.md",
+        "type": "chat",
+        "platform": "imessage",
+        "messages": [
+          {
+            "sender": "them",
+            "text": "Why does Claude keep asking what stack you use?"
+          },
+          {
+            "sender": "me",
+            "text": "Because you haven't made CLAUDE.md yet."
+          }
+        ]
+      },
+      {
+        "at_phrase": "thirty seconds saved on every future session",
+        "graphic": "30s",
+        "label": "SAVED PER SESSION",
+        "type": "stat",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "thirty seconds saved on every future session",
+          "display": "30s",
+          "label": "SAVED PER SESSION"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "wrong",
+        "pure building",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "finally",
+        "unless"
+      ],
+      "broll_phrases": [
+        "claude code reads a file called claude.md",
+        "run touch claude.md",
+        "watch claude code become pure building"
+      ],
+      "broll_image_descriptions": [
+        "CLAUDE.md file open in dark VS Code-style editor with stack rules typed inside, file explorer visible, no faces, dark lower third empty",
+        "Terminal window showing 'touch CLAUDE.md' command just executed, cursor blinking, dark background, no text in lower third",
+        "Claude Code terminal response showing correct framework-specific code on first attempt, no re-prompting message visible, dark UI"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "claude code reads a file",
+          "brand": "anthropic"
+        },
+        {
+          "phrase": "run touch claude.md",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "thirty seconds saved on every future session"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast, no smile warmup. Nail 'secret' with weight."
+      },
+      {
+        "second": 6,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2192 ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 12,
+        "phrase": "claude code reads a file called claude.md",
+        "action": "Slow down slightly, let graphic land"
+      },
+      {
+        "second": 22,
+        "phrase": "wrong approach",
+        "action": "Hit 'wrong' with contrast energy \u2014 dismissive but confident"
+      },
+      {
+        "second": 30,
+        "phrase": "thirty seconds to write it once",
+        "action": "PAUSE before 'thirty', speak number clearly"
+      },
+      {
+        "second": 36,
+        "phrase": "pure building",
+        "action": "Hit fun phrase hard \u2014 this is the energy spike"
+      },
+      {
+        "second": 48,
+        "phrase": "thirty seconds saved on every future session",
+        "action": "PAUSE before 'thirty' \u2014 receipt moment, slow and clear"
+      },
+      {
+        "second": 55,
+        "phrase": "that's all it is",
+        "action": "CLOSER \u2014 drop energy slightly, land it quiet and confident"
+      }
+    ],
+    "delivery_notes": "Fast and confident on the hook. Contrast 'wrong approach' vs 'right approach' with real vocal difference. Pause before every number. 'Pure building' is your energy peak \u2014 hit it. Closer is quiet authority, not hype.",
+    "retention_notes": "Open loop plants at second 0 ('ten extra minutes every session') \u2014 resolves at second 48 with the receipt. Mid-video re-hook at 'wrong approach' resets attention. Beat phrase 'here's the thing' fires crust zoom at second 6. Final line loops back to hook implicitly \u2014 the secret is now revealed and simple.",
+    "filename_hint": "script_04_claude_code_unpacked.mp4",
+    "word_count": 125,
+    "estimated_seconds": 48,
+    "validation_score": 97,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "1 sentence(s) exceed 25 words"
+    ],
+    "story_score": 73,
+    "source_topic": "Claude Code Unpacked : A visual guide",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=47597085",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 20,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 5,
+    "territory": "Claude Code",
+    "script_type": "TIP",
+    "format_hint": "tip",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE SKILLS > MCP?",
+    "subtitle_overlay": "The feature builders are sleeping on",
+    "spoken_script": "Claude Skills might be the secret nobody's talking about \u2014 and it's wild how much faster your Claude Code sessions get once you wire one in. Here's the thing \u2014 MCP gives Claude tools. Skills give Claude memory and judgment that persists across your whole project. Open Claude Code, type slash, create a skill, describe exactly how you want it to handle one recurring task \u2014 code review style, PR template, debug flow \u2014 whatever you repeat every day. That's it. Pure building, no config file, no server spinning up. Skills live in your project, travel with your context, and actually stick. MCP is great for connecting external tools. But Skills? That's Claude learning your standards and never forgetting them. Unless you teach it wrong \u2014 which, that's on you. Try it in the next ten minutes.",
+    "caption_hook": "MCP gets all the hype \u2014 but Claude Skills might actually change how you ship daily.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#AITools",
+      "#Cursor",
+      "#BuildWithAI"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 21/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. On 'Skills give Claude memory' \u2014 slow down slightly, let that land before moving forward.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Claude Skills might be the secret nobody's talking about \u2014 and it's wild how much faster your Claude Code sessions get once you wire one in.",
+    "open_loop_plant": "MCP gives Claude tools. Skills give Claude something else.",
+    "open_loop_payoff": "Resolved near end \u2014 Skills give Claude your standards and judgment, not just tool access.",
+    "loopback_closer": "Try it in the next ten minutes.",
+    "visual_cues": "Hook: Claude Code terminal with slash command creating a skill. Mid: side-by-side MCP config vs skill definition. Closer: skill persisting across a new session.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 dark Claude Code terminal on screen, cursor blinking after '/create skill', minimal UI, no faces, dark lower third empty for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Shows the exact slash command in Claude Code before the creator even says it \u2014 proves the tip is real in 2 seconds"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "type slash, create a skill",
+        "prompt": "Claude Code terminal close-up: slash command palette open, 'create skill' highlighted in list, dark background, no faces, lower third clear"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "MCP gives Claude tools",
+        "prompt": "Split-screen: left side MCP JSON config file with server entries, right side a clean skill definition block \u2014 both in dark IDE theme, no legible brand names, lower third empty"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "0",
+        "label": "CONFIG FILES NEEDED"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "type slash, create a skill",
+        "graphic": "1",
+        "label": "ONE COMMAND",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "no config file, no server spinning up",
+        "graphic": "0",
+        "label": "SETUP FILES",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "it's wild how much faster",
+        "type": "reaction",
+        "emoji": "\u26a1",
+        "label": "FASTER SESSIONS"
+      },
+      {
+        "at_phrase": "MCP is great for connecting external tools",
+        "type": "tweet",
+        "handle": "@HackerNews",
+        "display_name": "Hacker News",
+        "text": "Claude Skills are awesome, maybe a bigger deal than MCP \u2014 738 points"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "no config file, no server spinning up",
+          "display": "0",
+          "label": "SETUP FILES"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "wild",
+        "pure building"
+      ],
+      "energy_words": [
+        "right",
+        "unless",
+        "finally"
+      ],
+      "broll_phrases": [
+        "claude code sessions",
+        "skills live in your project",
+        "mcp is great for connecting"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal with active session, agent panel visible on right, dark IDE with syntax highlighted code diff, no faces, lower third empty",
+        "File tree in dark IDE showing a .claude/skills folder with YAML files inside, clean directory structure, no faces, lower third clear",
+        "MCP server architecture diagram \u2014 Claude agent connected to external API nodes via arrows, minimal flat design, dark background, no legible brand logos"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "claude code",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "that's claude learning your standards and never forgetting them"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Hit 'secret' hard."
+      },
+      {
+        "second": 4,
+        "phrase": "it's wild",
+        "action": "ENERGY UP \u2014 fun phrase, slight eyebrow raise"
+      },
+      {
+        "second": 8,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2014 crust beat fires here, slow down slightly"
+      },
+      {
+        "second": 14,
+        "phrase": "type slash, create a skill",
+        "action": "Speak clearly, deliberate pace \u2014 viewer is memorizing this"
+      },
+      {
+        "second": 25,
+        "phrase": "pure building",
+        "action": "Hit fun phrase with energy, short pause after"
+      },
+      {
+        "second": 35,
+        "phrase": "that's claude learning your standards",
+        "action": "SLOW \u2014 payoff beat, let it land"
+      },
+      {
+        "second": 43,
+        "phrase": "unless you teach it wrong",
+        "action": "Dry delivery, slight smirk \u2014 energy word fires"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 hold eye contact, calm confidence, land the loop-back line clean"
+      }
+    ],
+    "delivery_notes": "Hook is fast and confident \u2014 no warmup. Middle third slows for the actionable tip. Recover energy on 'pure building'. Dry humor on 'that's on you'. Final line is calm and direct, not hyped.",
+    "retention_notes": "Open loop planted at second 8 \u2014 MCP vs Skills distinction teased but not resolved until second 35. Mid-video re-hook at 'Skills live in your project' \u2014 viewer who zoned out re-engages. Closer loops back to the speed promise from the hook.",
+    "filename_hint": "script_05_claude_skills_mcp.mp4",
+    "word_count": 137,
+    "estimated_seconds": 53,
+    "validation_score": 89,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "2 sentence(s) exceed 25 words",
+      "Missing signature phrase (Right?, That's all it is., etc.)"
+    ],
+    "story_score": 73,
+    "source_topic": "Claude Skills are awesome, maybe a bigger deal than MCP",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=45619537",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 21,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 6,
+    "territory": "Claude Code",
+    "script_type": "BUILD",
+    "format_hint": "build",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE FOR EVERYTHING",
+    "subtitle_overlay": "Not just coding \u2014 your whole workflow",
+    "spoken_script": "I gave Claude Code a task that wasn't code \u2014 and it actually worked. Here's the thing \u2014 most builders treat Claude Code like a code-only tool. Wrong. I dropped my product spec, my user feedback doc, and my API notes into one session. Single prompt: plan the feature, write the tests, draft the changelog. Pure building. No tab switching. No copy-paste circus. The secret is slash-commands \u2014 type slash then memory, and it stores context across sessions. I shipped a feature in forty minutes I thought would take a day. Receipt: forty minutes, one session, three files generated. Unless you're still opening three tools to do what one can do \u2014 you're wasting time. Figure it out.",
+    "caption_hook": "Claude Code isn't just for code \u2014 I dropped my spec, feedback doc, and API notes into one session and shipped in 40 minutes.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#AITools",
+      "#BuildInPublic",
+      "#CursorAI"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 22/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Wrong' like a gut punch \u2014 that's your energy spike at second 6.",
+    "hook_type": "CONFESSION",
+    "opening_line": "I gave Claude Code a task that wasn't code \u2014 and it actually worked.",
+    "open_loop_plant": "Here's the thing \u2014 most builders treat Claude Code like a code-only tool.",
+    "open_loop_payoff": "The loop resolves when the slash-memory command is revealed \u2014 that's the one move that unlocks multi-doc context across sessions.",
+    "loopback_closer": "Figure it out.",
+    "visual_cues": "Hook: Claude Code terminal with a product spec file loaded. Mid: split showing spec doc plus test file plus changelog generated. Closer: timer overlay showing 40 minutes.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical \u2014 Claude Code terminal dark UI, three files open: product-spec.md, feedback.md, api-notes.md \u2014 single prompt line visible at bottom, no faces, no legible body text, dark lower third clear for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Proves multi-doc context in Claude Code before the creator says a word"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "wrong",
+        "prompt": "Claude Code terminal with only a single .py file open \u2014 minimal, sparse \u2014 dark background, lower third clear, no faces"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "40",
+        "label": "MINUTES TO SHIP"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "slash then memory",
+        "prompt": "Claude Code terminal showing slash-command autocomplete menu with /memory highlighted in the dropdown \u2014 dark UI, no faces, lower third clear"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "wrong",
+        "type": "reaction",
+        "emoji": "\u274c",
+        "label": "COMMON MISTAKE"
+      },
+      {
+        "at_phrase": "pure building",
+        "graphic": "3",
+        "label": "FILES IN ONE SESSION",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "forty minutes",
+        "graphic": "40",
+        "label": "MINUTES TO SHIP",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "slash then memory",
+        "type": "headline",
+        "source": "CLAUDE CODE",
+        "headline": "/memory \u2014 CONTEXT ACROSS SESSIONS",
+        "subheadline": "The command most builders never open"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty minutes",
+          "display": "40",
+          "label": "MINUTES TO SHIP"
+        }
+      ],
+      "fun_phrases": [
+        "wrong",
+        "pure building",
+        "secret"
+      ],
+      "energy_words": [
+        "unless",
+        "figure it out",
+        "wrong"
+      ],
+      "broll_phrases": [
+        "product spec",
+        "slash then memory",
+        "three files generated"
+      ],
+      "broll_image_descriptions": [
+        "Dark terminal showing product-spec.md file open in Claude Code editor \u2014 structured markdown text visible, no faces, lower third empty",
+        "Claude Code slash-command dropdown menu showing /memory option highlighted in a dark IDE \u2014 no faces, no legible sidebar text, lower third clear",
+        "Three generated files side by side in Claude Code output panel: test file, changelog, and API stub \u2014 dark background, no faces, lower third clear"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "presenter_on_bg"
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "slash then memory"
+      },
+      "logo_phrases": []
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast, no smile warmup. Confessional energy."
+      },
+      {
+        "second": 5,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2014 then energy UP. Crust zoom fires here."
+      },
+      {
+        "second": 8,
+        "phrase": "wrong",
+        "action": "Hit it like a gut punch. Single word, full stop."
+      },
+      {
+        "second": 18,
+        "phrase": "pure building",
+        "action": "Slow down slightly \u2014 this is the energy spike, let it land."
+      },
+      {
+        "second": 26,
+        "phrase": "slash then memory",
+        "action": "Say it clearly \u2014 this is the ONE copyable move. Pause after 'slash'."
+      },
+      {
+        "second": 36,
+        "phrase": "forty minutes",
+        "action": "PAUSE before 'forty' \u2014 let the number breathe."
+      },
+      {
+        "second": 48,
+        "action": "CLOSER \u2014 slow down. 'Figure it out' lands flat and confident. No uptick."
+      }
+    ],
+    "delivery_notes": "Fast through the confession opener. Gut-punch 'Wrong' \u2014 single word silence after. Slow into the slash-command reveal like you're sharing something most people never find. Receipt line ('forty minutes, one session, three files') lands staccato \u2014 one beat per item. Closer is quiet confidence, not a smile.",
+    "retention_notes": "Open loop plants at second 5 ('most builders treat Claude Code like a code-only tool') \u2014 viewer stays to find out what else it can do. Loop resolves at second 26 with /memory reveal. Mid-video re-hook: 'no tab switching, no copy-paste circus' at second 20 spikes relate-ability. Closer 'Figure it out' signature callbacks the builder identity from the hook.",
+    "filename_hint": "script_06_claude_code_for_everything.mp4",
+    "word_count": 118,
+    "estimated_seconds": 45,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [],
+    "story_score": 73,
+    "source_topic": "Cowork: Claude Code for the rest of your work",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=46593022",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 22,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 7,
+    "territory": "Agent Workflows",
+    "script_type": "ACTIONABLE_NEWS",
+    "format_hint": "news",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow \u2014 and that boundary is exactly what vibe coding is erasing.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "VIBE CODING MEETS AGENTIC ENGINEERING",
+    "subtitle_overlay": "The merge nobody asked for \u2014 and what to do today",
+    "spoken_script": "Vibe coding and agentic engineering are colliding \u2014 and honestly, that's insane to watch in real time. Hacker News just put seven hundred and eighty seven points on this exact tension. Here's the thing \u2014 vibe coding used to mean you prompt, you review, you ship. Agentic engineering means the agent plans, executes, loops, and deploys \u2014 with way less you in the middle. Those two things are merging. And that's not wrong, that's just the truth. But here's the secret most builders skip: before you let an agent run a full loop, drop a AGENTS.md file in your repo root. Tell it your stack, your constraints, your stop conditions. One file. Cursor and Claude Code both read it automatically. Do this today \u2014 your agent stops hallucinating scope and starts shipping inside yours. Figure it out before the agent does it for you.",
+    "caption_hook": "Vibe coding and agentic engineering are merging \u2014 here's the one file that keeps your agent from going rogue.",
+    "hashtags": [
+      "#VibeCoding",
+      "#AgentWorkflows",
+      "#CursorAI",
+      "#ClaudeCode",
+      "#AIEngineering"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 23/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'seven hundred and eighty seven' slowly \u2014 let the stat land before you move. Drop your voice slightly on 'figure it out' at the end \u2014 it should feel like a quiet warning, not a cheer.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Vibe coding and agentic engineering are colliding \u2014 and honestly, that's insane to watch in real time.",
+    "open_loop_plant": "Those two things are merging \u2014 and that's not wrong, that's just the truth.",
+    "open_loop_payoff": "The AGENTS.md file resolves the loop \u2014 it's the boundary that keeps the merge from going sideways on your project.",
+    "loopback_closer": "Figure it out before the agent does it for you.",
+    "visual_cues": "Hook: split-screen Cursor agent panel left / HN thread right. Stat overlay: 787 pts. Mid: AGENTS.md file in repo root \u2014 code view. Closer: Cursor reading AGENTS.md with agent output constrained to defined stack.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical split \u2014 left half shows Cursor IDE agent panel mid-run with code diff streaming; right half shows Hacker News thread at 787 points with 'vibe coding' in the title. Dark moody background. No faces. No purple gradients. Feels like a breaking-news moment for builders.",
+      "duration_s": 2.5,
+      "why": "Prove the tension in the first 2 seconds \u2014 two worlds colliding visually before a word is spoken."
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "seven hundred and eighty seven points",
+        "prompt": "Hacker News thread screenshot cropped to title and score \u2014 '787 points' bold, dark HN orange-on-black aesthetic, no other UI chrome visible"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "787",
+        "label": "HN POINTS"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "drop a AGENTS.md file in your repo root",
+        "prompt": "VS Code dark theme showing AGENTS.md open in repo root, clean markdown with headers: STACK, CONSTRAINTS, STOP CONDITIONS \u2014 no face, no stock human, lower third empty for speaker overlay"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "seven hundred and eighty seven points",
+        "type": "headline",
+        "source": "HACKER NEWS",
+        "headline": "VIBE CODING AND AGENTIC ENGINEERING ARE GETTING CLOSER THAN I'D LIKE",
+        "subheadline": "787 points \u00b7 top thread this week"
+      },
+      {
+        "at_phrase": "that's just the truth",
+        "type": "reaction",
+        "emoji": "\ud83e\udd2f",
+        "label": "THEY'RE MERGING"
+      },
+      {
+        "at_phrase": "drop a AGENTS.md file in your repo root",
+        "graphic": "1",
+        "label": "ONE FILE FIX",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "cursor and claude code both read it automatically",
+        "graphic": "\u2713",
+        "label": "BOTH TOOLS SUPPORT IT",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "seven hundred and eighty seven points",
+          "display": "787",
+          "label": "HN POINTS"
+        }
+      ],
+      "fun_phrases": [
+        "that's insane",
+        "the secret",
+        "the truth"
+      ],
+      "energy_words": [
+        "colliding",
+        "merging",
+        "figure it out"
+      ],
+      "broll_phrases": [
+        "vibe coding used to mean",
+        "agent plans executes loops",
+        "AGENTS.md file in your repo root"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal showing a simple prompt-response coding loop \u2014 one prompt, one diff, clean output \u2014 dark theme, no face, lower third clear",
+        "Cursor agent panel mid-autonomous run \u2014 multiple tool calls cascading in sidebar, task list self-updating, no human cursor visible \u2014 feels like the agent is driving",
+        "VS Code dark theme file tree showing AGENTS.md at repo root level, file open with STACK / CONSTRAINTS / STOP CONDITIONS headers \u2014 no legible code beyond structure"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "cursor",
+          "brand": "cursor"
+        },
+        {
+          "phrase": "claude code",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "do this today"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast pace. No smile warmup. Land 'insane' with genuine weight."
+      },
+      {
+        "second": 5,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2014 energy spike, crust zoom fires here"
+      },
+      {
+        "second": 10,
+        "phrase": "seven hundred and eighty seven points",
+        "action": "PAUSE before number, speak each word clearly \u2014 stat overlay fires"
+      },
+      {
+        "second": 18,
+        "phrase": "those two things are merging",
+        "action": "Slow down slightly \u2014 let the tension land before next line"
+      },
+      {
+        "second": 26,
+        "phrase": "here's the secret",
+        "action": "Drop pitch slightly \u2014 lean in like you're sharing something real"
+      },
+      {
+        "second": 33,
+        "phrase": "AGENTS.md file in your repo root",
+        "action": "Crisp and clear \u2014 this is the one copyable move, enunciate"
+      },
+      {
+        "second": 42,
+        "phrase": "do this today",
+        "action": "Confident reset \u2014 pace picks back up, payoff zone"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 slow down, quieter energy. 'Figure it out before the agent does it for you' \u2014 land it like a warning, not a punchline."
+      }
+    ],
+    "delivery_notes": "Open fast and slightly alarmed \u2014 not panic, more like 'this is moving faster than anyone admitted.' Mid-script slow down at the AGENTS.md tip \u2014 that's the money moment, don't rush it. Closer is dry and quiet. No smile on the last line.",
+    "retention_notes": "Open loop planted at 'those two things are merging' \u2014 viewer wants to know if that's good or bad. Resolves at AGENTS.md tip: the file is the boundary that makes the merge manageable. Mid-video re-hook at 'here's the secret' \u2014 energy dip then spike. Final line loops back to the opening tension: the agent will figure it out if you don't first.",
+    "filename_hint": "script_07_vibe_coding_meets_agentic.mp4",
+    "word_count": 144,
+    "estimated_seconds": 55,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Low story score (58/100) \u2014 reads listicle/newsy"
+    ],
+    "story_score": 58,
+    "source_topic": "Vibe coding and agentic engineering are getting closer than I'd like",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=48037128",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 23,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 8,
+    "territory": "Agent Workflows",
+    "script_type": "CONFESSION",
+    "format_hint": "confession",
+    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate.",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "AGENT THRASH IS REAL",
+    "subtitle_overlay": "How vibe coding at scale breaks \u2014 and the one fix",
+    "spoken_script": "My agent loop failed for forty minutes straight. That is that's normal when you're vibe coding at scale without a pattern. Here's the thing \u2014 no checkpoints. The agent kept retrying, burning tokens, spinning in circles. Wrong move. Gas town's hn thread finally cracked it open: agents need explicit decision gates, not vibes. One fix changes everything. In Cursor, add a rules file \u2014 dot cursor slash rules \u2014 write this: 'Stop after each sub-task. Confirm before continuing.' Pure building starts there. Context stays tight. Thrash stops. My last run: forty minutes wasted became five minutes clean. Create that rules file before your next agent session. Figure it out once. Ship forever.",
+    "caption_hook": "My agent wasted 40 minutes of tokens \u2014 one Cursor rules file fixed it instantly.",
+    "hashtags": [
+      "#CursorAI",
+      "#VibeCoding",
+      "#AIAgents",
+      "#ClaudeCode",
+      "#BuildWithAI"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 24/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that is that's normal' with a self-interrupting stumble \u2014 lean into it, it's authentic.",
+    "hook_type": "CONFESSION",
+    "opening_line": "My agent loop failed for forty minutes straight.",
+    "open_loop_plant": "My agent loop failed for forty minutes straight.",
+    "open_loop_payoff": "forty minutes wasted became five minutes clean.",
+    "loopback_closer": "Figure it out once. Ship forever.",
+    "visual_cues": "Hook: Cursor IDE with an agent loop running in circles. Mid: .cursor/rules file being created. Closer: clean 5-minute agent run stat.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 Cursor IDE dark mode, agent panel showing recursive retry loop, token counter climbing, red error state \u2014 no faces, empty lower third",
+      "duration_s": 2.5,
+      "why": "prove the failure state in the first 2 seconds before the confession lands"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "dot cursor slash rules",
+        "prompt": "Dark mode file tree showing .cursor/rules file open, rule text visible: Stop after each sub-task. Confirm before continuing. No faces, no legible background text."
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "40min",
+        "label": "TOKENS WASTED"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "5min",
+        "label": "CLEAN RUN AFTER FIX"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "forty minutes straight",
+        "graphic": "40",
+        "label": "MINUTES LOST",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "that is that's normal",
+        "type": "reaction",
+        "emoji": "\ud83d\ude2c",
+        "label": "RELATABLE"
+      },
+      {
+        "at_phrase": "gas town's hn thread finally cracked it open",
+        "type": "headline",
+        "source": "HACKER NEWS",
+        "headline": "GAS TOWN: AGENT PATTERNS & VIBE CODING AT SCALE",
+        "subheadline": "403 points \u2014 decision gates, not vibes"
+      },
+      {
+        "at_phrase": "forty minutes wasted became five minutes clean",
+        "graphic": "5",
+        "label": "MINUTES CLEAN",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty minutes straight",
+          "display": "40",
+          "label": "MINUTES LOST"
+        },
+        {
+          "phrase": "forty minutes wasted became five minutes clean",
+          "display": "5",
+          "label": "CLEAN RUN"
+        }
+      ],
+      "fun_phrases": [
+        "that is that's normal",
+        "wrong move",
+        "pure building"
+      ],
+      "energy_words": [
+        "finally",
+        "wrong",
+        "figure it out"
+      ],
+      "broll_phrases": [
+        "agent loop failed",
+        "dot cursor slash rules",
+        "context stays tight"
+      ],
+      "broll_image_descriptions": [
+        "Cursor agent panel with looping retry state, token counter visibly climbing, dark IDE background \u2014 no faces",
+        "File explorer tree with .cursor/rules file highlighted, rule lines partially visible \u2014 no faces, compositor-safe lower third",
+        "Cursor agent run completing cleanly, green status, minimal token usage displayed \u2014 dark mode, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_cutout",
+        "presenter_on_bg",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "in cursor",
+          "brand": "cursor"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "figure it out once. ship forever."
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast, no smile warmup. Confession energy."
+      },
+      {
+        "second": 3,
+        "phrase": "that is that's normal",
+        "action": "Self-interrupt stumble \u2014 pause 0.3s mid-sentence, then push through with irony"
+      },
+      {
+        "second": 8,
+        "phrase": "here's the thing",
+        "action": "PAUSE \u2192 ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 15,
+        "phrase": "wrong move",
+        "action": "Short. Punchy. Dead stop after it."
+      },
+      {
+        "second": 22,
+        "phrase": "dot cursor slash rules",
+        "action": "Slow down \u2014 speak the file path clearly, letter by letter energy"
+      },
+      {
+        "second": 32,
+        "phrase": "pure building starts there",
+        "action": "Confident. Slight nod. Payoff energy."
+      },
+      {
+        "second": 40,
+        "phrase": "forty minutes wasted became five minutes clean",
+        "action": "PAUSE before 'forty' \u2014 speak both numbers clearly as words"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 slow down, look straight in lens, land 'figure it out once. ship forever.' with weight"
+      }
+    ],
+    "delivery_notes": "Self-interrupt on 'that is \u2014 that's normal' is intentional. Play it real, not scripted. Speed up through the problem setup, slow down at the fix and the receipt. Final line is a punchline \u2014 don't rush it.",
+    "retention_notes": "Open loop plants at 'I had no checkpoints' \u2014 viewer wonders what the fix is. Crust fires at 'here's the thing' around second 8. Mid-video re-hook at the Gas Town headline visual. Loop resolves at 'pure building starts there' and fully closes with the 40-to-5 minute receipt. Rhythm break: 'Wrong move.' \u2014 two words, full stop.",
+    "filename_hint": "script_08_agent_thrash_is_real.mp4",
+    "word_count": 112,
+    "estimated_seconds": 43,
+    "validation_score": 78,
+    "validation_passed": false,
+    "validation_errors": [
+      "loopback_closer does not match final sentence of spoken_script",
+      "ViralTasteGate: missing receipt ($, minutes, file, ship, or 'do this today')"
+    ],
+    "validation_warnings": [],
+    "length_warning": "loopback_closer does not match final sentence of spoken_script",
+    "story_score": 73,
+    "source_topic": "Gas Town's agent patterns, design bottlenecks, and vibecoding at scale",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=46734302",
+    "source_platform": "hackernews",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 24,
+    "date_generated": "2026-07-26"
+  },
+  {
+    "script_number": 1,
+    "territory": "MCP & Tools",
+    "script_type": "HACK",
+    "format_hint": "hack",
     "creator_take_anchor": "AI is a tool \u2014 and the best tools collapse the distance between idea and shipped thing.",
     "work_pattern_id": "ai_brainstorm_ship_split",
     "title_overlay": "BROWSER MCP CHANGES EVERYTHING",
@@ -8763,1229 +10307,6 @@
     "estimated_seconds": 52,
     "source_topic": "The Engineering Debate: Build, Buy, or Automate with AI?",
     "source_type": "social",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 6,
-    "territory": "Career + Money",
-    "script_type": "EVERGREEN_VALUE",
-    "creator_take_anchor": "Biggest skill learned the hard way: grit + figure-it-out. Nobody hands you a syllabus for the next door.",
-    "work_pattern_id": "figure_it_out_integration",
-    "title_overlay": "THE UPSKILLING TREADMILL",
-    "subtitle_overlay": "How senior engineers stay current without burning out",
-    "spoken_script": "Senior engineers are drowning in new tools but can't stop learning or they'll get left behind. Here's the secret \u2014 you don't need to master everything, you need to master three skills that compound. According to Stack Overflow's 2024 developer survey, seventy four percent of engineers feel overwhelmed by the pace of new technologies. That's normal. Nobody hands you a syllabus for the hard integration \u2014 you read the docs, fail, ship anyway. Here's how you stay current without burning out. Step one \u2014 pick one AI tool and one cloud platform this quarter. Deep, not wide. Master Claude or Cursor completely before touching the next shiny thing. Step two \u2014 teach what you learn immediately. Write docs, mentor junior engineers, record what broke. Teaching forces you to truly understand, not just copy-paste. Step three \u2014 ship something real with your new skills within thirty days. Build a side project, automate a work process, solve an actual problem. Skills stick when they solve real pain. That's how you stay ahead of the treadmill without falling off.",
-    "caption_hook": "Senior engineers are drowning in new tools but can't stop learning or they'll get left behind.",
-    "hashtags": [
-      "#SoftwareEngineering",
-      "#CareerGrowth",
-      "#TechSkills",
-      "#AI",
-      "#CloudComputing"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'normal' with emphasis.",
-    "hook_type": "IDENTITY CALL",
-    "opening_line": "Senior engineers are drowning in new tools but can't stop learning or they'll get left behind.",
-    "open_loop_plant": "Here's the secret \u2014 you don't need to master everything, you need to master three skills that compound.",
-    "open_loop_payoff": "That's how you stay ahead of the treadmill without falling off.",
-    "loopback_closer": "That's how you stay ahead of the treadmill without falling off.",
-    "visual_cues": "Display 74% stat when mentioned, show three numbered steps with graphics",
-    "visual_moments": [
-      {
-        "at_phrase": "seventy four percent",
-        "graphic": "74%",
-        "label": "FEEL OVERWHELMED",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "PICK ONE TOOL",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "TEACH IMMEDIATELY",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "SHIP IN 30 DAYS",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "seventy four percent of engineers",
-          "display": "74%",
-          "label": "FEEL OVERWHELMED"
-        }
-      ],
-      "fun_phrases": [
-        "secret",
-        "normal",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "truth"
-      ],
-      "broll_phrases": [
-        "claude or cursor",
-        "side project",
-        "work process"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "claude or cursor",
-          "brand": "claude"
-        },
-        {
-          "phrase": "stack overflow",
-          "brand": "stackoverflow"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the secret",
-        "payoff": "that's how you stay ahead"
-      },
-      "broll_image_descriptions": [
-        "Dark IDE workspace with glowing code editor, moody teal lighting, no faces",
-        "Abstract cinematic metaphor for side project, no people",
-        "Abstract cinematic metaphor for work process, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 8,
-        "phrase": "here's the secret",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 18,
-        "phrase": "seventy four percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 25,
-        "phrase": "that's normal",
-        "action": "Hit fun phrase with emphasis"
-      },
-      {
-        "second": 35,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word 'one'"
-      },
-      {
-        "second": 45,
-        "phrase": "step two",
-        "action": "Second finger up, confident delivery"
-      },
-      {
-        "second": 55,
-        "phrase": "step three",
-        "action": "Third finger up, building energy"
-      },
-      {
-        "second": 65,
-        "action": "CLOSER \u2014 slow down, land the loop-back line"
-      }
-    ],
-    "delivery_notes": "Build energy through the three steps. Pause before each number. Hit fun phrases hard. End with authority.",
-    "retention_notes": "Loop plants at 8s with 'secret', pays off at 65s. Crust moment at 'here's the secret' for energy spike. Three-step cascade keeps momentum.",
-    "filename_hint": "script_06_the_upskilling_treadmill.mp4",
-    "word_count": 176,
-    "estimated_seconds": 68,
-    "length_warning": "OVER TARGET: 176 words (max 145). Trim before recording.",
-    "source_topic": "The upskilling treadmill every senior engineer is on",
-    "source_type": "social",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 6,
-    "territory": "Build Mindset",
-    "script_type": "EVERGREEN_VALUE",
-    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck",
-    "work_pattern_id": "solo_end_to_end",
-    "title_overlay": "SKILLS THAT GET YOU HIRED IN 2026",
-    "subtitle_overlay": "what hiring managers actually want",
-    "spoken_script": "Companies are paying twenty percent more for engineers who connect code to business outcomes \u2014 but most candidates are learning the wrong skills. Here's the secret: hiring managers aren't looking for pure coding anymore. They want builders who think in systems. One engineer who owns frontend, backend, and deploy beats three who only own tickets. Step one: learn AI workflow automation this month. Pick Claude or Cursor, build one end-to-end project that solves a real problem. Step two: practice explaining technical decisions in business terms. Why did you choose that database? How does it save time or money? Step three: ship something with modern data tools \u2014 real-time pipelines, event streaming, or ML ops. The market rewards engineers who deliver value, not just features. That's how you stand out when everyone else is grinding LeetCode.",
-    "caption_hook": "Companies are paying 20% more for engineers who connect code to business outcomes.",
-    "hashtags": [
-      "#SoftwareEngineering",
-      "#TechCareers",
-      "#AIEngineering",
-      "#TechHiring",
-      "#BuildMindset"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'pure coding' with emphasis.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Companies are paying twenty percent more for engineers who connect code to business outcomes \u2014 but most candidates are learning the wrong skills.",
-    "open_loop_plant": "Here's the secret: hiring managers aren't looking for pure coding anymore.",
-    "open_loop_payoff": "The market rewards engineers who deliver value, not just features.",
-    "loopback_closer": "That's how you stand out when everyone else is grinding LeetCode.",
-    "visual_cues": "20% stat, three numbered action steps, tech stack visuals",
-    "visual_moments": [
-      {
-        "at_phrase": "twenty percent more",
-        "graphic": "20%",
-        "label": "SALARY PREMIUM",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "AI AUTOMATION",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "BUSINESS THINKING",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "MODERN DATA",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "twenty percent more",
-          "display": "20%",
-          "label": "SALARY PREMIUM"
-        }
-      ],
-      "fun_phrases": [
-        "secret",
-        "pure coding",
-        "wrong"
-      ],
-      "energy_words": [
-        "right",
-        "finally"
-      ],
-      "broll_phrases": [
-        "frontend backend",
-        "database",
-        "data tools",
-        "ML ops"
-      ],
-      "beat_phrases": {
-        "crust": "here's the secret",
-        "payoff": "the market rewards engineers"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for frontend backend, no people",
-        "Abstract cinematic metaphor for database, no people",
-        "Abstract cinematic metaphor for data tools, no people",
-        "Abstract cinematic metaphor for ML ops, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident energy"
-      },
-      {
-        "second": 3,
-        "phrase": "twenty percent more",
-        "action": "PAUSE before number, clear delivery"
-      },
-      {
-        "second": 8,
-        "phrase": "here's the secret",
-        "action": "ENERGY UP \u2014 crust moment"
-      },
-      {
-        "second": 12,
-        "phrase": "pure coding",
-        "action": "Hit fun phrase with emphasis"
-      },
-      {
-        "second": 20,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word"
-      },
-      {
-        "second": 30,
-        "phrase": "step two",
-        "action": "Gesture shift, maintain energy"
-      },
-      {
-        "second": 40,
-        "phrase": "step three",
-        "action": "Final step emphasis"
-      },
-      {
-        "second": 48,
-        "action": "CLOSER \u2014 slow down, land the loop-back line"
-      }
-    ],
-    "delivery_notes": "Fast hook with authority. Pause before stats. Hit action steps with clear gestures. End with confident closer.",
-    "retention_notes": "Secret hook plants in first 10 seconds, resolves at 'market rewards' near end. Crust energy spike at 'here's the secret'. Three-step cascade keeps momentum.",
-    "filename_hint": "script_06_skills_that_get_you.mp4",
-    "word_count": 135,
-    "estimated_seconds": 52,
-    "source_topic": "What to Learn Next if You Want Hired in 2026",
-    "source_type": "trend",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 5,
-    "territory": "Career + Money",
-    "script_type": "EVERGREEN_VALUE",
-    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck",
-    "work_pattern_id": "trace_data_not_api",
-    "title_overlay": "THE STACK COMPANIES ACTUALLY USE",
-    "subtitle_overlay": "why the same tools keep appearing",
-    "spoken_script": "Databricks, Kafka, and Azure show up in seventy percent of data engineering job posts \u2014 but here's what's wild. Most engineers are learning random tools when they should be targeting the enterprise stack that actually gets hired. According to Stack Overflow's 2024 survey, companies stick with proven infrastructure because switching costs are insane. If the UI looks wrong, trace the data pipeline before you rewrite the frontend. Step one: pick one streaming platform and get obsessed. Kafka or Pulsar \u2014 doesn't matter which, just build three real-time projects you can demo. Step two: learn one cloud data platform deeply. Databricks, Snowflake, or BigQuery \u2014 companies want specialists, not generalists who've tried everything. Step three: connect your streaming data to your warehouse with actual code. Build an end-to-end pipeline this week \u2014 raw events to clean tables. The secret is that hiring managers want to see the same stack they're already using in production. That's how you get past the resume screen every single time.",
-    "caption_hook": "The same three tools appear in 70% of data engineering job posts \u2014 here's why targeting the enterprise stack gets you hired faster.",
-    "hashtags": [
-      "#DataEngineering",
-      "#TechCareers",
-      "#Databricks",
-      "#Kafka",
-      "#Azure"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'insane' and 'secret' hard for energy spikes.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Databricks, Kafka, and Azure show up in seventy percent of data engineering job posts \u2014 but here's what's wild.",
-    "open_loop_plant": "but here's what's wild",
-    "open_loop_payoff": "The secret is that hiring managers want to see the same stack they're already using in production",
-    "loopback_closer": "That's how you get past the resume screen every single time.",
-    "visual_cues": "70% stat, three numbered steps with tool logos, pipeline diagram",
-    "visual_moments": [
-      {
-        "at_phrase": "seventy percent of data engineering job posts",
-        "graphic": "70%",
-        "label": "JOB POSTS MENTION",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "STREAMING PLATFORM",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "CLOUD DATA PLATFORM",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "END-TO-END PIPELINE",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "seventy percent of data engineering job posts",
-          "display": "70%",
-          "label": "JOB POSTS MENTION"
-        }
-      ],
-      "fun_phrases": [
-        "wild",
-        "insane",
-        "secret"
-      ],
-      "energy_words": [
-        "obsessed",
-        "specialists",
-        "actually"
-      ],
-      "broll_phrases": [
-        "data pipeline",
-        "streaming data",
-        "warehouse",
-        "raw events",
-        "clean tables"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "Databricks",
-          "brand": "databricks"
-        },
-        {
-          "phrase": "Kafka",
-          "brand": "kafka"
-        },
-        {
-          "phrase": "Azure",
-          "brand": "azure"
-        },
-        {
-          "phrase": "Snowflake",
-          "brand": "snowflake"
-        },
-        {
-          "phrase": "BigQuery",
-          "brand": "bigquery"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's what's wild",
-        "payoff": "The secret is that hiring managers want to see the same stack"
-      },
-      "broll_image_descriptions": [
-        "ETL flow diagram with warehouse nodes, dark cinematic, no people",
-        "Abstract cinematic metaphor for streaming data, no people",
-        "Abstract cinematic metaphor for warehouse, no people",
-        "Abstract cinematic metaphor for raw events, no people",
-        "Abstract cinematic metaphor for clean tables, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 5,
-        "phrase": "here's what's wild",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 12,
-        "phrase": "seventy percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 20,
-        "phrase": "insane",
-        "action": "Hit energy word hard"
-      },
-      {
-        "second": 28,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word 'one'"
-      },
-      {
-        "second": 36,
-        "phrase": "step two",
-        "action": "Confident gesture, emphasize 'specialists'"
-      },
-      {
-        "second": 44,
-        "phrase": "step three",
-        "action": "Final step energy, lean forward"
-      },
-      {
-        "second": 50,
-        "phrase": "secret",
-        "action": "Drop voice slightly, then build to closer"
-      }
-    ],
-    "delivery_notes": "Energy spike on 'wild' and 'insane'. Pause before all numbers. Punch each step number. Build energy through the three steps.",
-    "retention_notes": "Loop plants at 5 seconds with 'wild', pays off at 50 seconds with 'secret reveal'. Mid-video re-hook at step transitions.",
-    "filename_hint": "script_05_the_stack_companies_actually.mp4",
-    "word_count": 164,
-    "estimated_seconds": 63,
-    "length_warning": "OVER TARGET: 164 words (max 145). Trim before recording.",
-    "source_topic": "Why Databricks, Kafka, and Azure keep showing up in job posts",
-    "source_type": "trend",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 5,
-    "territory": "Career + Money",
-    "script_type": "EVERGREEN_VALUE",
-    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck.",
-    "work_pattern_id": "inbox_is_backlog",
-    "title_overlay": "LINKEDIN OUTREACH BEATS APPLICATIONS",
-    "subtitle_overlay": "target hiring managers directly",
-    "spoken_script": "Ninety-two percent of engineers are wasting time on manual job applications when they should be messaging hiring managers directly. Here's the secret most people miss \u2014 applications go to HR, but outreach goes to the person who actually decides. The best feature specs I ever got were angry user emails \u2014 not roadmap decks. Step one: automate your basic applications using tools like Simplify or LinkedIn Easy Apply for volume. Step two: identify three hiring managers at companies you actually want. Check their LinkedIn, find their GitHub, understand what they're building. Step three: send a two-sentence message about their recent project or tech stack. No ask, just genuine interest in their work. That's how you get conversations instead of rejections. Stop applying and start connecting \u2014 that's where the real opportunities live.",
-    "caption_hook": "Ninety-two percent of engineers waste time on applications when they should message hiring managers directly.",
-    "hashtags": [
-      "#TechCareers",
-      "#LinkedInStrategy",
-      "#SoftwareJobs",
-      "#CareerAdvice",
-      "#TechNetworking"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'really' with emphasis.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Ninety-two percent of engineers are wasting time on manual job applications when they should be messaging hiring managers directly.",
-    "open_loop_plant": "Here's the secret most people miss",
-    "open_loop_payoff": "applications go to HR, but outreach goes to the person who actually decides",
-    "loopback_closer": "Stop applying and start connecting \u2014 that's where the real opportunities live.",
-    "visual_cues": "92% stat display, three numbered steps overlay, LinkedIn interface screenshots",
-    "visual_moments": [
-      {
-        "at_phrase": "ninety-two percent",
-        "graphic": "92%",
-        "label": "WASTED APPLICATIONS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "AUTOMATE BASIC APPS",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "TARGET HIRING MANAGERS",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "GENUINE OUTREACH",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "ninety-two percent",
-          "display": "92%",
-          "label": "WASTED APPLICATIONS"
-        }
-      ],
-      "fun_phrases": [
-        "secret",
-        "really"
-      ],
-      "energy_words": [
-        "directly",
-        "actually"
-      ],
-      "broll_phrases": [
-        "LinkedIn",
-        "GitHub",
-        "tech stack",
-        "hiring managers"
-      ],
-      "beat_phrases": {
-        "crust": "secret",
-        "payoff": "real opportunities"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for LinkedIn, no people",
-        "Abstract cinematic metaphor for GitHub, no people",
-        "Abstract cinematic metaphor for tech stack, no people",
-        "Abstract cinematic metaphor for hiring managers, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident"
-      },
-      {
-        "second": 3,
-        "phrase": "ninety-two percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 8,
-        "phrase": "secret",
-        "action": "ENERGY UP \u2014 hit fun phrase hard"
-      },
-      {
-        "second": 18,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one'"
-      },
-      {
-        "second": 28,
-        "phrase": "step two",
-        "action": "Gesture to right, emphasize 'actually want'"
-      },
-      {
-        "second": 38,
-        "phrase": "step three",
-        "action": "Forward lean, serious tone"
-      },
-      {
-        "second": 48,
-        "action": "CLOSER \u2014 slow down, land the loop-back"
-      }
-    ],
-    "delivery_notes": "Fast hook with conviction. Pause before stat. Build energy through steps. Land the closer with authority.",
-    "retention_notes": "Loop plants at 'secret' (8s), pays off at 'actually decides' (15s). Energy crest at step one. Mid-video re-hook with step two specificity.",
-    "filename_hint": "script_05_linkedin_outreach_beats_applications.mp4",
-    "word_count": 132,
-    "estimated_seconds": 51,
-    "source_topic": "Why LinkedIn Outreach Beats Manual Job Applications",
-    "source_type": "social",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 4,
-    "territory": "Career + Money",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "Markets and IPOs haven't caught up yet; deployment is still infancy \u2014 give it a decade",
-    "work_pattern_id": null,
-    "title_overlay": "THE SIGNAL ENGINEERS MISSED",
-    "subtitle_overlay": "Where the money actually is",
-    "spoken_script": "While everyone's panicking about tech layoffs, here's the signal most engineers are completely missing. According to this week's Stack Overflow hiring report, AI infrastructure roles grew forty three percent since October while frontend positions dropped eighteen percent. The market isn't flat \u2014 it's concentrating around high-leverage work. Step one: audit your current skills against these four areas \u2014 machine learning operations, cloud security, real-time data processing, and API design. Wrong skills means you're competing with everyone. Right skills means companies compete for you. Step two: pick one of those four and build something this week. Deploy a model, secure a bucket, stream some data, or design an endpoint. Pure building beats pure learning. Step three: document what you built and the business problem it solves. That's your new LinkedIn headline right there. The market signal is finally clear \u2014 engineers who build infrastructure get hired while everyone else gets ghosted.",
-    "caption_hook": "The job market signal most engineers are ignoring while panicking about layoffs.",
-    "hashtags": [
-      "#SoftwareEngineer",
-      "#TechCareers",
-      "#AI",
-      "#DataEngineering",
-      "#TechJobs"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' hard for energy spike.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "While everyone's panicking about tech layoffs, here's the signal most engineers are completely missing.",
-    "open_loop_plant": "here's the signal most engineers are completely missing",
-    "open_loop_payoff": "The market signal is finally clear \u2014 engineers who build infrastructure get hired while everyone else gets ghosted",
-    "loopback_closer": "The market signal is finally clear \u2014 engineers who build infrastructure get hired while everyone else gets ghosted.",
-    "visual_cues": "Growth percentages, skill categories, step numbers",
-    "visual_moments": [
-      {
-        "at_phrase": "forty three percent",
-        "graphic": "43%",
-        "label": "AI ROLES GROWTH",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "eighteen percent",
-        "graphic": "18%",
-        "label": "FRONTEND DECLINE",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "AUDIT SKILLS",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "BUILD SOMETHING",
-        "type": "step",
-        "side": "right"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "forty three percent",
-          "display": "43%",
-          "label": "AI ROLES GROWTH"
-        },
-        {
-          "phrase": "eighteen percent",
-          "display": "18%",
-          "label": "FRONTEND DECLINE"
-        }
-      ],
-      "fun_phrases": [
-        "wrong",
-        "right",
-        "pure building",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "wrong",
-        "pure"
-      ],
-      "broll_phrases": [
-        "machine learning operations",
-        "cloud security",
-        "real-time data",
-        "API design"
-      ],
-      "logo_phrases": [],
-      "beat_phrases": {
-        "crust": "step one",
-        "payoff": "the market signal is finally clear"
-      },
-      "broll_image_descriptions": [
-        "Neural network abstract visualization, nodes and edges, dark bg, no people",
-        "Abstract cinematic metaphor for cloud security, no people",
-        "Abstract cinematic metaphor for real-time data, no people",
-        "Abstract cinematic metaphor for API design, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, confident, not panicked"
-      },
-      {
-        "second": 8,
-        "phrase": "forty three percent",
-        "action": "PAUSE before number, clear delivery"
-      },
-      {
-        "second": 12,
-        "phrase": "eighteen percent",
-        "action": "PAUSE before number"
-      },
-      {
-        "second": 20,
-        "phrase": "step one",
-        "action": "ENERGY UP \u2014 point at camera"
-      },
-      {
-        "second": 32,
-        "phrase": "pure building",
-        "action": "Hit hard \u2014 crust energy spike"
-      },
-      {
-        "second": 40,
-        "phrase": "step three",
-        "action": "Steady pace, authority"
-      },
-      {
-        "second": 50,
-        "action": "CLOSER \u2014 slow down, land the payoff line"
-      }
-    ],
-    "delivery_notes": "Open with urgency but not panic. Pause before each percentage. Hit 'pure building' with energy. Land the closer with authority.",
-    "retention_notes": "Loop plants immediately with 'signal most are missing', resolves at 'market signal is finally clear'. Mid-video re-hook at 'wrong skills vs right skills'.",
-    "filename_hint": "script_04_the_signal_engineers_missed.mp4",
-    "word_count": 150,
-    "estimated_seconds": 58,
-    "source_topic": "The job market signal most engineers are ignoring",
-    "source_type": "news",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 4,
-    "territory": "Tech Made Simple",
-    "script_type": "EVERGREEN_VALUE",
-    "creator_take_anchor": "AI massively increased his productivity in the last two years \u2014 projects, products, delivery",
-    "work_pattern_id": "boring_automation_wins",
-    "title_overlay": "DATA ENGINEERS LEAD 2026",
-    "subtitle_overlay": "why everyone wants this stack",
-    "spoken_script": "Data engineers are getting hired faster than any other tech role in twenty twenty six. Here's the secret \u2014 while everyone else chases AI engineering titles, companies need people who can actually move data at scale. According to LinkedIn's latest hiring report, data engineering roles increased forty seven percent this year alone. The unsexy automation \u2014 queues, retries, dead letter handling \u2014 is where enterprise time gets saved. But here's what's wild. Most engineers are building the wrong skills. Step one \u2014 learn real time data processing with Kafka or Pulsar this week. Not just batch jobs. Step two \u2014 get hands on with modern data stacks. Snowflake, dbt, Airflow together. Companies pay premium for engineers who connect these tools in production. Step three \u2014 automate one manual data workflow at your current job. Export, transform, load \u2014 something boring that saves hours. That's how you prove value before the interview. Truth is, data engineering pays well because it's pure building. No meetings about meetings. Just systems that work. Data engineers who ship automation are getting hired faster than anyone else right now.",
-    "caption_hook": "Data engineers are getting hired faster than any other tech role in 2026.",
-    "hashtags": [
-      "#DataEngineering",
-      "#TechCareers",
-      "#SoftwareEngineering",
-      "#DataScience",
-      "#TechJobs"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'wild' with extra punch.",
-    "hook_type": "IDENTITY CALL",
-    "opening_line": "Data engineers are getting hired faster than any other tech role in twenty twenty six.",
-    "open_loop_plant": "Here's the secret \u2014 while everyone else chases AI engineering titles, companies need people who can actually move data at scale.",
-    "open_loop_payoff": "Truth is, data engineering pays well because it's pure building.",
-    "loopback_closer": "Data engineers who ship automation are getting hired faster than anyone else right now.",
-    "visual_cues": "Show 47% stat, highlight three steps with numbers, display tech stack logos",
-    "visual_moments": [
-      {
-        "at_phrase": "forty seven percent",
-        "graphic": "47%",
-        "label": "HIRING INCREASE",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "REAL-TIME DATA",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "MODERN STACK",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "AUTOMATE WORKFLOW",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "forty seven percent",
-          "display": "47%",
-          "label": "HIRING INCREASE"
-        }
-      ],
-      "fun_phrases": [
-        "secret",
-        "wild",
-        "truth",
-        "pure building"
-      ],
-      "energy_words": [
-        "faster",
-        "premium",
-        "automation"
-      ],
-      "broll_phrases": [
-        "data processing",
-        "Kafka",
-        "Snowflake",
-        "data workflow"
-      ],
-      "beat_phrases": {
-        "crust": "here's the secret",
-        "payoff": "truth is"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for data processing, no people",
-        "Abstract cinematic metaphor for Kafka, no people",
-        "Abstract cinematic metaphor for Snowflake, no people",
-        "Abstract cinematic metaphor for data workflow, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No warmup."
-      },
-      {
-        "second": 8,
-        "phrase": "here's the secret",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 18,
-        "phrase": "forty seven percent",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 28,
-        "phrase": "here's what's wild",
-        "action": "Hit energy spike, lean forward"
-      },
-      {
-        "second": 32,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word 'one'"
-      },
-      {
-        "second": 38,
-        "phrase": "step two",
-        "action": "Hand gesture, emphasis on 'premium'"
-      },
-      {
-        "second": 45,
-        "phrase": "step three",
-        "action": "Final step punch, slower pace"
-      },
-      {
-        "second": 50,
-        "phrase": "pure building",
-        "action": "Hit fun phrase hard, building to closer"
-      }
-    ],
-    "delivery_notes": "Fast hook, pause before stats, punch each step number, slow down for closer",
-    "retention_notes": "Secret loop plants at 8s, wild re-hooks at 28s, truth resolves at 50s, loopback closer connects to opening pace",
-    "filename_hint": "script_04_data_engineers_lead_2026.mp4",
-    "word_count": 183,
-    "estimated_seconds": 70,
-    "length_warning": "OVER TARGET: 183 words (max 145). Trim before recording.",
-    "source_topic": "Data Engineering Is One of the Leading Tech Career Paths for 2026",
-    "source_type": "trend",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 3,
-    "territory": "Career + Money",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck.",
-    "work_pattern_id": null,
-    "title_overlay": "2026 HIRING SHIFT",
-    "subtitle_overlay": "skills that actually get offers",
-    "spoken_script": "This week's hiring reports dropped and three skills are dominating every tech job posting \u2014 but ninety percent of engineers are preparing for the wrong interviews. According to Stack Overflow's latest survey, companies want AI workflow automation, cloud platform depth, and something most candidates completely ignore. Here's what's wild \u2014 the third skill isn't technical. Step one: pick one platform and go deep. Kafka, Databricks, or Azure \u2014 not all three. Hiring managers can spot tutorial knowledge versus production experience in thirty seconds. Step two: build one automation that saves your team actual time this week. Document the business impact in dollars or hours saved. That's what separates senior candidates from code-only resumes. Step three: practice explaining your projects to non-engineers. If you can't make your mom understand why your API matters, you won't survive the final interview with leadership. The secret is pairing platform depth with human communication \u2014 that's exactly what these reports are really measuring.",
-    "caption_hook": "Three skills dominating every 2026 tech job posting \u2014 but 90% of engineers are preparing wrong.",
-    "hashtags": [
-      "#TechCareers",
-      "#SoftwareEngineering",
-      "#AIEngineering",
-      "#CareerAdvice",
-      "#TechJobs"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'here's what's wild' with confident surprise.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "This week's hiring reports dropped and three skills are dominating every tech job posting \u2014 but ninety percent of engineers are preparing for the wrong interviews.",
-    "open_loop_plant": "three skills are dominating every tech job posting \u2014 but ninety percent of engineers are preparing for the wrong interviews",
-    "open_loop_payoff": "The secret is pairing platform depth with human communication \u2014 that's exactly what these reports are really measuring.",
-    "loopback_closer": "The secret is pairing platform depth with human communication \u2014 that's exactly what these reports are really measuring.",
-    "visual_cues": "Show hiring report graphics, platform logos (Kafka, Databricks, Azure), interview scenes",
-    "visual_moments": [
-      {
-        "at_phrase": "ninety percent of engineers",
-        "graphic": "90%",
-        "label": "WRONG PREP",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "PLATFORM DEPTH",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "BUILD AUTOMATION",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "EXPLAIN SIMPLY",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "ninety percent of engineers",
-          "display": "90%",
-          "label": "WRONG INTERVIEW PREP"
-        }
-      ],
-      "fun_phrases": [
-        "wild",
-        "secret",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "truth"
-      ],
-      "broll_phrases": [
-        "hiring reports",
-        "tech job posting",
-        "API matters",
-        "final interview"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "kafka",
-          "brand": "kafka"
-        },
-        {
-          "phrase": "databricks",
-          "brand": "databricks"
-        },
-        {
-          "phrase": "azure",
-          "brand": "azure"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's what's wild",
-        "payoff": "the secret is pairing platform depth"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for hiring reports, no people",
-        "Abstract cinematic metaphor for tech job posting, no people",
-        "Abstract cinematic metaphor for API matters, no people",
-        "Abstract cinematic metaphor for final interview, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 8,
-        "phrase": "here's what's wild",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 15,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word 'one'"
-      },
-      {
-        "second": 20,
-        "phrase": "thirty seconds",
-        "action": "PAUSE before number, speak clearly"
-      },
-      {
-        "second": 28,
-        "phrase": "step two",
-        "action": "Point at camera, punch the word 'two'"
-      },
-      {
-        "second": 38,
-        "phrase": "step three",
-        "action": "Point at camera, punch the word 'three'"
-      },
-      {
-        "second": 45,
-        "phrase": "secret",
-        "action": "Hit fun phrase hard with conviction"
-      },
-      {
-        "second": 52,
-        "action": "CLOSER \u2014 slow down, land the loop-back line"
-      }
-    ],
-    "delivery_notes": "Fast confident opening, pause before each step number, emphasize platform names clearly, land the human communication point with authority",
-    "retention_notes": "Open loop plants at 3 seconds about wrong preparation, resolves at 45 seconds with communication secret, crust energy spike at 'here's what's wild', three-step cascade builds momentum",
-    "filename_hint": "script_03_2026_hiring_shift.mp4",
-    "word_count": 158,
-    "estimated_seconds": 61,
-    "length_warning": "OVER TARGET: 158 words (max 145). Trim before recording.",
-    "source_topic": "Skills hiring managers want most in 2026",
-    "source_type": "news",
-    "content_phase": "growth",
-    "date_generated": "2026-06-11"
-  },
-  {
-    "script_number": 3,
-    "territory": "Tech Made Simple",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "Better interview: deep dive on real projects \u2014 what was built, why, how, persistence when stuck.",
-    "work_pattern_id": null,
-    "title_overlay": "KAFKA AND DATABRICKS HIRING SURGE",
-    "subtitle_overlay": "why these two skills are everywhere",
-    "spoken_script": "This week's hiring reports show Kafka and Databricks in seventy percent more job posts than six months ago. Here's the secret \u2014 companies finally figured out that real-time data beats yesterday's reports. Most engineers are still building batch pipelines while hiring managers want streaming systems. That's wrong. Step one: learn Kafka basics this week \u2014 topics, producers, consumers. Build a simple event stream. Step two: connect it to Databricks for analytics. The combo shows you think in real-time, not just daily ETL jobs. Step three: document one streaming use case you built. Even a toy project beats zero streaming experience on your resume. Truth is, hiring managers see Kafka plus Databricks and think systems engineer, not just code writer. That's the difference between getting interviews and getting ignored.",
-    "caption_hook": "Hiring managers are looking for Kafka and Databricks skills in 70% more job posts this quarter.",
-    "hashtags": [
-      "#Kafka",
-      "#Databricks",
-      "#DataEngineering",
-      "#StreamingData",
-      "#TechSkills"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'secret' and 'wrong' with emphasis.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "This week's hiring reports show Kafka and Databricks in seventy percent more job posts than six months ago.",
-    "open_loop_plant": "Here's the secret \u2014 companies finally figured out that real-time data beats yesterday's reports.",
-    "open_loop_payoff": "Truth is, hiring managers see Kafka plus Databricks and think systems engineer, not just code writer.",
-    "loopback_closer": "That's the difference between getting interviews and getting ignored.",
-    "visual_cues": "Show 70% statistic, Kafka logo, Databricks interface, streaming diagram",
-    "visual_moments": [
-      {
-        "at_phrase": "seventy percent more job posts",
-        "graphic": "70%",
-        "label": "MORE JOB POSTS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "LEARN KAFKA",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "ADD DATABRICKS",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "DOCUMENT PROJECT",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "seventy percent more job posts",
-          "display": "70%",
-          "label": "MORE JOB POSTS"
-        }
-      ],
-      "fun_phrases": [
-        "secret",
-        "wrong",
-        "truth"
-      ],
-      "energy_words": [
-        "finally",
-        "real-time"
-      ],
-      "broll_phrases": [
-        "Kafka",
-        "Databricks",
-        "streaming systems",
-        "event stream",
-        "analytics"
-      ],
-      "beat_phrases": {
-        "crust": "here's the secret",
-        "payoff": "truth is"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for Kafka, no people",
-        "Abstract cinematic metaphor for Databricks, no people",
-        "Abstract cinematic metaphor for streaming systems, no people",
-        "Abstract cinematic metaphor for event stream, no people",
-        "Abstract cinematic metaphor for analytics, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident energy"
-      },
-      {
-        "second": 5,
-        "phrase": "seventy percent",
-        "action": "PAUSE before number, clear delivery"
-      },
-      {
-        "second": 10,
-        "phrase": "here's the secret",
-        "action": "ENERGY UP \u2014 crust moment"
-      },
-      {
-        "second": 20,
-        "phrase": "that's wrong",
-        "action": "Hit fun phrase with conviction"
-      },
-      {
-        "second": 25,
-        "phrase": "step one",
-        "action": "Point at camera, punch the word"
-      },
-      {
-        "second": 35,
-        "phrase": "step two",
-        "action": "Gesture transition, confident tone"
-      },
-      {
-        "second": 45,
-        "phrase": "truth is",
-        "action": "Slow down for payoff line"
-      },
-      {
-        "second": 50,
-        "action": "CLOSER \u2014 land the final line with authority"
-      }
-    ],
-    "delivery_notes": "Start fast, pause at numbers, build energy through steps, land the closer with confidence",
-    "retention_notes": "Open loop plants at 'secret', resolves at 'truth is'. Crust energy at 'here's the secret'. Three-step cascade keeps momentum.",
-    "filename_hint": "script_03_kafka_and_databricks_hiring.mp4",
-    "word_count": 128,
-    "estimated_seconds": 49,
-    "source_topic": "What Hiring Managers Want Right Now: Apache Kafka and Databricks",
-    "source_type": "news",
     "content_phase": "growth",
     "date_generated": "2026-06-11"
   }
