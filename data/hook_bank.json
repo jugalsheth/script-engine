@@ -498,5 +498,45 @@
     "opening_line": "My agent loop failed for forty minutes straight.",
     "hook_type": "CONFESSION",
     "date": "2026-07-26"
+  },
+  {
+    "opening_line": "Cursor just got a browser.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-02"
+  },
+  {
+    "opening_line": "OpenAI's Agents SDK finally speaks MCP natively \u2014 and honestly, the setup is insane how fast it is.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-02"
+  },
+  {
+    "opening_line": "Claude 3.7 Sonnet has extended thinking mode inside Claude Code. Most builders never turn it on.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-02"
+  },
+  {
+    "opening_line": "Claude Code has a visual guide sitting on Hacker News right now \u2014 eleven hundred points \u2014 and most builders walked right past the actual secret buried inside it.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-02"
+  },
+  {
+    "opening_line": "Claude Skills might actually be wilder than MCP \u2014 and most builders haven't wired one yet.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-02"
+  },
+  {
+    "opening_line": "Claude Code became my coworker this week \u2014 and that's not an exaggeration.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-02"
+  },
+  {
+    "opening_line": "Cursor's agent mode and vibe coding are finally merging \u2014 and that's insane to watch.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-02"
+  },
+  {
+    "opening_line": "I ran a Gas Town-style agent loop for forty minutes and it failed.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-02"
   }
 ]
