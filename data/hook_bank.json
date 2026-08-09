@@ -538,5 +538,45 @@
     "opening_line": "I ran a Gas Town-style agent loop for forty minutes and it failed.",
     "hook_type": "CONFESSION",
     "date": "2026-08-02"
+  },
+  {
+    "opening_line": "Browser MCP just made Cursor and Claude Code insane \u2014 they can click, fill forms, and scrape your actual browser right now.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-09"
+  },
+  {
+    "opening_line": "OpenAI's Agents SDK just got MCP support \u2014 and the setup is insane how fast it is.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-09"
+  },
+  {
+    "opening_line": "Most builders using Claude Code are running the wrong model \u2014 and that's the secret killing their sessions.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-09"
+  },
+  {
+    "opening_line": "Most people treating Claude Code like a chat window are doing it wrong.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-09"
+  },
+  {
+    "opening_line": "MCP gets all the hype \u2014 but Claude Skills might actually be the secret nobody's talking about.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-09"
+  },
+  {
+    "opening_line": "Thirteen hundred builders on Hacker News are shipping work that isn't code.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-09"
+  },
+  {
+    "opening_line": "Vibe coding and agentic engineering are the same thing now \u2014 and honestly, that's insane.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-09"
+  },
+  {
+    "opening_line": "My agent loop failed for two hours straight \u2014 and honestly, that's normal.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-09"
   }
 ]
