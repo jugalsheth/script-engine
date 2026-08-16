@@ -578,5 +578,45 @@
     "opening_line": "My agent loop failed for two hours straight \u2014 and honestly, that's normal.",
     "hook_type": "CONFESSION",
     "date": "2026-08-09"
+  },
+  {
+    "opening_line": "I was burning through Cursor tokens and I had no idea why \u2014 until I found it's wrong.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-16"
+  },
+  {
+    "opening_line": "Claude Code just changed how builders ship.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-16"
+  },
+  {
+    "opening_line": "Claude Code and Higgsfield MCP running together \u2014 and this is wild \u2014 your product shot renders while the agent writes the landing page.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-16"
+  },
+  {
+    "opening_line": "You're paying up to forty times the price for the same model.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-16"
+  },
+  {
+    "opening_line": "ClawPool is the secret Hacker News found before you did.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-16"
+  },
+  {
+    "opening_line": "My LLM bill was embarrassingly wrong.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-16"
+  },
+  {
+    "opening_line": "You're probably calling the wrong model and paying five x cost difference for it.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-16"
+  },
+  {
+    "opening_line": "I switched to Claude 3.5 Sonnet expecting to save money.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-16"
   }
 ]
