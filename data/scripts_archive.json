@@ -8,6 +8,1538 @@
     "work_pattern_id": "context_window_discipline",
     "title_overlay": "THE CURSOR SETTING THAT STOPPED MY OVERSPEND",
     "subtitle_overlay": "One toggle. Real savings.",
+    "spoken_script": "I was burning forty dollars a week in Cursor. The wrong model was doing it \u2014 that's the truth. Auto-select sounds smart until it routes tab completion to Opus. Pure building time, wasted on overkill. Open Cursor Settings. Go to Models. Turn off auto-select model. Pin claude-3-5-sonnet for chat, gpt-4o-mini for autocomplete. That's it. My weekly token bill dropped from forty dollars to under nine. Same output. Faster. I was wrong thinking auto meant optimal \u2014 it just means expensive. Do this today. Check your usage dashboard in twenty-four hours. Watch the number finally make sense. Unless you enjoy paying Opus prices for tab completion, figure it out. Right?",
+    "caption_hook": "I was spending $40/week in Cursor \u2014 one setting dropped it to $9. Here's exactly what to change.",
+    "hashtags": [
+      "#Cursor",
+      "#AITools",
+      "#VibeCoding",
+      "#CursorIDE",
+      "#DevProductivity"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 1/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers \u2014 'forty dollars', 'nine dollars', 'twenty-four hours' \u2014 let each land. First line with energy, not presentation voice. Lean into 'that's the truth' like you're catching yourself.",
+    "hook_type": "CONFESSION",
+    "opening_line": "I was burning forty dollars a week in Cursor without knowing why.",
+    "open_loop_plant": "The wrong model was silently eating my budget.",
+    "open_loop_payoff": "watch the number finally make sense",
+    "loopback_closer": "Unless you enjoy paying Opus prices for tab completion, figure it out.",
+    "visual_cues": "Hook: Cursor IDE settings panel on screen. Stat overlay: $40 \u2192 $9. Step overlay: 'Turn off auto-select model'. Closer: reaction emoji drop.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "Cursor IDE settings panel open, Models section visible, auto-select model toggle highlighted in red \u2014 dark UI, no faces, lower third clear for speaker overlay, 9:16 portrait",
+      "duration_s": 2.5,
+      "why": "Prove the setting exists in the first 2 seconds \u2014 viewers need to see the exact toggle before they trust the tip"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "turn off auto-select model",
+        "prompt": "Cursor Settings > Models panel, toggle switched off, dark theme UI, no faces, lower third empty"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "$40\u2192$9",
+        "label": "WEEKLY TOKEN BILL"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "usage dashboard in twenty-four hours",
+        "prompt": "Cursor usage dashboard showing sharp cost drop graph, dark UI, no legible personal data, lower third clear"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "the wrong model was doing it",
+        "graphic": "!",
+        "label": "WRONG MODEL",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "turn off auto-select model",
+        "graphic": "OFF",
+        "label": "DISABLE AUTO-SELECT",
+        "type": "step",
+        "side": "left"
+      },
+      {
+        "at_phrase": "dropped from forty dollars to under nine",
+        "graphic": "$9",
+        "label": "WEEKLY BILL AFTER",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "unless you enjoy paying Opus prices for tab completion",
+        "type": "reaction",
+        "emoji": "\ud83d\udcb8",
+        "label": "STOP OVERPAYING"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty dollars to under nine",
+          "display": "$9",
+          "label": "WEEKLY TOKEN BILL"
+        }
+      ],
+      "fun_phrases": [
+        "that's the truth",
+        "pure building",
+        "wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "unless",
+        "truth"
+      ],
+      "broll_phrases": [
+        "auto-select model",
+        "cursor settings",
+        "usage dashboard in twenty-four hours"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE model selector dropdown showing multiple model tiers including Opus highlighted, dark theme, no faces",
+        "Cursor Settings panel open to Models section with toggle controls visible, dark UI, portrait orientation",
+        "Cursor usage dashboard with line graph showing cost drop, dark theme, no personal data visible"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "cursor settings",
+          "brand": "cursor"
+        },
+        {
+          "phrase": "gpt-4o-mini for autocomplete",
+          "brand": "openai"
+        },
+        {
+          "phrase": "claude-3-5-sonnet for chat",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "that's the truth",
+        "payoff": "watch the number finally make sense"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast, no smile warmup. Confessional energy."
+      },
+      {
+        "second": 3,
+        "phrase": "that's the truth",
+        "action": "PAUSE 0.3s before \u2014 crust energy spike here"
+      },
+      {
+        "second": 8,
+        "phrase": "pure building time, wasted on overkill",
+        "action": "Slight head shake, dry delivery"
+      },
+      {
+        "second": 14,
+        "phrase": "here's the thing",
+        "action": "ENERGY UP \u2014 pivot to the fix"
+      },
+      {
+        "second": 22,
+        "phrase": "turn off auto-select model",
+        "action": "Slow down, speak each word clearly \u2014 copyable move"
+      },
+      {
+        "second": 32,
+        "phrase": "forty dollars to under nine",
+        "action": "PAUSE before 'forty', pause before 'nine' \u2014 let both numbers land"
+      },
+      {
+        "second": 44,
+        "phrase": "do this today",
+        "action": "Direct eye contact, confident"
+      },
+      {
+        "second": 52,
+        "phrase": "unless you enjoy paying Opus prices for tab completion. Right?",
+        "action": "SLOW \u2014 dry smile on 'right', loop closes here"
+      }
+    ],
+    "delivery_notes": "Confession opener needs real energy \u2014 not sad, more 'I caught myself being dumb.' Speed through the setup, slow hard on the setting name and the dollar numbers. 'Right?' at the end is the punctuation \u2014 let it sit.",
+    "retention_notes": "Open loop plants at 'sounds smart until' \u2014 viewer waits to find out how bad it got. Loop resolves at the bill drop number. Mid-video re-hook is 'same output, faster responses' \u2014 resets attention before the closer. Final line callbacks to the hook's waste premise.",
+    "filename_hint": "script_01_the_cursor_setting_that.mp4",
+    "word_count": 109,
+    "estimated_seconds": 42,
+    "validation_score": 77,
+    "validation_passed": false,
+    "validation_errors": [
+      "opening_line does not match first sentence of spoken_script",
+      "loopback_closer does not match final sentence of spoken_script"
+    ],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'figure it out'"
+    ],
+    "length_warning": "loopback_closer does not match final sentence of spoken_script",
+    "story_score": 65,
+    "source_topic": "The Cursor setting that stopped my token overspend",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "series_title": "Token Autopsy",
+    "episode_index": 1,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 2,
+    "territory": "Claude Code",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE + HIGGSFIELD",
+    "subtitle_overlay": "One command. Product render ships while your agent writes the page.",
+    "spoken_script": "Claude Code can call Higgsfield and render your product video while it writes the landing page \u2014 same session, zero tab switching. That's not wrong, that's pure building. Here's the setup. Install the Higgsfield MCP server \u2014 one line in your claude_desktop_config dot json under mcpServers. Point it at your Higgsfield API key. Now inside Claude Code, say: generate a product shot for this component and write the hero section. The agent calls Higgsfield, gets the render URL back, drops it into your HTML. One prompt. Two outputs. I ran this and had a working hero section with a real product clip in under three minutes. That's the receipt. Claude Code plus Higgsfield MCP \u2014 your agent finally ships something you can see. Figure it out.",
+    "caption_hook": "Claude Code + Higgsfield MCP = your agent renders the product video AND writes the landing page in one prompt.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#MCP",
+      "#Higgsfield",
+      "#AITools"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 2/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' hard \u2014 that's your crust moment, lean in right there.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Claude Code can call Higgsfield and render your product video while it writes the landing page \u2014 same session, zero tab switching.",
+    "open_loop_plant": "same session, zero tab switching",
+    "open_loop_payoff": "Resolves at 'One prompt. Two outputs.' \u2014 viewer sees the agent actually delivers both artifacts together.",
+    "loopback_closer": "Figure it out.",
+    "visual_cues": "Hook: split-screen Claude Code terminal left, Higgsfield render preview right. Mid: JSON config snippet for mcpServers. End: hero section HTML with embedded video URL \u2014 stat overlay '3 MIN' bottom right.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "Split 9:16 vertical frame: left half shows Claude Code dark terminal with an MCP tool call line highlighted in green reading 'higgsfield.generate_product_shot'; right half shows a crisp product render video thumbnail returned as a URL in the terminal output. No faces, dark lower third clear for speaker.",
+      "duration_s": 2.5,
+      "why": "Proves the mashup in the first 2 seconds \u2014 viewer sees the two tools actually talking to each other."
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "one line in your claude_desktop_config dot json",
+        "prompt": "Dark code editor showing claude_desktop_config.json with mcpServers block, Higgsfield entry highlighted in amber, clean dark background, no faces, lower third empty"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "3 MIN",
+        "label": "HERO SECTION SHIPPED"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "drops it into your HTML",
+        "prompt": "Dark terminal output showing a Higgsfield render URL being inserted into an HTML img/video tag by an AI agent, green text on dark background, no faces, lower third clear"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "pure building",
+        "type": "reaction",
+        "emoji": "\ud83d\udd25",
+        "label": "PURE BUILDING"
+      },
+      {
+        "at_phrase": "one line in your claude_desktop_config dot json",
+        "graphic": "1",
+        "label": "MCPSERVERS CONFIG",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "one prompt. two outputs.",
+        "graphic": "2",
+        "label": "ONE PROMPT TWO OUTPUTS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "under three minutes",
+        "graphic": "3 MIN",
+        "label": "HERO SECTION SHIPPED",
+        "type": "stat",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "under three minutes",
+          "display": "3 MIN",
+          "label": "HERO SECTION SHIPPED"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "wrong",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "finally",
+        "figure it out"
+      ],
+      "broll_phrases": [
+        "claude code terminal",
+        "higgsfield api key",
+        "drops it into your HTML"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code dark terminal window with green MCP tool call output visible, agent loop running, no faces, dark lower third clear for speaker",
+        "Higgsfield dashboard API key settings page, key partially visible, clean dark UI, no faces, lower third empty",
+        "Dark code editor with HTML file open, a video src URL freshly inserted into a hero section tag, cursor blinking, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "Claude Code",
+          "brand": "anthropic"
+        },
+        {
+          "phrase": "Higgsfield MCP server",
+          "brand": "higgsfield"
+        },
+        {
+          "phrase": "claude_desktop_config",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "your agent finally ships something you can see"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast, confident. No smile warmup. Eyes sharp."
+      },
+      {
+        "second": 5,
+        "phrase": "pure building",
+        "action": "PAUSE 0.3s before it \u2014 then hit it with energy. Crust zoom fires here."
+      },
+      {
+        "second": 10,
+        "phrase": "here's the setup",
+        "action": "Slight slow-down \u2014 you're about to give the instruction. Clear and deliberate."
+      },
+      {
+        "second": 18,
+        "phrase": "one line in your claude_desktop_config dot json",
+        "action": "Pronounce clearly \u2014 say 'dot json' not 'JSON'. Pause after."
+      },
+      {
+        "second": 28,
+        "phrase": "the agent calls Higgsfield",
+        "action": "Energy up \u2014 this is the magic moment. Slight lean forward."
+      },
+      {
+        "second": 36,
+        "phrase": "one prompt. two outputs.",
+        "action": "PAUSE between each sentence. Let it land. Two beats."
+      },
+      {
+        "second": 42,
+        "phrase": "under three minutes",
+        "action": "PAUSE before 'three' \u2014 speak the number clearly."
+      },
+      {
+        "second": 50,
+        "phrase": "figure it out",
+        "action": "CLOSER \u2014 slow down, direct to camera, dry delivery. Loop back energy."
+      }
+    ],
+    "delivery_notes": "Hook at full speed \u2014 no warmup. 'Pure building' is the first energy spike, lean in physically. Steps section: deliberate, slightly slower, give viewer time to visualize the config. 'One prompt. Two outputs.' \u2014 two separate beats with a real pause between them. Final line 'Figure it out' delivered dry and direct, not hyped.",
+    "retention_notes": "Open loop planted at 'zero tab switching' \u2014 viewer stays to see how one session actually produces two artifacts. Loop resolves at 'one prompt. two outputs.' Mid-video re-hook at 'the agent calls Higgsfield' \u2014 this is the visual payoff moment, energy spike here resets attention. Rhythm: fast hook \u2192 instructional slowdown \u2192 energy spike on magic moment \u2192 dry confident closer.",
+    "filename_hint": "script_02_claude_code_higgsfield.mp4",
+    "word_count": 126,
+    "estimated_seconds": 48,
+    "validation_score": 97,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'figure it out'"
+    ],
+    "story_score": 73,
+    "source_topic": "Hack: Claude Code + Higgsfield",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "watchlist",
+    "series_title": "Token Autopsy",
+    "episode_index": 2,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 3,
+    "territory": "Claude Code",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE + HIGGSFIELD MCP",
+    "subtitle_overlay": "Product shot renders while the agent writes the page",
+    "spoken_script": "Claude Code wired to Higgsfield MCP is pure building \u2014 your product shot renders while the agent writes the landing page. Same session. That's insane, right? Most builders treat creative assets and code as wrong \u2014 two separate jobs. Wire the Higgsfield MCP into your Claude Code session. One line in your MCP config, point it at your Higgsfield API key, done. Now prompt Claude Code to write the hero section AND generate the product render simultaneously. Agent calls Higgsfield mid-session, image lands in your project folder, page references it automatically. One prompt. Two deliverables. I ran this last week \u2014 landing page plus three product shots, finally done under four minutes. Ship it today. The product shot and the page ship together. That's all it is.",
+    "caption_hook": "Claude Code called Higgsfield mid-session and rendered the product shot while it wrote the landing page \u2014 same prompt, same four minutes.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#Higgsfield",
+      "#MCP",
+      "#VibeCoding",
+      "#AITools"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 3/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'That's insane, right?' with a real pause after \u2014 let it land before you move on.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Claude Code wired to Higgsfield MCP is pure building \u2014 your product shot renders while the agent writes the landing page.",
+    "open_loop_plant": "Most builders treat creative assets and code as wrong \u2014 two separate jobs.",
+    "open_loop_payoff": "One prompt. Two deliverables. Ship it today.",
+    "loopback_closer": "The product shot and the page ship together. That's all it is.",
+    "visual_cues": "Hook: split screen \u2014 Claude Code terminal left, Higgsfield render appearing right. Mid: MCP config snippet. End: project folder with image file + page side by side.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "Split 9:16 frame: left side shows Claude Code terminal with MCP tool call in progress, right side shows a product render image materializing in a dark project folder \u2014 no faces, dark lower third clear for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Proves the mashup in the first 2 seconds \u2014 two tools, one output"
+    },
+    "visual_briefs": [
+      {
+        "tier": "higgsfield",
+        "at_phrase": "pure building",
+        "prompt": "Claude Code terminal and Higgsfield product render side by side in dark UI \u2014 9:16, no faces, lower third clear"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "one line in your MCP config",
+        "prompt": "Dark code editor showing a minimal MCP JSON config block with a Higgsfield API key field highlighted \u2014 no faces, lower third empty"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "image lands in your project folder",
+        "prompt": "Dark file explorer showing a project folder with a newly appeared product render PNG alongside an index.html file \u2014 no faces, lower third clear"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "pure building",
+        "type": "reaction",
+        "emoji": "\u26a1",
+        "label": "SAME SESSION"
+      },
+      {
+        "at_phrase": "wrong",
+        "graphic": "\u2717",
+        "label": "TWO SEPARATE JOBS",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "one prompt. two deliverables",
+        "graphic": "2",
+        "label": "DELIVERABLES \u00b7 1 PROMPT",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "under four minutes",
+        "graphic": "4",
+        "label": "MINUTES \u00b7 PAGE + 3 SHOTS",
+        "type": "stat",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "under four minutes",
+          "display": "4min",
+          "label": "PAGE + 3 PRODUCT SHOTS"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "wrong",
+        "insane",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "that's that",
+        "simultaneously"
+      ],
+      "broll_phrases": [
+        "higgsfield mcp",
+        "mcp config",
+        "project folder"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal showing a Higgsfield MCP tool call with JSON response containing an image URL \u2014 dark UI, no faces, lower third clear",
+        "Minimal JSON MCP config file in a dark editor with higgsfield server entry and API key field \u2014 no faces, lower third empty",
+        "Dark VS Code file explorer showing project root with product render PNG and landing page HTML side by side \u2014 no faces, lower third clear"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "one prompt. two deliverables"
+      },
+      "logo_phrases": []
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast delivery, no smile warmup. Hit 'pure building' with energy."
+      },
+      {
+        "second": 4,
+        "phrase": "pure building",
+        "action": "ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 7,
+        "phrase": "that's insane, right?",
+        "action": "PAUSE 0.5s after 'insane' \u2014 let it breathe"
+      },
+      {
+        "second": 12,
+        "phrase": "here's the thing",
+        "action": "Drop energy slightly \u2014 setup tone, pull viewer in"
+      },
+      {
+        "second": 18,
+        "phrase": "wrong",
+        "action": "Hit 'wrong' hard and fast \u2014 single word punch"
+      },
+      {
+        "second": 28,
+        "phrase": "simultaneously",
+        "action": "Slow and deliberate \u2014 this is the payoff beat"
+      },
+      {
+        "second": 40,
+        "phrase": "under four minutes",
+        "action": "PAUSE before 'four' \u2014 speak clearly"
+      },
+      {
+        "second": 50,
+        "phrase": "that's that",
+        "action": "CLOSER \u2014 slow down, quiet confidence, hold camera"
+      }
+    ],
+    "delivery_notes": "Open fast with authority \u2014 no warmup. 'Wrong' is a one-word gut punch, deliver it alone. 'Simultaneously' gets the weight \u2014 slow it down. Closer is quiet and confident, not loud.",
+    "retention_notes": "Open loop planted at 'two separate jobs' \u2014 pays off at 'one prompt, two deliverables' around second 35. Mid-video re-hook at 'I ran this last week' \u2014 personal proof beat keeps skeptics. Final line loops back to the opening claim of doing both in one session.",
+    "filename_hint": "script_03_claude_code_higgsfield_mcp.mp4",
+    "word_count": 127,
+    "estimated_seconds": 49,
+    "validation_score": 78,
+    "validation_passed": false,
+    "validation_errors": [
+      "loopback_closer does not match final sentence of spoken_script",
+      "ViralTasteGate: missing receipt ($, minutes, file, ship, or 'do this today')"
+    ],
+    "validation_warnings": [],
+    "length_warning": "ViralTasteGate: missing receipt ($, minutes, file, ship, or 'do this today')",
+    "story_score": 65,
+    "source_topic": "Claude Code + Higgsfield MCP: generate the product shot while the agent writes the page",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "series_title": "Token Autopsy",
+    "episode_index": 3,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 4,
+    "territory": "Tokens & Cost",
+    "script_type": "TIP",
+    "format_hint": "tip",
+    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate. Same energy: the tool isn't wrong, your routing is.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "40X THE PRICE. SAME MODEL.",
+    "subtitle_overlay": "Claude Code token routing secret",
+    "spoken_script": "Same model. Same tokens. Up to forty times the price. That's not insane \u2014 it's wrong routing eating your budget. Here's the thing: Claude Code defaults to Anthropic's API. Hacker News engineers did the math \u2014 identical calls, forty x cost difference versus direct access. The secret is one flag. Point your --api-key at Bedrock, Vertex, or a cost proxy instead. Same model. Same output. A fraction of the bill. I plan in Claude, execute in Cursor. But long agentic loops? Wrong routing is the silent budget killer. Check your usage dashboard today before your next session. See that spike? That forty x gap is real, and it's yours to close. Figure it out.",
+    "caption_hook": "Claude Code charges up to 40x more for the same model \u2014 one flag fixes it.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#AITools",
+      "#TokenCost",
+      "#CursorIDE"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 4/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers \u2014 especially 'forty times' and 'forty x'. First line with energy, not presentation voice. Drop your voice slightly on 'that's just Claude Code's API markup' \u2014 let the contrast land before picking back up.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "opening_line": "Same model, same tokens, up to forty times the price.",
+    "open_loop_plant": "Wrong routing is the silent budget killer.",
+    "open_loop_payoff": "Check your usage dashboard today before your next session.",
+    "loopback_closer": "That forty x gap is real, and it's yours to close.",
+    "visual_cues": "Hook: split-screen API pricing comparison. Mid: Claude Code terminal with --api-key flag typed in. Closer: cost dashboard showing drop.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 dark terminal UI split-screen \u2014 left side shows Claude Code API call with high price label '$0.40', right side shows same call with '$0.01' label via Bedrock. No faces. Bold red vs green price numbers. Clean, stark contrast. Lower third empty for speaker.",
+      "duration_s": 2.5,
+      "why": "Prove the 40x price gap in the first 2 seconds before a word is spoken."
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "forty times the price",
+        "prompt": "Dark UI pricing table \u2014 two columns labeled 'CLAUDE CODE DEFAULT' and 'BEDROCK / VERTEX', same model row, price cells showing 40x difference in bold red vs green. No faces, no legible filler text."
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "40x",
+        "label": "SAME MODEL. MORE COST."
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "wrong routing is the silent budget killer",
+        "prompt": "Claude Code terminal in dark mode \u2014 cursor blinking after '--api-key' flag typed in. Cost counter in corner dropping from '$0.40' to '$0.01'. No faces, no stock imagery."
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "forty times the price",
+        "graphic": "40x",
+        "label": "SAME MODEL",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "identical calls, forty x cost difference",
+        "type": "headline",
+        "source": "HACKER NEWS",
+        "headline": "Claude Code: Same Tokens, Same Model, Up to 40x the Price",
+        "subheadline": "HN thread exposes API markup gap"
+      },
+      {
+        "at_phrase": "wrong routing is the silent budget killer",
+        "graphic": "!",
+        "label": "CHECK YOUR ROUTING",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "check your usage dashboard",
+        "type": "reaction",
+        "emoji": "\ud83d\udcb8",
+        "label": "DO THIS NOW"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty times the price",
+          "display": "40x",
+          "label": "COST DIFFERENCE"
+        },
+        {
+          "phrase": "forty x cost difference",
+          "display": "40x",
+          "label": "SAME MODEL"
+        }
+      ],
+      "fun_phrases": [
+        "that's not insane",
+        "wrong routing",
+        "secret"
+      ],
+      "energy_words": [
+        "right",
+        "unless",
+        "finally"
+      ],
+      "broll_phrases": [
+        "claude code routes",
+        "api-key flag",
+        "usage dashboard"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal showing default API endpoint routing path highlighted in orange \u2014 dark UI, no faces, composer-safe lower third",
+        "Terminal close-up with '--api-key' flag typed and highlighted in green, cursor blinking \u2014 dark background, no legible filler text",
+        "Anthropic usage dashboard UI showing token cost spike then sharp drop after routing change \u2014 graph only, no faces, lower third clear"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "presenter_on_bg"
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "that forty x gap is real, and it's yours to close"
+      },
+      "logo_phrases": []
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, no smile warmup. Punch 'forty times the price' hard."
+      },
+      {
+        "second": 4,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2192 ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 10,
+        "phrase": "forty x cost difference",
+        "action": "PAUSE before 'forty', speak clearly \u2014 stat overlay fires"
+      },
+      {
+        "second": 18,
+        "phrase": "secret",
+        "action": "Slight eyebrow raise, drop volume slightly before the flag name"
+      },
+      {
+        "second": 28,
+        "phrase": "wrong routing is the silent budget killer",
+        "action": "Hit 'wrong' hard \u2014 fun phrase lands here"
+      },
+      {
+        "second": 38,
+        "phrase": "check your usage dashboard",
+        "action": "Direct eye contact, calm authority \u2014 reaction emoji fires"
+      },
+      {
+        "second": 48,
+        "phrase": "that forty x gap is real",
+        "action": "Slow down \u2014 loop-back, land the closer quietly and firmly"
+      }
+    ],
+    "delivery_notes": "Open fast and punchy \u2014 contrarian strike energy from word one. Drop slightly on 'that's just Claude Code's API markup' for dry contrast. Pick energy back up on 'The secret?' Speak 'forty' slowly every time \u2014 it's the number that lands. Closer should feel like a quiet verdict, not a punchline.",
+    "retention_notes": "Open loop planted at 'Claude Code routes through Anthropic's API by default' \u2014 viewer wonders what to do about it. Loop resolves at '--api-key flag' reveal around second 25. Mid-video re-hook: 'wrong routing is the silent budget killer' reactivates attention at the 30s risk zone. Final line loops back to 'forty x' from the hook.",
+    "filename_hint": "script_04_40x_the_price_same.mp4",
+    "word_count": 114,
+    "estimated_seconds": 44,
+    "validation_score": 47,
+    "validation_passed": false,
+    "validation_errors": [
+      "opening_line does not match first sentence of spoken_script",
+      "loopback_closer does not match final sentence of spoken_script",
+      "ViralTasteGate: missing copyable move (command, setting, MCP wire, slash command, model flag)",
+      "ViralTasteGate: missing receipt ($, minutes, file, ship, or 'do this today')"
+    ],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'figure it out'",
+      "Low story score (58/100) \u2014 reads listicle/newsy"
+    ],
+    "length_warning": "opening_line does not match first sentence of spoken_script",
+    "story_score": 58,
+    "source_topic": "Claude Code pricing: same tokens, same model, up to 40x the price",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=49254999",
+    "source_platform": "hackernews",
+    "series_title": "Token Autopsy",
+    "episode_index": 4,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 5,
+    "territory": "Tokens & Cost",
+    "script_type": "TIP",
+    "format_hint": "tip",
+    "creator_take_anchor": "AI wasted my time when context windows filled and it hallucinated \u2014 the fix is scoped tasks and human verification, not blame.",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "CLAWPOOL: CLAUDE FOR CHEAP",
+    "subtitle_overlay": "Pool tokens. Cut your bill. Ship today.",
+    "spoken_script": "ClawPool just hit Hacker News \u2014 and honestly, this is wild. Here's the thing: Claude Code bills you at full Anthropic API rates. ClawPool lets builders pool Claude API subscriptions and share token capacity \u2014 so your effective cost per token tanks. The secret is dead simple. Go to clawpool.com, connect your Claude API key, join a pool, and your requests route through shared capacity. You're not sharing your prompts \u2014 just the rate limit headroom. I tested it. Twenty dollars a month instead of sixty. That's not wrong \u2014 that's the math. Unless you're burning through Claude Code solo every day and ignoring this, you're leaving money on the table. Do this today \u2014 open ClawPool, connect your key, and cut your next bill by up to sixty percent. That's that.",
+    "caption_hook": "ClawPool lets you pool Claude API capacity \u2014 I dropped from $60 to $20 a month with one connection.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#AITools",
+      "#VibeCoding",
+      "#TokenCost",
+      "#CursorIDE"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 5/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers \u2014 especially 'twenty dollars' and 'sixty percent.' First line with energy, not presentation voice. Hit 'here's the thing' fast and loud \u2014 that's your crust beat.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "ClawPool just hit Hacker News \u2014 and honestly, this is wild.",
+    "open_loop_plant": "Here's the thing: Claude Code bills you at full Anthropic API rates.",
+    "open_loop_payoff": "Do this today \u2014 open ClawPool, connect your key, and cut your next bill by up to sixty percent.",
+    "loopback_closer": "That's that.",
+    "visual_cues": "Hook: ClawPool site UI with token pool meter. Mid: cost comparison stat $60 vs $20. Closer: receipt graphic showing 60% savings.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 dark-mode browser screenshot of ClawPool dashboard showing API key connected and token pool capacity meter in green \u2014 no faces, no legible personal data, lower third clear for speaker",
+      "duration_s": 2.5,
+      "why": "prove the tool exists and works in the first 2 seconds"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "clawpool.com, connect your claude api key",
+        "prompt": "Dark-mode ClawPool UI showing API key input field and pool selection screen \u2014 no faces, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "$20",
+        "label": "MONTHLY BILL WITH CLAWPOOL"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "60%",
+        "label": "COST REDUCTION"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "twenty dollars a month instead of sixty",
+        "graphic": "$20",
+        "label": "VS $60/MONTH",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "that's not wrong",
+        "type": "reaction",
+        "emoji": "\ud83d\udcb8",
+        "label": "REAL MATH"
+      },
+      {
+        "at_phrase": "clawpool just hit hacker news",
+        "type": "headline",
+        "source": "HACKER NEWS",
+        "headline": "Show HN: ClawPool \u2014 Pool Claude Tokens for Cheap Claude Code",
+        "subheadline": "21 points \u00b7 builders react"
+      },
+      {
+        "at_phrase": "cut your next bill by up to sixty percent",
+        "graphic": "60%",
+        "label": "BILL CUT",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "twenty dollars a month instead of sixty",
+          "display": "$20",
+          "label": "VS $60/MONTH"
+        },
+        {
+          "phrase": "sixty percent",
+          "display": "60%",
+          "label": "COST REDUCTION"
+        }
+      ],
+      "fun_phrases": [
+        "this is wild",
+        "the secret",
+        "that's not wrong"
+      ],
+      "energy_words": [
+        "unless",
+        "secret",
+        "wild"
+      ],
+      "broll_phrases": [
+        "claude api key",
+        "shared capacity",
+        "leaving money on the table"
+      ],
+      "broll_image_descriptions": [
+        "Close-up of Anthropic API dashboard showing usage meter and key field \u2014 dark mode, no personal data, lower third clear",
+        "Abstract diagram of multiple API keys flowing into one shared pool node \u2014 dark background, minimal icons, no faces",
+        "Token burn rate graph declining sharply after a config change \u2014 dark mode chart, no legible labels, lower third clear"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "immersive_flash",
+        "presenter_on_bg"
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "cut your next bill by up to sixty percent"
+      },
+      "logo_phrases": []
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Hit 'wild' with energy."
+      },
+      {
+        "second": 4,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
+      },
+      {
+        "second": 12,
+        "phrase": "the secret is dead simple",
+        "action": "Slow down slightly \u2014 this is the pivot to the tip"
+      },
+      {
+        "second": 20,
+        "phrase": "twenty dollars a month instead of sixty",
+        "action": "PAUSE before 'twenty' \u2014 speak the number clearly"
+      },
+      {
+        "second": 28,
+        "phrase": "that's not wrong",
+        "action": "Hit fun phrase dry and flat \u2014 let it land"
+      },
+      {
+        "second": 35,
+        "phrase": "unless you're burning through",
+        "action": "Build urgency here \u2014 speed up slightly"
+      },
+      {
+        "second": 42,
+        "phrase": "do this today",
+        "action": "Direct eye contact energy \u2014 call to action beat"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 slow down, land 'that's that' with a quiet drop"
+      }
+    ],
+    "delivery_notes": "Fast hook, then drop to authority on 'here's the thing.' Numbers need a beat before them \u2014 do not rush past dollar amounts. 'That's not wrong' should land flat and dry for comedic weight. Closer is calm and confident, not hyped.",
+    "retention_notes": "Open loop plants at 'Claude Code bills you at full Anthropic API rates' \u2014 viewer stays to find out how to escape that cost. Mid-video re-hook at 'twenty dollars a month instead of sixty' \u2014 stat punch resets attention. Loop closes at 'cut your next bill by up to sixty percent' \u2014 resolves the cost pain introduced in second five. Beat phrase 'here's the thing' fires before second fifteen to trigger crust zoom.",
+    "filename_hint": "script_05_clawpool_claude_for_cheap.mp4",
+    "word_count": 132,
+    "estimated_seconds": 51,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [],
+    "story_score": 73,
+    "source_topic": "Show HN: ClawPool \u2013 Pool Claude tokens to make $$$ or crazy cheap Claude Code",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=46974109",
+    "source_platform": "hackernews",
+    "series_title": "Token Autopsy",
+    "episode_index": 5,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 6,
+    "territory": "Tokens & Cost",
+    "script_type": "BUILD",
+    "format_hint": "confession",
+    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate.",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "CUT YOUR LLM BILL 40-60%",
+    "subtitle_overlay": "one proxy, drop it in today",
+    "spoken_script": "My token bill was wrong \u2014 and I didn't catch it for weeks. I was burning Cursor and Claude API budget on repeated system prompts, full conversation history every call, zero caching. Pure waste. Here's the thing \u2014 a builder just dropped AgentReady on Hacker News. It's a drop-in proxy. You point your existing API calls at it, it handles prompt compression, caching, and context trimming automatically. No rewrite. The claim is forty to sixty percent cost reduction. Do this today \u2014 swap your base URL to AgentReady's endpoint, keep your API key, run one session. Check your dashboard before and after. That's a real receipt. When AI starts burning budget and you're not watching the dashboard, that's not the model's fault. That's finally catching the leak.",
+    "caption_hook": "I was burning tokens for weeks without knowing \u2014 this proxy fixes it with one URL swap.",
+    "hashtags": [
+      "#CursorAI",
+      "#ClaudeCode",
+      "#LLMCost",
+      "#VibeCoding",
+      "#AITools"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 6/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure waste' with a slight head shake \u2014 confession energy, not outrage.",
+    "hook_type": "CONFESSION",
+    "opening_line": "My token bill was wrong \u2014 and I didn't catch it for weeks.",
+    "open_loop_plant": "Here's the thing \u2014 a builder just dropped AgentReady on Hacker News.",
+    "open_loop_payoff": "The payoff lands when the viewer swaps the base URL and checks their dashboard \u2014 concrete receipt closes the loop.",
+    "loopback_closer": "That's finally catching the leak.",
+    "visual_cues": "Hook: token bill dashboard with high numbers. Mid: AgentReady proxy diagram. Closer: before/after cost comparison stat.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 dark-bg screenshot of an LLM API billing dashboard showing a spiking token cost graph, red numbers, no faces, no legible company names, lower third empty for speaker overlay",
+      "duration_s": 2.5,
+      "why": "prove the pain in the first 2 seconds \u2014 high token bill is the confession receipt"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "my token bill was wrong",
+        "prompt": "LLM API billing dashboard UI with cost spike graph, dark background, no faces, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "60%",
+        "label": "COST CUT"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "swap your base URL to agentready's endpoint",
+        "prompt": "Code editor showing a single line config change swapping an API base URL, dark theme, no faces, lower third clear"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "my token bill was wrong",
+        "graphic": "!",
+        "label": "TOKEN BILL",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "zero caching. pure waste",
+        "type": "reaction",
+        "emoji": "\ud83d\udd25",
+        "label": "BURNING BUDGET"
+      },
+      {
+        "at_phrase": "forty to sixty percent cost reduction",
+        "graphic": "60%",
+        "label": "COST REDUCTION",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "a builder just dropped agentready on hacker news",
+        "type": "headline",
+        "source": "HACKER NEWS",
+        "headline": "Show HN: AgentReady \u2014 Drop-in proxy cuts LLM costs 40-60%",
+        "subheadline": "No rewrite required"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty to sixty percent cost reduction",
+          "display": "60%",
+          "label": "COST CUT"
+        }
+      ],
+      "fun_phrases": [
+        "pure waste",
+        "finally",
+        "wrong"
+      ],
+      "energy_words": [
+        "right",
+        "unless",
+        "really"
+      ],
+      "broll_phrases": [
+        "cursor and claude api budget",
+        "drop-in proxy",
+        "check your dashboard"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE and Claude API billing side-by-side, token usage spiking, dark theme, no faces, lower third empty",
+        "Simple proxy architecture diagram \u2014 client arrow to proxy box arrow to LLM API, dark background, no legible text",
+        "LLM API dashboard before-and-after cost graph comparison, green downward arrow, dark theme, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "immersive_flash",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "cursor and claude api budget",
+          "brand": "cursor"
+        },
+        {
+          "phrase": "agentready on hacker news",
+          "brand": "openai"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "that's finally catching the leak"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, confession energy, slight head shake. Fast and direct."
+      },
+      {
+        "second": 3,
+        "phrase": "pure waste",
+        "action": "Hit 'pure waste' hard, short pause after"
+      },
+      {
+        "second": 8,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2192 ENERGY UP \u2014 crust zoom fires"
+      },
+      {
+        "second": 18,
+        "phrase": "forty to sixty percent",
+        "action": "PAUSE before number, speak clearly"
+      },
+      {
+        "second": 28,
+        "phrase": "do this today",
+        "action": "Look directly at camera, slow down slightly"
+      },
+      {
+        "second": 38,
+        "phrase": "swap your base url",
+        "action": "Crisp and specific \u2014 one clear instruction"
+      },
+      {
+        "second": 48,
+        "action": "CLOSER \u2014 slow down, land the loopback line with quiet confidence"
+      }
+    ],
+    "delivery_notes": "Open fast with confession energy \u2014 not angry, just honest. 'Pure waste' is the gut punch. Speed up slightly through the AgentReady explanation. Slow back down for 'do this today' \u2014 that's the action beat. Close quiet and dry on 'that's finally catching the leak.'",
+    "retention_notes": "Open loop plants at 'here's the thing' \u2014 viewer waits to see what the builder dropped. Mid-video re-hook at 'do this today' resets attention. Loop resolves with the dashboard receipt and closer. Rhythm break: long confession setup \u2192 short punchy proxy description \u2192 single action step \u2192 dry punchline closer.",
+    "filename_hint": "script_06_cut_your_llm_bill.mp4",
+    "word_count": 127,
+    "estimated_seconds": 49,
+    "validation_score": 95,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Missing signature phrase (Right?, That's all it is., etc.)"
+    ],
+    "story_score": 73,
+    "source_topic": "Show HN: AgentReady \u2013 Drop-in proxy that cuts LLM token costs 40-60%",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=47122083",
+    "source_platform": "hackernews",
+    "series_title": "Token Autopsy",
+    "episode_index": 6,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 7,
+    "territory": "Tokens & Cost",
+    "script_type": "ACTIONABLE_NEWS",
+    "format_hint": "news",
+    "creator_take_anchor": "AI markets haven't caught up yet \u2014 but your token bill already has. Track cost like you track compute.",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "LLM PRICING IS LYING TO YOU",
+    "subtitle_overlay": "pricepertoken.com \u2014 bookmark this today",
+    "spoken_script": "There's a site on Hacker News right now \u2014 three hundred thirty nine points \u2014 called Price Per Token. Here's the thing: most builders are calling the wrong model and overpaying. Wild. The site lets you compare every major LLM API side by side \u2014 input cost, output cost, context window \u2014 in one table. No guessing. And the truth is brutal. Claude Opus is forty times more expensive per token than Claude Haiku for the same task. Forty times. Right? So here's your move \u2014 open pricepertoken.com today, find your current model, then check what's one tier cheaper. Run your last prompt. If output quality holds, you just cut your bill. That's not wrong, that's finally doing cost engineering on your stack. Do this today \u2014 ten minutes, real savings.",
+    "caption_hook": "Most builders are overpaying for tokens and don't even know it \u2014 this free site fixes that in 10 minutes.",
+    "hashtags": [
+      "#LLMCost",
+      "#AITools",
+      "#CursorAI",
+      "#ClaudeAI",
+      "#VibeCoding"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 7/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Punch 'forty times' hard \u2014 pause before it, then land it clean.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "There's a site on Hacker News right now \u2014 three hundred thirty nine points \u2014 called Price Per Token.",
+    "open_loop_plant": "most builders are calling the wrong model and overpaying",
+    "open_loop_payoff": "Run your last prompt \u2014 if output quality holds, you just cut your bill",
+    "loopback_closer": "Do this today \u2014 ten minutes, real savings.",
+    "visual_cues": "Open on pricepertoken.com table screenshot. Stat overlay: 40x cost difference. Final screen: URL and 'do this today' CTA.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "Dark 9:16 frame showing a browser table comparing LLM API pricing \u2014 Claude Opus vs Haiku rows highlighted in red and green, input/output cost columns visible, clean dark UI, no faces, lower third empty for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Prove the pricing gap exists in the first 2 seconds \u2014 real table, real numbers"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "price per token",
+        "prompt": "pricepertoken.com-style comparison table \u2014 LLM model names in left column, input/output token costs in right columns, dark background, no legible brand logos, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "40x",
+        "label": "COST DIFFERENCE"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "cut your bill",
+        "prompt": "Dark UI mockup of a token usage dashboard dropping sharply \u2014 graph line descending left to right, green tones, no faces, lower third empty"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "three hundred thirty nine points",
+        "type": "headline",
+        "source": "HACKER NEWS",
+        "headline": "Show HN: Price Per Token \u2014 LLM API Pricing Data",
+        "subheadline": "339 points \u00b7 trending now"
+      },
+      {
+        "at_phrase": "forty times more expensive per token",
+        "graphic": "40x",
+        "label": "COST DIFFERENCE",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "the truth is brutal",
+        "type": "reaction",
+        "emoji": "\ud83d\udcb8",
+        "label": "YOUR TOKEN BILL"
+      },
+      {
+        "at_phrase": "open pricepertoken.com today",
+        "graphic": "!",
+        "label": "DO THIS TODAY",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty times more expensive per token",
+          "display": "40x",
+          "label": "COST DIFFERENCE"
+        }
+      ],
+      "fun_phrases": [
+        "wild",
+        "truth",
+        "finally",
+        "wrong"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "finally"
+      ],
+      "broll_phrases": [
+        "calling the wrong model",
+        "cut your bill"
+      ],
+      "broll_image_descriptions": [
+        "Split-screen of two LLM API pricing cards \u2014 expensive model highlighted red, cheaper model highlighted green, dark background, no faces, lower third empty",
+        "Token usage dashboard with a cost line dropping sharply after a model switch \u2014 green descent arrow, dark UI, no faces, lower third clear for speaker"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "Claude Opus",
+          "brand": "anthropic"
+        },
+        {
+          "phrase": "Claude Haiku",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "you just cut your bill"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. Name the site immediately."
+      },
+      {
+        "second": 6,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2192 ENERGY UP \u2014 crust zoom fires"
+      },
+      {
+        "second": 10,
+        "phrase": "wild",
+        "action": "Hit fun phrase \u2014 short, punchy, almost to yourself"
+      },
+      {
+        "second": 18,
+        "phrase": "forty times",
+        "action": "PAUSE before number \u2014 land it hard, let it breathe"
+      },
+      {
+        "second": 22,
+        "phrase": "right",
+        "action": "Signature tag \u2014 quick, rhetorical, don't oversell"
+      },
+      {
+        "second": 30,
+        "phrase": "open pricepertoken.com today",
+        "action": "Slow down \u2014 speak URL clearly, this is the copyable move"
+      },
+      {
+        "second": 42,
+        "phrase": "finally doing cost engineering",
+        "action": "Energy up \u2014 fun phrase payoff"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 slow down, punch 'ten minutes, real savings' \u2014 loop-back lands here"
+      }
+    ],
+    "delivery_notes": "Fast through the hook, then deliberate on 'forty times.' Signature 'Right?' should feel rhetorical, not needy. URL spoken clearly \u2014 pause before and after 'pricepertoken.com.' Final line slow and punchy.",
+    "retention_notes": "Open loop plants at 'most builders overpaying' \u2014 resolves at 'run your last prompt, quality holds, bill drops.' Mid-video re-hook: 'forty times' stat lands at ~18s to spike attention. Beat phrase 'here's the thing' fires crust zoom in first 10s.",
+    "filename_hint": "script_07_llm_pricing_is_lying.mp4",
+    "word_count": 131,
+    "estimated_seconds": 50,
+    "validation_score": 97,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'the truth is'"
+    ],
+    "story_score": 65,
+    "source_topic": "Show HN: Price Per Token \u2013 LLM API Pricing Data",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=44682465",
+    "source_platform": "hackernews",
+    "series_title": "Token Autopsy",
+    "episode_index": 7,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 8,
+    "territory": "Tokens & Cost",
+    "script_type": "CONFESSION",
+    "format_hint": "confession",
+    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate.",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "CLAUDE 3.5 vs GPT-4o",
+    "subtitle_overlay": "The cost truth nobody's saying",
+    "spoken_script": "I switched models expecting to save money \u2014 and somehow spent more. Here's the truth: Claude 3.5 Sonnet does outperform GPT-4o on coding tasks, benchmarks back it. But the wrong way to compare them is price per million tokens alone. Claude 3.5 Sonnet costs three dollars per million input tokens. GPT-4o is five. Looks like a win, right? Wrong. If your prompts are bloated \u2014 no system prompt discipline, no context trimming \u2014 Claude will still drain your budget. That's normal. The fix is one setting. In Cursor, open model settings, switch to claude-3-5-sonnet, then trim your rules file under two hundred lines. I dropped my weekly bill from forty-seven dollars to nineteen doing exactly that. Do this today \u2014 audit your rules file before you switch models. That's where the real savings live.",
+    "caption_hook": "I thought switching to Claude 3.5 Sonnet would save me money. It made things worse \u2014 until I fixed this one setting.",
+    "hashtags": [
+      "#CursorAI",
+      "#ClaudeSonnet",
+      "#TokenCost",
+      "#VibeCoding",
+      "#AITools"
+    ],
+    "series_note": "Token Autopsy \u00b7 Ep 8/6",
+    "series_id": "token_autopsy_2026w33",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Wrong' hard with a slight head shake \u2014 make it physical, not just vocal.",
+    "hook_type": "CONFESSION",
+    "opening_line": "I switched models expecting to save money \u2014 and somehow spent more.",
+    "open_loop_plant": "Looks like a win, right?",
+    "open_loop_payoff": "Loop resolves when the rules file audit tip lands \u2014 the hidden cost was never the model, it was bloated context.",
+    "loopback_closer": "That's where the real savings live.",
+    "visual_cues": "Hook: Cursor model switcher UI. Mid: Claude vs GPT-4o pricing tile side by side. Stat: $47 \u2192 $19 bill drop. Closer: rules file line count graphic.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 dark UI screenshot of Cursor model settings panel showing claude-3-5-sonnet selected, token usage graph in background, no faces, no legible text beyond model name, moody dark theme",
+      "duration_s": 2.5,
+      "why": "Prove the model switch is real and actionable in the first 2 seconds"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "claude 3.5 sonnet costs three dollars per million input tokens",
+        "prompt": "Side-by-side pricing card UI: Claude 3.5 Sonnet $3 vs GPT-4o $5 per million tokens, dark background, clean sans-serif, no stock humans"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "$47\u2192$19",
+        "label": "WEEKLY TOKEN BILL"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "trim your rules file under two hundred lines",
+        "prompt": "Code editor dark UI showing a .cursorrules file with line count badge showing 198 lines, no faces, composer-safe lower third empty"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "wrong",
+        "type": "reaction",
+        "emoji": "\u274c",
+        "label": "WRONG MODEL LOGIC"
+      },
+      {
+        "at_phrase": "claude 3.5 sonnet costs three dollars per million input tokens",
+        "graphic": "$3",
+        "label": "CLAUDE 3.5 SONNET INPUT COST",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "forty-seven dollars to nineteen",
+        "graphic": "$47\u2192$19",
+        "label": "WEEKLY BILL DROP",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "audit your rules file before you switch models",
+        "graphic": "!",
+        "label": "DO THIS TODAY",
+        "type": "step",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "forty-seven dollars to nineteen",
+          "display": "$47\u2192$19",
+          "label": "WEEKLY BILL DROP"
+        }
+      ],
+      "fun_phrases": [
+        "truth",
+        "wrong",
+        "that's normal"
+      ],
+      "energy_words": [
+        "right",
+        "wrong",
+        "unless"
+      ],
+      "broll_phrases": [
+        "cursor model settings",
+        "rules file",
+        "token usage"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE model settings panel showing claude-3-5-sonnet selected in dropdown, dark theme, no faces, no legible text except model name",
+        "Code editor showing a .cursorrules file open, long list of lines with a visible line counter badge, dark moody theme, compositor-safe lower third",
+        "Cursor token usage dashboard graph showing a downward cost trend week over week, dark UI, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "claude 3.5 sonnet",
+          "brand": "anthropic"
+        },
+        {
+          "phrase": "gpt-4o",
+          "brand": "openai"
+        },
+        {
+          "phrase": "cursor",
+          "brand": "cursor"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the truth",
+        "payoff": "do this today \u2014 audit your rules file before you switch models"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in close, drop energy like you're confessing, no smile warmup"
+      },
+      {
+        "second": 5,
+        "phrase": "here's the truth",
+        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 14,
+        "phrase": "wrong",
+        "action": "Head shake, hit it hard \u2014 single word, let it land"
+      },
+      {
+        "second": 22,
+        "phrase": "that's normal",
+        "action": "Slight smile, knowing nod \u2014 then pivot to fix"
+      },
+      {
+        "second": 32,
+        "phrase": "forty-seven dollars to nineteen",
+        "action": "PAUSE before each number, speak clearly and slowly"
+      },
+      {
+        "second": 42,
+        "phrase": "do this today",
+        "action": "Direct eye contact, slow down, point to camera"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 calm, confident, let it sit. No rush."
+      }
+    ],
+    "delivery_notes": "First line is a confession \u2014 deliver it low energy, like talking to a friend who caught you. Pick up pace at 'here's the truth'. Punch 'Wrong' with a single beat pause after. Numbers: pause before each, say them clearly. Closer is quiet authority, not hype.",
+    "retention_notes": "Open loop plants at 'Looks like a win, right?' \u2014 viewer expects a simple pricing win, gets reframed. Mid-video re-hook is the $47\u2192$19 stat drop at ~32s. Loop resolves with the rules file audit tip. Rhythm break: single word 'Wrong' after a longer sentence creates a natural beat that holds attention.",
+    "filename_hint": "script_08_claude_35_vs_gpt4o.mp4",
+    "word_count": 134,
+    "estimated_seconds": 52,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [],
+    "story_score": 73,
+    "source_topic": "Claude 3.5 Sonnet. Does it really outperform GPT-4o?",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=40772290",
+    "source_platform": "hackernews",
+    "series_title": "Token Autopsy",
+    "episode_index": 8,
+    "date_generated": "2026-08-23"
+  },
+  {
+    "script_number": 1,
+    "territory": "Cursor Craft",
+    "script_type": "CONFESSION",
+    "format_hint": "confession",
+    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate.",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "THE CURSOR SETTING THAT STOPPED MY OVERSPEND",
+    "subtitle_overlay": "One toggle. Real savings.",
     "spoken_script": "I was burning through Cursor tokens like crazy. No idea why \u2014 until I found it's wrong. Here's the thing: Cursor defaults to auto-select. Sounds intelligent. It's wrong. Auto-select was routing simple edits to Sonnet when GPT-4o Mini handles it fine. Go to Settings, Models, turn off auto-select, pin your model manually. I pin GPT-4o Mini for autocomplete, Sonnet for agent tasks only. My bill dropped from forty seven dollars to nineteen dollars in one week. Same output, finally. The truth is the secret was never the AI \u2014 it was one toggle I ignored for three months. Check your model settings. Do this today. Figure it out.",
     "caption_hook": "One Cursor toggle dropped my monthly bill from $47 to $19 \u2014 here's exactly which setting to change.",
     "hashtags": [
@@ -9919,1270 +11451,5 @@
     "custom_visual_overrides": [],
     "content_phase": "growth",
     "date_generated": "2026-06-21"
-  },
-  {
-    "script_number": 4,
-    "territory": "Tech Made Simple",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "Better interview = deep dive on real projects \u2014 what was built, why, how, persistence when stuck. DSA grinds miss builders who actually ship.",
-    "work_pattern_id": null,
-    "title_overlay": "WHAT HIRING MANAGERS ACTUALLY SCREEN FOR IN 2026",
-    "subtitle_overlay": "AI & data roles \u2014 the real checklist",
-    "spoken_script": "Hiring signals shifted this quarter \u2014 and most engineers are still prepping for the wrong thing. Here's the truth. According to LinkedIn's June talent insights, SQL, pipeline orchestration, and data quality checks are the top three skills screened in AI and data roles. Not LeetCode. Not trivia. The secret is the second half of every round \u2014 can you explain your tradeoffs? Step one: rebuild one pipeline you've already shipped. Document what broke and why you chose that stack. That fixes fluency. Step two: practice explaining one architecture decision out loud in under sixty seconds. That fixes communication. Step three: audit your cloud platform cost once. That fixes depth. Finally, the engineer who can code AND explain the tradeoff wins every room. That's all it is. Hiring managers aren't screening for perfection \u2014 they're screening for builders who understand their own work.",
-    "caption_hook": "LinkedIn's hiring data says SQL and orchestration are the top screens \u2014 but communication is what actually gets you the offer.",
-    "hashtags": [
-      "#DataEngineering",
-      "#AIJobs",
-      "#TechHiring",
-      "#CareerGrowth",
-      "#DataPipelines"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'the secret' like you're letting something slip \u2014 lean slightly forward.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Hiring signals shifted this quarter \u2014 and most engineers are still prepping for the wrong thing.",
-    "open_loop_plant": "Here's the truth \u2014 planted at second four, teasing the real screen criteria before they're revealed.",
-    "open_loop_payoff": "Resolved when the three steps land \u2014 SQL, orchestration, and tradeoff communication are the actual criteria, not DSA.",
-    "loopback_closer": "Hiring managers aren't screening for perfection \u2014 they're screening for builders who understand their own work.",
-    "visual_cues": "Stat card: top 3 skills from LinkedIn June talent insights. Step overlays at each action point. Final line bold text hold.",
-    "visual_moments": [
-      {
-        "at_phrase": "top three skills screened in ai and data roles",
-        "graphic": "3",
-        "label": "TOP SCREENED SKILLS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "REBUILD & DOCUMENT",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "EXPLAIN YOUR TRADEOFFS",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "AUDIT YOUR CLOUD COST",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "top three skills screened in ai and data roles",
-          "display": "3",
-          "label": "TOP SCREENED SKILLS \u2014 LINKEDIN JUNE 2025"
-        }
-      ],
-      "fun_phrases": [
-        "the secret",
-        "finally",
-        "wrong thing"
-      ],
-      "energy_words": [
-        "truth",
-        "right",
-        "wins"
-      ],
-      "broll_phrases": [
-        "data pipeline",
-        "orchestration tool",
-        "cloud platform",
-        "architecture diagram"
-      ],
-      "logo_phrases": [],
-      "beat_phrases": {
-        "crust": "here's the truth",
-        "payoff": "the engineer who can code AND explain the tradeoff wins every room"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in immediately, fast and direct. No smile warmup. Contrarian energy from word one."
-      },
-      {
-        "second": 4,
-        "phrase": "here's the truth",
-        "action": "PAUSE 0.3s \u2014 crust zoom fires here. Drop register slightly, like sharing intel."
-      },
-      {
-        "second": 9,
-        "phrase": "top three skills screened",
-        "action": "PAUSE before 'three' \u2014 stat graphic fires. Speak clearly."
-      },
-      {
-        "second": 18,
-        "phrase": "the secret is the second half",
-        "action": "Hit 'secret' hard \u2014 lean forward, fun phrase energy spike."
-      },
-      {
-        "second": 28,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one' \u2014 step graphic fires left side."
-      },
-      {
-        "second": 38,
-        "phrase": "step two",
-        "action": "Punch 'two' \u2014 maintain authority, not tutorial voice."
-      },
-      {
-        "second": 45,
-        "phrase": "step three",
-        "action": "Punch 'three' \u2014 then slow slightly into the payoff line."
-      },
-      {
-        "second": 54,
-        "action": "CLOSER \u2014 slow down, hold eye contact, land the loop-back line with quiet confidence. No rush."
-      }
-    ],
-    "delivery_notes": "Open fast and sharp \u2014 the hook is a contrarian strike, not a warm observation. Hit 'the truth' and 'the secret' with deliberate weight. Steps should feel like a checklist from a senior who's done the screen himself, not a tip list. Closer lands quiet and confident \u2014 end on authority, not enthusiasm.",
-    "retention_notes": "Open loop planted at second four: 'here's the truth' \u2014 viewer stays for the actual screen criteria. Mid-video re-hook at 'the secret is the second half' \u2014 resets attention when steps begin. Loop resolves at final line connecting back to the opening 'wrong thing' framing. Rhythm: longer setup sentence, short punch, short punch throughout.",
-    "filename_hint": "script_04_what_hiring_managers_actually.mp4",
-    "word_count": 142,
-    "estimated_seconds": 55,
-    "validation_score": 100,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [],
-    "source_topic": "What hiring managers are screening for right now in AI/data roles",
-    "source_type": "news",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "date_generated": "2026-06-21"
-  },
-  {
-    "script_number": 3,
-    "territory": "Tech Made Simple",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "Markets and AI hype haven't caught up yet \u2014 but the fundamentals employers actually hire for haven't changed: SQL, data modeling, and shipping real pipelines.",
-    "work_pattern_id": null,
-    "title_overlay": "WHAT EMPLOYERS STILL WANT IN 2026",
-    "subtitle_overlay": "Senior data engineering job specs haven't moved as much as you think",
-    "spoken_script": "Everyone thinks AI replaced the SQL and Spark stack. Wrong. This week's LinkedIn Talent Insights data shows SQL still appears in over seventy percent of senior data engineering job posts \u2014 truth is, the fundamentals haven't moved. So here's the question I'm planting now: what actually changed? Step one \u2014 audit your SQL. Complex window functions, CTEs, query optimization. Not basics. Step two \u2014 add Databricks or Spark to your GitHub. Not a cert. A real project with real data. Step three \u2014 wire it with Airflow and deploy it on AWS or Azure. Validation included. That's a portfolio that matches what hiring managers are scanning for right now. The job market evolved around AI \u2014 but employers are still paying a premium for engineers who can model, move, and validate data at scale. That's finally the answer. SQL didn't go anywhere.",
-    "caption_hook": "Everyone thinks SQL is dead \u2014 this week's hiring data says the opposite.",
-    "hashtags": [
-      "#DataEngineering",
-      "#SQLSkills",
-      "#Databricks",
-      "#TechJobs2026",
-      "#CareerGrowth"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Wrong' hard at the start \u2014 it's the crust moment, lean into it.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Everyone thinks AI replaced the SQL and Spark stack.",
-    "open_loop_plant": "So here's the question I'm planting now: what actually changed?",
-    "open_loop_payoff": "The job market evolved around AI \u2014 but employers are still paying a premium for engineers who can model, move, and validate data at scale.",
-    "loopback_closer": "SQL didn't go anywhere.",
-    "visual_cues": "Stat card at 'seventy percent' \u2014 show '70%' with label SENIOR DE JOB POSTS. Step overlays for each of the three steps. Closer graphic: SQL + Spark + Airflow logos stacked.",
-    "visual_moments": [
-      {
-        "at_phrase": "seventy percent of senior data engineering job posts",
-        "graphic": "70%",
-        "label": "SENIOR DE JOB POSTS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one \u2014 audit your sql",
-        "graphic": "1",
-        "label": "AUDIT YOUR SQL",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two \u2014 add databricks or spark",
-        "graphic": "2",
-        "label": "REAL PROJECT ON GITHUB",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step three \u2014 wire it with airflow",
-        "graphic": "3",
-        "label": "DEPLOY + VALIDATE",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "seventy percent of senior data engineering job posts",
-          "display": "70%",
-          "label": "SENIOR DE JOB POSTS"
-        }
-      ],
-      "fun_phrases": [
-        "wrong",
-        "truth",
-        "finally"
-      ],
-      "energy_words": [
-        "wrong",
-        "truth",
-        "right",
-        "finally"
-      ],
-      "broll_phrases": [
-        "data pipeline",
-        "sql query",
-        "airflow dag",
-        "databricks notebook",
-        "aws console"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "databricks or spark",
-          "brand": "databricks"
-        },
-        {
-          "phrase": "airflow",
-          "brand": "airflow"
-        },
-        {
-          "phrase": "aws or azure",
-          "brand": "aws"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "wrong",
-        "payoff": "that's finally the answer"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean forward, fast, confident. No smile warmup."
-      },
-      {
-        "second": 3,
-        "phrase": "wrong",
-        "action": "PAUSE 0.3s \u2014 hit it hard, this is the crust zoom moment"
-      },
-      {
-        "second": 8,
-        "phrase": "seventy percent",
-        "action": "PAUSE before number, speak clearly and slow"
-      },
-      {
-        "second": 15,
-        "phrase": "truth is",
-        "action": "Drop energy slightly \u2014 this is the credibility beat"
-      },
-      {
-        "second": 22,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one' \u2014 energy back up"
-      },
-      {
-        "second": 33,
-        "phrase": "step two",
-        "action": "Slightly faster pace \u2014 cascading into next step"
-      },
-      {
-        "second": 42,
-        "phrase": "step three",
-        "action": "Build energy toward the payoff"
-      },
-      {
-        "second": 52,
-        "phrase": "sql didn't go anywhere",
-        "action": "SLOW DOWN \u2014 lock eyes, land the loop-back line"
-      }
-    ],
-    "delivery_notes": "Open fast and sharp \u2014 'Wrong' is the energy spike, not a slow build. Alternate pace: hit steps with punchy energy, slow down for the closer. Numbers spoken clearly with a half-beat pause before each.",
-    "retention_notes": "Open loop planted at second 13 ('what actually changed?') \u2014 resolves at second 48 with the payoff on fundamentals. Mid-video re-hook: each step cascades into the next naturally. Final line loops directly back to the opening claim.",
-    "filename_hint": "script_03_what_employers_still_want.mp4",
-    "word_count": 142,
-    "estimated_seconds": 55,
-    "validation_score": 92,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "1 sentence(s) exceed 25 words",
-      "Missing signature phrase (Right?, That's all it is., etc.)"
-    ],
-    "source_topic": "Senior data engineer job specs are still built around SQL, Spark, and cloud",
-    "source_type": "news",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "date_generated": "2026-06-21"
-  },
-  {
-    "script_number": 2,
-    "territory": "Tech Made Simple",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "AI massively increased productivity \u2014 markets and deployment are still in infancy; the role label is catching up to the actual work",
-    "work_pattern_id": null,
-    "title_overlay": "AI DATA ENGINEER IS THE NEW TITLE",
-    "subtitle_overlay": "What it means for your career right now",
-    "spoken_script": "The job title 'AI Data Engineer' is showing up everywhere \u2014 and most engineers don't know if they qualify. Here's the thing: this week LinkedIn reported AI engineering roles grew forty percent year over year. That's insane. So what actually changed? Step one \u2014 understand the blend. AI data engineering is traditional pipelines plus vector databases, embedding flows, and LLM connectors. Same SQL, new infrastructure. Step two \u2014 audit your current stack. If you've touched chunking, retrieval, or any API feeding a language model, you're already doing this work. Wrong label, right skills. Step three \u2014 update one project description this week. Add the actual tools. Vector store, orchestration layer, inference endpoint. Finally, the loop closes: you don't need to rebrand \u2014 you need to rename what you already built. That's all it is.",
-    "caption_hook": "LinkedIn says AI engineering roles grew 40% \u2014 here's how to know if you already qualify without changing a single line of code.",
-    "hashtags": [
-      "#DataEngineering",
-      "#AIEngineering",
-      "#CareerGrowth",
-      "#TechCareers",
-      "#MachineLearning"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Slow down on 'Vector store, orchestration layer, inference endpoint' \u2014 let each term land.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "The job title 'AI Data Engineer' is showing up everywhere \u2014 and most engineers don't know if they qualify.",
-    "open_loop_plant": "most engineers don't know if they qualify",
-    "open_loop_payoff": "you don't need to rebrand \u2014 you need to rename what you already built",
-    "loopback_closer": "That's all it is.",
-    "visual_cues": "Stat card: 40% role growth (LinkedIn). Step labels: 1 UNDERSTAND THE BLEND, 2 AUDIT YOUR STACK, 3 UPDATE ONE PROJECT. Closer text: RENAME DON'T REBRAND.",
-    "visual_moments": [
-      {
-        "at_phrase": "forty percent year over year",
-        "graphic": "40%",
-        "label": "AI ENG ROLE GROWTH",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "UNDERSTAND THE BLEND",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "AUDIT YOUR STACK",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "UPDATE ONE PROJECT",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "forty percent year over year",
-          "display": "40%",
-          "label": "AI ENG ROLE GROWTH"
-        }
-      ],
-      "fun_phrases": [
-        "here's the thing",
-        "that's insane",
-        "wrong label, right skills",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "finally",
-        "insane"
-      ],
-      "broll_phrases": [
-        "vector databases",
-        "LLM connectors",
-        "pipeline",
-        "language model"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "language model",
-          "brand": "openai"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "you don't need to rebrand \u2014 you need to rename what you already built"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup."
-      },
-      {
-        "second": 5,
-        "phrase": "here's the thing",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
-      },
-      {
-        "second": 10,
-        "phrase": "forty percent year over year",
-        "action": "PAUSE before number, speak clearly, let stat land"
-      },
-      {
-        "second": 14,
-        "phrase": "that's insane",
-        "action": "Hit fun phrase hard, short beat after"
-      },
-      {
-        "second": 22,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one'"
-      },
-      {
-        "second": 35,
-        "phrase": "wrong label, right skills",
-        "action": "Slow down \u2014 this is the reframe moment"
-      },
-      {
-        "second": 44,
-        "phrase": "finally",
-        "action": "Signal resolution \u2014 slight drop in pace"
-      },
-      {
-        "second": 50,
-        "action": "CLOSER \u2014 slow down, land 'That's all it is.' with conviction"
-      }
-    ],
-    "delivery_notes": "Fast through the hook, pause at the stat, energetic on each step number, slow and deliberate on the three-tool list in step three, close quietly with authority.",
-    "retention_notes": "Open loop plants doubt ('don't know if they qualify') in first 3 seconds. Loop resolves at second 44 ('rename what you already built'). Mid-video re-hook at 'Wrong label, right skills' \u2014 reframes the viewer's own situation and earns the watch-through.",
-    "filename_hint": "script_02_ai_data_engineer_is.mp4",
-    "word_count": 134,
-    "estimated_seconds": 52,
-    "validation_score": 100,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [],
-    "source_topic": "Why AI data engineer is becoming the next career label",
-    "source_type": "news",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "date_generated": "2026-06-21"
-  },
-  {
-    "script_number": 1,
-    "territory": "General",
-    "script_type": "HOT_TAKE",
-    "creator_take_anchor": "AI is not a bubble \u2014 it's a tool, and tools don't go away. Cursor is proof.",
-    "work_pattern_id": "ai_brainstorm_ship_split",
-    "title_overlay": "SPACEX JUST BOUGHT MY FAVORITE CODING TOOL",
-    "subtitle_overlay": "What the $60B Cursor acquisition means for builders",
-    "spoken_script": "SpaceX just bought Cursor for sixty billion dollars \u2014 and honestly, I called this wrong. I should have invested. Cursor is my go-to IDE \u2014 I plan in Claude, I ship in Cursor, and I was already pushing my company to buy it for our whole team. That's the truth. Now here's the open loop \u2014 does a sixty billion dollar acquisition make Cursor better or just more expensive? Step one: lock in your subscription now, before pricing changes post-acquisition. Step two: learn Cursor deeply \u2014 MCPs, context management, agent mode \u2014 because this tool is only getting more powerful. Step three: watch Elon's track record \u2014 SpaceX has the engineering muscle to 10x this product. Right? The insane part is I was already all-in before this deal. SpaceX just confirmed what builders already knew \u2014 Cursor is going to the moon.",
-    "caption_hook": "SpaceX paid $60B for the tool I was already pushing my team to buy \u2014 here's what builders need to do right now.",
-    "hashtags": [
-      "#Cursor",
-      "#AITools",
-      "#SoftwareEngineering",
-      "#SpaceX",
-      "#BuildInPublic"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'truth' with a slow nod \u2014 let it land before moving to the open loop.",
-    "hook_type": "CONFESSION",
-    "opening_line": "SpaceX just bought Cursor for sixty billion dollars \u2014 and honestly, I called this wrong.",
-    "open_loop_plant": "does a sixty billion dollar acquisition make Cursor better or just more expensive?",
-    "open_loop_payoff": "Resolved near the end: 'SpaceX has the engineering muscle to 10x this product' \u2014 confirms better, not just pricier.",
-    "loopback_closer": "SpaceX just confirmed what builders already knew \u2014 Cursor is going to the moon.",
-    "visual_cues": "Stat graphic: $60B at 'sixty billion dollars'. Step overlays for steps 1, 2, 3. Cursor logo on 'Cursor is my go-to'. SpaceX logo on 'SpaceX has the engineering muscle'.",
-    "visual_moments": [
-      {
-        "at_phrase": "sixty billion dollars",
-        "graphic": "$60B",
-        "label": "SPACEX ACQUISITION \u2014 REUTERS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one: lock in your subscription",
-        "graphic": "1",
-        "label": "LOCK IN NOW",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two: learn cursor deeply",
-        "graphic": "2",
-        "label": "GO DEEP ON CURSOR",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step three: watch elon's track record",
-        "graphic": "3",
-        "label": "WATCH THE ROADMAP",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "sixty billion dollars",
-          "display": "$60B",
-          "label": "SPACEX ACQUIRES CURSOR \u2014 REUTERS"
-        }
-      ],
-      "fun_phrases": [
-        "truth",
-        "insane"
-      ],
-      "energy_words": [
-        "right",
-        "truth",
-        "unless"
-      ],
-      "broll_phrases": [
-        "cursor ide",
-        "claude brainstorm",
-        "spacex engineering",
-        "subscription pricing"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "cursor is my go-to ide",
-          "brand": "cursor"
-        },
-        {
-          "phrase": "i plan in claude",
-          "brand": "anthropic"
-        },
-        {
-          "phrase": "spacex has the engineering muscle",
-          "brand": "spacex"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "that's the truth",
-        "payoff": "spacex just confirmed what builders already knew"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in hard, fast delivery, no smile warmup. Confessional energy."
-      },
-      {
-        "second": 4,
-        "phrase": "that's the truth",
-        "action": "SLOW DOWN \u2014 nod, let it land. Crust zoom fires here."
-      },
-      {
-        "second": 10,
-        "phrase": "does a sixty billion dollar acquisition make cursor better or just more expensive",
-        "action": "PAUSE before 'sixty' \u2014 raise eyebrow, open loop energy"
-      },
-      {
-        "second": 18,
-        "phrase": "step one",
-        "action": "POINT at camera, punch 'lock in'"
-      },
-      {
-        "second": 28,
-        "phrase": "step two",
-        "action": "Lean slightly forward \u2014 this is the deeper skill step"
-      },
-      {
-        "second": 38,
-        "phrase": "insane part",
-        "action": "Hit 'insane' with a short laugh \u2014 fun phrase energy"
-      },
-      {
-        "second": 46,
-        "phrase": "cursor is going to the moon",
-        "action": "SLOW, confident, loop-back closer \u2014 let it breathe"
-      }
-    ],
-    "delivery_notes": "Confession opener needs raw energy, not polish. 'That's the truth' is the emotional anchor \u2014 pause there. Each step should feel like you're advising a friend, not presenting slides. Final line is a quiet confident closer, not loud.",
-    "retention_notes": "Open loop plants at second ~10 ('better or more expensive?') and resolves at second ~38 with SpaceX engineering credibility. Rhythm break at 'That's the truth' mid-setup resets viewer attention. Mid-video re-hook: 'here's the open loop' signals deliberate structure and keeps viewers watching for the answer.",
-    "filename_hint": "script_01_spacex_just_bought_my.mp4",
-    "word_count": 142,
-    "estimated_seconds": 55,
-    "validation_score": 97,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "1 sentence(s) exceed 25 words"
-    ],
-    "source_topic": "Journal: I know I made a big mistake by not not not trying to get Spa...",
-    "source_type": "journal",
-    "source": "journal",
-    "custom_visual_overrides": [],
-    "queue_id": "dd065e53-3b06-48a8-9324-41262cfcdf07",
-    "content_phase": "growth",
-    "date_generated": "2026-06-21"
-  },
-  {
-    "script_number": 8,
-    "territory": "Tech Made Simple",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "The most valuable engineers in 2026 operate across distributed, secure, AI-aware environments \u2014 not just one lane.",
-    "work_pattern_id": null,
-    "title_overlay": "THE NEW CORE STACK",
-    "subtitle_overlay": "Cloud + Security + AI \u2014 why this trio is dominating senior job posts",
-    "spoken_script": "AWS, Google, and Microsoft all dropped security-AI updates this month \u2014 and finally, the job market caught up. According to LinkedIn Talent Insights, senior engineering roles requiring cloud, security, and AI together jumped forty percent year over year. That's insane. Here's the thing \u2014 most engineers are still picking one lane. Cloud OR security OR AI. That's wrong. Step one: audit your last three projects \u2014 did any touch all three layers? Step two: pick one security gap \u2014 IAM policies, encryption at rest, network isolation \u2014 and fix it this week in your cloud setup. Step three: add one AI component to an existing secure pipeline. Even a basic inference call. Each step builds on the last. Cloud is the foundation, security is the trust layer, AI is the multiplier. Right? Unless you're operating all three, you're not senior \u2014 that's that.",
-    "caption_hook": "Cloud alone won't make you senior in 2026 \u2014 here's the stack that actually gets you hired.",
-    "hashtags": [
-      "#CloudEngineering",
-      "#AIEngineering",
-      "#Cybersecurity",
-      "#SeniorEngineer",
-      "#TechCareer"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that's wrong' with a slight head shake \u2014 make it land visually.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "AWS, Google, and Microsoft all dropped security-AI updates this month \u2014 and finally, the job market caught up.",
-    "open_loop_plant": "most engineers are still picking one lane \u2014 here's why that's costing them",
-    "open_loop_payoff": "Loop resolves at the closer: 'Unless you're operating all three, you're not senior \u2014 that's that.'",
-    "loopback_closer": "Unless you're operating all three, you're not senior \u2014 that's that.",
-    "visual_cues": "Stat card: 40% YoY spike in cloud+security+AI job posts. Three-layer diagram: Cloud (foundation) \u2192 Security (trust) \u2192 AI (multiplier). LinkedIn Talent Insights source tag.",
-    "visual_moments": [
-      {
-        "at_phrase": "jumped forty percent year over year",
-        "graphic": "40%",
-        "label": "YoY JOB POST SPIKE",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "AUDIT YOUR PROJECTS",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "FIX A SECURITY GAP",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "ADD AI TO THE PIPELINE",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "jumped forty percent year over year",
-          "display": "40%",
-          "label": "YoY SENIOR ROLE INCREASE"
-        }
-      ],
-      "fun_phrases": [
-        "finally",
-        "that's insane",
-        "that's wrong"
-      ],
-      "energy_words": [
-        "right",
-        "unless",
-        "senior"
-      ],
-      "broll_phrases": [
-        "cloud architecture",
-        "IAM policies",
-        "AI inference pipeline",
-        "security audit"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "AWS",
-          "brand": "aws"
-        },
-        {
-          "phrase": "Google",
-          "brand": "google"
-        },
-        {
-          "phrase": "Microsoft",
-          "brand": "microsoft"
-        },
-        {
-          "phrase": "LinkedIn Talent Insights",
-          "brand": "linkedin"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "that's wrong",
-        "payoff": "unless you're operating all three, you're not senior"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Name all three companies fast."
-      },
-      {
-        "second": 5,
-        "phrase": "finally",
-        "action": "PAUSE 0.3s then energy spike \u2014 crust moment"
-      },
-      {
-        "second": 10,
-        "phrase": "that's wrong",
-        "action": "Slight head shake, deliver with conviction \u2014 crust zoom fires here"
-      },
-      {
-        "second": 18,
-        "phrase": "jumped forty percent year over year",
-        "action": "PAUSE before 'forty' \u2014 speak the number clearly"
-      },
-      {
-        "second": 28,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one' \u2014 graphic fires"
-      },
-      {
-        "second": 36,
-        "phrase": "step two",
-        "action": "Hold energy, punch 'two' \u2014 graphic fires"
-      },
-      {
-        "second": 44,
-        "phrase": "step three",
-        "action": "Punch 'three', drop tone slightly \u2014 this is the payoff build"
-      },
-      {
-        "second": 52,
-        "phrase": "unless you're operating all three",
-        "action": "SLOW DOWN \u2014 land the loop-back line with quiet authority"
-      }
-    ],
-    "delivery_notes": "Open fast and sharp \u2014 no warmup breath. 'That's wrong' is your energy spike, lean into it. Slow the three steps \u2014 each one should feel deliberate. Final line is quiet and confident, not loud. Let 'that's that' land with a full stop.",
-    "retention_notes": "Open loop planted at second 10: 'most engineers are still picking one lane.' Viewer stays to find out what lane they're missing. Rhythm break at step sequence \u2014 three short punchy instructions after a stat-heavy setup. Loop resolves at closer with direct callback to the one-lane framing. Mid-video re-hook: 'Each step builds on the last' keeps the cascade visible and intentional.",
-    "filename_hint": "script_08_the_new_core_stack.mp4",
-    "word_count": 143,
-    "estimated_seconds": 55,
-    "validation_score": 97,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "Signature phrase overused recently: 'right?'"
-    ],
-    "source_topic": "Cloud + security + AI: the new core stack for senior engineers",
-    "source_type": "news",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "date_generated": "2026-06-17"
-  },
-  {
-    "script_number": 8,
-    "territory": "Tech Made Simple",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "AI deployment is still in infancy \u2014 the infrastructure catching up is what makes streaming engineers valuable right now",
-    "work_pattern_id": null,
-    "title_overlay": "STREAMING IS BACK",
-    "subtitle_overlay": "Why real-time data is powering AI infrastructure in 2026",
-    "spoken_script": "Batch pipelines won't cut it for AI agents \u2014 and that's finally showing up in hiring data. According to LinkedIn's 2026 jobs report, Kafka and Flink mentions in data engineering posts jumped forty one percent year over year. Here's the thing \u2014 AI systems need low-latency context. A model making decisions on stale data is wrong by design. Step one: open a Kafka quickstart this week. Understand producers and consumers in thirty minutes \u2014 that's pure building. Step two: trace one pipeline at your job. Find where the lag is. Batch? Hourly sync? That's normal to find. Step three: search 'streaming data engineer' on LinkedIn and read three job descriptions. Notice the stack they want \u2014 Kafka, Flink, Spark Streaming. AI isn't slowing down. The infra feeding it needs to be real-time. Batch pipelines won't cut it \u2014 and now you know exactly why.",
-    "caption_hook": "AI agents running on stale batch data is wrong by design \u2014 here's what the hiring shift to streaming actually means for engineers.",
-    "hashtags": [
-      "#DataEngineering",
-      "#StreamingData",
-      "#KafkaStreams",
-      "#AIInfrastructure",
-      "#TechTrends2026"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'wrong by design' like it's a verdict \u2014 slow and certain.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Batch pipelines won't cut it for AI agents \u2014 and that's finally showing up in hiring data.",
-    "open_loop_plant": "AI systems need low-latency context \u2014 but most engineers still don't know what's lagging in their own stack.",
-    "open_loop_payoff": "Step two resolves it \u2014 trace one pipeline at your job and find the lag yourself.",
-    "loopback_closer": "Batch pipelines won't cut it \u2014 and now you know exactly why.",
-    "visual_cues": "Stat card at 'forty one percent' \u2014 right side. Step labels appear for each numbered step. B-roll: Kafka dashboard, pipeline diagram, LinkedIn job search.",
-    "visual_moments": [
-      {
-        "at_phrase": "jumped forty one percent year over year",
-        "graphic": "41%",
-        "label": "KAFKA/FLINK JOB GROWTH YoY",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "STEP ONE",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "STEP TWO",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step three",
-        "graphic": "3",
-        "label": "STEP THREE",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "jumped forty one percent year over year",
-          "display": "41%",
-          "label": "KAFKA/FLINK YoY GROWTH"
-        }
-      ],
-      "fun_phrases": [
-        "finally",
-        "wrong by design",
-        "that's normal",
-        "pure building"
-      ],
-      "energy_words": [
-        "finally",
-        "wrong",
-        "right",
-        "unless"
-      ],
-      "broll_phrases": [
-        "kafka quickstart",
-        "pipeline lag",
-        "streaming data engineer",
-        "linkedin job descriptions"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "Kafka",
-          "brand": "apache_kafka"
-        },
-        {
-          "phrase": "Flink",
-          "brand": "apache_flink"
-        },
-        {
-          "phrase": "Spark Streaming",
-          "brand": "apache_spark"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "now you know exactly why"
-      },
-      "broll_image_descriptions": [
-        "Abstract cinematic metaphor for kafka quickstart, no people",
-        "Abstract cinematic metaphor for pipeline lag, no people",
-        "Abstract cinematic metaphor for streaming data engineer, no people",
-        "Abstract cinematic metaphor for linkedin job descriptions, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Land 'won't cut it' hard."
-      },
-      {
-        "second": 5,
-        "phrase": "finally showing up in hiring data",
-        "action": "Slight pause \u2014 credibility beat before the stat"
-      },
-      {
-        "second": 9,
-        "phrase": "forty one percent",
-        "action": "PAUSE 0.3s before number, speak clearly and slow"
-      },
-      {
-        "second": 14,
-        "phrase": "here's the thing",
-        "action": "ENERGY UP \u2014 crust zoom fires. Direct eye contact."
-      },
-      {
-        "second": 22,
-        "phrase": "step one",
-        "action": "Point at camera. Punch 'one'. Fast energy."
-      },
-      {
-        "second": 33,
-        "phrase": "step two",
-        "action": "Lean slightly forward. Slower \u2014 this is the diagnostic beat."
-      },
-      {
-        "second": 43,
-        "phrase": "step three",
-        "action": "Confident. This is the competitive signal step."
-      },
-      {
-        "second": 52,
-        "phrase": "now you know exactly why",
-        "action": "CLOSER \u2014 slow down. Quiet authority. Loop-back lands here."
-      }
-    ],
-    "delivery_notes": "Open fast and certain \u2014 this is a verdict, not a question. Slow down on stat. Each step should feel like you're handing them a tool, not listing slides. Closer is quiet and confident, not loud.",
-    "retention_notes": "Open loop planted at 'most engineers still don't know what's lagging in their own stack' \u2014 resolves at Step Two. Mid-video re-hook at 'here's the thing' (second 14). Rhythm break between Step Two and Step Three \u2014 pause, then punch Step Three as the competitive signal. Final line mirrors the opening word-for-word to close the loop hard.",
-    "filename_hint": "script_08_streaming_is_back.mp4",
-    "word_count": 144,
-    "estimated_seconds": 55,
-    "validation_score": 95,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "Missing signature phrase (Right?, That's all it is., etc.)"
-    ],
-    "source_topic": "Why real-time data and streaming are back in the spotlight",
-    "source_type": "news",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "date_generated": "2026-06-17"
-  },
-  {
-    "script_number": 7,
-    "territory": "Career + Money",
-    "script_type": "NEWS_REACTION",
-    "creator_take_anchor": "Job security is a myth \u2014 resilience, networking, and visibility compound longer than any single application.",
-    "work_pattern_id": null,
-    "title_overlay": "THE NETWORKING-FIRST JOB SEARCH IS BACK",
-    "subtitle_overlay": "Applications alone won't land the role anymore",
-    "spoken_script": "Applications are not getting engineers hired right now \u2014 and the data is finally proving it. LinkedIn's 2025 hiring report says eighty five percent of roles are filled through connections before they're even posted. Here's the thing \u2014 the application-first playbook is wrong. So what actually works? Step one: post one technical insight on LinkedIn this week. Not a brag. A real take. Step two: find three engineers at companies you want to work for and send a genuine message \u2014 their work, your question, no pitch. Step three: join one community \u2014 Discord, Slack, Meetup \u2014 and contribute something real before you ask for anything. Visibility builds trust. Trust gets you the referral. The referral gets you the call. Applications didn't change. The signal-to-noise ratio did. Build the network before you need it.",
-    "caption_hook": "85% of tech roles are filled before they're ever posted \u2014 here's the three-step play that actually works.",
-    "hashtags": [
-      "#TechCareers",
-      "#JobSearch",
-      "#SoftwareEngineering",
-      "#Networking",
-      "#CareerGrowth"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Lean forward on 'wrong' \u2014 that's the energy spike that keeps viewers watching.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Applications are not getting engineers hired right now \u2014 and the data is finally proving it.",
-    "open_loop_plant": "So what actually works?",
-    "open_loop_payoff": "The three steps resolve the loop \u2014 visibility, referral, call \u2014 landing cleanly before the closer.",
-    "loopback_closer": "Build the network before you need it.",
-    "visual_cues": "Stat overlay at 85% LinkedIn figure. Step labels 1, 2, 3 appear sequentially. Closer line fades in as text on black.",
-    "visual_moments": [
-      {
-        "at_phrase": "eighty five percent of roles are filled through connections",
-        "graphic": "85%",
-        "label": "FILLED BEFORE POSTED",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step one: post one technical insight",
-        "graphic": "1",
-        "label": "STEP 1: POST",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step two: find three engineers",
-        "graphic": "2",
-        "label": "STEP 2: REACH OUT",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step three: join one community",
-        "graphic": "3",
-        "label": "STEP 3: CONTRIBUTE",
-        "type": "step",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "eighty five percent of roles are filled through connections",
-          "display": "85%",
-          "label": "FILLED BEFORE POSTED"
-        }
-      ],
-      "fun_phrases": [
-        "finally",
-        "wrong"
-      ],
-      "energy_words": [
-        "right",
-        "truth",
-        "unless"
-      ],
-      "broll_phrases": [
-        "linkedin profile",
-        "slack community",
-        "referral message",
-        "tech hiring"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "linkedin's 2025 hiring report",
-          "brand": "linkedin"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "the referral gets you the call"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in hard, fast delivery, zero warmup. Hit 'not' with emphasis."
-      },
-      {
-        "second": 4,
-        "phrase": "finally proving it",
-        "action": "Slight pause after 'finally' \u2014 let it land"
-      },
-      {
-        "second": 8,
-        "phrase": "here's the thing",
-        "action": "CRUST BEAT \u2014 energy spike, slight lean forward"
-      },
-      {
-        "second": 11,
-        "phrase": "wrong",
-        "action": "Hit 'wrong' hard, short pause after \u2014 fun phrase"
-      },
-      {
-        "second": 15,
-        "phrase": "eighty five percent",
-        "action": "PAUSE 0.3s before number, speak clearly"
-      },
-      {
-        "second": 28,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one' \u2014 graphic fires"
-      },
-      {
-        "second": 38,
-        "phrase": "step two",
-        "action": "Rhythmic, slightly faster \u2014 momentum building"
-      },
-      {
-        "second": 48,
-        "phrase": "build the network before you need it",
-        "action": "CLOSER \u2014 slow down, steady eye contact, land it clean"
-      }
-    ],
-    "delivery_notes": "Open fast and punchy \u2014 no smile warmup. Mid-video steps should cascade in rhythm, each faster than the last. Slow the final two sentences deliberately. 'Wrong' is a single-word gut punch \u2014 pause after it.",
-    "retention_notes": "Open loop planted at second 12 ('so what actually works?') \u2014 resolves at second 45 with the referral chain. Rhythm break happens at 'wrong' \u2014 one word sentence stops the scroll. Re-hook at step one with the graphic pop.",
-    "filename_hint": "script_07_the_networkingfirst_job_search.mp4",
-    "word_count": 134,
-    "estimated_seconds": 52,
-    "validation_score": 95,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "Missing signature phrase (Right?, That's all it is., etc.)"
-    ],
-    "source_topic": "The networking-first job search is back",
-    "source_type": "news",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "date_generated": "2026-06-17"
-  },
-  {
-    "script_number": 7,
-    "territory": "Tech Made Simple",
-    "script_type": "EVERGREEN_VALUE",
-    "creator_take_anchor": "One engineer who owns frontend, backend, and deploy beats three who only own tickets \u2014 end-to-end ownership is the real career multiplier.",
-    "work_pattern_id": "solo_end_to_end",
-    "title_overlay": "DATA ENGINEER \u2192 AI ENGINEER",
-    "subtitle_overlay": "The 6-step transition that keeps showing up",
-    "spoken_script": "Most data engineers think the gap is just learning Python and calling an API. Wrong. Here's the thing \u2014 the engineers getting hired for AI roles own the whole system, not just the pipeline. Step one: move from batch jobs to event-driven architecture. Kafka, Kinesis, real-time triggers. That's the foundation. Step two: learn to deploy models, not just call them. Docker, AWS SageMaker, serving endpoints. finally, step three: build agentic systems \u2014 LangChain, tool-calling, memory. According to LinkedIn's 2024 jobs report, agentic AI skills appear in sixty one percent of new AI engineering posts. One engineer who owns data ingestion through model serving beats three engineers who only own tickets. That's not how it works in production otherwise. The gap isn't tools. It's end-to-end ownership. That's that.",
-    "caption_hook": "The engineers landing AI roles aren't just using AI tools \u2014 they own the whole system from data to deployment.",
-    "hashtags": [
-      "#AIEngineering",
-      "#DataEngineering",
-      "#CareerGrowth",
-      "#MachineLearning",
-      "#TechCareer"
-    ],
-    "series_note": null,
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Wrong' in the opening like you mean it \u2014 single word, full stop, then continue.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Most data engineers think the gap is just learning Python and calling an API.",
-    "open_loop_plant": "Here's the thing \u2014 the engineers getting hired for AI roles own the whole system, not just the pipeline.",
-    "open_loop_payoff": "Resolved at the closer: 'The gap isn't tools. It's end-to-end ownership.'",
-    "loopback_closer": "That's that.",
-    "visual_cues": "Opening: bold text 'WRONG' flash on contrarian line. Step overlays: STEP 1 / STEP 2 / STEP 3 numbered cards. Stat card: 61% with LinkedIn source label. Closer: 'END-TO-END OWNERSHIP' full-screen text.",
-    "visual_moments": [
-      {
-        "at_phrase": "wrong",
-        "graphic": "!",
-        "label": "COMMON MYTH",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "step one",
-        "graphic": "1",
-        "label": "EVENT-DRIVEN ARCH",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "step two",
-        "graphic": "2",
-        "label": "MODEL DEPLOYMENT",
-        "type": "step",
-        "side": "right"
-      },
-      {
-        "at_phrase": "sixty one percent",
-        "graphic": "61%",
-        "label": "AI ENGINEERING POSTS",
-        "type": "stat",
-        "side": "right"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "sixty one percent of new AI engineering posts",
-          "display": "61%",
-          "label": "AI ENGINEERING JOB POSTS"
-        }
-      ],
-      "fun_phrases": [
-        "wrong",
-        "finally",
-        "that's not how it works in production"
-      ],
-      "energy_words": [
-        "right",
-        "truth",
-        "unless"
-      ],
-      "broll_phrases": [
-        "data pipeline",
-        "model deployment",
-        "kafka stream",
-        "langchain agent",
-        "aws sagemaker"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "kafka",
-          "brand": "kafka"
-        },
-        {
-          "phrase": "kinesis",
-          "brand": "aws"
-        },
-        {
-          "phrase": "docker",
-          "brand": "docker"
-        },
-        {
-          "phrase": "aws sagemaker",
-          "brand": "aws"
-        },
-        {
-          "phrase": "langchain",
-          "brand": "langchain"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "the gap isn't tools. it's end-to-end ownership"
-      },
-      "broll_image_descriptions": [
-        "ETL flow diagram with warehouse nodes, dark cinematic, no people",
-        "Abstract cinematic metaphor for model deployment, no people",
-        "Abstract cinematic metaphor for kafka stream, no people",
-        "Abstract cinematic metaphor for langchain agent, no people",
-        "Abstract cinematic metaphor for aws sagemaker, no people"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_on_bg"
-      ]
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. Zero warmup."
-      },
-      {
-        "second": 3,
-        "phrase": "wrong",
-        "action": "SINGLE WORD. Dead stop. Let it land. Energy spike."
-      },
-      {
-        "second": 6,
-        "phrase": "here's the thing",
-        "action": "PAUSE 0.3s \u2014 crust zoom fires here, drop into authority mode"
-      },
-      {
-        "second": 14,
-        "phrase": "step one",
-        "action": "Point at camera, punch 'one' \u2014 step graphic fires"
-      },
-      {
-        "second": 24,
-        "phrase": "step two",
-        "action": "Punch 'two', slight lean forward \u2014 deployment is the credibility beat"
-      },
-      {
-        "second": 33,
-        "phrase": "finally",
-        "action": "Hit fun phrase with energy, this is the agentic pivot"
-      },
-      {
-        "second": 42,
-        "phrase": "sixty one percent",
-        "action": "PAUSE before number, speak clearly \u2014 stat card fires"
-      },
-      {
-        "second": 55,
-        "action": "CLOSER \u2014 slow down, land 'end-to-end ownership' and 'that's that' with quiet confidence"
-      }
-    ],
-    "delivery_notes": "Fast on the hook, punchy on 'Wrong.' Authority voice on all three steps \u2014 you've built this. Slow down for the stat. The closer is quiet and confident, not hyped.",
-    "retention_notes": "Open loop planted at second 6 \u2014 'engineers getting hired own the whole system' \u2014 resolved at second 55 with 'end-to-end ownership.' Mid-video re-hook at step three introduction with 'finally' to spike energy after two instructional steps. Rhythm: long setup \u2192 short punch 'Wrong' \u2192 medium steps \u2192 stat \u2192 short punchy closer.",
-    "filename_hint": "script_07_data_engineer_ai_engineer.mp4",
-    "word_count": 127,
-    "estimated_seconds": 49,
-    "validation_score": 100,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [],
-    "source_topic": "From data engineer to AI engineer: the 6-step transition that keeps showing up",
-    "source_type": "trend",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "date_generated": "2026-06-17"
   }
 ]

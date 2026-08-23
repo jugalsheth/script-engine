@@ -618,5 +618,45 @@
     "opening_line": "I switched to Claude 3.5 Sonnet expecting to save money.",
     "hook_type": "CONFESSION",
     "date": "2026-08-16"
+  },
+  {
+    "opening_line": "I was burning forty dollars a week in Cursor without knowing why.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-23"
+  },
+  {
+    "opening_line": "Claude Code can call Higgsfield and render your product video while it writes the landing page \u2014 same session, zero tab switching.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-23"
+  },
+  {
+    "opening_line": "Claude Code wired to Higgsfield MCP is pure building \u2014 your product shot renders while the agent writes the landing page.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-23"
+  },
+  {
+    "opening_line": "Same model, same tokens, up to forty times the price.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-23"
+  },
+  {
+    "opening_line": "ClawPool just hit Hacker News \u2014 and honestly, this is wild.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-23"
+  },
+  {
+    "opening_line": "My token bill was wrong \u2014 and I didn't catch it for weeks.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-23"
+  },
+  {
+    "opening_line": "There's a site on Hacker News right now \u2014 three hundred thirty nine points \u2014 called Price Per Token.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-23"
+  },
+  {
+    "opening_line": "I switched models expecting to save money \u2014 and somehow spent more.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-23"
   }
 ]
