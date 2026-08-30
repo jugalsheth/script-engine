@@ -658,5 +658,45 @@
     "opening_line": "I switched models expecting to save money \u2014 and somehow spent more.",
     "hook_type": "CONFESSION",
     "date": "2026-08-23"
+  },
+  {
+    "opening_line": "I was spending forty dollars a week in Cursor and the wrong model was eating half of it.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-30"
+  },
+  {
+    "opening_line": "Wire Claude Code to Higgsfield MCP and here's the thing \u2014 your product video renders while the agent is still writing the landing page.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-30"
+  },
+  {
+    "opening_line": "Wire Claude Code to Higgsfield MCP and your product shot renders while the agent writes the landing page \u2014 same session, zero tab switching.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-30"
+  },
+  {
+    "opening_line": "Claude Code is charging forty times more than the API for the same model, same tokens.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-30"
+  },
+  {
+    "opening_line": "AgentReady is a drop-in proxy that just hit Hacker News \u2014 and the claim is wild \u2014 forty to sixty percent off your LLM token bill with zero code changes.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-08-30"
+  },
+  {
+    "opening_line": "My token bill was wrong for weeks.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-30"
+  },
+  {
+    "opening_line": "Builders on Hacker News are asking if Claude 3.5 Sonnet actually beats GPT-4o.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-08-30"
+  },
+  {
+    "opening_line": "My LLM bill kept climbing and I couldn't figure out why \u2014 that's the truth.",
+    "hook_type": "CONFESSION",
+    "date": "2026-08-30"
   }
 ]
