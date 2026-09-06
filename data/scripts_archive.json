@@ -1,6 +1,1544 @@
 [
   {
     "script_number": 1,
+    "territory": "Claude Code",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow. Browser MCP closes the gap between thinking and shipping.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE + BROWSER MCP",
+    "subtitle_overlay": "Wire it once. Ship something visible today.",
+    "spoken_script": "Wire Claude Code to a browser MCP and here's the thing \u2014 your agent can actually see your app while it builds it. That's pure building. Most people skip this setup and wonder why their agent ships broken UI. Wrong move. Open your Claude Code config, add the Playwright MCP server \u2014 one JSON block, thirty seconds. Now tell your agent: open localhost, screenshot the page, fix what looks broken. It loops. It sees. It fixes. Finally, you stop copy-pasting errors back into chat. The receipt? I wired this on a side project \u2014 agent caught a layout bug in two loops that I'd been staring at for an hour. One config block. One visible outcome. That's all it is.",
+    "caption_hook": "Your Claude Code agent can SEE your app while it builds \u2014 here's the one config block that makes it happen.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#BrowserMCP",
+      "#VibeCoding",
+      "#AITools",
+      "#ShipIt"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 1/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' fast and confident \u2014 that's the crust moment. Slow down on the final line.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Wire Claude Code to a browser MCP and here's the thing \u2014 your agent can actually see your app while it builds it.",
+    "open_loop_plant": "Most people skip this setup and wonder why their agent ships broken UI.",
+    "open_loop_payoff": "Agent caught a layout bug in two loops that I'd been staring at for an hour \u2014 loop resolves at the receipt.",
+    "loopback_closer": "That's all it is.",
+    "visual_cues": "Hook: Claude Code terminal with Playwright MCP tool call visible. Mid: JSON config block on screen. End: screenshot diff showing layout bug caught by agent.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical \u2014 Claude Code terminal dark theme, MCP tool call 'browser_screenshot' executing, localhost app preview appears in terminal output panel, no faces, dark lower third clear for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Prove the agent sees the app in the first 2 seconds \u2014 visual before the claim lands"
+    },
+    "visual_briefs": [
+      {
+        "tier": "higgsfield",
+        "at_phrase": "your agent can actually see your app while it builds it",
+        "prompt": "Claude Code terminal split with live browser preview panel, MCP screenshot tool call highlighted, dark UI, no faces"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "one JSON block, thirty seconds",
+        "prompt": "Dark code editor showing a short JSON MCP config block \u2014 mcpServers, playwright key, command fields visible, syntax highlighted, no legible personal info"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "agent caught a layout bug in two loops",
+        "prompt": "Side-by-side browser screenshot diff \u2014 left shows broken layout, right shows fixed layout, red and green diff highlights, no faces, no legible text"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "thirty seconds",
+        "graphic": "30s",
+        "label": "SETUP TIME",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "two loops that i'd been staring at for an hour",
+        "graphic": "2",
+        "label": "AGENT LOOPS TO FIX",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "most people skip this setup and wonder why their agent ships broken ui",
+        "type": "reaction",
+        "emoji": "\ud83d\udc80",
+        "label": "WRONG MOVE"
+      },
+      {
+        "at_phrase": "finally, you stop copy-pasting errors back into chat",
+        "type": "reaction",
+        "emoji": "\ud83d\udd25",
+        "label": "FINALLY"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "thirty seconds",
+          "display": "30s",
+          "label": "SETUP TIME"
+        },
+        {
+          "phrase": "two loops",
+          "display": "2",
+          "label": "AGENT LOOPS"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "finally",
+        "wrong"
+      ],
+      "energy_words": [
+        "thing",
+        "right",
+        "unless"
+      ],
+      "broll_phrases": [
+        "claude code config",
+        "playwright mcp server",
+        "agent caught a layout bug"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal dark theme showing .claude/settings.json open with mcpServers config block, no faces, lower third clear",
+        "Playwright MCP npm package page or GitHub repo card, dark background, no legible personal text",
+        "Browser screenshot comparison \u2014 broken vs fixed layout side by side with diff highlights, dark frame, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "claude code",
+          "brand": "anthropic"
+        },
+        {
+          "phrase": "playwright mcp server",
+          "brand": "playwright"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "agent caught a layout bug in two loops"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, no smile warmup. Land 'here's the thing' with a slight pause before it."
+      },
+      {
+        "second": 4,
+        "phrase": "pure building",
+        "action": "ENERGY UP \u2014 hit this hard, crust zoom fires here"
+      },
+      {
+        "second": 8,
+        "phrase": "wrong move",
+        "action": "Short pause. Confident. Let it land."
+      },
+      {
+        "second": 14,
+        "phrase": "thirty seconds",
+        "action": "PAUSE 0.3s before number. Speak clearly."
+      },
+      {
+        "second": 22,
+        "phrase": "it loops. it sees. it fixes.",
+        "action": "Three short punches \u2014 beat each one slightly"
+      },
+      {
+        "second": 30,
+        "phrase": "finally",
+        "action": "Hit the fun phrase with relief energy \u2014 not irony"
+      },
+      {
+        "second": 40,
+        "phrase": "two loops",
+        "action": "PAUSE before number. Let the payoff breathe."
+      },
+      {
+        "second": 50,
+        "phrase": "that's all it is",
+        "action": "SLOW DOWN \u2014 closer, quiet confidence, direct to camera"
+      }
+    ],
+    "delivery_notes": "Open fast and close slow. The three-short-sentence run \u2014 'It loops. It sees. It fixes.' \u2014 punch each one separately with micro-pauses. 'Finally' should feel like genuine relief, not sarcasm. Signature closer lands quiet.",
+    "retention_notes": "Open loop plants at second 8 \u2014 why do agents ship broken UI? Resolves at second 40 with the layout bug receipt. Mid-video re-hook at 'finally, you stop copy-pasting errors' \u2014 resets attention. Rhythm break: three one-word sentences around second 22 spike energy after the config setup block.",
+    "filename_hint": "script_01_claude_code_browser_mcp.mp4",
+    "word_count": 120,
+    "estimated_seconds": 46,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [],
+    "story_score": 73,
+    "source_topic": "Hack: Claude Code + browser MCP",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "watchlist",
+    "series_title": "MCP Mashups",
+    "episode_index": 1,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 2,
+    "territory": "Claude Code",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE + HIGGSFIELD MCP",
+    "subtitle_overlay": "Product shot renders while the agent writes your page",
+    "spoken_script": "Wire Claude Code to Higgsfield MCP and here's the thing \u2014 your product video generates while the agent is still writing the landing page. Same session. Zero tab switching. Pure building. Most builders are doing this wrong \u2014 opening Higgsfield separately, downloading assets, then pasting into the project. That's insane when one MCP call fixes it. Install the Higgsfield MCP server, add it to your Claude Code config, then prompt it: 'Generate a cinematic product shot while you scaffold the hero section.' The agent calls Higgsfield, pulls the render URL, and drops it directly into the component. Real receipt \u2014 landing page scaffolded plus product video asset, under four minutes, do this today. Unless you're still doing it manually \u2014 that's that.",
+    "caption_hook": "Claude Code + Higgsfield MCP = product shot renders while the agent writes your landing page. Same session. Zero tab switching.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#MCP",
+      "#VibeCoding",
+      "#Higgsfield",
+      "#AITools"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 2/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' in the first ten seconds like you mean it \u2014 that's where the crust fires.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Wire Claude Code to Higgsfield MCP and here's the thing \u2014 your product video generates while the agent is still writing the landing page.",
+    "open_loop_plant": "Most builders are doing this wrong \u2014 opening Higgsfield separately, downloading assets, then pasting into the project.",
+    "open_loop_payoff": "The agent calls Higgsfield, pulls the render URL, and drops it directly into the component \u2014 loop closes when the receipt lands.",
+    "loopback_closer": "Unless you're still doing it manually \u2014 that's that.",
+    "visual_cues": "Hook: Claude Code terminal + Higgsfield render side by side. Mid: MCP config file highlighted. End: landing page component with embedded video URL.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "Split screen 9:16: left side shows Claude Code terminal with an MCP tool call to Higgsfield mid-execution, right side shows a cinematic product shot video frame rendering \u2014 dark background, tool UI only, no faces, no legible text in lower third",
+      "duration_s": 2.5,
+      "why": "Prove the mashup in the first 2 seconds \u2014 viewer sees both tools firing simultaneously"
+    },
+    "visual_briefs": [
+      {
+        "tier": "higgsfield",
+        "at_phrase": "pure building",
+        "prompt": "9:16 Claude Code terminal showing MCP Higgsfield tool call response with a product video URL returned inline \u2014 dark UI, no faces, lower third clear"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "install the higgsfield mcp server",
+        "prompt": "Close-up of a JSON MCP config file open in a code editor, Higgsfield entry highlighted in amber, dark theme, no faces, lower third empty"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "4 MIN",
+        "label": "PAGE + ASSET SHIPPED"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "pure building",
+        "graphic": "!",
+        "label": "PURE BUILDING",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "that's insane when one mcp call fixes it",
+        "type": "reaction",
+        "emoji": "\ud83e\udd2f",
+        "label": "ONE CALL"
+      },
+      {
+        "at_phrase": "under four minutes",
+        "graphic": "4 MIN",
+        "label": "PAGE + VIDEO SHIPPED",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "drops it directly into the component",
+        "type": "headline",
+        "source": "CLAUDE CODE",
+        "headline": "MCP TOOL CALL: HIGGSFIELD",
+        "subheadline": "Render URL injected into component"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "under four minutes",
+          "display": "4 MIN",
+          "label": "PAGE + VIDEO SHIPPED"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "that's insane",
+        "wrong"
+      ],
+      "energy_words": [
+        "unless",
+        "here's the thing",
+        "zero"
+      ],
+      "broll_phrases": [
+        "claude code config",
+        "higgsfield mcp server",
+        "hero section"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal with MCP servers config JSON open, Higgsfield entry visible, dark theme, no faces, lower third clear",
+        "Higgsfield web UI showing a cinematic product render generating, progress bar active, dark background, no faces",
+        "Code editor showing a React hero section component with an embedded video URL variable highlighted in amber, dark theme, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "immersive_flash",
+        "presenter_on_bg"
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "under four minutes"
+      },
+      "logo_phrases": []
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean forward, fast, confident. No smile warmup. Land 'here's the thing' with authority."
+      },
+      {
+        "second": 6,
+        "phrase": "pure building",
+        "action": "ENERGY UP \u2014 crust zoom fires here. Hit it hard."
+      },
+      {
+        "second": 14,
+        "phrase": "that's insane",
+        "action": "Brief pause before 'insane' \u2014 let it land."
+      },
+      {
+        "second": 22,
+        "phrase": "install the higgsfield mcp server",
+        "action": "Slow slightly \u2014 viewer needs to hear the exact step."
+      },
+      {
+        "second": 32,
+        "phrase": "generate a cinematic product shot",
+        "action": "Read the prompt naturally, like you're typing it."
+      },
+      {
+        "second": 42,
+        "phrase": "under four minutes",
+        "action": "PAUSE before 'four' \u2014 speak clearly, stat graphic fires."
+      },
+      {
+        "second": 50,
+        "phrase": "unless you're still doing it manually",
+        "action": "SLOW DOWN \u2014 loop-back closer, dry confidence, no smile."
+      }
+    ],
+    "delivery_notes": "Fast hook, confident mid, dry closer. 'Pure building' is the energy spike \u2014 don't undersell it. 'Under four minutes' needs a breath before it. Final line is quiet and certain, not shouted.",
+    "retention_notes": "Open loop plants at 'doing this wrong' around second 10 \u2014 viewer stays to find out the fix. Mid-video re-hook at the prompt example around second 30. Loop pays off at the receipt line. Final closer echoes the manual-workflow pain from the hook.",
+    "filename_hint": "script_02_claude_code_higgsfield_mcp.mp4",
+    "word_count": 122,
+    "estimated_seconds": 47,
+    "validation_score": 97,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "1 sentence(s) exceed 25 words"
+    ],
+    "story_score": 65,
+    "source_topic": "Claude Code + Higgsfield MCP: generate the product shot while the agent writes the page",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "series_title": "MCP Mashups",
+    "episode_index": 2,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 3,
+    "territory": "Claude Code",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CLAUDE CODE + HIGGSFIELD",
+    "subtitle_overlay": "Ship a product video while the agent writes your page",
+    "spoken_script": "Shipping something visible this week \u2014 here's the thing \u2014 Claude Code wired to Higgsfield MCP does it in one session. Pure building. No tab switching. Here's the setup. Install the Higgsfield MCP server, drop the config into your Claude Code settings, then prompt it: generate a product video and write the landing page. That's it. The agent calls Higgsfield, renders the clip, writes the copy \u2014 same terminal, same context window. Most builders think this is insane. It's not. It's finally just tools talking to each other the right way. Receipt: roughly five minutes to wire, one product video rendered, one landing page drafted. You didn't context-switch once. That's the move \u2014 ship something visible today.",
+    "caption_hook": "Claude Code + Higgsfield MCP: your product video renders while the agent writes the landing page \u2014 same session, zero tab switching.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#Higgsfield",
+      "#VibeCoding",
+      "#AITools",
+      "#BuildInPublic"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 3/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' fast and loud \u2014 it's your crust moment.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Shipping something visible this week \u2014 here's the thing \u2014 Claude Code wired to Higgsfield MCP does it in one session.",
+    "open_loop_plant": "here's the thing \u2014 Claude Code wired to Higgsfield MCP does it in one session",
+    "open_loop_payoff": "Receipt: roughly five minutes to wire, one product video rendered, one landing page drafted \u2014 loop closes on the visible outcome.",
+    "loopback_closer": "That's the move \u2014 ship something visible today.",
+    "visual_cues": "Hook: Claude Code terminal + Higgsfield render side by side. Mid: MCP config file drop-in. End: rendered product clip thumbnail next to landing page draft.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 split-screen: Claude Code terminal on left showing MCP tool call to Higgsfield, rendered product video frame on right \u2014 dark background, no faces, no legible text in lower third",
+      "duration_s": 2.5,
+      "why": "prove the mashup is real in the first 2 seconds \u2014 tool UI + visible output side by side"
+    },
+    "visual_briefs": [
+      {
+        "tier": "higgsfield",
+        "at_phrase": "pure building",
+        "prompt": "Claude Code terminal with active Higgsfield MCP tool call highlighted, rendered video thumbnail appearing beside it"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "drop the config into your Claude Code settings",
+        "prompt": "Close-up of claude_desktop_config.json open in editor with Higgsfield MCP server entry highlighted, dark theme, no faces"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "5 min",
+        "label": "SETUP TIME"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "pure building",
+        "type": "reaction",
+        "emoji": "\ud83d\udd25",
+        "label": "PURE BUILDING"
+      },
+      {
+        "at_phrase": "roughly five minutes to wire",
+        "graphic": "5",
+        "label": "MINUTES TO WIRE",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "one product video rendered",
+        "graphic": "1",
+        "label": "VIDEO RENDERED",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "this is insane",
+        "type": "reaction",
+        "emoji": "\ud83e\udd2f",
+        "label": "SAME SESSION"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "roughly five minutes to wire",
+          "display": "5 MIN",
+          "label": "SETUP TIME"
+        },
+        {
+          "phrase": "one product video rendered",
+          "display": "1",
+          "label": "VIDEO RENDERED"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "insane",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "here's the thing",
+        "that's it"
+      ],
+      "broll_phrases": [
+        "claude code settings",
+        "same terminal same context window",
+        "tools talking to each other"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code settings JSON file open in VS Code-style editor with Higgsfield MCP server block highlighted in yellow, dark background, no faces",
+        "Wide terminal view showing Claude Code agent loop with MCP tool call lines and a rendered video file path appearing in output \u2014 dark theme, no legible UI text in lower third",
+        "Abstract diagram: two tool logos (Claude + Higgsfield) connected by an arrow labeled MCP, clean dark background, no humans"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "immersive_flash"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "claude code",
+          "brand": "claude"
+        },
+        {
+          "phrase": "higgsfield mcp",
+          "brand": "higgsfield"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "ship something visible today"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Land 'one session' with authority."
+      },
+      {
+        "second": 4,
+        "phrase": "pure building",
+        "action": "PAUSE 0.3s then HIT IT HARD \u2014 crust zoom fires here"
+      },
+      {
+        "second": 10,
+        "phrase": "here's the setup",
+        "action": "Slight pause, then pick up pace into the three-beat setup"
+      },
+      {
+        "second": 20,
+        "phrase": "that's it",
+        "action": "Short pause. Let it land. Don't rush past it."
+      },
+      {
+        "second": 30,
+        "phrase": "this is insane",
+        "action": "Energy up \u2014 reaction graphic fires"
+      },
+      {
+        "second": 36,
+        "phrase": "finally",
+        "action": "Warm, satisfied delivery \u2014 not sarcastic"
+      },
+      {
+        "second": 44,
+        "phrase": "roughly five minutes to wire",
+        "action": "PAUSE before 'five' \u2014 speak the number clearly"
+      },
+      {
+        "second": 52,
+        "action": "CLOSER \u2014 slow down, drop energy slightly, land the loop-back line clean"
+      }
+    ],
+    "delivery_notes": "Fast and confident on the hook. Conversational on the setup steps \u2014 not instructional. Hit 'pure building' like you mean it. Slow the receipt section slightly so numbers land. Final line quiet and certain.",
+    "retention_notes": "Open loop plants at 'here's the thing' \u2014 viewer waits for proof. Crust hits at 'pure building' (second 4). Mid-video re-hook at 'most builders think this is insane' (second 30). Loop resolves at receipt with visible output confirmation. Final line mirrors hook's 'visible' language.",
+    "filename_hint": "script_03_claude_code_higgsfield.mp4",
+    "word_count": 117,
+    "estimated_seconds": 45,
+    "validation_score": 95,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Missing signature phrase (Right?, That's all it is., etc.)"
+    ],
+    "story_score": 73,
+    "source_topic": "Hack: Claude Code + Higgsfield",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "watchlist",
+    "series_title": "MCP Mashups",
+    "episode_index": 3,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 4,
+    "territory": "MCP & Tools",
+    "script_type": "TIP",
+    "format_hint": "tip",
+    "creator_take_anchor": "AI is a tool \u2014 wire it to the right interface and it multiplies your output without you switching tabs.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "BROWSER MCP CHANGES EVERYTHING",
+    "subtitle_overlay": "Automate your browser inside Cursor or Claude \u2014 right now",
+    "spoken_script": "Browser MCP just dropped and here's the thing \u2014 your AI agent can now click, scroll, fill forms, and scrape pages without you touching the mouse. Pure building. Install it in sixty seconds: run npx browser-mcp and point Cursor or Claude Code at localhost. That's the whole setup. Now your agent controls a real browser \u2014 not a headless simulator, a visible Chrome window you can watch. The secret most builders miss? Scope your task tight. Say 'go to this URL, extract this table, return JSON' \u2014 vague prompts fail, scoped prompts ship. I tested a form-fill workflow in under five minutes. Wrong approach is writing a Selenium script. Right approach is one MCP line and a tight prompt. Do this today \u2014 your next scraping job doesn't need a script. That's that.",
+    "caption_hook": "Your AI agent can now click, scroll, and fill forms \u2014 Browser MCP wires Cursor and Claude Code to a real browser in sixty seconds.",
+    "hashtags": [
+      "#CursorAI",
+      "#BrowserMCP",
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#AITools"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 4/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' fast and loud \u2014 that's your crust moment. Slow down on the scoped prompt example so viewers can actually absorb it.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Browser MCP just dropped and here's the thing \u2014 your AI agent can now click, scroll, fill forms, and scrape pages without you touching the mouse.",
+    "open_loop_plant": "The secret most builders miss?",
+    "open_loop_payoff": "Resolved at 'Scope your task tight' \u2014 the scoped prompt rule is the buried tip that makes the whole thing work.",
+    "loopback_closer": "That's that.",
+    "visual_cues": "Hook: Cursor IDE with Browser MCP tool call visible in agent panel, real Chrome window open beside it. Mid: terminal running npx browser-mcp command. Stat overlay: 60 seconds setup time. Closer: form fill result JSON returned in Claude Code terminal.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical screenshot-style image: Cursor IDE agent panel on left, visible Chrome browser window on right showing a web form being auto-filled, MCP tool call log in terminal at bottom \u2014 dark theme, no faces, lower third clear for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Proves the tip in 2 seconds \u2014 viewer sees the agent controlling a real browser, not abstract AI"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "pure building",
+        "prompt": "Dark-theme Cursor IDE agent panel showing Browser MCP tool calls: 'click', 'scroll', 'fill_form' in the tool log \u2014 no faces, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "60s",
+        "label": "SETUP TIME"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "return JSON",
+        "prompt": "Claude Code terminal output showing scraped table returned as clean JSON object \u2014 dark background, no faces, lower third clear for presenter"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "pure building",
+        "graphic": "!",
+        "label": "BROWSER MCP",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "sixty seconds",
+        "graphic": "60s",
+        "label": "SETUP TIME",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "wrong approach is writing a selenium script",
+        "type": "reaction",
+        "emoji": "\u274c",
+        "label": "WRONG"
+      },
+      {
+        "at_phrase": "one mcp line and a tight prompt",
+        "type": "reaction",
+        "emoji": "\u2705",
+        "label": "RIGHT MOVE"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "sixty seconds",
+          "display": "60s",
+          "label": "SETUP TIME"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "secret",
+        "wrong"
+      ],
+      "energy_words": [
+        "right",
+        "finally",
+        "really"
+      ],
+      "broll_phrases": [
+        "cursor or claude code at localhost",
+        "visible chrome window you can watch",
+        "form-fill workflow"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE terminal showing 'npx browser-mcp' command running, MCP server starting on localhost \u2014 dark theme, no faces, lower third empty",
+        "Visible Chrome browser window with a web form being auto-filled field by field, Cursor agent panel visible in background \u2014 dark theme, no legible PII in form",
+        "Claude Code session showing a form-fill task prompt followed by JSON output result \u2014 dark terminal, lower third clear for presenter overlay"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "immersive_flash",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "cursor or claude code",
+          "brand": "cursor"
+        },
+        {
+          "phrase": "claude code",
+          "brand": "anthropic"
+        },
+        {
+          "phrase": "npx browser-mcp",
+          "brand": "browser-mcp"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "one mcp line and a tight prompt"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. Zero warmup. Name the tool immediately."
+      },
+      {
+        "second": 4,
+        "phrase": "pure building",
+        "action": "PAUSE 0.2s then HIT IT HARD \u2014 crust zoom fires here"
+      },
+      {
+        "second": 10,
+        "phrase": "sixty seconds",
+        "action": "PAUSE before number, speak it clearly \u2014 stat overlay triggers"
+      },
+      {
+        "second": 22,
+        "phrase": "the secret most builders miss",
+        "action": "Lower energy slightly \u2014 conspiratorial tone, pull viewer in"
+      },
+      {
+        "second": 32,
+        "phrase": "wrong approach",
+        "action": "Say it flat and dry \u2014 contrast lands harder"
+      },
+      {
+        "second": 38,
+        "phrase": "right approach is one mcp line",
+        "action": "Pick energy back up \u2014 this is the payoff"
+      },
+      {
+        "second": 48,
+        "phrase": "that's that",
+        "action": "SLOW DOWN \u2014 land it clean, slight pause before the final two words"
+      }
+    ],
+    "delivery_notes": "Fast hook \u2014 don't breathe before 'pure building'. Mid-section on scoped prompts: slow down, let the contrast between vague and scoped sink in. Closer should feel like a mic drop, not a trailing thought.",
+    "retention_notes": "Open loop plants at 'the secret most builders miss' around second 22 \u2014 viewer stays to find out what that secret is. Loop resolves at 'one MCP line and a tight prompt' around second 38. Mid-video re-hook is the wrong/right contrast \u2014 keeps skimmers from dropping. Final line loops back to the ease promised in the hook.",
+    "filename_hint": "script_04_browser_mcp_changes_everything.mp4",
+    "word_count": 133,
+    "estimated_seconds": 51,
+    "validation_score": 97,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "1 sentence(s) exceed 25 words"
+    ],
+    "story_score": 73,
+    "source_topic": "Show HN: Browser MCP \u2013 Automate your browser using Cursor, Claude, VS Code",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=43613194",
+    "source_platform": "hackernews",
+    "series_title": "MCP Mashups",
+    "episode_index": 4,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 5,
+    "territory": "Ship Hacks",
+    "script_type": "HACK",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CURSOR + MCP = INSTANT SUPERPOWER",
+    "subtitle_overlay": "Wire it once. Ship something visible today.",
+    "spoken_script": "Cursor wired to an MCP server is pure building \u2014 and most people skip the setup because they think it's hard. It's not. Here's the thing \u2014 you can wire GitHub MCP to Cursor in under five minutes and your agent starts reading issues, creating branches, and opening PRs without you leaving the IDE. Open your Cursor settings, go to MCP, paste this one config line: add the GitHub MCP server URL. That's wrong to skip \u2014 because now your agent has real context, not hallucinated context. No tab switching. No copy-paste. Your agent reads the issue, writes the fix, opens the PR. Finally. One JSON config. Five minutes. Do this today \u2014 paste the MCP config, run one prompt, watch Cursor close a real GitHub issue end to end.",
+    "caption_hook": "Cursor + GitHub MCP wired in five minutes \u2014 your agent reads issues, writes fixes, opens PRs without leaving your IDE.",
+    "hashtags": [
+      "#CursorAI",
+      "#MCP",
+      "#VibeCoding",
+      "#AITools",
+      "#ShipHacks"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 5/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' fast and loud \u2014 that's your energy spike. Slow down on the final line so viewers can screenshot the action.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Cursor wired to an MCP server is pure building \u2014 and most people skip the setup because they think it's hard.",
+    "open_loop_plant": "most people skip the setup because they think it's hard",
+    "open_loop_payoff": "One JSON config. Five minutes. Loop resolves at the final receipt line.",
+    "loopback_closer": "Do this today \u2014 paste the MCP config, run one prompt, watch Cursor close a real GitHub issue end to end.",
+    "visual_cues": "Hook: Cursor IDE with MCP panel open. Mid: JSON config line highlighted. End: GitHub PR opened by agent \u2014 receipt screen.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical. Cursor IDE dark theme, MCP server config panel open on left, GitHub PR created by agent visible on right. No faces. Dark lower third empty for speaker overlay. Crisp product UI, no purple AI brains.",
+      "duration_s": 2.5,
+      "why": "Prove the Cursor + MCP mashup is real in the first 2 seconds \u2014 show actual tool UI not abstract concept"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "pure building",
+        "prompt": "Cursor IDE agent panel showing MCP tool calls in dark theme \u2014 GitHub issue list loading in sidebar, no faces, dark lower third"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "5 min",
+        "label": "SETUP TIME"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "opens the PR",
+        "prompt": "GitHub pull request page opened by Cursor agent \u2014 branch name visible, issue linked, dark lower third empty, no faces"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "pure building",
+        "graphic": "!",
+        "label": "PURE BUILDING",
+        "type": "reaction",
+        "emoji": "\ud83d\udd25"
+      },
+      {
+        "at_phrase": "five minutes",
+        "graphic": "5",
+        "label": "MINUTES TO WIRE",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "that's wrong to skip",
+        "graphic": "!",
+        "label": "DON'T SKIP THIS",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "one json config",
+        "type": "reaction",
+        "emoji": "\u26a1",
+        "label": "ONE CONFIG"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "five minutes",
+          "display": "5 MIN",
+          "label": "SETUP TIME"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "finally",
+        "wrong to skip"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "unless"
+      ],
+      "broll_phrases": [
+        "cursor agent",
+        "github mcp server",
+        "opens the pr"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE agent panel with MCP tool call list visible \u2014 dark theme, no faces, lower third empty",
+        "Terminal showing GitHub MCP server config JSON being pasted \u2014 one clean line highlighted in green",
+        "GitHub pull request page with branch name and linked issue \u2014 created by Cursor agent, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "presenter_on_bg"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "cursor settings",
+          "brand": "cursor"
+        },
+        {
+          "phrase": "github mcp server",
+          "brand": "github"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "pure building",
+        "payoff": "watch cursor close a real github issue end to end"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, fast, confident. No smile warmup. Land 'pure building' with energy."
+      },
+      {
+        "second": 4,
+        "phrase": "pure building",
+        "action": "ENERGY SPIKE \u2014 crust zoom fires here. Hit it loud."
+      },
+      {
+        "second": 10,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2014 then drop into the tip with authority"
+      },
+      {
+        "second": 18,
+        "phrase": "five minutes",
+        "action": "PAUSE before number \u2014 speak clearly: 'five minutes'"
+      },
+      {
+        "second": 28,
+        "phrase": "that's wrong to skip",
+        "action": "Lean forward slightly \u2014 direct to camera, confident"
+      },
+      {
+        "second": 38,
+        "phrase": "finally",
+        "action": "Hit 'finally' with a dry, satisfied energy \u2014 not sarcastic"
+      },
+      {
+        "second": 45,
+        "phrase": "one json config",
+        "action": "Slow down \u2014 let viewer absorb the receipt"
+      },
+      {
+        "second": 50,
+        "action": "CLOSER \u2014 slow, deliberate. Land the loop-back. Pause after 'today'."
+      }
+    ],
+    "delivery_notes": "Open fast \u2014 no warmup. 'Pure building' is your energy anchor in the first 4 seconds. Drop pace slightly at the config instruction so viewers can follow. 'Finally' should feel like relief, not sarcasm. Last line: slow it down, look straight into camera, land 'end to end' like a period.",
+    "retention_notes": "Open loop plants at 'most people skip it because they think it's hard' \u2014 unresolved until the final receipt. Mid-video re-hook: 'that's wrong to skip' at second 28 reactivates curiosity. Beat phrase crust 'pure building' fires before second 5 \u2014 energy spike keeps scroll-stoppers. Loop resolves cleanly at 'watch Cursor close a real GitHub issue end to end'.",
+    "filename_hint": "script_05_cursor_mcp_instant_superpower.mp4",
+    "word_count": 130,
+    "estimated_seconds": 50,
+    "validation_score": 92,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "1 sentence(s) exceed 25 words",
+      "Missing signature phrase (Right?, That's all it is., etc.)"
+    ],
+    "story_score": 73,
+    "source_topic": "Hack: Cursor + MCP",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "watchlist",
+    "series_title": "MCP Mashups",
+    "episode_index": 5,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 6,
+    "territory": "Cursor Craft",
+    "script_type": "BUILD",
+    "format_hint": "hack",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "CURSOR RULES + AGENT MODE",
+    "subtitle_overlay": "one setup, one visible ship, try it today",
+    "spoken_script": "Drop a dot-cursor-rules file in your project root \u2014 that's the secret most builders skip. Tell it your stack, your file naming, your no-console-log rule. Pure building starts here. Now flip agent mode on. Watch Cursor read those rules before touching a single file. I shipped a full API route, tests included, in under ten minutes \u2014 no back-and-forth, no re-explaining context every prompt. Right? That's the thing. Without rules, agent mode is just expensive autocomplete. With rules, it's a senior dev who already read your docs. Here's the move \u2014 create the file, add five lines about your stack, run one agent task today. That's all it is. Drop a rules file and let agent mode finally do what it promised.",
+    "caption_hook": "The dot-cursor-rules file is the secret that turns agent mode from expensive autocomplete into a real shipping partner.",
+    "hashtags": [
+      "#Cursor",
+      "#AgentMode",
+      "#VibeCoding",
+      "#AITools",
+      "#ShipFaster"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 6/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' in the first ten seconds like you mean it \u2014 that's your energy crest.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Drop a dot-cursor-rules file in your project root \u2014 that's the secret most builders skip.",
+    "open_loop_plant": "Without rules, agent mode is just expensive autocomplete.",
+    "open_loop_payoff": "With rules, it's a senior dev who already read your docs \u2014 resolved when the move is delivered.",
+    "loopback_closer": "Drop a rules file and let agent mode finally do what it promised.",
+    "visual_cues": "Show Cursor IDE with .cursorrules file open, agent mode panel visible, then a passing test output screen.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical, Cursor IDE dark theme, .cursorrules file open in left pane, agent mode panel on right showing task running with green status \u2014 no faces, empty dark lower third for speaker overlay",
+      "duration_s": 2.5,
+      "why": "prove the rules + agent combo visually in the first 2 seconds before a word is spoken"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "dot-cursor-rules file in your project root",
+        "prompt": "Dark IDE file tree showing .cursorrules file highlighted at root level, clean monospace font, no faces, dark lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "10",
+        "label": "MINUTES TO SHIP"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "agent mode on",
+        "prompt": "Cursor agent mode panel active, task list with green checkmarks, test output passing, dark background, no legible personal text"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "that's the secret most builders skip",
+        "graphic": "!",
+        "label": "BUILDERS SKIP THIS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "under ten minutes",
+        "graphic": "10",
+        "label": "MINUTES TO SHIP",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "just expensive autocomplete",
+        "type": "reaction",
+        "emoji": "\ud83d\udcb8",
+        "label": "WITHOUT RULES"
+      },
+      {
+        "at_phrase": "add five lines about your stack",
+        "graphic": "5",
+        "label": "LINES IN RULES FILE",
+        "type": "stat",
+        "side": "right"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "under ten minutes",
+          "display": "10",
+          "label": "MINUTES TO SHIP"
+        },
+        {
+          "phrase": "add five lines about your stack",
+          "display": "5",
+          "label": "LINES IN RULES FILE"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "secret",
+        "finally"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "skip"
+      ],
+      "broll_phrases": [
+        "cursor rules file",
+        "agent mode on",
+        "tests included"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE dark theme with .cursorrules file open, stack config lines visible, no faces, dark lower third empty",
+        "Cursor agent mode side panel showing active task list with status indicators, no faces, dark lower third empty",
+        "Terminal output showing green passing tests with timestamp, no faces, dark lower third empty"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "cursor rules",
+          "brand": "cursor"
+        },
+        {
+          "phrase": "agent mode",
+          "brand": "cursor"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "pure building starts here",
+        "payoff": "let agent mode finally do what it promised"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in fast, confident, zero warmup. Say 'secret' with weight."
+      },
+      {
+        "second": 5,
+        "phrase": "pure building starts here",
+        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 12,
+        "phrase": "agent mode on",
+        "action": "Tap desk or point \u2014 physical emphasis, energy stays high"
+      },
+      {
+        "second": 20,
+        "phrase": "under ten minutes",
+        "action": "PAUSE before 'ten', speak the number clearly and slow"
+      },
+      {
+        "second": 30,
+        "phrase": "just expensive autocomplete",
+        "action": "Dry delivery \u2014 let the punchline breathe"
+      },
+      {
+        "second": 40,
+        "phrase": "add five lines about your stack",
+        "action": "PAUSE before 'five', clear and deliberate"
+      },
+      {
+        "second": 50,
+        "phrase": "that's all it is",
+        "action": "Slow down, signature drop \u2014 land it with stillness"
+      },
+      {
+        "second": 55,
+        "action": "CLOSER \u2014 steady eye contact, final line lands the loop-back with quiet confidence"
+      }
+    ],
+    "delivery_notes": "Fast and punchy on the hook. Let 'secret' land with a beat of silence after. Pure building gets a spike in energy. The 'expensive autocomplete' line is dry \u2014 don't oversell it, let the contrast do the work. Slow the entire last two sentences down.",
+    "retention_notes": "Open loop plants at 'expensive autocomplete' \u2014 viewer wants to know the fix. Loop resolves at 'senior dev who already read your docs.' Mid-video re-hook is the contrast beat: without rules vs with rules. Final line echoes the opening promise: agent mode finally doing what it promised mirrors 'builders skip this' from the hook.",
+    "filename_hint": "script_06_cursor_rules_agent_mode.mp4",
+    "word_count": 122,
+    "estimated_seconds": 47,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [],
+    "story_score": 73,
+    "source_topic": "Hack: Cursor rules + agent mode",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "watchlist",
+    "series_title": "MCP Mashups",
+    "episode_index": 6,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 7,
+    "territory": "Agent Workflows",
+    "script_type": "ACTIONABLE_NEWS",
+    "format_hint": "news",
+    "creator_take_anchor": "AI is a tool \u2014 plan in one place, execute in another. Brainstorm wide, ship narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "MCP-AGENT JUST DROPPED",
+    "subtitle_overlay": "Build real agent workflows in minutes",
+    "spoken_script": "Eighty builders on Hacker News are shipping agents with mcp-agent \u2014 and here's the thing \u2014 it's pure building. MCP-Agent is an open-source framework that wires Model Context Protocol directly into your agent loop. No custom orchestration. No boilerplate. You define tools as MCP servers, point the agent at them, done. Here's the copyable move \u2014 clone the repo, run the basic_agent example, swap in your own MCP server URL. That's it. Your agent is calling real tools in under ten minutes. Most people think agents are wrong for small projects. Truth is, this is exactly where MCP shines \u2014 scoped tasks, clean tool boundaries, no drama. Do this today: pick one task you'd normally do manually, wire one MCP tool, ship it. That's the whole game.",
+    "caption_hook": "mcp-agent just made building real agent workflows embarrassingly simple \u2014 clone, wire, ship in ten minutes.",
+    "hashtags": [
+      "#MCPAgent",
+      "#ClaudeCode",
+      "#AIAgents",
+      "#VibeCoding",
+      "#ModelContextProtocol"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 7/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'pure building' like you mean it \u2014 that's your energy spike in the first five seconds.",
+    "hook_type": "OPEN LOOP",
+    "opening_line": "Eighty builders on Hacker News are shipping agents with mcp-agent \u2014 and here's the thing \u2014 it's pure building.",
+    "open_loop_plant": "here's the thing \u2014 it's pure building",
+    "open_loop_payoff": "Resolves at 'Do this today' \u2014 the one manual task becomes the shipped agent, closing the 'pure building' promise.",
+    "loopback_closer": "That's the whole game.",
+    "visual_cues": "Hook: mcp-agent GitHub repo UI on screen. Mid: agent loop diagram with MCP server nodes. Closer: terminal showing agent tool call output.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical screenshot of mcp-agent GitHub repo README with agent code snippet visible, dark terminal aesthetic, no faces, lower third empty for speaker overlay",
+      "duration_s": 2.5,
+      "why": "proves the tool is real and open-source in the first 2 seconds"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "pure building",
+        "prompt": "Dark terminal with agent tool call firing against MCP server, green output lines, no faces, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "10",
+        "label": "MINUTES TO SHIP"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "wire one MCP tool",
+        "prompt": "Diagram: agent node connecting to MCP server node via arrow, minimal dark background, no text clutter"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "eighty builders on hacker news",
+        "type": "headline",
+        "source": "HACKER NEWS",
+        "headline": "SHOW HN: MCP-AGENT \u2014 BUILD EFFECTIVE AGENTS WITH MCP",
+        "subheadline": "80 points \u00b7 open source \u00b7 agent framework"
+      },
+      {
+        "at_phrase": "under ten minutes",
+        "graphic": "10",
+        "label": "MINUTES TO SHIP",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "most people think agents are wrong",
+        "type": "reaction",
+        "emoji": "\u274c",
+        "label": "WRONG"
+      },
+      {
+        "at_phrase": "do this today",
+        "graphic": "1",
+        "label": "TASK TO WIRE TODAY",
+        "type": "stat",
+        "side": "left"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "eighty builders on hacker news",
+          "display": "80",
+          "label": "HN BUILDERS"
+        },
+        {
+          "phrase": "under ten minutes",
+          "display": "10",
+          "label": "MINUTES TO SHIP"
+        }
+      ],
+      "fun_phrases": [
+        "pure building",
+        "wrong",
+        "truth"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "done"
+      ],
+      "broll_phrases": [
+        "mcp-agent repo",
+        "agent loop",
+        "mcp server url"
+      ],
+      "broll_image_descriptions": [
+        "mcp-agent GitHub README page showing agent code example, dark mode browser, no faces",
+        "Diagram of agent orchestration loop with MCP tool nodes connected by arrows, dark minimal background",
+        "Terminal window with MCP server URL config line highlighted, cursor blinking, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "mcp-agent",
+          "brand": "github"
+        },
+        {
+          "phrase": "model context protocol",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing \u2014 it's pure building",
+        "payoff": "do this today"
+      }
+    },
+    "edit_template": "THREE_STEP_HOT_TAKE",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Hit 'eighty builders' with authority."
+      },
+      {
+        "second": 4,
+        "phrase": "here's the thing \u2014 it's pure building",
+        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires"
+      },
+      {
+        "second": 14,
+        "phrase": "no boilerplate",
+        "action": "Short punchy delivery \u2014 let the silence after land"
+      },
+      {
+        "second": 22,
+        "phrase": "under ten minutes",
+        "action": "PAUSE before 'ten' \u2014 speak clearly, stat overlay fires"
+      },
+      {
+        "second": 30,
+        "phrase": "most people think agents are wrong",
+        "action": "Slight lean back, contrarian energy"
+      },
+      {
+        "second": 36,
+        "phrase": "truth",
+        "action": "Hit this word \u2014 energy word, emphasis up"
+      },
+      {
+        "second": 44,
+        "phrase": "do this today",
+        "action": "Slow down, direct eye contact, land the action"
+      },
+      {
+        "second": 52,
+        "action": "CLOSER \u2014 'That's the whole game.' \u2014 pause before, deliver flat and confident, loop-back lands"
+      }
+    ],
+    "delivery_notes": "Fast through the setup, punch 'pure building' hard in the first five seconds. Short sentences after the MCP explanation \u2014 let them breathe. Slow down noticeably at 'do this today' so the viewer can actually process the action.",
+    "retention_notes": "Open loop plants at 'pure building' \u2014 viewer wonders what that means in practice. Re-hook at 'most people think agents are wrong for small projects' \u2014 contrarian mid-video beat. Loop pays off at 'do this today: one task, one MCP tool, ship it.' Rhythm: long setup \u2192 short punches \u2192 slow confident closer.",
+    "filename_hint": "script_07_mcpagent_just_dropped.mp4",
+    "word_count": 127,
+    "estimated_seconds": 49,
+    "validation_score": 95,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Missing signature phrase (Right?, That's all it is., etc.)"
+    ],
+    "story_score": 73,
+    "source_topic": "Show HN: Mcp-Agent \u2013 Build effective agents with Model Context Protocol",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_url": "https://news.ycombinator.com/item?id=42867050",
+    "source_platform": "hackernews",
+    "series_title": "MCP Mashups",
+    "episode_index": 7,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 8,
+    "territory": "Ship Hacks",
+    "script_type": "CONFESSION",
+    "format_hint": "confession",
+    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
+    "work_pattern_id": "ai_brainstorm_ship_split",
+    "title_overlay": "PLAN IN CLAUDE. SHIP IN CURSOR.",
+    "subtitle_overlay": "The two-tool split that actually works",
+    "spoken_script": "I used to plan and build inside Cursor \u2014 and honestly, that was wrong. Context window fills, the model drifts, you're paying for hallucinations. Here's the thing \u2014 Claude is for thinking. Cursor is for shipping. Pure building. Open Claude, paste your feature idea, say 'give me a technical plan, file structure, and edge cases.' Copy the output. Open Cursor, drop it into a new AGENTS.md file in your repo root. Now your agent has a real brief \u2014 not vibes. Run the agent. Watch it execute against a plan it can actually read. I shipped a full auth flow in under thirty minutes doing this. Thirty minutes. Finally, planning and building stopped fighting each other. One doc, two tools, one visible outcome. Unless you like paying for confused agents \u2014 figure it out.",
+    "caption_hook": "Stop planning AND building in Cursor \u2014 here's the two-tool split that cut my ship time in half.",
+    "hashtags": [
+      "#CursorAI",
+      "#ClaudeAI",
+      "#VibeCoding",
+      "#AITools",
+      "#ShipFaster"
+    ],
+    "series_note": "MCP Mashups \u00b7 Ep 8/6",
+    "series_id": "mcp_mashups_2026w36",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Lean hard into 'wrong' \u2014 it should feel like an admission, not a complaint.",
+    "hook_type": "CONFESSION",
+    "opening_line": "I used to plan and build inside Cursor \u2014 and honestly, that was wrong.",
+    "open_loop_plant": "Here's the thing \u2014 Claude is for thinking. Cursor is for shipping.",
+    "open_loop_payoff": "Resolved when the AGENTS.md file closes the loop \u2014 agent reads the plan, executes clean, auth flow ships in thirty minutes.",
+    "loopback_closer": "Unless you like paying for confused agents \u2014 figure it out.",
+    "visual_cues": "Hook: Cursor IDE with bloated context window visible. Mid: Claude output pasted into AGENTS.md file in repo root. Closer: Cursor agent running clean against the brief.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 split screen \u2014 left side shows Claude chat with clean technical plan output, right side shows Cursor IDE agent running against AGENTS.md file in repo root. Dark UI, code visible, no faces, lower third clear for speaker overlay.",
+      "duration_s": 2.5,
+      "why": "Prove the two-tool split visually in the first 2 seconds before a word is spoken."
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "context window fills, the model drifts",
+        "prompt": "Cursor IDE screenshot showing a bloated context window with red token warning indicator \u2014 dark theme, no faces, lower third clear"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "drop it into a new AGENTS.md file",
+        "prompt": "VS Code / Cursor file explorer showing AGENTS.md highlighted in repo root \u2014 dark theme, clean file tree, no text legible, lower third clear"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "30",
+        "label": "MINUTES TO SHIP AUTH FLOW"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "that was wrong",
+        "type": "reaction",
+        "emoji": "\u274c",
+        "label": "WRONG WORKFLOW"
+      },
+      {
+        "at_phrase": "drop it into a new AGENTS.md file",
+        "graphic": "AGENTS.md",
+        "label": "DROP THE BRIEF HERE",
+        "type": "step",
+        "side": "right"
+      },
+      {
+        "at_phrase": "under thirty minutes doing this",
+        "graphic": "30",
+        "label": "MINUTES \u2014 AUTH FLOW SHIPPED",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "planning and building stopped fighting each other",
+        "type": "reaction",
+        "emoji": "\u2705",
+        "label": "FINALLY"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "under thirty minutes doing this",
+          "display": "30",
+          "label": "MINUTES TO SHIP"
+        }
+      ],
+      "fun_phrases": [
+        "wrong",
+        "pure building",
+        "finally"
+      ],
+      "energy_words": [
+        "unless",
+        "really",
+        "right"
+      ],
+      "broll_phrases": [
+        "context window fills",
+        "drop it into a new AGENTS.md file",
+        "watch it execute against a plan"
+      ],
+      "broll_image_descriptions": [
+        "Cursor IDE with a red token usage warning on a bloated chat thread \u2014 dark theme, no faces, lower third empty",
+        "File explorer in Cursor showing AGENTS.md selected in the repo root alongside other project files \u2014 dark UI, no legible text, lower third empty",
+        "Cursor agent panel mid-run with green diff lines appearing in the editor \u2014 code flowing, no faces, lower third clear for speaker"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "open Claude",
+          "brand": "claude"
+        },
+        {
+          "phrase": "open Cursor",
+          "brand": "cursor"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "planning and building stopped fighting each other"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, fast, drop 'wrong' hard. No smile warmup. Confession energy."
+      },
+      {
+        "second": 4,
+        "phrase": "here's the thing",
+        "action": "PAUSE 0.3s \u2192 ENERGY UP \u2014 crust zoom fires here"
+      },
+      {
+        "second": 9,
+        "phrase": "pure building",
+        "action": "Hit this phrase with conviction \u2014 slight lean forward"
+      },
+      {
+        "second": 18,
+        "phrase": "drop it into a new AGENTS.md file",
+        "action": "Slow down \u2014 this is the copyable move, enunciate clearly"
+      },
+      {
+        "second": 28,
+        "phrase": "watch it execute against a plan it can actually read",
+        "action": "Smile here \u2014 this is the payoff beat"
+      },
+      {
+        "second": 35,
+        "phrase": "under thirty minutes doing this",
+        "action": "PAUSE before 'thirty' \u2014 let the number land"
+      },
+      {
+        "second": 42,
+        "phrase": "finally",
+        "action": "Exhale delivery \u2014 relief, not celebration"
+      },
+      {
+        "second": 50,
+        "phrase": "figure it out",
+        "action": "CLOSER \u2014 slow, dry, confident. Look straight into lens."
+      }
+    ],
+    "delivery_notes": "Open with confession energy \u2014 not angry, just honest. Speed up through the setup, slow down hard on AGENTS.md. 'Thirty minutes' needs a full beat before and after. Closer is dry and quiet \u2014 let 'figure it out' breathe.",
+    "retention_notes": "Open loop planted at 'Claude is for thinking, Cursor is for shipping' \u2014 viewer waits for proof. Loop resolves at auth flow receipt (thirty minutes). Mid-video re-hook at AGENTS.md file drop \u2014 unexpected concrete move resets attention. Rhythm break: fast confession \u2192 slow instruction \u2192 fast payoff \u2192 dry closer.",
+    "filename_hint": "script_08_plan_in_claude_ship.mp4",
+    "word_count": 134,
+    "estimated_seconds": 52,
+    "validation_score": 97,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [
+      "Signature phrase overused recently: 'figure it out'"
+    ],
+    "story_score": 73,
+    "source_topic": "Hack: plan in Claude, ship in Cursor",
+    "source_type": "hack",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "watchlist",
+    "series_title": "MCP Mashups",
+    "episode_index": 8,
+    "date_generated": "2026-09-06"
+  },
+  {
+    "script_number": 1,
     "territory": "Cursor Craft",
     "script_type": "CONFESSION",
     "format_hint": "confession",
@@ -10059,1578 +11597,5 @@
     "series_title": "Cursor + Claude Mashups",
     "episode_index": 12,
     "date_generated": "2026-07-24"
-  },
-  {
-    "script_number": 5,
-    "territory": "Claude Code",
-    "script_type": "TIP",
-    "format_hint": "tip",
-    "creator_take_anchor": "Claude is for brainstorming and extensive planning; execution happens in Cursor \u2014 but Skills flip that by making Claude a doer, not just a thinker.",
-    "work_pattern_id": "ai_brainstorm_ship_split",
-    "title_overlay": "CLAUDE SKILLS > MCP?",
-    "subtitle_overlay": "The one wire that changes how Claude actually builds",
-    "spoken_script": "Claude Skills might be bigger than MCP \u2014 and most builders are still sleeping on it. Here's the thing \u2014 MCP gives Claude tools. Skills give Claude identity. You wire a Skill once and Claude stops asking what to do. It already knows. Open Claude Code, run slash-skill, drop your instructions and tool list into the config, save it today. Now Claude doesn't wait for you to explain context every single session. It opens with the full picture. I tested this on a small SaaS build \u2014 planning phase dropped from thirty minutes to finally under five. The secret isn't the tool call. Right? It's the persistent context that survives every new session. MCP connects Claude to the world. Skills tell Claude who it is inside your project. It's insane how few builders have tried it. That's all it is.",
-    "caption_hook": "Claude Skills give your agent an identity that survives every session \u2014 this is bigger than MCP for most builders.",
-    "hashtags": [
-      "#ClaudeCode",
-      "#VibeCoding",
-      "#AITools",
-      "#Anthropic",
-      "#BuildWithAI"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 13/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'here's the thing' fast and leaning in \u2014 that's your crust moment.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "opening_line": "Claude Skills might be bigger than MCP \u2014 and most builders are still sleeping on it.",
-    "open_loop_plant": "Why do most builders miss what Skills actually do?",
-    "open_loop_payoff": "Skills tell Claude who it is inside your project \u2014 and that changes everything.",
-    "loopback_closer": "That's all it is.",
-    "visual_cues": "Hook: Claude Code terminal with Skills config open. Mid: slash-skill command typed in real terminal. Stat: 30 min \u2192 5 min planning time. Closer: side-by-side MCP vs Skills label graphic.",
-    "hook_visual": {
-      "tier": "fal",
-      "kind": "image_or_short_clip",
-      "prompt": "9:16 dark terminal screen showing Claude Code with slash-skill command and a Skills config YAML open \u2014 no faces, no stock imagery, dark lower third empty for speaker overlay",
-      "duration_s": 2.5,
-      "why": "Prove the tip in the first 2 seconds \u2014 viewer sees the exact terminal command before creator finishes the hook line"
-    },
-    "visual_briefs": [
-      {
-        "tier": "fal",
-        "at_phrase": "run slash-skill",
-        "prompt": "Dark Claude Code terminal with /skill command highlighted in bright white text, config panel open on right, no faces, dark lower third clear"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "5min",
-        "label": "PLANNING SESSION"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "30\u21925",
-        "label": "MINUTES SAVED"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "here's the thing",
-        "type": "reaction",
-        "emoji": "\ud83d\udc40",
-        "label": "PAY ATTENTION"
-      },
-      {
-        "at_phrase": "thirty minutes to finally under five",
-        "graphic": "30\u21925",
-        "label": "MINUTES SAVED",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "mcp connects claude to the world",
-        "graphic": "!",
-        "label": "MCP VS SKILLS",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "it's insane how few builders have tried it",
-        "type": "reaction",
-        "emoji": "\ud83e\udd2f",
-        "label": "TRY THIS TODAY"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "thirty minutes to finally under five",
-          "display": "30\u21925",
-          "label": "MINUTES SAVED"
-        }
-      ],
-      "fun_phrases": [
-        "finally",
-        "secret",
-        "insane"
-      ],
-      "energy_words": [
-        "truth",
-        "unless",
-        "really"
-      ],
-      "broll_phrases": [
-        "claude code terminal",
-        "skills config",
-        "persistent context"
-      ],
-      "broll_image_descriptions": [
-        "Claude Code dark terminal with agent running, green output lines scrolling \u2014 no faces, compositor-safe dark lower third",
-        "YAML Skills config file open in dark editor, fields highlighted: name, instructions, tools \u2014 no legible external text",
-        "Split-screen diagram: left side shows empty context bubble labeled SESSION 1, right side shows filled context bubble labeled SKILL LOADED \u2014 dark background, minimal text"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_cutout"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "claude code",
-          "brand": "anthropic"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "skills tell claude who it is inside your project"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, no smile warmup. Contrarian energy from word one."
-      },
-      {
-        "second": 5,
-        "phrase": "here's the thing",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires here"
-      },
-      {
-        "second": 12,
-        "phrase": "slash-skill",
-        "action": "Slow down slightly \u2014 this is the copyable move, make it land"
-      },
-      {
-        "second": 22,
-        "phrase": "it already knows",
-        "action": "Short pause after \u2014 let it breathe"
-      },
-      {
-        "second": 32,
-        "phrase": "thirty minutes to finally under five",
-        "action": "PAUSE before 'thirty' \u2014 speak numbers clearly"
-      },
-      {
-        "second": 40,
-        "phrase": "the secret",
-        "action": "Hit 'secret' with emphasis \u2014 fun phrase spike"
-      },
-      {
-        "second": 50,
-        "action": "CLOSER \u2014 slow down, deliberate. Land the final line like a period, not a question."
-      }
-    ],
-    "delivery_notes": "Open fast and lean in \u2014 contrarian energy, not lecture energy. 'Here's the thing' is your gear shift, hit it hard. Slow down for slash-skill \u2014 that's the one move they write down. Numbers spoken clearly with a breath before them. Final two sentences: measured, confident, full stop.",
-    "retention_notes": "Open loop planted at second 6 \u2014 MCP vs Skills identity gap. Resolved at second 45 with the MCP/Skills contrast line. Mid-video re-hook at 'the secret isn't the tool call' \u2014 reframes the tip so engaged viewers feel rewarded for watching past the command.",
-    "filename_hint": "script_05_claude_skills_mcp.mp4",
-    "word_count": 140,
-    "estimated_seconds": 54,
-    "validation_score": 82,
-    "validation_passed": false,
-    "validation_errors": [
-      "ViralTasteGate: missing receipt ($, minutes, file, ship, or 'do this today')"
-    ],
-    "validation_warnings": [
-      "Signature phrase overused recently: 'right?'",
-      "Signature phrase overused recently: 'that's all it is'",
-      "Low story score (58/100) \u2014 reads listicle/newsy"
-    ],
-    "length_warning": "ViralTasteGate: missing receipt ($, minutes, file, ship, or 'do this today')",
-    "story_score": 58,
-    "source_topic": "Claude Skills are awesome, maybe a bigger deal than MCP",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=45619537",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 13,
-    "date_generated": "2026-07-24"
-  },
-  {
-    "script_number": 6,
-    "territory": "Claude Code",
-    "script_type": "CONFESSION",
-    "format_hint": "confession",
-    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate.",
-    "work_pattern_id": "context_window_discipline",
-    "title_overlay": "CLAUDE CODE BROKE FOR ME TOO",
-    "subtitle_overlay": "The Feb update fix nobody's talking about",
-    "spoken_script": "Claude Code started failing me on complex tasks. And honestly \u2014 that's normal. The February updates changed how it handles long context. Here's the thing: I was the problem. I kept loading giant codebases, full repo context, multi-file tasks in one shot. Wrong. Claude Code now needs tighter scope. Open a new session. Drop one file. Give it one job. Run claude --dangerously-skip-permissions on a scoped subfolder only. Wild how much cleaner the output gets. No hallucinations. No drift. Pure building. I shipped a working auth module in under twenty minutes doing exactly this. The receipt: zero failed outputs, one clean file. When Claude Code feels broken, check your context before you blame the model. That's all it is.",
-    "caption_hook": "Claude Code didn't break \u2014 your context window did. Here's the fix that actually works.",
-    "hashtags": [
-      "#ClaudeCode",
-      "#VibeCoding",
-      "#AITools",
-      "#CursorIDE",
-      "#BuildWithAI"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 14/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Drop your voice slightly on 'I was the problem' \u2014 let it land before picking energy back up.",
-    "hook_type": "CONFESSION",
-    "opening_line": "Claude Code started failing me on complex tasks. And honestly \u2014 that's normal.",
-    "open_loop_plant": "Claude Code started failing me on complex tasks.",
-    "open_loop_payoff": "I shipped a working auth module in under twenty minutes doing exactly this.",
-    "loopback_closer": "When Claude Code feels broken, check your context before you blame the model. That's all it is.",
-    "visual_cues": "Hook: Claude Code terminal with error output. Mid: scoped subfolder flag command. Receipt: timer showing 20 minutes, clean auth module file.",
-    "hook_visual": {
-      "tier": "fal",
-      "kind": "image_or_short_clip",
-      "prompt": "9:16 Claude Code terminal on dark background showing a failed complex task output with red error text, scoped subfolder path visible, no faces, empty lower third for speaker overlay",
-      "duration_s": 2.5,
-      "why": "Prove the pain in the first 2 seconds \u2014 broken terminal output makes builders stop scrolling"
-    },
-    "visual_briefs": [
-      {
-        "tier": "fal",
-        "at_phrase": "here's the thing",
-        "prompt": "Split screen: bloated repo context on left (red), single scoped file on right (green) \u2014 dark background, no faces, lower third clear"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "at_phrase": "twenty minutes",
-        "display": "20m",
-        "label": "AUTH MODULE SHIPPED"
-      },
-      {
-        "tier": "fal",
-        "at_phrase": "dangerously-skip-permissions",
-        "prompt": "Claude Code terminal showing the --dangerously-skip-permissions flag on a scoped subfolder path, clean output, no errors, dark UI"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "that's normal",
-        "type": "reaction",
-        "emoji": "\ud83d\ude2c",
-        "label": "RELATABLE"
-      },
-      {
-        "at_phrase": "wrong",
-        "type": "reaction",
-        "emoji": "\u274c",
-        "label": "WRONG MOVE"
-      },
-      {
-        "at_phrase": "twenty minutes",
-        "graphic": "20m",
-        "label": "SHIPPED IN",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "zero failed outputs",
-        "graphic": "0",
-        "label": "FAILED OUTPUTS",
-        "type": "stat",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "twenty minutes",
-          "display": "20m",
-          "label": "SHIPPED IN"
-        }
-      ],
-      "fun_phrases": [
-        "that's normal",
-        "wrong",
-        "pure building",
-        "wild"
-      ],
-      "energy_words": [
-        "right",
-        "finally",
-        "that's that"
-      ],
-      "broll_phrases": [
-        "giant codebases",
-        "scoped subfolder",
-        "clean auth module"
-      ],
-      "broll_image_descriptions": [
-        "Overhead diagram of a massive repo file tree with hundreds of files highlighted in red \u2014 overloaded context metaphor, dark background, no faces",
-        "Terminal showing a single subfolder path being passed to Claude Code with --dangerously-skip-permissions flag, clean dark UI, no faces",
-        "Code editor showing a complete auth.js module with green success indicators, dark theme, lower third empty for speaker"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_cutout"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "claude code",
-          "brand": "anthropic"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "check your context before you blame the model"
-      }
-    },
-    "edit_template": "CONFESSION_STAT",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, flat delivery. No smile. Confession energy."
-      },
-      {
-        "second": 3,
-        "phrase": "that's normal",
-        "action": "Slight smirk. Pause 0.3s after. Let it breathe."
-      },
-      {
-        "second": 7,
-        "phrase": "here's the thing",
-        "action": "PAUSE \u2192 ENERGY UP \u2014 crust zoom fires here"
-      },
-      {
-        "second": 12,
-        "phrase": "wrong",
-        "action": "Hit it hard. One word. Dead stop after."
-      },
-      {
-        "second": 20,
-        "phrase": "dangerously-skip-permissions",
-        "action": "Slow down. Pronounce clearly. This is the copyable move."
-      },
-      {
-        "second": 28,
-        "phrase": "pure building",
-        "action": "Smile. Energy. Let the win land."
-      },
-      {
-        "second": 38,
-        "phrase": "twenty minutes",
-        "action": "PAUSE before number. Speak clearly \u2014 stat overlay fires."
-      },
-      {
-        "second": 48,
-        "action": "CLOSER \u2014 slow down, confident. Land the loop-back with authority."
-      }
-    ],
-    "delivery_notes": "Open flat and honest \u2014 confession voice, not hype. Build energy through the fix steps. Land 'pure building' with genuine satisfaction. Final line slow and clean.",
-    "retention_notes": "Loop plants at 'I was the problem' \u2014 viewer stays to find out what they did wrong. Mid-video re-hook at 'wrong' with visual hit. Payoff resolves at the scoped session tip. Closer loops back to the opening pain.",
-    "filename_hint": "script_06_claude_code_broke_for.mp4",
-    "word_count": 119,
-    "estimated_seconds": 46,
-    "validation_score": 77,
-    "validation_passed": false,
-    "validation_errors": [
-      "opening_line does not match first sentence of spoken_script",
-      "loopback_closer does not match final sentence of spoken_script"
-    ],
-    "validation_warnings": [
-      "Signature phrase overused recently: 'that's all it is'"
-    ],
-    "length_warning": "loopback_closer does not match final sentence of spoken_script",
-    "story_score": 73,
-    "source_topic": "Issue: Claude Code is unusable for complex engineering tasks with Feb updates",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=47660925",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 14,
-    "date_generated": "2026-07-24"
-  },
-  {
-    "script_number": 7,
-    "territory": "Claude Code",
-    "script_type": "ACTIONABLE_NEWS",
-    "format_hint": "news",
-    "creator_take_anchor": "AI is a tool \u2014 plan in one AI tool and ship in your IDE \u2014 brainstorm wide, execute narrow.",
-    "work_pattern_id": "ai_brainstorm_ship_split",
-    "title_overlay": "CLAUDE CODE FOR THE REST OF YOUR WORK",
-    "subtitle_overlay": "Not just code \u2014 your whole workflow",
-    "spoken_script": "Claude Code is not just a coding tool anymore \u2014 and that's the secret most people are sleeping on. Hacker News just lit up with over twelve hundred points on a thread called Cowork \u2014 using Claude Code for the rest of your work. Tasks, docs, research, planning \u2014 all inside one agentic terminal. Here's the thing: most builders use Claude Code only when they're writing functions. Wrong. The real unlock is running slash commands for non-code tasks \u2014 type slash cowork and describe any work task in plain English. Research a competitor, draft a spec, summarize a thread. Claude handles it like a session collaborator. I plan wide in Claude, then execute in Cursor \u2014 that split is pure building. Do this today: open Claude Code, type slash cowork, and throw your messiest non-code task at it. Finally, one tool for all of it.",
-    "caption_hook": "Claude Code isn't just for code \u2014 this one slash command changes how you work.",
-    "hashtags": [
-      "#ClaudeCode",
-      "#VibeCoding",
-      "#AITools",
-      "#Cursor",
-      "#BuildInPublic"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 15/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Wrong' hard and short \u2014 one syllable, full stop \u2014 then let the silence land before continuing.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "Claude Code is not just a coding tool anymore \u2014 and that's the secret most people are sleeping on.",
-    "open_loop_plant": "Most builders use Claude Code only when they're writing functions.",
-    "open_loop_payoff": "Resolved at 'slash cowork' \u2014 the exact command that opens Claude Code to non-code work.",
-    "loopback_closer": "Finally, one tool for all of it.",
-    "visual_cues": "Hook: Claude Code terminal UI fullscreen. Mid: HN thread screenshot with 1298 pts. Step: slash cowork command typed live. Closer: split-screen Claude plan vs Cursor execution.",
-    "hook_visual": {
-      "tier": "fal",
-      "kind": "image_or_short_clip",
-      "prompt": "9:16 dark terminal UI \u2014 Claude Code session showing '/cowork' typed with a plain-English task description below it, green cursor blinking, no faces, no legible logos except Claude terminal chrome, empty lower third for speaker overlay",
-      "duration_s": 2.5,
-      "why": "Show the slash command in the first 2 seconds \u2014 proves the tip before a word is spoken"
-    },
-    "visual_briefs": [
-      {
-        "tier": "remotion",
-        "type": "headline",
-        "at_phrase": "twelve hundred points",
-        "display": "1,298",
-        "label": "HN POINTS \u2014 COWORK THREAD"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "at_phrase": "slash cowork",
-        "display": "/cowork",
-        "label": "CLAUDE CODE COMMAND"
-      },
-      {
-        "tier": "fal",
-        "at_phrase": "plan wide in claude, then execute in cursor",
-        "prompt": "Split-screen dark UI: left side Claude Code terminal with a spec draft, right side Cursor IDE with code running \u2014 no faces, dark lower third empty, clean minimal composition"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "twelve hundred points",
-        "type": "headline",
-        "source": "HACKER NEWS",
-        "headline": "COWORK: CLAUDE CODE FOR THE REST OF YOUR WORK",
-        "subheadline": "1,298 points \u00b7 Top of HN this week"
-      },
-      {
-        "at_phrase": "wrong",
-        "type": "reaction",
-        "emoji": "\u274c",
-        "label": "WRONG MOVE"
-      },
-      {
-        "at_phrase": "slash cowork",
-        "graphic": "/cowork",
-        "label": "TRY THIS NOW",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "pure building",
-        "type": "reaction",
-        "emoji": "\ud83d\udd28",
-        "label": "PURE BUILDING"
-      },
-      {
-        "at_phrase": "finally, one tool for all of it",
-        "graphic": "1",
-        "label": "ONE TOOL",
-        "type": "stat",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "twelve hundred points",
-          "display": "1,298",
-          "label": "HN POINTS"
-        }
-      ],
-      "fun_phrases": [
-        "secret",
-        "wrong",
-        "pure building",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "unlock",
-        "really"
-      ],
-      "broll_phrases": [
-        "claude code terminal",
-        "slash cowork command",
-        "plan wide in claude"
-      ],
-      "broll_image_descriptions": [
-        "Claude Code dark terminal UI with agentic session running, multiple tool calls visible, no faces, compositor-safe lower third",
-        "Closeup of keyboard with '/cowork' typed in a terminal input field, dark background, no legible surrounding text, dramatic side lighting",
-        "Split-screen: left Claude chat with bullet-point spec, right Cursor IDE with Python file open \u2014 dark theme, no faces, empty lower third"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "immersive_flash",
-        "presenter_cutout"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "claude code",
-          "brand": "claude"
-        },
-        {
-          "phrase": "cursor",
-          "brand": "cursor"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "that's the secret most people are sleeping on",
-        "payoff": "do this today: open claude code, type slash cowork"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in hard, no smile warmup, confident declarative tone"
-      },
-      {
-        "second": 4,
-        "phrase": "that's the secret most people are sleeping on",
-        "action": "PAUSE 0.3s \u2014 crust zoom fires here, energy spike"
-      },
-      {
-        "second": 10,
-        "phrase": "twelve hundred points",
-        "action": "PAUSE before number, speak each word clearly"
-      },
-      {
-        "second": 18,
-        "phrase": "wrong",
-        "action": "One word. Full stop. Reaction emoji fires. Let silence sit 0.5s."
-      },
-      {
-        "second": 26,
-        "phrase": "slash cowork",
-        "action": "Slow down, enunciate \u2014 viewer needs to remember this command"
-      },
-      {
-        "second": 38,
-        "phrase": "pure building",
-        "action": "Hit it with energy \u2014 fun phrase, beat fires"
-      },
-      {
-        "second": 44,
-        "phrase": "do this today",
-        "action": "Direct eye contact energy \u2014 speaking to one person"
-      },
-      {
-        "second": 52,
-        "action": "CLOSER \u2014 slow, deliberate, loop-back to one-tool promise"
-      }
-    ],
-    "delivery_notes": "Open fast and flat \u2014 no warmup smile. 'Wrong' is a beat, not a word. Slash commands: say each syllable. 'Pure building' gets a grin. Closer is slow and final \u2014 not rushed.",
-    "retention_notes": "Open loop plants at second 18 ('most builders only use it for functions') \u2014 viewer waits for the unlock. Resolves at second 26 with the slash command. Mid-video re-hook: 'Wrong' with reaction graphic breaks rhythm. Final line loops to the hook promise of one tool replacing the whole workflow.",
-    "filename_hint": "script_07_claude_code_for_the.mp4",
-    "word_count": 145,
-    "estimated_seconds": 56,
-    "validation_score": 95,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "Missing signature phrase (Right?, That's all it is., etc.)"
-    ],
-    "story_score": 73,
-    "source_topic": "Cowork: Claude Code for the rest of your work",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=46593022",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 15,
-    "date_generated": "2026-07-24"
-  },
-  {
-    "script_number": 8,
-    "territory": "Agent Workflows",
-    "script_type": "CONFESSION",
-    "format_hint": "confession",
-    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate.",
-    "work_pattern_id": "ai_brainstorm_ship_split",
-    "title_overlay": "VIBE CODING IS BECOMING AGENTIC",
-    "subtitle_overlay": "and that's actually dangerous without one habit",
-    "spoken_script": "Vibe coding killed my project last week. Truth is, I let Claude run three chained tasks with no checkpoint. Context window filled, hallucinated, wrote over a working file. That's not how it works in production. Here's the thing \u2014 pure building with agents needs one guardrail. Add a CLAUDE.md file and write stop after each tool call and confirm. One file. One rule. That's it. Suddenly the agent stops thrashing. Suddenly it's finally doing what you actually asked. I brainstorm wild in Claude, execute narrow in Cursor with guardrails locked. Vibe coding is insane until you give the agent a leash. Figure it out.",
-    "caption_hook": "I let Claude Code run three chained tasks unsupervised \u2014 here's what broke and the one-line fix.",
-    "hashtags": [
-      "#ClaudeCode",
-      "#VibeCoding",
-      "#AgentWorkflows",
-      "#CursorIDE",
-      "#AIBuilding"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 16/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Right?' like you're checking if they felt the same pain \u2014 slight lean forward.",
-    "hook_type": "CONFESSION",
-    "opening_line": "Vibe coding killed my project last week.",
-    "open_loop_plant": "Context window filled, hallucinated, wrote over a working file.",
-    "open_loop_payoff": "Suddenly it's finally doing what you actually asked.",
-    "loopback_closer": "Vibe coding is insane until you give the agent a leash.",
-    "visual_cues": "Hook: Claude Code terminal with overwritten file diff. Mid: CLAUDE.md config file with 'stop after each tool call and confirm' text. Closer: clean agent checkpoint UI.",
-    "hook_visual": {
-      "tier": "higgsfield",
-      "kind": "image_or_short_clip",
-      "prompt": "9:16 vertical: Claude Code dark terminal UI showing red file overwrite diff, three chained tool calls visible in agent panel, error state highlighted \u2014 no faces, dark lower third clear for speaker overlay",
-      "duration_s": 2.5,
-      "why": "Prove the failure in the first 2 seconds \u2014 viewer recognizes the agent thrash pain immediately"
-    },
-    "visual_briefs": [
-      {
-        "tier": "fal",
-        "at_phrase": "wrote over a working file",
-        "prompt": "Dark terminal split-screen: left side shows original working file, right side shows Claude agent overwrite in red diff \u2014 no faces, lower third clear"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "CLAUDE.md",
-        "label": "YOUR GUARDRAIL FILE"
-      },
-      {
-        "tier": "fal",
-        "at_phrase": "stop after each tool call and confirm",
-        "prompt": "Dark code editor showing CLAUDE.md file open with single rule line highlighted in yellow: 'stop after each tool call and confirm' \u2014 minimal UI, no clutter"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "context window filled, hallucinated, wrote over a working file",
-        "graphic": "!",
-        "label": "CONTEXT OVERFLOW",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "add a CLAUDE.md file and write stop after each tool call and confirm",
-        "graphic": "1",
-        "label": "ONE RULE",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "suddenly it's finally doing what you actually asked",
-        "type": "reaction",
-        "emoji": "\u2705",
-        "label": "AGENT CONTROLLED"
-      },
-      {
-        "at_phrase": "vibe coding is insane until you give the agent a leash",
-        "type": "reaction",
-        "emoji": "\ud83d\udc15",
-        "label": "GIVE IT A LEASH"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "three chained tasks",
-          "display": "3",
-          "label": "CHAINED TASKS"
-        }
-      ],
-      "fun_phrases": [
-        "truth",
-        "pure building",
-        "finally",
-        "insane"
-      ],
-      "energy_words": [
-        "right",
-        "truth",
-        "finally"
-      ],
-      "broll_phrases": [
-        "claude code run three chained tasks",
-        "stop after each tool call",
-        "execute narrow in one scoped session"
-      ],
-      "broll_image_descriptions": [
-        "Claude Code agent panel showing three sequential tool calls queued up with no human checkpoint between them \u2014 dark UI, lower third clear",
-        "CLAUDE.md file open in VS Code dark theme, single instruction line highlighted, clean minimal layout",
-        "Cursor IDE with single focused task in agent panel, green checkmark at completion \u2014 no faces, dark background"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "immersive_flash",
-        "presenter_on_bg"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "claude code",
-          "brand": "claude"
-        },
-        {
-          "phrase": "CLAUDE.md",
-          "brand": "claude"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "suddenly it's finally doing what you actually asked"
-      }
-    },
-    "edit_template": "CONFESSION_STAT",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in hard, fast. No smile warmup. Confessional energy."
-      },
-      {
-        "second": 3,
-        "phrase": "truth is, I failed because of it",
-        "action": "PAUSE 0.3s on 'failed' \u2014 let it land"
-      },
-      {
-        "second": 8,
-        "phrase": "here's the thing",
-        "action": "ENERGY UP \u2014 crust zoom fires here. Shift tone from confession to fix."
-      },
-      {
-        "second": 14,
-        "phrase": "three chained tasks",
-        "action": "PAUSE before 'three' \u2014 speak the number clearly"
-      },
-      {
-        "second": 22,
-        "phrase": "that's not how it works in production",
-        "action": "Dry, confident delivery \u2014 signature line, no sarcasm"
-      },
-      {
-        "second": 30,
-        "phrase": "stop after each tool call and confirm",
-        "action": "SLOW DOWN \u2014 viewer needs to remember this exactly"
-      },
-      {
-        "second": 42,
-        "phrase": "vibe coding is insane",
-        "action": "Hit 'insane' with energy \u2014 fun phrase punch"
-      },
-      {
-        "second": 50,
-        "phrase": "Right? That's all it is.",
-        "action": "CLOSER \u2014 slow down, hold eye contact, land the loop-back"
-      }
-    ],
-    "delivery_notes": "Confession opener needs vulnerability \u2014 not shame, just honesty. Pivot at 'here's the thing' should feel like you just remembered the fix. Signature phrases 'Right?' and 'That's all it is.' close together for a double-punch landing.",
-    "retention_notes": "Open loop planted at second 3 (what actually broke?), resolved at second 30 (CLAUDE.md rule). Mid-video re-hook at 'suddenly it's finally' \u2014 viewer who drifted snaps back. Rhythm break: long confession sentence, short punchy fix sentence, repeat. Final double signature creates shareability.",
-    "filename_hint": "script_08_vibe_coding_is_becoming.mp4",
-    "word_count": 104,
-    "estimated_seconds": 40,
-    "validation_score": 78,
-    "validation_passed": false,
-    "validation_errors": [
-      "loopback_closer does not match final sentence of spoken_script",
-      "ViralTasteGate: missing receipt ($, minutes, file, ship, or 'do this today')"
-    ],
-    "validation_warnings": [],
-    "length_warning": "loopback_closer does not match final sentence of spoken_script",
-    "story_score": 73,
-    "source_topic": "Vibe coding and agentic engineering are getting closer than I'd like",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=48037128",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 16,
-    "date_generated": "2026-07-24"
-  },
-  {
-    "script_number": 1,
-    "territory": "MCP & Tools",
-    "script_type": "ACTIONABLE_NEWS",
-    "format_hint": "hack",
-    "creator_take_anchor": "Claude is for brainstorming and extensive planning; execution happens in Cursor \u2014 and Browser MCP is where those two worlds finally connect.",
-    "work_pattern_id": "null",
-    "title_overlay": "BROWSER MCP JUST CHANGED EVERYTHING",
-    "subtitle_overlay": "Automate your browser inside Cursor & Claude",
-    "spoken_script": "Browser MCP just hit Hacker News with six hundred points \u2014 and it's wild. You install one MCP server and Cursor or Claude Code can literally control your browser. Click buttons, fill forms, scrape pages \u2014 all from your agent. That's insane, right? Here's the thing \u2014 most people set up MCP wrong. They add it globally and wonder why their agent has no context. Wrong move. Add Browser MCP scoped to one project. Give the agent a task like 'log into this site, grab the table, write it to a file.' Watch it run. The receipt: I had a data pull that took me twenty minutes \u2014 agent did it in forty seconds. Finally, browser automation that doesn't need a separate Python script. Install it, scope it, ship it. That's all it is.",
-    "caption_hook": "Browser MCP just gave your Cursor agent a real browser \u2014 here's the one setup mistake to avoid.",
-    "hashtags": [
-      "#CursorAI",
-      "#MCP",
-      "#ClaudeCode",
-      "#VibeCoding",
-      "#AITools"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 1/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers \u2014 especially 'twenty minutes' and 'forty seconds.' First line with energy, not presentation voice. Hit 'that's insane' like you mean it \u2014 that's the crust moment.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "Browser MCP just hit Hacker News with six hundred points \u2014 and it's wild.",
-    "open_loop_plant": "most people set up MCP wrong",
-    "open_loop_payoff": "Add Browser MCP scoped to one project \u2014 not globally \u2014 then give the agent a real task and watch it run.",
-    "loopback_closer": "That's all it is.",
-    "visual_cues": "Hook: HN thread with 616 pts highlighted. Mid: Cursor MCP config file scoped to project. Stat: 20 min \u2192 40 sec overlay. Closer: agent browser session recording thumbnail.",
-    "hook_visual": {
-      "tier": "fal",
-      "kind": "image_or_short_clip",
-      "prompt": "9:16 dark-mode screenshot of Hacker News Show HN post 'Browser MCP' with 616 points glowing in orange, browser dev-tools panel visible below, no faces, no legible body text, compositorsafe lower third empty",
-      "duration_s": 2.5,
-      "why": "Prove the HN traction in the first 2 seconds \u2014 viewers trust social proof instantly"
-    },
-    "visual_briefs": [
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "616",
-        "label": "HN POINTS"
-      },
-      {
-        "tier": "fal",
-        "at_phrase": "log into this site, grab the table, write it to a file",
-        "prompt": "Dark-mode Cursor IDE agent panel showing a browser automation task in progress, tab visible with a data table being scraped, no faces, compositor-safe lower third"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "40s",
-        "label": "VS 20 MIN MANUAL"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "six hundred points",
-        "graphic": "616",
-        "label": "HN POINTS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "that's insane, right",
-        "type": "reaction",
-        "emoji": "\ud83e\udd2f",
-        "label": "BROWSER IN YOUR AGENT"
-      },
-      {
-        "at_phrase": "wrong move",
-        "graphic": "!",
-        "label": "WRONG SETUP",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "twenty minutes \u2014 agent did it in forty seconds",
-        "type": "headline",
-        "source": "SHOW HN",
-        "headline": "BROWSER MCP: CURSOR NOW CONTROLS YOUR BROWSER",
-        "subheadline": "20 min task \u2192 40 seconds"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "six hundred points",
-          "display": "616",
-          "label": "HN UPVOTES"
-        },
-        {
-          "phrase": "twenty minutes \u2014 agent did it in forty seconds",
-          "display": "40s",
-          "label": "VS 20 MIN MANUAL"
-        }
-      ],
-      "fun_phrases": [
-        "that's insane",
-        "finally",
-        "wrong move"
-      ],
-      "energy_words": [
-        "wild",
-        "right",
-        "insane"
-      ],
-      "broll_phrases": [
-        "cursor or claude code can literally control your browser",
-        "add browser mcp scoped to one project",
-        "separate python script"
-      ],
-      "broll_image_descriptions": [
-        "Dark-mode Cursor agent panel with a visible browser window being puppeted \u2014 address bar, a form being filled, no faces, compositor-safe lower third empty",
-        "Cursor IDE MCP config JSON file open, one project folder highlighted with Browser MCP entry scoped, dark theme, no legible personal data",
-        "Python browser automation script (Playwright/Selenium) grayed out with a red X overlay next to a clean MCP config \u2014 metaphor for replacing old approach"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_cutout"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "cursor or claude code",
-          "brand": "cursor"
-        },
-        {
-          "phrase": "claude code can literally",
-          "brand": "anthropic"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "that's insane, right",
-        "payoff": "finally, browser automation that doesn't need a separate python script"
-      }
-    },
-    "edit_template": "THREE_STEP_HOT_TAKE",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Hit 'six hundred points' with conviction."
-      },
-      {
-        "second": 4,
-        "phrase": "it's wild",
-        "action": "PAUSE 0.3s \u2014 let it land before moving"
-      },
-      {
-        "second": 9,
-        "phrase": "that's insane, right",
-        "action": "ENERGY UP \u2014 crust zoom fires here. Slight grin."
-      },
-      {
-        "second": 18,
-        "phrase": "wrong move",
-        "action": "PAUSE, point or shake head \u2014 make it physical"
-      },
-      {
-        "second": 28,
-        "phrase": "log into this site, grab the table, write it to a file",
-        "action": "Slow down slightly \u2014 this is the copyable move. Enunciate each step."
-      },
-      {
-        "second": 38,
-        "phrase": "twenty minutes",
-        "action": "PAUSE 0.3s before 'twenty minutes', then speed into 'forty seconds'"
-      },
-      {
-        "second": 48,
-        "phrase": "finally",
-        "action": "Smile \u2014 genuine relief energy"
-      },
-      {
-        "second": 52,
-        "action": "CLOSER \u2014 slow down, land 'That's all it is' with quiet confidence. Loop closed."
-      }
-    ],
-    "delivery_notes": "Fast hook, authority from word one. Mid-section slow down on the copyable move \u2014 viewers need to hear 'scope it to one project.' Numbers get a beat of silence before them. End on quiet confidence, not hype.",
-    "retention_notes": "Open loop planted at 'most people set up MCP wrong' \u2014 viewer stays to hear the fix. Crust zoom at 'that's insane, right' (~9s) spikes energy before the drop. Re-hook at 'the receipt' line mid-video. Loop closes on 'that's all it is' echoing the calm confidence from the hook.",
-    "filename_hint": "script_01_browser_mcp_just_changed.mp4",
-    "word_count": 134,
-    "estimated_seconds": 52,
-    "validation_score": 97,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "Signature phrase overused recently: 'that's all it is'"
-    ],
-    "story_score": 73,
-    "source_topic": "Show HN: Browser MCP \u2013 Automate your browser using Cursor, Claude, VS Code",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=43613194",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 1,
-    "date_generated": "2026-07-23"
-  },
-  {
-    "script_number": 2,
-    "territory": "Agent Workflows",
-    "script_type": "HACK",
-    "format_hint": "hack",
-    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
-    "work_pattern_id": "ai_brainstorm_ship_split",
-    "title_overlay": "OPENAI JUST OPENED THE DOOR",
-    "subtitle_overlay": "MCP support lands in Agents SDK \u2014 here's how to use it today",
-    "spoken_script": "OpenAI just added MCP support to their Agents SDK \u2014 and that changes how you wire tools to agents. Finally. Here's the thing \u2014 before this, connecting an external tool meant writing custom integration code every single time. Wrong approach, and exhausting. Now your agent can call any MCP server directly. One config block. That's all it is. You point the SDK at your MCP server URL, declare the tools you want exposed, and the agent discovers them automatically. Pure building \u2014 no glue code, no adapter layer. I tested this with a filesystem MCP and a web search MCP running together. The agent coordinated both without me writing a single routing function. Right? That's the receipt. Two tools, one agent, zero custom plumbing. OpenAI added MCP support \u2014 and your agent just got a lot smarter.",
-    "caption_hook": "OpenAI dropped MCP support in their Agents SDK and your agent workflows just changed \u2014 here's the one move to try today.",
-    "hashtags": [
-      "#MCPAgents",
-      "#OpenAI",
-      "#CursorIDE",
-      "#AgentSDK",
-      "#VibeCoding"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 2/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Drop your voice slightly on 'That's all it is' \u2014 let it land like a full stop.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "OpenAI just added MCP support to their Agents SDK \u2014 and that changes how you wire tools to agents.",
-    "open_loop_plant": "Here's the thing \u2014 before this, connecting an external tool meant writing custom integration code every single time.",
-    "open_loop_payoff": "Loop resolves when the receipt lands \u2014 two tools, one agent, zero custom plumbing \u2014 proving the earlier pain was real and is now gone.",
-    "loopback_closer": "OpenAI added MCP support \u2014 and your agent just got a lot smarter.",
-    "visual_cues": "Hook: Agents SDK dashboard showing MCP server connection config. Mid: split UI \u2014 filesystem MCP and web search MCP both active in one agent session. Closer: stat card showing '0 custom routing functions written'.",
-    "hook_visual": {
-      "tier": "fal",
-      "kind": "image_or_short_clip",
-      "prompt": "9:16 dark terminal UI showing OpenAI Agents SDK config block with MCP server URL and two tool declarations highlighted in green, no faces, dark lower third empty for speaker overlay",
-      "duration_s": 2.5,
-      "why": "Prove the SDK-to-MCP connection exists in the first 2 seconds \u2014 show the config, not a concept"
-    },
-    "visual_briefs": [
-      {
-        "tier": "fal",
-        "at_phrase": "point the sdk at your mcp server url",
-        "prompt": "Dark code editor showing a JSON config block: mcp_server_url field and tools array with two entries highlighted, no faces, compositor-safe dark lower third"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "0",
-        "label": "CUSTOM ROUTING FUNCTIONS"
-      },
-      {
-        "tier": "fal",
-        "at_phrase": "filesystem mcp and a web search mcp running together",
-        "prompt": "Split terminal view: left panel shows filesystem MCP tool call response, right panel shows web search MCP tool call response, both connected to one agent session, dark background, no faces"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "finally",
-        "type": "reaction",
-        "emoji": "\ud83c\udfaf",
-        "label": "FINALLY"
-      },
-      {
-        "at_phrase": "one config block",
-        "graphic": "1",
-        "label": "CONFIG BLOCK",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "two tools, one agent, zero custom plumbing",
-        "graphic": "0",
-        "label": "GLUE CODE WRITTEN",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "openai just added mcp support to their agents sdk",
-        "type": "headline",
-        "source": "HACKER NEWS",
-        "headline": "OPENAI ADDS MCP SUPPORT TO AGENTS SDK",
-        "subheadline": "807 points \u00b7 top of HN"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "two tools, one agent, zero custom plumbing",
-          "display": "0",
-          "label": "GLUE CODE"
-        }
-      ],
-      "fun_phrases": [
-        "finally",
-        "wrong",
-        "pure building"
-      ],
-      "energy_words": [
-        "right",
-        "finally",
-        "unless"
-      ],
-      "broll_phrases": [
-        "agents sdk config block",
-        "filesystem mcp and a web search mcp",
-        "agent coordinated both"
-      ],
-      "broll_image_descriptions": [
-        "OpenAI Agents SDK Python file open in dark IDE, MCP server URL string highlighted in config dict, no faces, dark lower third clear",
-        "Two terminal windows side by side \u2014 one showing filesystem tool response JSON, one showing web search result JSON, unified agent session header visible at top",
-        "Single agent run log in terminal showing sequential tool calls to two different MCP servers, green checkmarks beside each call, no faces"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_on_bg",
-        "presenter_cutout"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "openai just added mcp support",
-          "brand": "openai"
-        },
-        {
-          "phrase": "agents sdk",
-          "brand": "openai"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "two tools, one agent, zero custom plumbing"
-      }
-    },
-    "edit_template": "CONFESSION_STAT",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, confident. No smile warmup. Name the tool immediately."
-      },
-      {
-        "second": 4,
-        "phrase": "finally",
-        "action": "Hit this word hard \u2014 short pause before it, then punch it. Reaction graphic fires."
-      },
-      {
-        "second": 7,
-        "phrase": "here's the thing",
-        "action": "PAUSE 0.3s \u2014 this is the crust beat, energy up, zoom fires here"
-      },
-      {
-        "second": 15,
-        "phrase": "wrong",
-        "action": "Say it flat and dry \u2014 let the word do the work"
-      },
-      {
-        "second": 28,
-        "phrase": "pure building",
-        "action": "Slight smile, confident. This is the relief moment."
-      },
-      {
-        "second": 38,
-        "phrase": "two tools, one agent, zero custom plumbing",
-        "action": "SLOW DOWN \u2014 this is the receipt, speak each word clearly, stat graphic fires"
-      },
-      {
-        "second": 48,
-        "action": "CLOSER \u2014 drop energy slightly, land the loop-back line steady. Not excited. Certain."
-      }
-    ],
-    "delivery_notes": "Hook line fast and punchy \u2014 no warmup. 'Finally' should sound like genuine relief, not hype. 'That's all it is' lands flat and confident \u2014 that's the signature. Receipt line slow and deliberate. Closer is calm authority, not a shout.",
-    "retention_notes": "Open loop plants at 'here's the thing' \u2014 viewer wonders how bad the old way really was. Loop pays off at the receipt: zero custom routing functions, two live MCPs. Mid-video re-hook is 'Pure building \u2014 no glue code' which resets attention after the setup. Final line mirrors the opener word-for-word to close the arc cleanly.",
-    "filename_hint": "script_02_openai_just_opened_the.mp4",
-    "word_count": 137,
-    "estimated_seconds": 53,
-    "validation_score": 97,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "Signature phrase overused recently: 'that's all it is'"
-    ],
-    "story_score": 73,
-    "source_topic": "OpenAI adds MCP support to Agents SDK",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=43485566",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 2,
-    "date_generated": "2026-07-23"
-  },
-  {
-    "script_number": 3,
-    "territory": "Claude Code",
-    "script_type": "HACK",
-    "format_hint": "hack",
-    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
-    "work_pattern_id": "ai_brainstorm_ship_split",
-    "title_overlay": "CLAUDE 3.7 + CLAUDE CODE = UNFAIR",
-    "subtitle_overlay": "The setup most builders are sleeping on",
-    "spoken_script": "Claude 3.7 Sonnet inside Claude Code is pure building \u2014 and most people haven't flipped the right switch yet. Here's the thing: Claude Code defaults to an older model. You open the terminal, you start vibing, and you're not even on 3.7. That's insane. One fix. Run claude with the flag dash dash model claude dash 3 dash 7 dash sonnet \u2014 or set it in your dot claude config so every session opens on the new model automatically. That's it. Extended thinking kicks in on the hard problems. Multi-file edits land in one shot. I went from three back-and-forth correction rounds down to one. The receipt? About twenty minutes saved per hour of real coding. Claude Code is finally the tool it was supposed to be \u2014 but only if you actually tell it which brain to use.",
-    "caption_hook": "Claude Code is defaulting to the wrong model \u2014 here's the one flag that fixes it.",
-    "hashtags": [
-      "#ClaudeCode",
-      "#Claude37",
-      "#VibeCoding",
-      "#AITools",
-      "#CursorAlternative"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 3/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that's insane' like you genuinely can't believe it \u2014 quick pause before it, then land it flat.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "Claude 3.7 Sonnet inside Claude Code is pure building \u2014 and most people haven't flipped the right switch yet.",
-    "open_loop_plant": "most people haven't flipped the right switch yet",
-    "open_loop_payoff": "Resolved near the end when the exact config flag is named and the receipt drops \u2014 twenty minutes saved per hour.",
-    "loopback_closer": "Claude Code is finally the tool it was supposed to be \u2014 but only if you actually tell it which brain to use.",
-    "visual_cues": "Hook: Claude Code terminal with model flag visible. Mid: config file closeup showing model line. End: stat card showing 1 correction round vs 3.",
-    "hook_visual": {
-      "tier": "fal",
-      "kind": "image_or_short_clip",
-      "prompt": "Dark terminal window, Claude Code CLI running, model flag '--model claude-3-7-sonnet' typed in bright green text, 9:16 vertical frame, no faces, lower third empty for speaker overlay",
-      "duration_s": 2.5,
-      "why": "Prove the flag exists in the first 2 seconds \u2014 not an explainer, a receipt"
-    },
-    "visual_briefs": [
-      {
-        "tier": "fal",
-        "at_phrase": "claude code defaults to an older model",
-        "prompt": "Split-screen: left side shows older model label in Claude Code terminal, right side shows Claude 3.7 Sonnet label \u2014 dark background, no faces, lower third clear"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "20",
-        "label": "MINUTES SAVED / HR"
-      },
-      {
-        "tier": "fal",
-        "at_phrase": "set it in your dot claude config",
-        "prompt": "Close-up of a .claude config file open in a dark code editor, model field highlighted in yellow, no faces, lower third empty"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "that's insane",
-        "type": "reaction",
-        "emoji": "\ud83e\udd2f",
-        "label": "WRONG MODEL THIS WHOLE TIME"
-      },
-      {
-        "at_phrase": "three back-and-forth correction rounds down to one",
-        "graphic": "3\u21921",
-        "label": "CORRECTION ROUNDS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "about twenty minutes saved per hour of real coding",
-        "graphic": "20",
-        "label": "MINUTES SAVED / HR",
-        "type": "stat",
-        "side": "left"
-      },
-      {
-        "at_phrase": "set it in your dot claude config",
-        "type": "headline",
-        "source": "CLAUDE CODE",
-        "headline": "MODEL: CLAUDE-3-7-SONNET",
-        "subheadline": "Set once. Every session upgraded."
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "three back-and-forth correction rounds down to one",
-          "display": "3\u21921",
-          "label": "CORRECTION ROUNDS"
-        },
-        {
-          "phrase": "about twenty minutes saved per hour of real coding",
-          "display": "20",
-          "label": "MIN SAVED / HR"
-        }
-      ],
-      "fun_phrases": [
-        "pure building",
-        "that's insane",
-        "finally"
-      ],
-      "energy_words": [
-        "right",
-        "finally",
-        "actually"
-      ],
-      "broll_phrases": [
-        "claude code terminal",
-        "dot claude config",
-        "multi-file edits land in one shot"
-      ],
-      "broll_image_descriptions": [
-        "Claude Code CLI terminal dark screen, green text streaming, model flag visible in command line, no faces",
-        "Dark code editor showing .claude config file with model field highlighted, no legible personal info, lower third empty",
-        "Side-by-side diff view in dark IDE showing multi-file changes applied simultaneously, no faces, dark lower third"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_cutout",
-        "immersive_flash"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "claude code",
-          "brand": "anthropic"
-        },
-        {
-          "phrase": "claude 3.7 sonnet",
-          "brand": "anthropic"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "pure building",
-        "payoff": "only if you actually tell it which brain to use"
-      }
-    },
-    "edit_template": "CONFESSION_STAT",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean forward, fast, confident. Zero warmup. Hit the first word hard."
-      },
-      {
-        "second": 4,
-        "phrase": "pure building",
-        "action": "ENERGY UP \u2014 crust zoom fires here. Land it like a fact, not hype."
-      },
-      {
-        "second": 9,
-        "phrase": "that's insane",
-        "action": "PAUSE 0.3s before it. Say it flat \u2014 let it land."
-      },
-      {
-        "second": 18,
-        "phrase": "dash dash model claude dash 3 dash 7 dash sonnet",
-        "action": "Slow down. Speak each segment clearly. Viewer is copying this."
-      },
-      {
-        "second": 28,
-        "phrase": "dot claude config",
-        "action": "Slight emphasis \u2014 this is the power move, not just the flag."
-      },
-      {
-        "second": 38,
-        "phrase": "about twenty minutes saved per hour",
-        "action": "PAUSE before 'twenty'. Speak the number clearly."
-      },
-      {
-        "second": 48,
-        "phrase": "finally the tool it was supposed to be",
-        "action": "Warmth up slightly \u2014 then land the closer with confidence."
-      },
-      {
-        "second": 53,
-        "action": "CLOSER \u2014 slow down, lock eyes with camera, loop-back line delivered like a quiet truth."
-      }
-    ],
-    "delivery_notes": "Fast hook, no smile warmup. 'That's insane' lands flat \u2014 don't oversell it. Slow down on the flag syntax so viewers can actually copy it. 'Twenty minutes' gets a beat before the number. Final line: quiet confidence, not hype.",
-    "retention_notes": "Open loop planted in second 1 ('haven't flipped the right switch') \u2014 stays unresolved until the config tip lands at second 28. Mid-video re-hook: 'That's insane' at second 9 spikes energy before the tutorial beat. Rhythm alternates: short confession \u2192 longer explanation \u2192 short punch. Loop-back closer echoes 'right switch' with 'which brain to use.'",
-    "filename_hint": "script_03_claude_37_claude_code.mp4",
-    "word_count": 139,
-    "estimated_seconds": 53,
-    "validation_score": 92,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "1 sentence(s) exceed 25 words",
-      "Missing signature phrase (Right?, That's all it is., etc.)"
-    ],
-    "story_score": 73,
-    "source_topic": "Claude 3.7 Sonnet and Claude Code",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=43163011",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 3,
-    "date_generated": "2026-07-23"
-  },
-  {
-    "script_number": 4,
-    "territory": "Claude Code",
-    "script_type": "HACK",
-    "format_hint": "hack",
-    "creator_take_anchor": "I plan in one AI tool and ship in my IDE \u2014 brainstorm wide, execute narrow.",
-    "work_pattern_id": "ai_brainstorm_ship_split",
-    "title_overlay": "CLAUDE CODE UNPACKED",
-    "subtitle_overlay": "The visual guide HN went wild for \u2014 here's the one move",
-    "spoken_script": "Claude Code hit eleven hundred points on Hacker News this week \u2014 and most people missed the actually useful part. Here's the thing: Claude Code isn't just a terminal chatbot. It reads your entire repo as context before it touches a single file. That's wild. So the move is this \u2014 open Claude Code, type slash init, and let it map your project first. Pure building after that. It writes a CLAUDE.md file \u2014 your persistent memory \u2014 so every future session starts with full context, not a blank slate. No hallucinations from a cold start. No re-explaining your stack every time. That's the secret most builders skip. One slash command, thirty seconds, and Claude Code finally knows what you're actually building. That's all it is.",
-    "caption_hook": "Claude Code hit 1,100 pts on HN \u2014 and the one move everyone missed takes 30 seconds.",
-    "hashtags": [
-      "#ClaudeCode",
-      "#VibeCoding",
-      "#AITools",
-      "#Cursor",
-      "#BuildWithAI"
-    ],
-    "series_note": "Cursor + Claude Mashups \u00b7 Ep 4/8",
-    "series_id": "cursor_claude_mashups_2026w30",
-    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Drop your voice slightly on 'that's the secret' \u2014 let that line land before moving to the closer.",
-    "hook_type": "OPEN LOOP",
-    "opening_line": "Claude Code hit eleven hundred points on Hacker News this week \u2014 and most people missed the actually useful part.",
-    "open_loop_plant": "most people missed the actually useful part",
-    "open_loop_payoff": "Resolved at 'that's the secret most builders skip' \u2014 the /init + CLAUDE.md move is the missed part from the HN thread",
-    "loopback_closer": "That's all it is.",
-    "visual_cues": "Hook: Claude Code terminal with repo scan animation. Mid: CLAUDE.md file appearing in file tree. Stat: 1100 HN points overlay. Closer: persistent memory icon or file stamp.",
-    "hook_visual": {
-      "tier": "fal",
-      "kind": "image_or_short_clip",
-      "prompt": "Dark terminal window showing Claude Code running slash init command, a CLAUDE.md file appearing in a minimal file tree sidebar, green cursor blinking \u2014 no faces, no generic AI imagery, dark lower third empty for speaker",
-      "duration_s": 2.5,
-      "why": "Proves the hack instantly \u2014 viewer sees the exact command and file output in the first two seconds"
-    },
-    "visual_briefs": [
-      {
-        "tier": "fal",
-        "at_phrase": "reads your entire repo as context",
-        "prompt": "Top-down diagram of a repo file tree with a soft scan line sweeping across folders \u2014 dark background, no text legible, no faces, lower third clear"
-      },
-      {
-        "tier": "remotion",
-        "type": "stat",
-        "display": "1,100",
-        "label": "HN POINTS THIS WEEK"
-      },
-      {
-        "tier": "fal",
-        "at_phrase": "writes a CLAUDE.md file",
-        "prompt": "Minimal dark code editor showing a CLAUDE.md file open with a blinking cursor \u2014 file tree visible on left, no legible code content, lower third empty"
-      }
-    ],
-    "visual_moments": [
-      {
-        "at_phrase": "eleven hundred points on hacker news",
-        "graphic": "1,100",
-        "label": "HN POINTS",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "that's wild",
-        "type": "reaction",
-        "emoji": "\ud83e\udd2f",
-        "label": "FULL REPO CONTEXT"
-      },
-      {
-        "at_phrase": "type slash init",
-        "graphic": "/init",
-        "label": "THE COMMAND",
-        "type": "step",
-        "side": "left"
-      },
-      {
-        "at_phrase": "writes a CLAUDE.md file",
-        "graphic": "CLAUDE.md",
-        "label": "PERSISTENT MEMORY",
-        "type": "stat",
-        "side": "right"
-      },
-      {
-        "at_phrase": "thirty seconds",
-        "graphic": "30s",
-        "label": "SETUP TIME",
-        "type": "stat",
-        "side": "left"
-      }
-    ],
-    "video_triggers": {
-      "stat_phrases": [
-        {
-          "phrase": "eleven hundred points",
-          "display": "1,100",
-          "label": "HN POINTS"
-        },
-        {
-          "phrase": "thirty seconds",
-          "display": "30s",
-          "label": "SETUP TIME"
-        }
-      ],
-      "fun_phrases": [
-        "that's wild",
-        "pure building",
-        "that's the secret"
-      ],
-      "energy_words": [
-        "finally",
-        "right",
-        "actually"
-      ],
-      "broll_phrases": [
-        "reads your entire repo",
-        "slash init",
-        "persistent memory"
-      ],
-      "broll_image_descriptions": [
-        "Animated top-down repo file tree with a soft green scan line sweeping across folders \u2014 dark background, no legible text, lower third clear for speaker",
-        "Dark terminal window with the text '/init' typed at a Claude Code prompt, cursor blinking \u2014 no faces, minimal UI, lower third empty",
-        "Dark code editor showing CLAUDE.md open in a tab, file tree on left \u2014 no legible content, clean lower third for speaker overlay"
-      ],
-      "broll_layouts": [
-        "presenter_on_bg",
-        "presenter_cutout",
-        "presenter_on_bg"
-      ],
-      "logo_phrases": [
-        {
-          "phrase": "claude code",
-          "brand": "anthropic"
-        },
-        {
-          "phrase": "hacker news",
-          "brand": "ycombinator"
-        }
-      ],
-      "beat_phrases": {
-        "crust": "here's the thing",
-        "payoff": "that's the secret most builders skip"
-      }
-    },
-    "edit_template": "CONFESSION_STAT",
-    "recording_cues": [
-      {
-        "second": 0,
-        "action": "HOOK \u2014 lean in, fast, no smile warmup. Land 'eleven hundred' with weight."
-      },
-      {
-        "second": 4,
-        "phrase": "here's the thing",
-        "action": "PAUSE 0.3s then ENERGY UP \u2014 crust zoom fires here"
-      },
-      {
-        "second": 10,
-        "phrase": "that's wild",
-        "action": "Hit it short and flat \u2014 let the reaction graphic do the work"
-      },
-      {
-        "second": 16,
-        "phrase": "slash init",
-        "action": "Say it clearly, enunciate the slash \u2014 viewer must hear the command"
-      },
-      {
-        "second": 22,
-        "phrase": "pure building",
-        "action": "Energy spike \u2014 fun phrase lands here"
-      },
-      {
-        "second": 33,
-        "phrase": "that's the secret most builders skip",
-        "action": "Slow down \u2014 this is the open loop payoff, let it breathe"
-      },
-      {
-        "second": 44,
-        "phrase": "thirty seconds",
-        "action": "PAUSE before the number, speak clearly"
-      },
-      {
-        "second": 50,
-        "action": "CLOSER \u2014 drop pace, land 'that's all it is' quiet and confident"
-      }
-    ],
-    "delivery_notes": "Open fast and confident \u2014 no warmup. Mid-video slow slightly at 'that's the secret' for emphasis. Closer is quiet authority, not hype. 'Slash init' must be crisp and distinct \u2014 it is the copyable move.",
-    "retention_notes": "Open loop planted at 'most people missed the actually useful part' \u2014 resolves at 'that's the secret most builders skip.' Mid-video re-hook at 'no hallucinations from a cold start' \u2014 reframes the pain before closing. Rhythm alternates: long setup line, short punch (that's wild), long explanation, short payoff (that's all it is).",
-    "filename_hint": "script_04_claude_code_unpacked.mp4",
-    "word_count": 126,
-    "estimated_seconds": 48,
-    "validation_score": 97,
-    "validation_passed": true,
-    "validation_errors": [],
-    "validation_warnings": [
-      "Signature phrase overused recently: 'that's all it is'"
-    ],
-    "story_score": 73,
-    "source_topic": "Claude Code Unpacked : A visual guide",
-    "source_type": "social",
-    "source": "trending",
-    "custom_visual_overrides": [],
-    "content_phase": "growth",
-    "source_url": "https://news.ycombinator.com/item?id=47597085",
-    "source_platform": "hackernews",
-    "series_title": "Cursor + Claude Mashups",
-    "episode_index": 4,
-    "date_generated": "2026-07-23"
   }
 ]

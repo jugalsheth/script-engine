@@ -698,5 +698,45 @@
     "opening_line": "My LLM bill kept climbing and I couldn't figure out why \u2014 that's the truth.",
     "hook_type": "CONFESSION",
     "date": "2026-08-30"
+  },
+  {
+    "opening_line": "Wire Claude Code to a browser MCP and here's the thing \u2014 your agent can actually see your app while it builds it.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-06"
+  },
+  {
+    "opening_line": "Wire Claude Code to Higgsfield MCP and here's the thing \u2014 your product video generates while the agent is still writing the landing page.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-06"
+  },
+  {
+    "opening_line": "Shipping something visible this week \u2014 here's the thing \u2014 Claude Code wired to Higgsfield MCP does it in one session.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-06"
+  },
+  {
+    "opening_line": "Browser MCP just dropped and here's the thing \u2014 your AI agent can now click, scroll, fill forms, and scrape pages without you touching the mouse.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-06"
+  },
+  {
+    "opening_line": "Cursor wired to an MCP server is pure building \u2014 and most people skip the setup because they think it's hard.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-06"
+  },
+  {
+    "opening_line": "Drop a dot-cursor-rules file in your project root \u2014 that's the secret most builders skip.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-06"
+  },
+  {
+    "opening_line": "Eighty builders on Hacker News are shipping agents with mcp-agent \u2014 and here's the thing \u2014 it's pure building.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-06"
+  },
+  {
+    "opening_line": "I used to plan and build inside Cursor \u2014 and honestly, that was wrong.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-06"
   }
 ]
