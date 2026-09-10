@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "updated_at": "2026-07-28T00:45:11.899571+00:00",
+  "default_hook_style": "face+text",
+  "default_edit_pattern": "face_then_screen",
+  "taste_tags": [
+    "natural_home_lighting",
+    "chest_up_talking_head",
+    "dark_ui_broll",
+    "slow_deliberate_pacing",
+    "slow_pacing",
+    "talking_head_authority",
+    "bottom_safe_text",
+    "hard_cut_pacing",
+    "bottom_safe_placement",
+    "chest_up_intimate"
+  ],
+  "recipes": [
+    {
+      "id": "FACE_HOOK_SCREEN_PROOF",
+      "when": "HACK/TIP with copyable UI move",
+      "hook": "Chest-up face + bold top-third hook text for 1.5–2.5s, then hard cut to screen record",
+      "mid": "Screen record on the exact settings path; Remotion stat on the receipt number",
+      "capture": [
+        "talking_head mp4",
+        "1–2 UI screenshots or 10s screen record"
+      ],
+      "remotion": [
+        "stat overlay",
+        "reaction at frustration beat",
+        "headline on copyable move"
+      ],
+      "required_beats": [
+        "hook_hero_or_title",
+        "rehook",
+        "proof_fullscreen",
+        "receipt_stat",
+        "closer_zoom"
+      ]
+    },
+    {
+      "id": "CONFESSION_STAT",
+      "when": "CONFESSION / micro-story with number receipt",
+      "hook": "Face close-up, no text first second — emotion sells; stat pops at payoff phrase",
+      "mid": "Mostly face; optional single UI screenshot as proof",
+      "capture": [
+        "talking_head mp4",
+        "optional one receipt screenshot"
+      ],
+      "remotion": [
+        "stat at receipt",
+        "reaction at confession beat"
+      ],
+      "required_beats": [
+        "hook_hero_or_title",
+        "struggle_fx",
+        "receipt_stat",
+        "closer_zoom"
+      ]
+    },
+    {
+      "id": "WALKTHROUGH",
+      "when": "Tool install / step process (Part X series style)",
+      "hook": "Face + series hook text box at top; transition to full-screen UI early",
+      "mid": "Continuous screen record with minimal face return",
+      "capture": [
+        "talking_head 5–8s",
+        "screen record of full flow"
+      ],
+      "remotion": [
+        "step labels optional — prefer native UI"
+      ],
+      "required_beats": [
+        "hook_hero_or_title",
+        "early_fullscreen_ui",
+        "closer_zoom"
+      ]
+    }
+  ],
+  "hook_visual_defaults": {
+    "tier": "higgsfield",
+    "kind": "image_or_short_clip",
+    "duration_s": 2.5,
+    "prompt_rules": [
+      "9:16 product UI or terminal — not abstract AI brain",
+      "Lower third clear for face overlay if hook is split",
+      "Name the exact tool (Cursor, Claude Code, etc.)"
+    ]
+  },
+  "anti_patterns": [
+    "Avoid over-reliance on on-screen captions; this reel leans heavily on text, which can feel text-heavy for short-form",
+    "Avoid slow pacing if targeting global/fast-scroll audiences; 11s-per-shot is meditative but may lose impatient viewers",
+    "Avoid minimal branding/watermark presence; creator relies on face recognition rather than logo lock",
+    "Overly stylized animated brain graphics can read cheesy if not paired with serious voiceover—balance abstract AI visuals with grounded face time",
+    "Hindi/Urdu voiceover + Hindi/English mixed captions create friction for global audience; Jugal's English-first strategy may need subtitle clarity",
+    "Talking-head fatigue: 5+ frames of face risks scroll-past; lab footage saves it, but short-form needs 2-3 more visual breaks",
+    "Don't over-animate the screen swaps—static hard cuts feel more professional and credible than flashy transitions in educational content",
+    "Avoid cluttering the face with too many overlays; here, the 2 card PIPs work because they're clean, boxed, and placed in safe corners",
+    "Don't use generic stock music or B-roll; the face + named tools + branded UI is the payload—anything flashy dilutes authority",
+    "Over-reliance on one static shot; even slow-paced educational content benefits from subtle angle/framing shifts or cutaways",
+    "Minimal personality/humor in tone — this works for some audiences but risks losing Gen-Z viewers accustomed to faster, more irreverent ed-tech (e.g., MoocLab, @lex_fridman style)",
+    "No CTA or retention loop visible — 'watch till the end' in caption but no preview of payoff; could add teaser frame or end-screen element",
+    "Avoid heavy emoji or sticker overlays that compete with on-screen UI clarity — this works because graphics are minimal and intentional",
+    "Avoid rapid montage or jump-cuts; the slow deliberate pacing relies on creator credibility, not editing flashiness",
+    "Avoid music-driven beat-matching; this narrator-forward format needs clean audio focus",
+    "Avoid rapid montage or jump-cuts; this creator's strength is *clarity*, not hype—slow, methodical walkthrough fits the educational tone",
+    "Avoid heavy emoji or animated stickers on the talking-head portions—keeps the focus on facial expression and the hack itself",
+    "Avoid loud background music or dramatic sound design; the value is in the words and visuals, not production theater",
+    "Avoid standing lecture feel—Harper succeeds because she's warm and eye-contacting; don't default to voice-over + broll",
+    "Don't overload text density; this thrives on 4-6 word captions (not full sentences)"
+  ],
+  "steal_from_viral": [
+    {
+      "creator": "Parthknowsai",
+      "technique": "incomplete hook text creates open loop",
+      "likes": 177730
+    },
+    {
+      "creator": "Parthknowsai",
+      "technique": "close-up chest-up framing increases intimacy",
+      "likes": 177730
+    },
+    {
+      "creator": "Parthknowsai",
+      "technique": "hand gestures mid-sentence add urgency",
+      "likes": 177730
+    },
+    {
+      "creator": "Parthknowsai",
+      "technique": "high-contrast white text on dark clothing pops",
+      "likes": 177730
+    },
+    {
+      "creator": "Magan | Building in Public",
+      "technique": "Sentence fragmentation (incomplete text = must watch)",
+      "likes": 175741
+    },
+    {
+      "creator": "Magan | Building in Public",
+      "technique": "Hands-in-frame with colorful objects = craft/creative energy",
+      "likes": 175741
+    },
+    {
+      "creator": "Magan | Building in Public",
+      "technique": "Handwritten/minimal text style = personal, DIY tone",
+      "likes": 175741
+    },
+    {
+      "creator": "Magan | Building in Public",
+      "technique": "Outdoor daylight = authenticity vs polished studio",
+      "likes": 175741
+    },
+    {
+      "creator": "Aditya Singh Sisodiya",
+      "technique": "Curiosity gap via split caption across frames",
+      "likes": 86929
+    },
+    {
+      "creator": "Aditya Singh Sisodiya",
+      "technique": "Alternating face/logo pattern creates rhythm without fast cuts",
+      "likes": 86929
+    },
+    {
+      "creator": "Aditya Singh Sisodiya",
+      "technique": "Neon gradient logos on dark backgrounds inject visual energy",
+      "likes": 86929
+    },
+    {
+      "creator": "Aditya Singh Sisodiya",
+      "technique": "Centered composition + simple framing maximizes face legibility",
+      "likes": 86929
+    },
+    {
+      "creator": "Kushank Aggarwal | Your Chief AI Officer",
+      "technique": "bold white text box on top third (high-contrast, reads instantly)",
+      "likes": 70113
+    },
+    {
+      "creator": "Kushank Aggarwal | Your Chief AI Officer",
+      "technique": "series branding ('part 7') signals repeat-viewer bait",
+      "likes": 70113
+    },
+    {
+      "creator": "Kushank Aggarwal | Your Chief AI Officer",
+      "technique": "hand gesture adds kinetic energy to talking head",
+      "likes": 70113
+    },
+    {
+      "creator": "Kushank Aggarwal | Your Chief AI Officer",
+      "technique": "natural home setting (relatable, not overly produced)",
+      "likes": 70113
+    },
+    {
+      "creator": "Sri Nithya Thimmaraju",
+      "technique": "Day 01/50 counter creates series expectation and FOMO",
+      "likes": 36283
+    },
+    {
+      "creator": "Sri Nithya Thimmaraju",
+      "technique": "Bold white bottom-safe caption mirrors YouTube Shorts convention",
+      "likes": 36283
+    },
+    {
+      "creator": "Sri Nithya Thimmaraju",
+      "technique": "Chest-up framing with hand gesture adds explanatory physicality",
+      "likes": 36283
+    },
+    {
+      "creator": "Sri Nithya Thimmaraju",
+      "technique": "Natural home lighting feels authentic vs. sterile studio",
+      "likes": 36283
+    },
+    {
+      "creator": "Shubham & Labhini Singla | Careers",
+      "technique": "glowing neon text overlay on simple background",
+      "likes": 35857
+    },
+    {
+      "creator": "Shubham & Labhini Singla | Careers",
+      "technique": "hand-held prop (robot head) creates tangibility",
+      "likes": 35857
+    },
+    {
+      "creator": "Shubham & Labhini Singla | Careers",
+      "technique": "contrasting color (circuit-board teal) draws eye",
+      "likes": 35857
+    },
+    {
+      "creator": "Shubham & Labhini Singla | Careers",
+      "technique": "face fills frame—personal trust angle",
+      "likes": 35857
+    },
+    {
+      "creator": "The Sheryians Coding School",
+      "technique": "bold centered caption in white box outline",
+      "likes": 31108
+    },
+    {
+      "creator": "The Sheryians Coding School",
+      "technique": "deliberate hand gesture pointing",
+      "likes": 31108
+    },
+    {
+      "creator": "The Sheryians Coding School",
+      "technique": "high-contrast red environment vs. dark code later",
+      "likes": 31108
+    },
+    {
+      "creator": "The Sheryians Coding School",
+      "technique": "direct eye contact with slight lean-in",
+      "likes": 31108
+    },
+    {
+      "creator": "Robert Gutierrez",
+      "technique": "Orbiting brand logos (visual metaphor for rotating subscription costs)",
+      "likes": 29575
+    },
+    {
+      "creator": "Robert Gutierrez",
+      "technique": "All-caps bold white center text (high contrast, mobile-safe)",
+      "likes": 29575
+    },
+    {
+      "creator": "Robert Gutierrez",
+      "technique": "Chest-up framing keeps face large; outdoor natural light vs. dark UI = visual contrast",
+      "likes": 29575
+    },
+    {
+      "creator": "Robert Gutierrez",
+      "technique": "No jump cuts; slow rhythm allows viewer to absorb premise in first 2s",
+      "likes": 29575
+    },
+    {
+      "creator": "Harper Carroll  | AI Explained ✨",
+      "technique": "Centered talking head with high eye-contact framing",
+      "likes": 22384
+    },
+    {
+      "creator": "Harper Carroll  | AI Explained ✨",
+      "technique": "Bold white caption box positioned center for readability",
+      "likes": 22384
+    },
+    {
+      "creator": "Harper Carroll  | AI Explained ✨",
+      "technique": "Soft, warm home lighting (not clinical) builds approachability",
+      "likes": 22384
+    },
+    {
+      "creator": "Harper Carroll  | AI Explained ✨",
+      "technique": "Minimal text (one phrase per cut) prevents cognitive overload",
+      "likes": 22384
+    },
+    {
+      "creator": "Harper Carroll  | AI Explained ✨",
+      "technique": "Verbal markers ('but the really cool part') cue visual transitions",
+      "likes": 22384
+    },
+    {
+      "creator": "Maitri Mangal",
+      "technique": "branded environment establishes authority without intro voiceover",
+      "likes": 14699
+    },
+    {
+      "creator": "Maitri Mangal",
+      "technique": "person posed confidently in high-status location",
+      "likes": 14699
+    },
+    {
+      "creator": "Maitri Mangal",
+      "technique": "neon signage adds visual punch over generic interview setting",
+      "likes": 14699
+    },
+    {
+      "creator": "Taki Wong | AI For Business",
+      "technique": "Arrow graphic explicitly frames competitive comparison",
+      "likes": 11079
+    },
+    {
+      "creator": "Taki Wong | AI For Business",
+      "technique": "Exclamation-point tone in facial expression (slightly open mouth, forward lean) = energy",
+      "likes": 11079
+    },
+    {
+      "creator": "Taki Wong | AI For Business",
+      "technique": "Colored box text treatment (white bold on beige bg) ensures mobile readability",
+      "likes": 11079
+    },
+    {
+      "creator": "Taki Wong | AI For Business",
+      "technique": "Immediate speaker authority before screen content — trust building",
+      "likes": 11079
+    },
+    {
+      "creator": "Varun Saini",
+      "technique": "Open on dense, structured reference doc (high-information density = high-value signal)",
+      "likes": 10124
+    },
+    {
+      "creator": "Varun Saini",
+      "technique": "Minimal, clean layout (professional, not clickbait)",
+      "likes": 10124
+    },
+    {
+      "creator": "Varun Saini",
+      "technique": "Labeled sections in soft-colored boxes (visual hierarchy)",
+      "likes": 10124
+    },
+    {
+      "creator": "Varun Saini",
+      "technique": "Creator speaks over visuals (authority + narrative drive)",
+      "likes": 10124
+    }
+  ]
+}

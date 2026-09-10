@@ -1,0 +1,378 @@
+[
+  {
+    "script_number": 1,
+    "territory": "Cursor",
+    "script_type": "CONFESSION",
+    "format_hint": "confession",
+    "creator_take_anchor": "AI wasted his time when context window filled and it hallucinated \u2014 admits user error, not AI hate.",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "CURSOR WAS BILLING ME TWICE",
+    "subtitle_overlay": "The one toggle that stopped the bleed",
+    "spoken_script": "Cursor was sending my entire chat history on every single request. Every message. Every file. Every response \u2014 shipped again. That's insane. And I had no idea until my API bill showed up. Here's the thing \u2014 it's not a bug. It's a default setting. Finally, I figured it out. Go to Cursor Settings, open the Models tab, find 'Include conversation history' and toggle it off for long sessions. Wrong assumption: I thought the model was getting expensive. My bill dropped by almost forty percent the next day. Forty percent. I wasn't writing more code. I wasn't doing anything different. I was just sending the same tokens over and over. When AI starts burning money, check your context settings before you blame the model. That's all it is.",
+    "caption_hook": "Cursor was resending my entire chat history every request \u2014 one toggle cut my API bill by 40%.",
+    "hashtags": [
+      "#Cursor",
+      "#VibeCoding",
+      "#AITools",
+      "#CursorIDE",
+      "#BuildWithAI"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 17/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'that's insane' like you're genuinely annoyed \u2014 not performing it.",
+    "hook_type": "CONFESSION",
+    "opening_line": "Cursor was sending my entire chat history on every single request. Every message. Every file. Every response \u2014 shipped again. That's insane.",
+    "open_loop_plant": "I had no idea until my API bill showed up.",
+    "open_loop_payoff": "My bill dropped by almost forty percent the next day.",
+    "loopback_closer": "When AI starts burning money, check your context settings before you blame the model. That's all it is.",
+    "visual_cues": "Hook: Cursor IDE settings panel zoomed on conversation history toggle. Mid: API bill stat overlay at 40%. Closer: receipt screen with before/after token cost.",
+    "hook_visual": {
+      "tier": "higgsfield",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 vertical close-up of Cursor IDE Settings panel, Models tab visible, 'Include conversation history' toggle highlighted in red, dark background, no faces, lower third clear for speaker overlay",
+      "duration_s": 2.5,
+      "why": "Prove the settings move exists in the first 2 seconds \u2014 viewer knows this is real and copyable"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "Go to Cursor Settings, open the Models tab",
+        "prompt": "Cursor IDE settings screen, Models tab open, conversation history toggle visible, clean dark UI, no faces, lower third empty"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "40%",
+        "label": "API BILL DROP"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "I was just sending the same tokens over and over",
+        "prompt": "Abstract token stream visualization, repeated identical packets looping in a pipeline, dark background, no text, no faces"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "that's insane",
+        "type": "reaction",
+        "emoji": "\ud83e\udd2f",
+        "label": "EVERY. REQUEST."
+      },
+      {
+        "at_phrase": "almost forty percent the next day",
+        "graphic": "40%",
+        "label": "API BILL DROP",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "I wasn't writing more code",
+        "graphic": "!",
+        "label": "SAME WORK",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "check your context settings before you blame the model",
+        "type": "headline",
+        "source": "CURSOR SETTINGS",
+        "headline": "INCLUDE CONVERSATION HISTORY",
+        "subheadline": "Models tab \u2192 toggle off for long sessions"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "almost forty percent the next day",
+          "display": "40%",
+          "label": "API BILL DROP"
+        }
+      ],
+      "fun_phrases": [
+        "that's insane",
+        "finally",
+        "wrong"
+      ],
+      "energy_words": [
+        "right",
+        "truth",
+        "insane"
+      ],
+      "broll_phrases": [
+        "entire chat history on every single request",
+        "API bill showed up",
+        "same tokens over and over"
+      ],
+      "broll_image_descriptions": [
+        "Cursor chat panel with long scrolling conversation history, every message highlighted with red outline, dark IDE background, no faces, lower third clear",
+        "Close-up of a browser tab showing an API billing dashboard with a sharp cost spike on a line graph, dark UI, no legible personal data",
+        "Animated loop of identical token packets cycling through a pipeline repeatedly, abstract dark background, no text or faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_cutout",
+        "immersive_flash"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "Cursor Settings",
+          "brand": "cursor"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "my bill dropped by almost forty percent the next day"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in hard, clipped delivery, controlled frustration. No smile warmup."
+      },
+      {
+        "second": 4,
+        "phrase": "that's insane",
+        "action": "PAUSE 0.3s \u2014 hit this like genuine disbelief, not performance"
+      },
+      {
+        "second": 8,
+        "phrase": "here's the thing",
+        "action": "ENERGY UP \u2014 crust zoom fires here, slight forward lean"
+      },
+      {
+        "second": 18,
+        "phrase": "find 'Include conversation history' and turn it off",
+        "action": "Slow down \u2014 this is the copyable move, let it land"
+      },
+      {
+        "second": 28,
+        "phrase": "almost forty percent the next day",
+        "action": "PAUSE before 'forty' \u2014 speak the number clearly, stat overlay fires"
+      },
+      {
+        "second": 38,
+        "phrase": "same tokens over and over",
+        "action": "Dry, almost annoyed \u2014 let the absurdity of it sit"
+      },
+      {
+        "second": 48,
+        "phrase": "Right? That's all it is.",
+        "action": "CLOSER \u2014 slow down completely, slight smile, loop-back landing"
+      }
+    ],
+    "delivery_notes": "Open fast and tight \u2014 the frustration is real, not performed. Slow down on the settings path (Models tab, toggle name). Hit the forty percent pause hard \u2014 that's the receipt. Close soft and dry. The last two sentences are the punchline, not a summary.",
+    "retention_notes": "Open loop plants at 'I had no idea until my API bill showed up' \u2014 viewer stays to find out what it cost. Mid-video re-hook at 'My bill dropped by almost forty percent' \u2014 stat overlay fires here to spike retention. Rhythm break between 'That's it.' and the bill reveal creates a beat pause that keeps attention. Loop resolves cleanly with the settings path + receipt before the closer.",
+    "filename_hint": "script_01_cursor_was_billing_me.mp4",
+    "word_count": 128,
+    "estimated_seconds": 49,
+    "validation_score": 80,
+    "validation_passed": false,
+    "validation_errors": [
+      "opening_line does not match first sentence of spoken_script",
+      "loopback_closer does not match final sentence of spoken_script"
+    ],
+    "validation_warnings": [],
+    "length_warning": "loopback_closer does not match final sentence of spoken_script",
+    "story_score": 65,
+    "soul_note": "Micro-story: didn't know \u2192 bill shock \u2192 one toggle \u2192 40% receipt. Yearning line embedded in surprise ('I wasn't doing anything different'). Uses all three fun_phrases (that's insane, finally, wrong) verbatim. No listicle language. Closes with loopback to opening tension. 141 words.",
+    "source_topic": "Cursor was sending my whole chat every request and nuking my API bill",
+    "source_type": "social",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "manual_preview",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 17
+  },
+  {
+    "script_number": 2,
+    "territory": "Claude Code",
+    "script_type": "CONFESSION",
+    "format_hint": "confession",
+    "creator_take_anchor": "AI wasted my time when context window filled and it hallucinated \u2014 admits user error, not AI hate",
+    "work_pattern_id": "context_window_discipline",
+    "title_overlay": "CLAUDE.MD FIXES AGENT AMNESIA",
+    "subtitle_overlay": "One file. No more forgotten stack.",
+    "spoken_script": "I ran Claude Code for a whole month without a CLAUDE.md file. And every single session \u2014 wrong framework, wrong conventions, wrong everything. I thought the model was failing me. Truth is, I was failing the model. Here's the thing: Claude Code reads CLAUDE.md automatically at session start. That's it. That's the secret. One file in your project root. I put my stack, my folder structure, my naming rules \u2014 all of it. Thirty lines, maybe five minutes to write. Claude stopped guessing. First session after I added it, zero corrections on conventions. Zero. Do this today \u2014 create CLAUDE.md in your root, drop your rules in plain English, commit it. That's all it is. One file and your agent finally remembers who you are.",
+    "caption_hook": "I blamed Claude Code for a month. The real problem was a missing file I didn't know existed.",
+    "hashtags": [
+      "#ClaudeCode",
+      "#VibeCoding",
+      "#AITools",
+      "#CursorAI",
+      "#BuildWithAI"
+    ],
+    "series_note": "Cursor + Claude Mashups \u00b7 Ep 18/8",
+    "series_id": "cursor_claude_mashups_2026w30",
+    "recording_tip": "Pause before numbers. First line with energy, not presentation voice. Hit 'Truth is' like a confession \u2014 slower, a beat of self-awareness before you accelerate into the fix.",
+    "hook_type": "CONFESSION",
+    "opening_line": "I ran Claude Code for a whole month without a CLAUDE.md file.",
+    "open_loop_plant": "I thought the model was failing me.",
+    "open_loop_payoff": "Truth is, I was failing the model \u2014 resolved when CLAUDE.md fix is revealed mid-script",
+    "loopback_closer": "One file and your agent finally remembers who you are.",
+    "visual_cues": "Hook: Claude Code terminal showing repeated wrong framework output. Mid: CLAUDE.md file open in editor with stack rules. Receipt: stat overlay \u2014 0 convention corrections after file added.",
+    "hook_visual": {
+      "tier": "fal",
+      "kind": "image_or_short_clip",
+      "prompt": "9:16 dark terminal screen showing Claude Code session, repeated wrong framework suggestions highlighted in red, CLAUDE.md file icon glowing in corner \u2014 no faces, dark lower third clear for speaker",
+      "duration_s": 2.5,
+      "why": "proves the pain in the first 2 seconds \u2014 wrong output is the conflict that creates want"
+    },
+    "visual_briefs": [
+      {
+        "tier": "fal",
+        "at_phrase": "wrong framework, wrong conventions, wrong everything",
+        "prompt": "Claude Code terminal output with framework name highlighted red, multiple correction comments visible, dark moody UI \u2014 no faces"
+      },
+      {
+        "tier": "remotion",
+        "type": "stat",
+        "display": "0",
+        "label": "CONVENTION CORRECTIONS"
+      },
+      {
+        "tier": "fal",
+        "at_phrase": "create CLAUDE.md in your root",
+        "prompt": "VS Code or Cursor file explorer showing CLAUDE.md in project root, file open with plain English stack rules visible \u2014 dark theme, no legible personal data"
+      }
+    ],
+    "visual_moments": [
+      {
+        "at_phrase": "wrong framework, wrong conventions, wrong everything",
+        "graphic": "!",
+        "label": "WRONG EVERY TIME",
+        "type": "stat",
+        "side": "left"
+      },
+      {
+        "at_phrase": "thirty lines, maybe five minutes to write",
+        "graphic": "5",
+        "label": "MINUTES TO FIX",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "zero corrections on conventions. zero",
+        "graphic": "0",
+        "label": "CONVENTION ERRORS",
+        "type": "stat",
+        "side": "right"
+      },
+      {
+        "at_phrase": "that's the secret",
+        "type": "reaction",
+        "emoji": "\ud83e\udd26",
+        "label": "ONE MONTH WASTED"
+      }
+    ],
+    "video_triggers": {
+      "stat_phrases": [
+        {
+          "phrase": "thirty lines, maybe five minutes to write",
+          "display": "5",
+          "label": "MINUTES TO WRITE"
+        },
+        {
+          "phrase": "zero corrections on conventions",
+          "display": "0",
+          "label": "CONVENTION ERRORS"
+        }
+      ],
+      "fun_phrases": [
+        "secret",
+        "truth",
+        "finally"
+      ],
+      "energy_words": [
+        "truth",
+        "wrong",
+        "right"
+      ],
+      "broll_phrases": [
+        "claude code terminal",
+        "project root folder",
+        "stack rules in plain english"
+      ],
+      "broll_image_descriptions": [
+        "Claude Code terminal session with repeated incorrect framework suggestions, red highlights on wrong output \u2014 dark theme, no faces, lower third clear",
+        "File explorer showing project root with CLAUDE.md file highlighted, clean dark IDE layout \u2014 no legible personal data",
+        "CLAUDE.md open in editor showing stack name, folder structure, naming conventions in plain text \u2014 dark theme, no faces"
+      ],
+      "broll_layouts": [
+        "presenter_on_bg",
+        "presenter_on_bg",
+        "presenter_cutout"
+      ],
+      "logo_phrases": [
+        {
+          "phrase": "claude code",
+          "brand": "anthropic"
+        }
+      ],
+      "beat_phrases": {
+        "crust": "here's the thing",
+        "payoff": "one file and your agent finally remembers who you are"
+      }
+    },
+    "edit_template": "CONFESSION_STAT",
+    "recording_cues": [
+      {
+        "second": 0,
+        "action": "HOOK \u2014 lean in, drop it like a confession. No warmup smile. Fast and honest."
+      },
+      {
+        "second": 4,
+        "phrase": "wrong framework, wrong conventions, wrong everything",
+        "action": "Slightly frustrated energy \u2014 this is the wound"
+      },
+      {
+        "second": 8,
+        "phrase": "truth is",
+        "action": "PAUSE 0.4s before 'Truth is' \u2014 slower, self-aware, then accelerate"
+      },
+      {
+        "second": 13,
+        "phrase": "here's the thing",
+        "action": "ENERGY UP \u2014 crust zoom fires. This is the turn."
+      },
+      {
+        "second": 20,
+        "phrase": "that's the secret",
+        "action": "Hit 'secret' with quiet confidence \u2014 not a shout, a reveal"
+      },
+      {
+        "second": 30,
+        "phrase": "thirty lines, maybe five minutes",
+        "action": "PAUSE before 'five' \u2014 speak number clearly"
+      },
+      {
+        "second": 38,
+        "phrase": "zero corrections on conventions. zero",
+        "action": "Say both 'zeros' \u2014 the second one lands harder. Let it sit."
+      },
+      {
+        "second": 48,
+        "action": "CLOSER \u2014 slow down, land the loop-back. Eye contact energy."
+      }
+    ],
+    "delivery_notes": "Open with confession energy \u2014 not shame, just honest. The turn at 'Truth is' is the soul beat of the script. Slow down there, then pick back up. 'Zero. Zero.' \u2014 two beats, let the second one breathe. Close with warmth, not hype.",
+    "retention_notes": "Open loop planted at 'I thought the model was failing me' \u2014 viewer waits for the real culprit. Loop resolves at 'Truth is, I was failing the model.' Mid-video re-hook at 'zero corrections on conventions. Zero.' \u2014 stat drop keeps watch time. Loopback closer ties confession to invitation.",
+    "filename_hint": "script_02_claudemd_fixes_agent_amnesia.mp4",
+    "word_count": 125,
+    "estimated_seconds": 48,
+    "validation_score": 100,
+    "validation_passed": true,
+    "validation_errors": [],
+    "validation_warnings": [],
+    "story_score": 65,
+    "source_topic": "I ran Claude Code for a month without CLAUDE.md and wondered why it forgot my stack",
+    "source_type": "story",
+    "source": "trending",
+    "custom_visual_overrides": [],
+    "content_phase": "growth",
+    "source_platform": "manual_preview",
+    "series_title": "Cursor + Claude Mashups",
+    "episode_index": 18
+  }
+]

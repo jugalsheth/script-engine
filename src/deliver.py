@@ -37,6 +37,8 @@ def _format_spoken_readable(spoken: str) -> str:
 
 
 def _format_minimal_script(script: dict) -> str:
+    from src.edit_brief import build_edit_brief, format_edit_brief_telegram
+
     number = script.get("script_number", "?")
     territory = _escape(script.get("territory", "General"))
     hook_type = _escape(script.get("hook_type", ""))
@@ -54,6 +56,9 @@ def _format_minimal_script(script: dict) -> str:
         "",
         f"📁 <code>{filename}</code> · ~{est_sec}s",
     ]
+    brief = script.get("edit_brief") or build_edit_brief(script)
+    capture_block = format_edit_brief_telegram(brief)
+    lines.extend(["", capture_block])
     return "\n".join(lines)
 
 

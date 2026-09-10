@@ -21,10 +21,13 @@ MAX_GENERATION_ATTEMPTS = 3
 MAX_WORDS = 145
 
 HOOK_TO_TEMPLATE = {
-    "OPEN LOOP": "THREE_STEP_HOT_TAKE",
-    "IDENTITY CALL": "THREE_STEP_HOT_TAKE",
-    "CONTRARIAN STRIKE": "THREE_STEP_HOT_TAKE",
+    "OPEN LOOP": "FACE_HOOK_SCREEN_PROOF",
+    "IDENTITY CALL": "FACE_HOOK_SCREEN_PROOF",
+    "CONTRARIAN STRIKE": "FACE_HOOK_SCREEN_PROOF",
     "CONFESSION": "CONFESSION_STAT",
+    "HOT TAKE": "FACE_HOOK_SCREEN_PROOF",
+    "PROOF": "FACE_HOOK_SCREEN_PROOF",
+    "LISTICLE": "WALKTHROUGH",
 }
 
 JSON_FIELDS = """
@@ -72,7 +75,7 @@ JSON_FIELDS = """
     "broll_image_descriptions": ["Cursor IDE agent panel with code diff", "Claude Code terminal with MCP tool call"],
     "beat_phrases": {"crust": "pure building", "payoff": "here's what makes it worth it"}
   },
-  "edit_template": "THREE_STEP_HOT_TAKE or CONFESSION_STAT",
+  "edit_template": "FACE_HOOK_SCREEN_PROOF | CONFESSION_STAT | WALKTHROUGH",
   "recording_cues": [
     {"second": 0, "action": "HOOK — lean in, fast, confident. No smile warmup."},
     {"second": 5, "phrase": "here's what's wild", "action": "PAUSE 0.3s then ENERGY UP — crust zoom fires"},
@@ -100,10 +103,16 @@ def _load_config_file(filename: str) -> str:
 
 
 def _build_system_prompt() -> str:
-    """Combine voice profile, creator POV bank, and hard content boundaries."""
+    """Combine voice profile, soul card, edit style, creator POV bank, and hard content boundaries."""
+    from src.edit_recipes import recipe_prompt_block
+
     parts = [
         _load_config_file("content_philosophy.txt"),
         _load_config_file("voice_profile.txt"),
+        _load_config_file("living_voice_card.md"),
+        _load_config_file("script_craft_inspiration.md"),
+        _load_config_file("living_edit_style_card.md"),
+        recipe_prompt_block(),
         _load_config_file("creator_takes.txt"),
         _load_config_file("work_patterns.txt"),
         _load_config_file("content_boundaries.txt"),
@@ -164,8 +173,9 @@ def _script_type_requirements(script_type: str, script_number: int, batch_size: 
             "- Middle = exact setup the viewer copies today\n"
             "- End = visible outcome / receipt\n"
             "- Prefer hook_type OPEN LOOP or CONFESSION\n"
-            "- edit_template: CONFESSION_STAT or THREE_STEP_HOT_TAKE\n"
+            "- edit_template: FACE_HOOK_SCREEN_PROOF (default) or WALKTHROUGH if install flow\n"
             "- hook_visual.tier: higgsfield when the hack produces a visual; else fal\n"
+            "- Hook visual = real tool UI proof, not abstract AI\n"
         )
     if script_type == "TIP":
         return (
@@ -173,6 +183,7 @@ def _script_type_requirements(script_type: str, script_number: int, batch_size: 
             "- One setting, shortcut, rule file, or prompt pattern\n"
             "- No three-step career advice\n"
             "- Receipt: time saved or error avoided\n"
+            "- edit_template: FACE_HOOK_SCREEN_PROOF\n"
             "- hook_visual.tier: fal\n"
         )
     if script_type == "BUILD":
@@ -194,7 +205,7 @@ def _script_type_requirements(script_type: str, script_number: int, batch_size: 
             "SCRIPT TYPE: CONFESSION\n"
             "- Admit a real fail: tokens, vibe theater, agent thrash\n"
             "- Land the fix with a named tool move\n"
-            "- hook_type: CONFESSION; edit_template: CONFESSION_STAT\n"
+            "- hook_type: CONFESSION; edit_template: CONFESSION_STAT (required)\n"
         )
     if script_type == "STORY_REACTION":
         return (
@@ -349,8 +360,11 @@ def _normalize_script(script: dict) -> dict:
     if not isinstance(script.get("visual_briefs"), list):
         script["visual_briefs"] = []
 
-    hook = script.get("hook_type", "OPEN LOOP")
-    script.setdefault("edit_template", HOOK_TO_TEMPLATE.get(hook, "THREE_STEP_HOT_TAKE"))
+    from src.edit_recipes import apply_recipe_to_script
+    from src.edit_beats import apply_edit_beats
+
+    apply_recipe_to_script(script)
+    apply_edit_beats(script)
     if st:
         script.setdefault("format_hint", st.lower() if st != "ACTIONABLE_NEWS" else "news")
 
@@ -397,7 +411,7 @@ async def _voice_rewrite_pass(
     topic: dict,
     validation: ValidationResult,
 ) -> dict | None:
-    """Second pass: tighten spoken_script while preserving trigger phrases."""
+    """Second pass: soul + ear-test rewrite while preserving trigger phrases."""
     triggers = script.get("video_triggers") or {}
     trigger_json = json.dumps(
         {
@@ -409,33 +423,64 @@ async def _voice_rewrite_pass(
         indent=2,
     )
     voice_samples = _load_config_file("voice_samples.txt")
+    voice_card = _load_config_file("living_voice_card.md")
     creator_takes = _load_config_file("creator_takes.txt")
+    spoken = script.get("spoken_script") or ""
     prompt = (
-        "Rewrite ONLY the spoken_script field for a verbatim teleprompter read.\n"
-        f"Target: 130-{MAX_WORDS} words. Short punchy sentences. Alternate long and short.\n"
-        "Sound like Jugal: third-language clarity, energetic storyteller, not essay.\n"
+        "Rewrite ONLY the spoken_script for a verbatim teleprompter read.\n"
+        f"Target: 130-{MAX_WORDS} words.\n\n"
+        "SOUL GATES (must pass or rewrite again mentally before returning):\n"
+        "- First 3 seconds create WANT (curiosity/stakes/waste/obsession) — not a memo.\n"
+        "- Prefer micro-story (tried→broke→one move→receipt) over listicle.\n"
+        "- At least one yearning/honesty line. Contractions. Fragments OK.\n"
+        "- BAN: Step one/two/three stacks; furthermore; leverage; delve; 'in this video'.\n"
+        "- If it sounds like documentation, it fails — add story pressure.\n"
+        "- Keep named tool + copyable move + receipt intact.\n\n"
+        "Sound like Jugal: third-language clarity, energetic peer storyteller.\n"
         "Keep EVERY trigger phrase EXACTLY as listed — do not paraphrase them.\n"
         "Update opening_line, loopback_closer, open_loop_plant, open_loop_payoff to match.\n"
-        "Include 1-2 signature phrases from: Right?, That's all it is., The truth is, Figure it out.\n"
+        "Include at most 1-2 signature phrases from: Right?, That's all it is., The truth is, Figure it out.\n"
         "No banned phrases: here's what's wild, hey guys, I analyzed N posts, interview prep language.\n\n"
         f"VALIDATION ISSUES TO FIX:\n{_validation_feedback(validation)}\n\n"
         f"TRIGGERS (must appear verbatim in spoken_script):\n{trigger_json}\n\n"
+        f"LIVING SOUL VOICE CARD:\n{(voice_card or '')[:3500]}\n\n"
         f"VOICE SAMPLES:\n{voice_samples[:2500]}\n\n"
-        f"CREATOR VOICE:\n{creator_takes[:1500]}\n\n"
-        f"CURRENT spoken_script ({len((script.get('spoken_script') or '').split())} words):\n"
-        f"{script.get('spoken_script', '')}\n\n"
+        f"CREATOR VOICE:\n{creator_takes[:1200]}\n\n"
+        f"CURRENT spoken_script ({len(spoken.split())} words):\n"
+        f"{spoken}\n\n"
         "Return ONLY JSON: {\"spoken_script\", \"opening_line\", \"loopback_closer\", "
-        "\"open_loop_plant\", \"open_loop_payoff\"}"
+        "\"open_loop_plant\", \"open_loop_payoff\", \"soul_note\"}"
     )
     try:
         response = await client.messages.create(
             model=HAIKU_MODEL,
-            max_tokens=1200,
+            max_tokens=1400,
             messages=[{"role": "user", "content": prompt}],
         )
         parsed = _parse_script_json(response.content[0].text)
         if not parsed or not parsed.get("spoken_script"):
             return None
+        rewritten = parsed["spoken_script"]
+        lower = rewritten.lower()
+        # Soft retry once if still listicle-robotic
+        if ("step one" in lower and "step two" in lower) or lower.startswith(
+            ("in this video", "today i want", "today we're going")
+        ):
+            print("   Voice rewrite still robotic — second soul pass…")
+            prompt2 = (
+                prompt
+                + "\n\nYOUR PREVIOUS REWRITE FAILED SOUL GATES. "
+                "Rewrite again with stronger yearning + micro-story. NO step stacks.\n"
+                f"PREVIOUS:\n{rewritten}\n"
+            )
+            response = await client.messages.create(
+                model=HAIKU_MODEL,
+                max_tokens=1400,
+                messages=[{"role": "user", "content": prompt2}],
+            )
+            parsed2 = _parse_script_json(response.content[0].text)
+            if parsed2 and parsed2.get("spoken_script"):
+                parsed = parsed2
         for key in (
             "spoken_script",
             "opening_line",
@@ -445,6 +490,8 @@ async def _voice_rewrite_pass(
         ):
             if parsed.get(key):
                 script[key] = parsed[key]
+        if parsed.get("soul_note"):
+            script["soul_note"] = parsed["soul_note"]
         return script
     except Exception as exc:
         print(f"   Voice rewrite failed: {exc}")
@@ -622,7 +669,8 @@ def _video_contract_block() -> str:
         "broll_layouts: optional parallel array — presenter_on_bg (default), presenter_cutout (hook hero), immersive_flash (0.5s punch-in).\n"
         "beat_phrases.crust MUST be spoken in the first 15 seconds (e.g. 'step one', 'here's the thing', 'that's not how it works').\n"
         "recording_cues: 5-8 items — teleprompter sheet with second targets, phrases, and actions.\n"
-        "edit_template: THREE_STEP_HOT_TAKE for 3-step scripts, CONFESSION_STAT for confession hooks.\n"
+        "edit_template: FACE_HOOK_SCREEN_PROOF (default hack/tip), CONFESSION_STAT (confession), "
+        "WALKTHROUGH (install/series). Slow face→screen→face; real UI proof.\n"
     )
 
 
@@ -662,15 +710,19 @@ def _intro_requirements(brand_episode: int) -> str:
 
 def _growth_requirements() -> str:
     return (
-        "CONTENT PHASE: GROWTH — VIBE CODING / NEVER BORING\n"
+        "CONTENT PHASE: GROWTH — VIBE CODING / NEVER BORING / SOUL FIRST\n"
         "Weekly tips, hacks, builds, actionable news. Viewer acts in ≤10 minutes.\n\n"
-        "SPOKEN SCRIPT REQUIREMENTS (ViralTasteGate — hard fail if missing):\n"
-        "1. HOOK — named TOOL in the first sentence. NOT 'N points on Hacker News'.\n"
-        "   Patterns: CONFESSION | OPEN LOOP | CONTRARIAN STRIKE | IDENTITY CALL\n"
+        "SPOKEN SCRIPT REQUIREMENTS (ViralTasteGate + SOUL — hard fail if missing):\n"
+        "0. SOUL — first 3 seconds create WANT (curiosity, waste, obsession, stakes).\n"
+        "   Prefer micro-story (tried→broke→move). NOT a documentation opener.\n"
+        "   At least one yearning/honesty line. No Step one/two/three stacks.\n"
+        "1. HOOK — named TOOL in the first sentence (can ride inside the yearning line).\n"
+        "   NOT 'N points on Hacker News'.\n"
+        "   Patterns: CONFESSION | OPEN LOOP | CONTRARIAN STRIKE | IDENTITY CALL | CURIOSITY\n"
         '   NEVER open with "Hey guys", "In this video", or hiring listicles.\n'
         "   NEVER reuse any opening line from recent_hooks list provided.\n\n"
         "2. ONE COPYABLE MOVE — command, setting, MCP wire, slash command, --model flag.\n"
-        "   Prefer ONE hard tip/hack. Max two steps if needed — never Step one/two/three spam.\n"
+        "   Prefer ONE hard tip/hack. Max two beats if needed — never Step one/two/three spam.\n"
         "3. RECEIPT — $, minutes saved, file created, ship, or 'do this today'.\n"
         "4. FORMAT — script_type + format_hint must match assigned type for this slot.\n"
         "5. OPEN LOOP — soft unresolved beat early; resolve near the end.\n"
@@ -681,7 +733,8 @@ def _growth_requirements() -> str:
         "8. PUNCH PACK — ≥2 fun_phrases from pool verbatim; beat_phrases.crust in first 15s;\n"
         "   energy_words; optional early headline/tweet visual_moment for news/hack.\n"
         "9. Rotate signatures — do NOT default every closer to 'that's all it is.'\n"
-        "10. RECORDING CUES — 5-8 teleprompter beats.\n\n"
+        "10. RECORDING CUES — 5-8 teleprompter beats.\n"
+        "11. EAR TEST — contractions; fragments OK; if it sounds like a memo, rewrite.\n\n"
         f'{_video_contract_block()}'
         "- Written in first person, casual, direct\n"
         "- No bullet points in spoken_script — continuous speech\n"
@@ -884,6 +937,9 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
                 script["source_platform"] = topic["source_platform"]
             if topic.get("format_hint"):
                 script.setdefault("format_hint", topic["format_hint"])
+            from src.edit_brief import build_edit_brief
+
+            script["edit_brief"] = build_edit_brief(script)
             scripts.append(script)
 
         except Exception as exc:

@@ -27,6 +27,9 @@ FORMAT RULES:
 - Prefer tip/hack/confession voice over "Step one / Step two / Step three" listicles.
 - One copyable move beats three vague career steps.
 - Mashups encouraged when true (Claude Code + Higgsfield, Cursor rules + MCP, etc.).
+- Competitor inspiration = hooks, formats, and topics only — never paste a full viral script.
+  Fill the meat with Jugal’s Cursor/Claude expertise (viral hook + own value).
+- Broad scroll-stop hook → narrow tool-specific value (don’t niche the first line so hard people bounce).
 
 PERSONAL WORK:
 - Default: ZERO sentences about employer internal systems
@@ -41,7 +44,9 @@ HOOK STYLE (steal patterns from Alex Finn / Chris Raroque / Fireship energy — 
 - "Claude Code can call Higgsfield and spit the product render while it writes the page."
 - "I overspent on Cursor again — and the setting that fixed it took ten seconds."
 - "Everyone's vibe coding. Here's the one habit that makes it actually ship."
+- Align verbal + written (title_overlay) + visual (hook_visual) in the first 3 seconds.
 
 STORYTELLING RHYTHM:
-Claim → one move → receipt. Alternate sentence length. One feeling word when it fits.
+Claim → rehook/stakes → struggle → one move → receipt. Alternate sentence length. One feeling word when it fits.
 Every piece answers: "What do I try in the next 10 minutes?"
+See also: script_craft_inspiration.md (study-note patterns; living_voice_card.md wins on spoken identity).
