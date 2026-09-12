@@ -11,10 +11,18 @@ Sources: short-form virality craft (outlier hooks + own meat), timed Reel storyt
 Optimize all three together — scroll-stop fails if one is weak:
 
 1. **Verbal** — `opening_line` / first spoken sentence. Instantly clear (5-year-old test). Named tool when possible.
-2. **Written** — `title_overlay` (and on-screen text). Short, high-contrast; completes or deliberately incomplete the verbal hook.
+2. **Written** — `title_overlay` (and on-screen text). Short, high-contrast.
 3. **Visual** — `hook_visual` + first capture. Real Cursor/Claude UI or face+proof. Never abstract AI brains.
 
-If verbal says “Cursor was billing me twice,” written should punch that claim and visual should show settings/bill — not a neon network.
+### Hook modes (Millie / 20266)
+
+- **Default `complementary`:** spoken and title have **different jobs**. Spoken = conflict/yearning; title = payoff punch or claim summary. They must **not** paraphrase each other.
+  - Spoken: “Cursor was billing me twice and I had no idea why.”
+  - Title: `ONE TOGGLE FIXED IT`
+- **Allowed `incomplete_cliff`:** title withholds or fragments (`THE SETTING NOBODY…`). Stamp `hook_mode: incomplete_cliff`.
+- **Reject:** near-identical spoken + title (wastes a attention channel).
+
+If verbal says “Cursor was billing me twice,” written should punch the *payoff or fragment* — not repeat the same sentence.
 
 ---
 
@@ -79,9 +87,20 @@ Sharp edges beat beige “helpful tips” energy.
 
 ## Hard checklist before a script ships
 
-- [ ] Verbal + written + visual hooks align in the first 3s
+- [ ] Verbal + written + visual hooks align in the first 3s (**complementary** or **incomplete_cliff**, not identical)
 - [ ] Hook could stop a stranger; meat is niche-specific and copyable
 - [ ] Rehook/stakes before the teach
 - [ ] One struggle beat before the receipt
 - [ ] No Step one/two/three stacks; no corporate tells
 - [ ] Edit recipe matches format (face→screen for hacks)
+- [ ] CTA is try this / follow the series — no soft offers
+- [ ] Talking-head + UI proof only (no lip-sync / trend-audio-only / POV-text-only)
+
+---
+
+## Scale notes (from creator-coach study — short)
+
+- **Research triad for seeds:** platform search suggestions + FYP/neighbors + niche posts that beat their baseline. TLDR AI RSS feeds the “what’s moving this week” news slot (with HN/Reddit).
+- **Audience wedge:** one builder persona, many tools — don’t niche the first line into oblivion.
+- **Packaging retry:** same seed, swap `edit_template` among FACE_HOOK_SCREEN_PROOF / WALKTHROUGH / CONFESSION_STAT only.
+- **Intention (optional metadata):** growth | nurture | fun — tip monoculture is the failure mode; keep ≥3 non-HACK/TIP in an 8-pack.

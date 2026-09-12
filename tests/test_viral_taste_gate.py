@@ -15,6 +15,8 @@ def _base_script(**overrides):
             "That's all it is."
         ),
         "opening_line": "Open Cursor and flip agent mode on — that's the move.",
+        "title_overlay": "ONE AGENT MODE TOGGLE",
+        "hook_mode": "complementary",
         "loopback_closer": "That's all it is.",
         "script_type": "HACK",
         "hook_type": "OPEN LOOP",
@@ -76,6 +78,43 @@ def test_format_mix_order():
     topics = [{"topic_title": f"t{i}", "source_type": "social"} for i in range(8)]
     types = _resolve_batch_script_types(topics)
     assert types == FORMAT_MIX_ORDER
+    tip_ish = sum(1 for t in types if t in ("HACK", "TIP"))
+    assert tip_ish <= 5
+    assert tip_ish == 5
+
+
+def test_complementary_hook_rejects_identical_title():
+    script = _base_script(
+        title_overlay="OPEN CURSOR AND FLIP AGENT MODE ON THATS THE MOVE",
+        hook_mode="complementary",
+    )
+    result = validate_script(script, {"source_type": "social"})
+    assert not result.passed
+    assert any("title_overlay too similar" in e for e in result.errors)
+
+
+def test_incomplete_cliff_title_allowed():
+    script = _base_script(
+        title_overlay="THE SETTING NOBODY…",
+        hook_mode="incomplete_cliff",
+    )
+    result = validate_script(script, {"source_type": "social"})
+    assert result.passed, result.errors
+
+
+def test_soft_offer_cta_banned():
+    script = _base_script(
+        spoken_script=(
+            "Open Cursor and flip agent mode on — that's the move. "
+            "Here's the thing: most people stay in chat and waste tokens. Wrong. "
+            "Run one parallel agent on the failing test and ship in ten minutes. "
+            "Join my course in the link in bio. That's all it is."
+        ),
+        loopback_closer="That's all it is.",
+    )
+    result = validate_script(script, {"source_type": "social"})
+    assert not result.passed
+    assert any("soft-offer" in e for e in result.errors)
 
 
 def test_normalize_forces_higgsfield_on_hack():

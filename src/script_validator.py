@@ -78,6 +78,17 @@ RECEIPT_PATTERN = re.compile(
     re.I,
 )
 
+# Soft offers banned for 90-day growth CTA policy (try this / follow series only)
+SOFT_OFFER_CTA = re.compile(
+    r"(?:link\s+in\s+(?:my\s+)?bio|"
+    r"join\s+my\s+(?:course|waitlist|community|newsletter)|"
+    r"download\s+my\s+(?:free\s+)?(?:guide|pack|notion)|"
+    r"grab\s+(?:my|the)\s+(?:freebie|workbook)|"
+    r"stan\.store|manychat|"
+    r"sign\s+up\s+for\s+my)",
+    re.I,
+)
+
 NEWSINESS_PATTERN = re.compile(
     r"according to (?:this week|the latest|a report)",
     re.I,
@@ -211,6 +222,29 @@ def _last_sentence(text: str) -> str:
 
 def _normalize_for_match(text: str) -> str:
     return re.sub(r"[^a-z0-9' ]", "", text.lower())
+
+
+def _token_set(text: str) -> set[str]:
+    return {t for t in _normalize_for_match(text).split() if len(t) > 2}
+
+
+def hook_title_overlap(opening: str, title: str) -> float:
+    """Jaccard overlap of significant tokens (1.0 = near-identical)."""
+    a, b = _token_set(opening), _token_set(title)
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
+def is_incomplete_cliff_title(title: str) -> bool:
+    t = (title or "").strip()
+    if not t:
+        return False
+    if t.endswith(("…", "...", "—", "-")):
+        return True
+    # Short ALL-CAPS fragment often used as incomplete overlay
+    words = t.split()
+    return len(words) <= 4 and t.upper() == t and not t.endswith(".")
 
 
 def _phrase_in_script(phrase: str, spoken: str) -> bool:
@@ -410,6 +444,30 @@ def validate_script(
         if st in ("HACK",) and (hv.get("tier") or "").lower() != "higgsfield":
             warnings.append("HACK scripts should set hook_visual.tier=higgsfield")
             score -= 2
+
+        # Complementary / incomplete-cliff hooks — reject near-identical spoken+title
+        title = (script.get("title_overlay") or "").strip()
+        opening_for_hook = opening or first
+        hook_mode = (script.get("hook_mode") or "").lower()
+        if title and opening_for_hook:
+            overlap = hook_title_overlap(opening_for_hook, title)
+            cliff_ok = hook_mode == "incomplete_cliff" or is_incomplete_cliff_title(title)
+            if overlap >= 0.72 and not cliff_ok:
+                errors.append(
+                    "ViralTasteGate: title_overlay too similar to opening_line — "
+                    "use complementary jobs (spoken=conflict, title=payoff) or incomplete_cliff"
+                )
+                score -= 14
+            elif cliff_ok:
+                script.setdefault("hook_mode", "incomplete_cliff")
+            else:
+                script.setdefault("hook_mode", "complementary")
+
+        if SOFT_OFFER_CTA.search(spoken):
+            errors.append(
+                "ViralTasteGate: soft-offer CTA banned — use try this / follow the series only"
+            )
+            score -= 16
 
     score = max(0, min(100, score))
     passed = len(errors) == 0

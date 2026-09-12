@@ -1,5 +1,5 @@
 {
-  "active_series_id": "cursor_claude_mashups_2026w30",
+  "active_series_id": "mcp_mashups_2026w36",
   "series": [
     {
       "id": "cursor_claude_mashups_2026w30",
@@ -38,6 +38,10 @@
         "Claude Code",
         "MCP",
         "vibe coding"
+      ],
+      "tldr_feeds": [
+        "https://bullrich.dev/tldr-rss/ai.rss",
+        "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml"
       ]
     },
     {
@@ -72,6 +76,10 @@
         "Claude pricing",
         "Cursor cost",
         "LLM tokens"
+      ],
+      "tldr_feeds": [
+        "https://bullrich.dev/tldr-rss/ai.rss",
+        "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml"
       ]
     },
     {
@@ -105,6 +113,10 @@
         "MCP",
         "Model Context Protocol",
         "Higgsfield"
+      ],
+      "tldr_feeds": [
+        "https://bullrich.dev/tldr-rss/ai.rss",
+        "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml"
       ]
     }
   ],

@@ -35,8 +35,9 @@ JSON_FIELDS = """
   "format_hint": "hack | tip | build | news | confession",
   "creator_take_anchor": "one-line POV from creator_takes.txt (opinion angle, not work story)",
   "work_pattern_id": "null or optional id from work_patterns.txt — only if generalized credibility fits",
-  "title_overlay": "THE BOLD TITLE IN CAPS",
+  "title_overlay": "PAYOFF PUNCH IN CAPS — must NOT paraphrase opening_line",
   "subtitle_overlay": "short descriptive subtitle",
+  "hook_mode": "complementary | incomplete_cliff",
   "spoken_script": "The complete word-for-word script the creator reads...",
   "caption_hook": "One compelling sentence for Instagram/LinkedIn caption",
   "hashtags": ["#Tag1", "#Tag2", "#Tag3", "#Tag4", "#Tag5"],
@@ -720,7 +721,11 @@ def _growth_requirements() -> str:
         "   NOT 'N points on Hacker News'.\n"
         "   Patterns: CONFESSION | OPEN LOOP | CONTRARIAN STRIKE | IDENTITY CALL | CURIOSITY\n"
         '   NEVER open with "Hey guys", "In this video", or hiring listicles.\n'
-        "   NEVER reuse any opening line from recent_hooks list provided.\n\n"
+        "   NEVER reuse any opening line from recent_hooks list provided.\n"
+        "   title_overlay must be COMPLEMENTARY to opening_line (different job) OR incomplete_cliff.\n"
+        "   Spoken = conflict/yearning; title = payoff punch OR withheld fragment. Never identical.\n"
+        "   Set hook_mode to complementary or incomplete_cliff.\n"
+        "   CTA: try this today / follow the series only — no waitlist/course/freebie soft offers.\n\n"
         "2. ONE COPYABLE MOVE — command, setting, MCP wire, slash command, --model flag.\n"
         "   Prefer ONE hard tip/hack. Max two beats if needed — never Step one/two/three spam.\n"
         "3. RECEIPT — $, minutes saved, file created, ship, or 'do this today'.\n"
@@ -744,6 +749,7 @@ def _growth_requirements() -> str:
 
 
 FORMAT_MIX_ORDER = [
+    # Hard cap: 5 HACK+TIP educational; ≥3 BUILD/NEWS/CONFESSION (Millie 3A / philosophy)
     "HACK",
     "HACK",
     "HACK",
@@ -935,6 +941,12 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
                 script["source_url"] = topic["source_url"]
             if topic.get("source_platform"):
                 script["source_platform"] = topic["source_platform"]
+            if topic.get("seed_origin"):
+                script["seed_origin"] = topic["seed_origin"]
+            elif topic.get("source_type") == "journal":
+                script["seed_origin"] = "journal"
+            else:
+                script.setdefault("seed_origin", "fresh")
             if topic.get("format_hint"):
                 script.setdefault("format_hint", topic["format_hint"])
             from src.edit_brief import build_edit_brief

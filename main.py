@@ -27,28 +27,61 @@ from src.series_calendar import filter_topics_for_series, get_active_series
 
 
 def _select_growth_topics(scored_topics: list[dict], count: int = 8, news_slots: int = 3) -> list[dict]:
-    """Prefer series-aligned hacks/tips; reserve a few timely social/news slots."""
+    """Prefer series-aligned hacks/tips; reserve timely social/news (TLDR preferred).
+
+    Target seed split for an 8-pack (journal filled upstream): ~4 fresh / ≤2 outlier / rest evergreen.
+    Outlier sources soft-pad from fresh until a neighbor scraper exists.
+    """
     series = get_active_series()
     if series:
         print(f"📚 Series: {series.get('title')} — filtering topics to arc")
         scored_topics = filter_topics_for_series(scored_topics, max_off_arc=2, series=series)
 
-    timely_pool = sorted(
-        [t for t in scored_topics if t.get("source_type") in ("story", "news", "social", "hack")],
-        key=lambda t: (
+    # Boost TLDR into the timely pool
+    def _timely_key(t: dict) -> tuple:
+        platform = (t.get("source_platform") or "").lower()
+        tldr_boost = 0 if platform == "tldr" else 1
+        return (
+            tldr_boost,
             {"hack": 0, "social": 1, "story": 2, "news": 3}.get(t.get("source_type", "trend"), 4),
             -t.get("match_score", 0),
             -float(t.get("engagement_score") or 0),
-        ),
+        )
+
+    timely_pool = sorted(
+        [t for t in scored_topics if t.get("source_type") in ("story", "news", "social", "hack")],
+        key=_timely_key,
     )[:news_slots]
+    for t in timely_pool:
+        t.setdefault("seed_origin", "fresh")
+
     timely_titles = {t["topic_title"] for t in timely_pool}
     evergreen = sorted(
         [t for t in scored_topics if t["topic_title"] not in timely_titles],
         key=lambda t: (t.get("match_score", 0), float(t.get("engagement_score") or 0)),
         reverse=True,
     )
+    for t in evergreen:
+        # Reserved outlier bucket — soft-pad from fresh until neighbor scraper exists
+        if t.get("seed_origin") == "outlier":
+            continue
+        t.setdefault("seed_origin", "fresh")
+
     batch = timely_pool + evergreen
-    return batch[:count]
+    selected = batch[:count]
+
+    # Ensure up to 2 slots tagged outlier when available; else log soft miss
+    outlier_n = sum(1 for t in selected if t.get("seed_origin") == "outlier")
+    if outlier_n < 2:
+        print(f"   Seed split: outlier soft-miss ({outlier_n}/2) — padding from fresh")
+    return selected
+
+
+def _stamp_seed_origins(journal_topics: list[dict], trending_batch: list[dict]) -> None:
+    for t in journal_topics:
+        t["seed_origin"] = "journal"
+    for t in trending_batch:
+        t.setdefault("seed_origin", "fresh")
 
 
 def _batch_size_for_phase(phase: str) -> int:
@@ -159,6 +192,7 @@ async def main():
         dropped += trend_dropped
 
     combined = journal_topics + trending_batch
+    _stamp_seed_origins(journal_topics, trending_batch)
     topics_researched = len(raw_topics) + len(journal_topics)
 
     print("✍️ Generating scripts...")
@@ -166,10 +200,16 @@ async def main():
         news_count = sum(1 for t in trending_batch if t.get("source_type") == "news")
         story_count = sum(1 for t in trending_batch if t.get("source_type") == "story")
         evergreen_count = len(trending_batch) - news_count - story_count
+        origin_counts: dict[str, int] = {}
+        for t in combined:
+            origin_counts[t.get("seed_origin") or "fresh"] = origin_counts.get(
+                t.get("seed_origin") or "fresh", 0
+            ) + 1
         print(
             f"   Batch mix: {len(journal_topics)} journal + {story_count} story + "
             f"{news_count} news + {evergreen_count} evergreen"
         )
+        print(f"   Seed origins: {origin_counts}")
     scripts = await generate_scripts(combined, phase=phase)
     print(f"   Generated {len(scripts)} scripts")
 

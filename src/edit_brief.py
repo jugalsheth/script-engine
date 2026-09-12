@@ -265,6 +265,7 @@ def build_edit_brief(script: dict) -> dict:
         "edit_template": script.get("edit_template"),
         "edit_recipe": recipe,
         "edit_beats": script.get("edit_beats"),
+        "hook_mode": script.get("hook_mode") or "complementary",
         "talking_head": talking_head,
         "captures": captures,
         "auto_handled": auto_handled,
@@ -308,6 +309,7 @@ def format_edit_brief_markdown(brief: dict) -> str:
             f"- Verbal: “{(triple.get('verbal') or '')[:90]}”",
             f"- Written title: `{(triple.get('written') or '')}`",
             f"- Visual: drop `{triple.get('visual') or 'hook_hero'}` in assets/ (UI proof, not AI brain)",
+            f"- Hook mode: `{brief.get('hook_mode') or 'complementary'}` (complementary ≠ same words; cliff = incomplete title)",
         ])
     if recipe.get("id") == "FACE_HOOK_SCREEN_PROOF":
         lines.append("- Proof screenshot required at the copyable-move beat (full-bleed on screen).")

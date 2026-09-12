@@ -3,7 +3,8 @@ CONTENT PHILOSOPHY — vibe coding / AI coding tools
 PRIMARY GOAL: Weekly tips, tricks, hacks, builds, and actionable news that builders
 can try in the next 10 minutes. Viewer thinks: "I'm opening Cursor/Claude Code right now."
 
-HOME NICHE (not a prison — series rotate inside this world):
+HOME NICHE (playground, not a prison — audience wedge first):
+One builder persona (designer-who-ships-with-AI). Many tools inside that world:
 Cursor, Claude Code, tokens/cost, agents/MCP, vibe coding, shipping hacks, tool mashups
 (e.g. Claude Code + Higgsfield, Cursor + MCP).
 
@@ -12,15 +13,18 @@ Every script belongs to the active series arc (2–3 weeks) unless it is a journ
 Stamp series_note like "Cursor Deep · Ep 3/6". Off-arc fillers: max 1 per batch.
 
 WEEKLY FRESHNESS:
-Prefer seeds from the last 7 days (changelog, Reddit/HN thread, new MCP, pricing change).
+Prefer seeds from the last 7 days (TLDR AI, changelog, Reddit/HN thread, new MCP, pricing).
 Series = lens. Weekly = what's hot inside that lens.
+Seed split target (8-pack): ~4 fresh · ~2 journal · ~2 outlier (outlier soft-pads from fresh for now).
 
-SCRIPT MIX (8 per batch, journal fills first):
+SCRIPT MIX (8 per batch, journal fills first) — hard cap 5 HACK+TIP:
 - 3 × HACK — one concrete combo (tool A + tool B → outcome)
 - 2 × TIP — one setting, shortcut, prompt pattern, or config detail
 - 1 × BUILD — micro ship story / what you made this week
-- 1–2 × ACTIONABLE_NEWS — changelog or viral thread with "do this today"
+- 1–2 × ACTIONABLE_NEWS — TLDR/changelog/viral thread with "do this today"
 - 0–1 × CONFESSION — token overspend, agent fail, vibe-coding theater
+
+CTA (90 days): try this today / follow the series only. No waitlist, freebie, or course pitch.
 
 FORMAT RULES:
 - Named tools in the hook. Concrete action in the middle. Receipt at the end ($, minutes, file).

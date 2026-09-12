@@ -1,4 +1,4 @@
-"""Community signal research — HN Algolia + Reddit public JSON + mashup seeds.
+"""Community signal research — HN Algolia + Reddit public JSON + mashup + TLDR seeds.
 
 No Reddit OAuth required. Perplexity is used only as optional enrichment elsewhere.
 """
@@ -13,6 +13,14 @@ from urllib.parse import quote_plus
 import httpx
 
 from src.series_calendar import get_active_series, mashup_watchlist
+from src.tldr_feed import (
+    TLDR_AI_RSS_FALLBACK,
+    TLDR_AI_RSS_PRIMARY,
+    USER_AGENT as TLDR_UA,
+    is_sponsor_title,
+    matches_builder_lens,
+    parse_rss_items,
+)
 
 USER_AGENT = (
     "CreatorAuto/1.0 (educational research bot; +https://github.com/local/creatorauto)"
@@ -205,15 +213,88 @@ def mashup_seed_topics() -> list[dict]:
     return topics
 
 
+def _tldr_feed_urls(series: dict | None) -> list[str]:
+    configured = (series or {}).get("tldr_feeds") if series else None
+    if isinstance(configured, list) and configured:
+        return [str(u) for u in configured if u]
+    return [TLDR_AI_RSS_PRIMARY, TLDR_AI_RSS_FALLBACK]
+
+
+async def fetch_tldr_topics(
+    client: httpx.AsyncClient,
+    *,
+    max_items: int = 12,
+) -> list[dict]:
+    """TLDR AI newsletter → ACTIONABLE_NEWS seeds (RSS; no Gmail)."""
+    series = get_active_series()
+    keywords = list((series or {}).get("theme_keywords") or [])
+    topics: list[dict] = []
+    headers = {"User-Agent": TLDR_UA or USER_AGENT}
+
+    for feed_url in _tldr_feed_urls(series):
+        try:
+            resp = await client.get(feed_url, headers=headers, timeout=25.0)
+            if resp.status_code != 200 or not resp.content:
+                print(f"   ⚠️ TLDR feed HTTP {resp.status_code}: {feed_url}")
+                continue
+            items = parse_rss_items(resp.content)
+        except Exception as exc:
+            print(f"   ⚠️ TLDR feed failed ({feed_url}): {exc}")
+            continue
+
+        for item in items:
+            title = item.get("title") or ""
+            if not title or is_sponsor_title(title):
+                continue
+            summary = item.get("summary") or f"From TLDR AI: {title}"
+            if not matches_builder_lens(title, summary, keywords):
+                continue
+            url = (item.get("link") or item.get("archive_url") or "").strip()
+            age = item.get("age_days")
+            # Prefer fresher issues; still allow undated
+            engagement = 90.0 if age is not None and age <= 3 else 55.0
+            seed = _seed(
+                title=title,
+                summary=summary,
+                source_type="news",
+                virality="high" if engagement >= 80 else "medium",
+                url=url,
+                platform="tldr",
+                engagement=engagement,
+                format_hint="news",
+                story_hook=f"TLDR flagged: {title[:100]}",
+            )
+            seed["seed_origin"] = "fresh"
+            topics.append(seed)
+            if len(topics) >= max_items:
+                break
+        if topics:
+            print(f"   TLDR: {len(topics)} builder-lens stories from {feed_url}")
+            break
+
+    if not topics:
+        print("   ⚠️ TLDR: no builder-lens stories (feeds down or filtered empty)")
+    return topics
+
+
 async def fetch_community_topics() -> list[dict]:
     """Fetch and merge community topics, ranked by engagement."""
     async with httpx.AsyncClient() as client:
-        hn, reddit = await asyncio.gather(
+        hn, reddit, tldr = await asyncio.gather(
             fetch_hn_topics(client),
             fetch_reddit_topics(client),
+            fetch_tldr_topics(client),
         )
 
-    combined = mashup_seed_topics() + hn + reddit
+    # Stamp seed_origin for weekly split metadata
+    for t in hn + reddit + tldr:
+        t.setdefault("seed_origin", "fresh")
+    mashups = mashup_seed_topics()
+    for t in mashups:
+        t.setdefault("seed_origin", "fresh")
+
+    # Prefer TLDR near the top of the fresh pool (after mashups)
+    combined = mashups + tldr + hn + reddit
     # Dedupe by title
     seen: set[str] = set()
     unique: list[dict] = []
@@ -226,7 +307,7 @@ async def fetch_community_topics() -> list[dict]:
 
     unique.sort(key=lambda t: float(t.get("engagement_score") or 0), reverse=True)
     print(
-        f"   Community research: {len(hn)} HN + {len(reddit)} Reddit + "
-        f"{len(mashup_seed_topics())} mashups → {len(unique)} unique"
+        f"   Community research: {len(tldr)} TLDR + {len(hn)} HN + {len(reddit)} Reddit + "
+        f"{len(mashups)} mashups → {len(unique)} unique"
     )
     return unique[:40]
