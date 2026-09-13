@@ -738,5 +738,45 @@
     "opening_line": "I used to plan and build inside Cursor \u2014 and honestly, that was wrong.",
     "hook_type": "CONFESSION",
     "date": "2026-09-06"
+  },
+  {
+    "opening_line": "A new benchmark just dropped \u2014 and honestly, the results are wild.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-13"
+  },
+  {
+    "opening_line": "OpenAI just dropped the Agents API in public beta \u2014 and this is wild \u2014 it's the same managed infrastructure powering Codex, now available to any builder.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-13"
+  },
+  {
+    "opening_line": "Your inference layer is probably wrong \u2014 and it's costing you more than you think.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-09-13"
+  },
+  {
+    "opening_line": "Claude Code just got eyes.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-13"
+  },
+  {
+    "opening_line": "Cursor can now control your browser.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-13"
+  },
+  {
+    "opening_line": "Last week I had a product idea and zero assets.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-13"
+  },
+  {
+    "opening_line": "I wasted a week wondering why my Cursor agent kept timing out.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-13"
+  },
+  {
+    "opening_line": "Agent mode in Cursor was eating my tokens and shipping wrong.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-13"
   }
 ]
