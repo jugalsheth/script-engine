@@ -1,0 +1,485 @@
+{
+  "version": 1,
+  "active_week": 1,
+  "timezone_note": "Promote week before Sunday script cron",
+  "slots": [
+    {
+      "week": 1,
+      "slot": 1,
+      "hook_id": "hook_01",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "mon"
+    },
+    {
+      "week": 1,
+      "slot": 2,
+      "hook_id": "hook_06",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "tue"
+    },
+    {
+      "week": 1,
+      "slot": 3,
+      "hook_id": "hook_07",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "wed"
+    },
+    {
+      "week": 1,
+      "slot": 4,
+      "hook_id": "hook_13",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "thu"
+    },
+    {
+      "week": 1,
+      "slot": 5,
+      "hook_id": "hook_23",
+      "script_type": "CONFESSION",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "fri"
+    },
+    {
+      "week": 1,
+      "slot": 6,
+      "hook_id": "hook_04",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "sat"
+    },
+    {
+      "week": 1,
+      "slot": 7,
+      "hook_id": "hook_11",
+      "script_type": "BUILD",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "sun"
+    },
+    {
+      "week": 1,
+      "slot": 8,
+      "hook_id": "hook_12",
+      "script_type": "BUILD",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "flex"
+    },
+    {
+      "week": 2,
+      "slot": 1,
+      "hook_id": "hook_14",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "mon"
+    },
+    {
+      "week": 2,
+      "slot": 2,
+      "hook_id": "hook_15",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "tue"
+    },
+    {
+      "week": 2,
+      "slot": 3,
+      "hook_id": "hook_17",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "wed"
+    },
+    {
+      "week": 2,
+      "slot": 4,
+      "hook_id": "hook_19",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "thu"
+    },
+    {
+      "week": 2,
+      "slot": 5,
+      "hook_id": "hook_24",
+      "script_type": "CONFESSION",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "fri"
+    },
+    {
+      "week": 2,
+      "slot": 6,
+      "hook_id": "hook_25",
+      "script_type": "CONFESSION",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "sat"
+    },
+    {
+      "week": 2,
+      "slot": 7,
+      "hook_id": "hook_49",
+      "script_type": "HACK",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "sun"
+    },
+    {
+      "week": 2,
+      "slot": 8,
+      "hook_id": "hook_03",
+      "script_type": "BUILD",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "flex"
+    },
+    {
+      "week": 3,
+      "slot": 1,
+      "hook_id": "hook_16",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "mon"
+    },
+    {
+      "week": 3,
+      "slot": 2,
+      "hook_id": "hook_18",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "tue"
+    },
+    {
+      "week": 3,
+      "slot": 3,
+      "hook_id": "hook_21",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "wed"
+    },
+    {
+      "week": 3,
+      "slot": 4,
+      "hook_id": "hook_22",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "thu"
+    },
+    {
+      "week": 3,
+      "slot": 5,
+      "hook_id": "hook_26",
+      "script_type": "CONFESSION",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "fri"
+    },
+    {
+      "week": 3,
+      "slot": 6,
+      "hook_id": "hook_28",
+      "script_type": "HACK",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "sat"
+    },
+    {
+      "week": 3,
+      "slot": 7,
+      "hook_id": "hook_31",
+      "script_type": "CONFESSION",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "sun"
+    },
+    {
+      "week": 3,
+      "slot": 8,
+      "hook_id": "hook_08",
+      "script_type": "CONFESSION",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "flex"
+    },
+    {
+      "week": 4,
+      "slot": 1,
+      "hook_id": "hook_20",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "mon"
+    },
+    {
+      "week": 4,
+      "slot": 2,
+      "hook_id": "hook_43",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "tue"
+    },
+    {
+      "week": 4,
+      "slot": 3,
+      "hook_id": "hook_44",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "wed"
+    },
+    {
+      "week": 4,
+      "slot": 4,
+      "hook_id": "hook_46",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "thu"
+    },
+    {
+      "week": 4,
+      "slot": 5,
+      "hook_id": "hook_27",
+      "script_type": "TIP",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "fri"
+    },
+    {
+      "week": 4,
+      "slot": 6,
+      "hook_id": "hook_32",
+      "script_type": "CONFESSION",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "sat"
+    },
+    {
+      "week": 4,
+      "slot": 7,
+      "hook_id": "hook_05",
+      "script_type": "BUILD",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "sun"
+    },
+    {
+      "week": 4,
+      "slot": 8,
+      "hook_id": "hook_51",
+      "script_type": "CONFESSION",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "flex"
+    },
+    {
+      "week": 5,
+      "slot": 1,
+      "hook_id": "hook_45",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "mon"
+    },
+    {
+      "week": 5,
+      "slot": 2,
+      "hook_id": "hook_47",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "tue"
+    },
+    {
+      "week": 5,
+      "slot": 3,
+      "hook_id": "hook_48",
+      "script_type": "HACK",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "wed"
+    },
+    {
+      "week": 5,
+      "slot": 4,
+      "hook_id": "hook_50",
+      "script_type": "TIP",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "thu"
+    },
+    {
+      "week": 5,
+      "slot": 5,
+      "hook_id": "hook_29",
+      "script_type": "TIP",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "fri"
+    },
+    {
+      "week": 5,
+      "slot": 6,
+      "hook_id": "hook_30",
+      "script_type": "CONFESSION",
+      "series_id": "vibe_reality_2026w40",
+      "day_hint": "sat"
+    },
+    {
+      "week": 5,
+      "slot": 7,
+      "hook_id": "hook_09",
+      "script_type": "BUILD",
+      "series_id": "prod_ai_leaks_2026w38",
+      "day_hint": "sun"
+    },
+    {
+      "week": 5,
+      "slot": 8,
+      "hook_id": "hook_53",
+      "script_type": "BUILD",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "flex"
+    },
+    {
+      "week": 6,
+      "slot": 1,
+      "hook_id": "hook_02",
+      "script_type": "CONFESSION",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "mon"
+    },
+    {
+      "week": 6,
+      "slot": 2,
+      "hook_id": "hook_10",
+      "script_type": "TIP",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "tue"
+    },
+    {
+      "week": 6,
+      "slot": 3,
+      "hook_id": "hook_33",
+      "script_type": "BUILD",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "wed"
+    },
+    {
+      "week": 6,
+      "slot": 4,
+      "hook_id": "hook_36",
+      "script_type": "BUILD",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "thu"
+    },
+    {
+      "week": 6,
+      "slot": 5,
+      "hook_id": "hook_39",
+      "script_type": "HACK",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "fri"
+    },
+    {
+      "week": 6,
+      "slot": 6,
+      "hook_id": "hook_41",
+      "script_type": "BUILD",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "sat"
+    },
+    {
+      "week": 6,
+      "slot": 7,
+      "hook_id": "hook_54",
+      "script_type": "BUILD",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "sun"
+    },
+    {
+      "week": 6,
+      "slot": 8,
+      "hook_id": "hook_55",
+      "script_type": "CONFESSION",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "flex"
+    },
+    {
+      "week": 7,
+      "slot": 1,
+      "hook_id": "hook_34",
+      "script_type": "CONFESSION",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "mon"
+    },
+    {
+      "week": 7,
+      "slot": 2,
+      "hook_id": "hook_35",
+      "script_type": "CONFESSION",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "tue"
+    },
+    {
+      "week": 7,
+      "slot": 3,
+      "hook_id": "hook_37",
+      "script_type": "BUILD",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "wed"
+    },
+    {
+      "week": 7,
+      "slot": 4,
+      "hook_id": "hook_38",
+      "script_type": "TIP",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "thu"
+    },
+    {
+      "week": 7,
+      "slot": 5,
+      "hook_id": "hook_40",
+      "script_type": "TIP",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "fri"
+    },
+    {
+      "week": 7,
+      "slot": 6,
+      "hook_id": "hook_42",
+      "script_type": "CONFESSION",
+      "series_id": "career_proof_2026w42",
+      "day_hint": "sat"
+    },
+    {
+      "week": 7,
+      "slot": 7,
+      "hook_id": "hook_56",
+      "script_type": "TIP",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "sun"
+    },
+    {
+      "week": 7,
+      "slot": 8,
+      "hook_id": "hook_57",
+      "script_type": "BUILD",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "flex"
+    },
+    {
+      "week": 8,
+      "slot": 1,
+      "hook_id": "hook_52",
+      "script_type": "CONFESSION",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "mon"
+    },
+    {
+      "week": 8,
+      "slot": 2,
+      "hook_id": "hook_58",
+      "script_type": "CONFESSION",
+      "series_id": "ship_in_public_2026w44",
+      "day_hint": "tue"
+    }
+  ],
+  "summary": {
+    "total_hooks": 58,
+    "weeks": 8,
+    "week_counts": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 8,
+      "5": 8,
+      "6": 8,
+      "7": 8,
+      "8": 2
+    }
+  }
+}

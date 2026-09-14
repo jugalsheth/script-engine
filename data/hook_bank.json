@@ -1,782 +1,586 @@
-[
-  {
-    "opening_line": "Most AI engineer job posts are lying to you.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "MLOps engineers make thirty percent more than ML engineers at the same company.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "Hiring managers aren't just looking for Python skills anymore.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "Your resume is upside down and it's costing you interviews.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "Eighty-seven percent of hiring managers say they can't find candidates with AI automation skills \u2014 but here's what they're not telling you.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "Every AI engineer knows Python and Docker, but the ones making 300K plus know this stack.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "The highest-paying tech jobs in 2025 all require the same three skills that used to be completely separate.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "Four skills that can get you to $180K within two years \u2014 but most engineers are learning the wrong ones.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-08"
-  },
-  {
-    "opening_line": "If you've been wondering what an AI data engineer actually does all day, I'm about to break it down.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "If you've ever wondered what a data engineer actually does all day, I'm about to break it down.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "I focused on building the wrong thing for the first two years of my career.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Five years building systems in NYC taught me that learning as an engineer isn't about consuming more content.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Three skills are separating the candidates getting offers from the ones getting ghosted, and I'm about to show you exactly what they are.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Companies are hiring AI engineers who think in systems, not those who memorize ChatGPT prompts.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Tech recruiters just changed how they read resumes and ninety percent of engineers missed the memo.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "The three most-shared pieces of tech job advice on LinkedIn right now \u2014 and why only one of them actually works.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Companies are hiring multi-skilled engineers at twenty five percent higher salaries than pure specialists \u2014 but most engineers are still building resumes the wrong way.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Security engineers who understand cloud architecture are getting hired at senior levels with three years of experience.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Three job titles are completely broken right now \u2014 AI engineer, ML engineer, and data scientist.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Sixty-two percent of tech job postings now mention AI skills even when they're not AI roles.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "I just analyzed two hundred AI engineering job posts and seventy four percent want the same five skills that most engineers are completely ignoring.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Data engineering interviews got harder, but not where you think.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Senior engineers who can't explain their work in sixty seconds get passed over for promotion every single time.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Real-time data engineers are making forty percent more than traditional batch engineers at the same company \u2014 but here's what's wild.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "AI engineering roles stopped rewarding PhD researchers and started paying engineers who ship code to production.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Senior data engineers who aren't using AI tools daily are getting left behind \u2014 and the gap is widening fast.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Senior engineers who build full-stack AI systems are getting hired faster than anyone else right now.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Three industries are hiring AI engineers faster than they can interview them \u2014 and it's not the ones you think.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-10"
-  },
-  {
-    "opening_line": "Thirty eight percent of tech job postings mentioned AI skills in June \u2014 up from thirty six percent last month.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "This week Meta announced they're hiring five hundred AI infrastructure engineers by March \u2014 and every job posting mentions one skill that eighty percent of candidates are missing.",
-    "hook_type": "OPEN_LOOP",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "This week's hiring reports show Kafka and Databricks in seventy percent more job posts than six months ago.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Data engineers are getting hired faster than any other tech role in twenty twenty six.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Ninety-two percent of engineers are wasting time on manual job applications when they should be messaging hiring managers directly.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Companies are paying twenty percent more for engineers who connect code to business outcomes \u2014 but most candidates are learning the wrong skills.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Every engineering team faces this question wrong.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "DSA interviews are finally dying and hiring managers are panicking.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "This week's jobs report shows data engineers getting hired at twice the rate of other tech roles \u2014 and there's a simple reason why.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "GitHub just released their developer survey and eighty seven percent of engineers are using AI tools daily \u2014 but here's what's wild.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "This week's hiring reports dropped and three skills are dominating every tech job posting \u2014 but ninety percent of engineers are preparing for the wrong interviews.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "While everyone's panicking about tech layoffs, here's the signal most engineers are completely missing.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Databricks, Kafka, and Azure show up in seventy percent of data engineering job posts \u2014 but here's what's wild.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Senior engineers are drowning in new tools but can't stop learning or they'll get left behind.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Eighty three percent of engineers are experimenting with AI tools but only twenty percent are actually shipping faster.",
-    "hook_type": "CONTRARIAN_STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "The most valuable engineers in twenty twenty six aren't the ones grinding LeetCode \u2014 they're building full systems with AI, cloud, and data.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-11"
-  },
-  {
-    "opening_line": "Ninety percent of engineers think they're behind on AI when really they're in the majority doing nothing.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "Your automated system just broke and you have two choices \u2014 panic or pivot like a senior engineer.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "Hiring managers stopped caring if you know Pandas and started asking if you understand embeddings in production.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "Data engineers are getting hired faster than any other tech role right now \u2014 but ninety percent are preparing for the wrong interview.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "Most engineers deploy to AWS and immediately regret three things they didn't set up first.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "Your LinkedIn profile is invisible to recruiters and you have no idea why.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "Data engineers who aren't using AI daily are about to get replaced by engineers who are.",
-    "hook_type": "IDENTITY CALL",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "Most engineers write SQL that works in tutorials but fails in production.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-14"
-  },
-  {
-    "opening_line": "One engineer with AI is doing what used to take an entire team.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "You do not need a machine gun to kill a fly.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "I finished a three-to-four-week project in under a day.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "RAG is showing up in sixty percent of senior AI engineering job posts right now \u2014 according to this month's LinkedIn Talent Insights report.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "Everyone's studying vector databases \u2014 but that's wrong.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "Job postings for senior data engineers changed this year \u2014 and most engineers don't know what's on the new checklist.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "Most data engineers think the gap is just learning Python and calling an API.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "Batch pipelines won't cut it for AI agents \u2014 and that's finally showing up in hiring data.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "I overspent on Cursor this month and I genuinely did not care.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "Sitting through a ground-up tutorial for a modern data tool in 2026 is wild.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "LinkedIn's latest hiring report just dropped \u2014 and five skills are pulling away from the pack.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "LinkedIn's latest hiring report says sixty two percent of recruiters now prioritize demonstrated skills over credentials.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "LinkedIn's 2025 Jobs Report dropped this week \u2014 AI fluency is now the fastest-growing skill demand across every engineering role.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "Most engineers undersell themselves because they only list one skill \u2014 data, or cloud, or AI.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "Applications are not getting engineers hired right now \u2014 and the data is finally proving it.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "AWS, Google, and Microsoft all dropped security-AI updates this month \u2014 and finally, the job market caught up.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-17"
-  },
-  {
-    "opening_line": "SpaceX just bought Cursor for sixty billion dollars \u2014 and honestly, I called this wrong.",
-    "hook_type": "CONFESSION",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "The job title 'AI Data Engineer' is showing up everywhere \u2014 and most engineers don't know if they qualify.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "Everyone thinks AI replaced the SQL and Spark stack.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "Hiring signals shifted this quarter \u2014 and most engineers are still prepping for the wrong thing.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "Everyone keeps asking which title to chase \u2014 data engineer or AI engineer. Wrong question.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "Most data engineers are building pipelines nobody trusts.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "Anthropic's latest research report says AI now automates up to forty percent of repetitive ETL and boilerplate coding tasks.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "Four moves every data engineer should make this year \u2014 and most are skipping three of them.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-06-21"
-  },
-  {
-    "opening_line": "Browser MCP just hit Hacker News with six hundred points \u2014 and it's wild.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "OpenAI just added MCP support to their Agents SDK \u2014 and that changes how you wire tools to agents.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "Claude 3.7 Sonnet inside Claude Code is pure building \u2014 and most people haven't flipped the right switch yet.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "Claude Code hit eleven hundred points on Hacker News this week \u2014 and most people missed the actually useful part.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "Claude Skills just hit seven hundred points on Hacker News.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "Claude Code isn't just for code anymore \u2014 and that's the secret most people miss.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "Vibe coding and agentic engineering are merging \u2014 and that is wild.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "Gas Town just dropped their agent architecture on Hacker News \u2014 four hundred points in a day.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-23"
-  },
-  {
-    "opening_line": "Browser MCP lets Cursor and Claude Code control your actual browser \u2014 clicking, filling forms, scraping \u2014 without you writing a single Playwright script.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "OpenAI's Agents SDK finally supports MCP \u2014 and that changes everything about how you wire tools to agents.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "Claude Code plus Claude 3.7 Sonnet is pure building \u2014 and most people skip the one flag that makes it actually fast.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "Claude Code has a secret most builders never open.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "Claude Skills might be bigger than MCP \u2014 and most builders are still sleeping on it.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "Claude Code started failing me on complex tasks. And honestly \u2014 that's normal.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "Claude Code is not just a coding tool anymore \u2014 and that's the secret most people are sleeping on.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "Vibe coding killed my project last week.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-24"
-  },
-  {
-    "opening_line": "Browser MCP lets Cursor and Claude drive your actual browser without you writing a single Playwright script.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "OpenAI's Agents SDK now speaks MCP natively \u2014 and that changes how you wire tools.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "Nobody told me Claude Code had an extended thinking flag \u2014 and I wasted two weeks without it.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "Claude Code has a secret most builders walk right past \u2014 and it costs you ten extra minutes every single session.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "Claude Skills might be the secret nobody's talking about \u2014 and it's wild how much faster your Claude Code sessions get once you wire one in.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "I gave Claude Code a task that wasn't code \u2014 and it actually worked.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "Vibe coding and agentic engineering are colliding \u2014 and honestly, that's insane to watch in real time.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "My agent loop failed for forty minutes straight.",
-    "hook_type": "CONFESSION",
-    "date": "2026-07-26"
-  },
-  {
-    "opening_line": "Cursor just got a browser.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "OpenAI's Agents SDK finally speaks MCP natively \u2014 and honestly, the setup is insane how fast it is.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "Claude 3.7 Sonnet has extended thinking mode inside Claude Code. Most builders never turn it on.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "Claude Code has a visual guide sitting on Hacker News right now \u2014 eleven hundred points \u2014 and most builders walked right past the actual secret buried inside it.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "Claude Skills might actually be wilder than MCP \u2014 and most builders haven't wired one yet.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "Claude Code became my coworker this week \u2014 and that's not an exaggeration.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "Cursor's agent mode and vibe coding are finally merging \u2014 and that's insane to watch.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "I ran a Gas Town-style agent loop for forty minutes and it failed.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-02"
-  },
-  {
-    "opening_line": "Browser MCP just made Cursor and Claude Code insane \u2014 they can click, fill forms, and scrape your actual browser right now.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "OpenAI's Agents SDK just got MCP support \u2014 and the setup is insane how fast it is.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "Most builders using Claude Code are running the wrong model \u2014 and that's the secret killing their sessions.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "Most people treating Claude Code like a chat window are doing it wrong.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "MCP gets all the hype \u2014 but Claude Skills might actually be the secret nobody's talking about.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "Thirteen hundred builders on Hacker News are shipping work that isn't code.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "Vibe coding and agentic engineering are the same thing now \u2014 and honestly, that's insane.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "My agent loop failed for two hours straight \u2014 and honestly, that's normal.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-09"
-  },
-  {
-    "opening_line": "I was burning through Cursor tokens and I had no idea why \u2014 until I found it's wrong.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "Claude Code just changed how builders ship.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "Claude Code and Higgsfield MCP running together \u2014 and this is wild \u2014 your product shot renders while the agent writes the landing page.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "You're paying up to forty times the price for the same model.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "ClawPool is the secret Hacker News found before you did.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "My LLM bill was embarrassingly wrong.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "You're probably calling the wrong model and paying five x cost difference for it.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "I switched to Claude 3.5 Sonnet expecting to save money.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-16"
-  },
-  {
-    "opening_line": "I was burning forty dollars a week in Cursor without knowing why.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "Claude Code can call Higgsfield and render your product video while it writes the landing page \u2014 same session, zero tab switching.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "Claude Code wired to Higgsfield MCP is pure building \u2014 your product shot renders while the agent writes the landing page.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "Same model, same tokens, up to forty times the price.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "ClawPool just hit Hacker News \u2014 and honestly, this is wild.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "My token bill was wrong \u2014 and I didn't catch it for weeks.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "There's a site on Hacker News right now \u2014 three hundred thirty nine points \u2014 called Price Per Token.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "I switched models expecting to save money \u2014 and somehow spent more.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-23"
-  },
-  {
-    "opening_line": "I was spending forty dollars a week in Cursor and the wrong model was eating half of it.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "Wire Claude Code to Higgsfield MCP and here's the thing \u2014 your product video renders while the agent is still writing the landing page.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "Wire Claude Code to Higgsfield MCP and your product shot renders while the agent writes the landing page \u2014 same session, zero tab switching.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "Claude Code is charging forty times more than the API for the same model, same tokens.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "AgentReady is a drop-in proxy that just hit Hacker News \u2014 and the claim is wild \u2014 forty to sixty percent off your LLM token bill with zero code changes.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "My token bill was wrong for weeks.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "Builders on Hacker News are asking if Claude 3.5 Sonnet actually beats GPT-4o.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "My LLM bill kept climbing and I couldn't figure out why \u2014 that's the truth.",
-    "hook_type": "CONFESSION",
-    "date": "2026-08-30"
-  },
-  {
-    "opening_line": "Wire Claude Code to a browser MCP and here's the thing \u2014 your agent can actually see your app while it builds it.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "Wire Claude Code to Higgsfield MCP and here's the thing \u2014 your product video generates while the agent is still writing the landing page.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "Shipping something visible this week \u2014 here's the thing \u2014 Claude Code wired to Higgsfield MCP does it in one session.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "Browser MCP just dropped and here's the thing \u2014 your AI agent can now click, scroll, fill forms, and scrape pages without you touching the mouse.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "Cursor wired to an MCP server is pure building \u2014 and most people skip the setup because they think it's hard.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "Drop a dot-cursor-rules file in your project root \u2014 that's the secret most builders skip.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "Eighty builders on Hacker News are shipping agents with mcp-agent \u2014 and here's the thing \u2014 it's pure building.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "I used to plan and build inside Cursor \u2014 and honestly, that was wrong.",
-    "hook_type": "CONFESSION",
-    "date": "2026-09-06"
-  },
-  {
-    "opening_line": "A new benchmark just dropped \u2014 and honestly, the results are wild.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-13"
-  },
-  {
-    "opening_line": "OpenAI just dropped the Agents API in public beta \u2014 and this is wild \u2014 it's the same managed infrastructure powering Codex, now available to any builder.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-13"
-  },
-  {
-    "opening_line": "Your inference layer is probably wrong \u2014 and it's costing you more than you think.",
-    "hook_type": "CONTRARIAN STRIKE",
-    "date": "2026-09-13"
-  },
-  {
-    "opening_line": "Claude Code just got eyes.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-13"
-  },
-  {
-    "opening_line": "Cursor can now control your browser.",
-    "hook_type": "OPEN LOOP",
-    "date": "2026-09-13"
-  },
-  {
-    "opening_line": "Last week I had a product idea and zero assets.",
-    "hook_type": "CONFESSION",
-    "date": "2026-09-13"
-  },
-  {
-    "opening_line": "I wasted a week wondering why my Cursor agent kept timing out.",
-    "hook_type": "CONFESSION",
-    "date": "2026-09-13"
-  },
-  {
-    "opening_line": "Agent mode in Cursor was eating my tokens and shipping wrong.",
-    "hook_type": "CONFESSION",
-    "date": "2026-09-13"
-  }
-]
+{
+  "version": 1,
+  "count": 58,
+  "hooks": [
+    {
+      "id": "hook_01",
+      "hook": "Your AI app isn't slow because the model is slow. It's probably making one of these 4 API mistakes.",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Name Cursor/Claude + one concrete leak (retries without backoff, no cache, full-history every call)",
+      "status": "queued",
+      "priority": 1
+    },
+    {
+      "id": "hook_02",
+      "hook": "The fastest way to lose an AI engineering interview? Say 'I used LangChain' and stop there.",
+      "pillar": "career",
+      "format_hint": "confession",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Show a Cursor/Claude eval or cost receipt as the portfolio proof instead of a framework name",
+      "status": "queued",
+      "priority": 2
+    },
+    {
+      "id": "hook_03",
+      "hook": "A week in NYC taught me more about AI careers than another certification ever could.",
+      "pillar": "nyc",
+      "format_hint": "build",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "One shippable takeaway: build a Cursor/Claude side ship and show receipt, not another cert",
+      "status": "queued",
+      "priority": 3
+    },
+    {
+      "id": "hook_04",
+      "hook": "Your RAG demo works on 20 documents. At 20,000, these 5 shortcuts break it.",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "One Cursor/Claude chunking or retrieval fix builders can try today",
+      "status": "queued",
+      "priority": 4
+    },
+    {
+      "id": "hook_05",
+      "hook": "Most AI portfolios prove you can call an API. Recruiters are looking for these 4 signals instead.",
+      "pillar": "career",
+      "format_hint": "build",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Name the artifact: evals, cost dashboard, or MCP wiring screenshot in Cursor",
+      "status": "queued",
+      "priority": 5
+    },
+    {
+      "id": "hook_06",
+      "hook": "If your LLM bill jumped 10x, check these 5 leaks before changing models.",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Cursor/Claude model pin or cache toggle as the copyable move",
+      "status": "queued",
+      "priority": 6
+    },
+    {
+      "id": "hook_07",
+      "hook": "Your AI agent doesn't need more tools. It needs these 4 guardrails.",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Claude Code/Cursor agent: one allowlist or confirmation gate",
+      "status": "queued",
+      "priority": 7
+    },
+    {
+      "id": "hook_08",
+      "hook": "The NYSE wasn't the lesson. Getting invited was.",
+      "pillar": "nyc",
+      "format_hint": "confession",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Ship-in-public habit with Cursor — one concrete weekly ship rule",
+      "status": "queued",
+      "priority": 8
+    },
+    {
+      "id": "hook_09",
+      "hook": "Your AI feature is not production-ready until these 5 metrics are on a dashboard.",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Add one eval/cost metric you can track from a Cursor/Claude project today",
+      "status": "queued",
+      "priority": 9
+    },
+    {
+      "id": "hook_10",
+      "hook": "Stop saying 'I know AI.' Show this 30-second proof instead.",
+      "pillar": "career",
+      "format_hint": "tip",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "30s screen: Cursor agent + MCP or eval run as the proof",
+      "status": "queued",
+      "priority": 10
+    },
+    {
+      "id": "hook_11",
+      "hook": "The model didn't fail. Your evals did. Audit these 5 gaps before launch.",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "One eval harness step in Cursor/Claude before ship",
+      "status": "queued",
+      "priority": 11
+    },
+    {
+      "id": "hook_12",
+      "hook": "What building AI in NYC actually looks like: 10% events, 90% quiet reps.",
+      "pillar": "nyc",
+      "format_hint": "build",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Quiet rep = one Cursor daily ship; name the tool habit",
+      "status": "queued",
+      "priority": 12
+    },
+    {
+      "id": "hook_13",
+      "hook": "Your RAG isn't slow because of the model — it's your chunking strategy",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Chunk size/overlap tweak you can run in Cursor today",
+      "status": "queued",
+      "priority": 113
+    },
+    {
+      "id": "hook_14",
+      "hook": "I deleted LangChain from our production app and p99 latency dropped — here's what replaced it",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Replace with direct API + thin wrapper; show Cursor file diff receipt",
+      "status": "queued",
+      "priority": 114
+    },
+    {
+      "id": "hook_15",
+      "hook": "Your agent doesn't need more tools. It needs fewer.",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Claude Code/Cursor: prune MCP servers to the 2 that matter",
+      "status": "queued",
+      "priority": 115
+    },
+    {
+      "id": "hook_16",
+      "hook": "The one eval nobody runs that decides whether your AI feature actually ships",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Offline golden-set eval run from Cursor before merge",
+      "status": "queued",
+      "priority": 116
+    },
+    {
+      "id": "hook_17",
+      "hook": "Why your LLM bill exploded last month (and the 3-line routing fix)",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Route cheap model for drafts in Cursor/Claude settings",
+      "status": "queued",
+      "priority": 117
+    },
+    {
+      "id": "hook_18",
+      "hook": "We cut AI inference costs 90% by sending 80% of traffic to a small model",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Small-model default + escalate only on fail — wire in Cursor rules",
+      "status": "queued",
+      "priority": 118
+    },
+    {
+      "id": "hook_19",
+      "hook": "Stop stuffing 100K tokens of context into every call — here's what production teams do instead",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Cursor: turn off full-history / trim CLAUDE.md bloat",
+      "status": "queued",
+      "priority": 119
+    },
+    {
+      "id": "hook_20",
+      "hook": "Fine-tuning is almost never the answer. Do this instead.",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Prompt + retrieval + eval loop in Cursor before any fine-tune",
+      "status": "queued",
+      "priority": 120
+    },
+    {
+      "id": "hook_21",
+      "hook": "Your chatbot isn't hallucinating — your retrieval is returning garbage",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "One retrieval debug step (top-k inspect) in your Cursor project",
+      "status": "queued",
+      "priority": 121
+    },
+    {
+      "id": "hook_22",
+      "hook": "The guardrail checklist I run on every production LLM app before it touches users",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Checklist as Cursor rule or CLAUDE.md block",
+      "status": "queued",
+      "priority": 122
+    },
+    {
+      "id": "hook_23",
+      "hook": "Why your vibe coded app feels so slow — the security edition",
+      "pillar": "vibe_coding",
+      "format_hint": "confession",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Cursor security scan / one secret leak fix",
+      "status": "queued",
+      "priority": 123
+    },
+    {
+      "id": "hook_24",
+      "hook": "This founder shipped an app without writing a single line of code. Three days later, 1.5 million API keys leaked.",
+      "pillar": "vibe_coding",
+      "format_hint": "confession",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Cursor: rotate keys + .env gitignore move",
+      "status": "queued",
+      "priority": 124
+    },
+    {
+      "id": "hook_25",
+      "hook": "Your AI wrote 10,000 lines of code overnight. Congratulations — you now own 10,000 lines of tech debt.",
+      "pillar": "vibe_coding",
+      "format_hint": "confession",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Claude Code: plan mode + smaller PR habit",
+      "status": "queued",
+      "priority": 125
+    },
+    {
+      "id": "hook_26",
+      "hook": "An AI coding agent deleted a production environment and caused a 13-hour outage. Amazon blamed 'human error.'",
+      "pillar": "vibe_coding",
+      "format_hint": "confession",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Cursor agent: confirmation gate / no prod credentials in agent",
+      "status": "queued",
+      "priority": 126
+    },
+    {
+      "id": "hook_27",
+      "hook": "91.5% of vibe-coded apps have at least one AI-hallucination flaw — here's the most common one",
+      "pillar": "vibe_coding",
+      "format_hint": "tip",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Common flaw + Cursor fix (auth/CORS/env)",
+      "status": "queued",
+      "priority": 127
+    },
+    {
+      "id": "hook_28",
+      "hook": "Karpathy says vibe coding is dead. He replaced it with something called 'agentic engineering.'",
+      "pillar": "vibe_coding",
+      "format_hint": "hack",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Agentic loop in Claude Code/Cursor: plan → agent → verify",
+      "status": "queued",
+      "priority": 128
+    },
+    {
+      "id": "hook_29",
+      "hook": "Apple is rejecting vibe-coded apps from the App Store — here's the rule they're breaking",
+      "pillar": "vibe_coding",
+      "format_hint": "tip",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "One App Store / privacy rule + how to check in Cursor project",
+      "status": "queued",
+      "priority": 129
+    },
+    {
+      "id": "hook_30",
+      "hook": "The $400M AI app builder that left a security hole open for 48 days after a bug report",
+      "pillar": "vibe_coding",
+      "format_hint": "confession",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Bug-report SLA habit + Cursor security checklist",
+      "status": "queued",
+      "priority": 130
+    },
+    {
+      "id": "hook_31",
+      "hook": "I asked AI to review AI's code. This is what slipped through.",
+      "pillar": "vibe_coding",
+      "format_hint": "hack",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Second-pass Claude Code review prompt that catches secrets",
+      "status": "queued",
+      "priority": 131
+    },
+    {
+      "id": "hook_32",
+      "hook": "Vibe coding raises the floor. It does NOT raise the ceiling — and production lives at the ceiling",
+      "pillar": "vibe_coding",
+      "format_hint": "confession",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Ceiling = evals + receipt; show Cursor production checklist",
+      "status": "queued",
+      "priority": 132
+    },
+    {
+      "id": "hook_33",
+      "hook": "Your resume is worth nothing in 2026 — here's what actually gets interviews",
+      "pillar": "career",
+      "format_hint": "build",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Public Cursor/Claude ship with evals as the artifact",
+      "status": "queued",
+      "priority": 133
+    },
+    {
+      "id": "hook_34",
+      "hook": "63% of job seekers have now been interviewed by an AI. Most hated it.",
+      "pillar": "career",
+      "format_hint": "confession",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "How to prep: demo a tool-named ship in 30s",
+      "status": "queued",
+      "priority": 134
+    },
+    {
+      "id": "hook_35",
+      "hook": "They told me 'no AI tools' in my coding interview — for a job that IS using AI tools",
+      "pillar": "career",
+      "format_hint": "confession",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Honest take + still name Cursor as the real job skill",
+      "status": "queued",
+      "priority": 135
+    },
+    {
+      "id": "hook_36",
+      "hook": "The AI engineer interview isn't LeetCode anymore. It's: ship it, eval it, defend your costs.",
+      "pillar": "career",
+      "format_hint": "build",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Take-home shape: Cursor project + cost line + one eval",
+      "status": "queued",
+      "priority": 136
+    },
+    {
+      "id": "hook_37",
+      "hook": "I landed 20 US interviews as an international student by building in public — not applying",
+      "pillar": "career",
+      "format_hint": "build",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Build-in-public cadence with weekly Cursor ship",
+      "status": "queued",
+      "priority": 137
+    },
+    {
+      "id": "hook_38",
+      "hook": "AI was the #1 cited reason for job cuts two months in a row. Here's the roles actually growing.",
+      "pillar": "career",
+      "format_hint": "tip",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Growing role skills map to Cursor/Claude/MCP stack",
+      "status": "queued",
+      "priority": 138
+    },
+    {
+      "id": "hook_39",
+      "hook": "Your polished AI demo portfolio is getting skipped. Hiring managers want evals.",
+      "pillar": "career",
+      "format_hint": "hack",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Add eval screenshot/folder to your Cursor repo today",
+      "status": "queued",
+      "priority": 139
+    },
+    {
+      "id": "hook_40",
+      "hook": "Entry-level SWE isn't dead — but the entry-level job description got rewritten",
+      "pillar": "career",
+      "format_hint": "tip",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Rewrite: agent + eval literacy shown via Claude Code",
+      "status": "queued",
+      "priority": 140
+    },
+    {
+      "id": "hook_41",
+      "hook": "The take-home assignment that gets you hired: end-to-end product, real baseline, cost breakdown",
+      "pillar": "career",
+      "format_hint": "build",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Template: Cursor app + baseline metric + $ cost",
+      "status": "queued",
+      "priority": 141
+    },
+    {
+      "id": "hook_42",
+      "hook": "Frontier lab vs product AI: two completely different careers with the same job title",
+      "pillar": "career",
+      "format_hint": "confession",
+      "series_arc": "career_proof_2026w42",
+      "adaptation_note": "Pick product AI path with Cursor shipping proof",
+      "status": "queued",
+      "priority": 142
+    },
+    {
+      "id": "hook_43",
+      "hook": "Designing the chatbot was the easy 20%. The other 80% is the system design interview question.",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Queue + retries + fallback — sketch you can wire next to Cursor agent",
+      "status": "queued",
+      "priority": 143
+    },
+    {
+      "id": "hook_44",
+      "hook": "Your AI app doesn't need a bigger model — it needs a queue, retries, and fallbacks",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Add retry/backoff in your Cursor API wrapper",
+      "status": "queued",
+      "priority": 144
+    },
+    {
+      "id": "hook_45",
+      "hook": "N+1 queries will kill your AI app faster than a bad prompt ever will",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Batch retrieval/tool calls in Claude Code agent loop",
+      "status": "queued",
+      "priority": 145
+    },
+    {
+      "id": "hook_46",
+      "hook": "Rate limits, idempotency, streaming: the unsexy backend every AI demo is missing",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Add idempotency key to one Cursor API call",
+      "status": "queued",
+      "priority": 146
+    },
+    {
+      "id": "hook_47",
+      "hook": "Your vector database is not a database — stop treating it like one",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Source-of-truth + vector as index; one Cursor project fix",
+      "status": "queued",
+      "priority": 147
+    },
+    {
+      "id": "hook_48",
+      "hook": "How I'd architect a production RAG system in 2026 (whiteboard edition)",
+      "pillar": "production_ai",
+      "format_hint": "hack",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Whiteboard → one file scaffold in Cursor today",
+      "status": "queued",
+      "priority": 148
+    },
+    {
+      "id": "hook_49",
+      "hook": "One MCP server cut our agent's tool calls by 76%. Here's the before/after.",
+      "pillar": "vibe_coding",
+      "format_hint": "hack",
+      "series_arc": "vibe_reality_2026w40",
+      "adaptation_note": "Wire one MCP in Cursor/Claude Code; measure tool calls",
+      "status": "queued",
+      "priority": 149
+    },
+    {
+      "id": "hook_50",
+      "hook": "SSE vs websockets vs polling: how to make your AI app feel instant",
+      "pillar": "production_ai",
+      "format_hint": "tip",
+      "series_arc": "prod_ai_leaks_2026w38",
+      "adaptation_note": "Streaming default in Cursor app for perceived speed",
+      "status": "queued",
+      "priority": 150
+    },
+    {
+      "id": "hook_51",
+      "hook": "Day 47 building my AI app in public: the demo worked, production didn't — here's the damage",
+      "pillar": "nyc",
+      "format_hint": "confession",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Demo→prod gap: one Cursor prod checklist item that failed",
+      "status": "queued",
+      "priority": 151
+    },
+    {
+      "id": "hook_52",
+      "hook": "POV: you're a senior AI engineer in NYC and your rent just went up",
+      "pillar": "nyc",
+      "format_hint": "confession",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Ship side income/tool skill with Cursor — light, no soft offer",
+      "status": "queued",
+      "priority": 152
+    },
+    {
+      "id": "hook_53",
+      "hook": "I rang the NYSE closing bell with Snowflake — here's what tech events never show you",
+      "pillar": "nyc",
+      "format_hint": "build",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Event vs quiet ship; name one Cursor habit after the event",
+      "status": "queued",
+      "priority": 153
+    },
+    {
+      "id": "hook_54",
+      "hook": "I showed my AI side project to 10 strangers in Manhattan. Brutal feedback.",
+      "pillar": "nyc",
+      "format_hint": "build",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Feedback → one Cursor fix shipped same day",
+      "status": "queued",
+      "priority": 154
+    },
+    {
+      "id": "hook_55",
+      "hook": "What nobody posts about: the 90 days between the viral demo and actual production",
+      "pillar": "nyc",
+      "format_hint": "confession",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "90-day prod path: evals + cost in Cursor",
+      "status": "queued",
+      "priority": 155
+    },
+    {
+      "id": "hook_56",
+      "hook": "From 0 to 500K users with $0 ad spend: what one AI founder's Instagram actually looked like daily",
+      "pillar": "nyc",
+      "format_hint": "tip",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Steal cadence only; meat = daily Cursor ship clip",
+      "status": "queued",
+      "priority": 156
+    },
+    {
+      "id": "hook_57",
+      "hook": "I asked 5 NYC VCs what they'd fund in AI right now — their answers surprised me",
+      "pillar": "nyc",
+      "format_hint": "build",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Translate VC answer into one Cursor prototype angle",
+      "status": "queued",
+      "priority": 157
+    },
+    {
+      "id": "hook_58",
+      "hook": "Shipping at 2am from a NYC apartment: the build-in-public episode nobody claps for",
+      "pillar": "nyc",
+      "format_hint": "confession",
+      "series_arc": "ship_in_public_2026w44",
+      "adaptation_note": "Quiet ship receipt from Cursor/Claude session",
+      "status": "queued",
+      "priority": 158
+    }
+  ]
+}

@@ -941,6 +941,12 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
                 script["source_url"] = topic["source_url"]
             if topic.get("source_platform"):
                 script["source_platform"] = topic["source_platform"]
+            if topic.get("hook_bank_id"):
+                script["hook_bank_id"] = topic["hook_bank_id"]
+            if topic.get("adaptation_note"):
+                script["adaptation_note"] = topic["adaptation_note"]
+            if topic.get("pillar"):
+                script["pillar"] = topic["pillar"]
             if topic.get("seed_origin"):
                 script["seed_origin"] = topic["seed_origin"]
             elif topic.get("source_type") == "journal":

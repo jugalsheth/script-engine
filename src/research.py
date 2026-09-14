@@ -158,7 +158,17 @@ VIRALITY_ORDER = {"high": 0, "medium": 1, "low": 2, "manual": 3}
 
 
 def _load_manual_topics() -> list[dict]:
-    """Read non-comment, non-empty lines from topics_override.txt."""
+    """Prefer active calendar week seeds; fall back to topics_override.txt lines."""
+    try:
+        from src.hook_bank import active_week, topics_for_week
+
+        cal_topics = topics_for_week(active_week())
+        if cal_topics:
+            print(f"   Calendar seeds: {len(cal_topics)} from week {active_week()}")
+            return cal_topics
+    except Exception as exc:
+        print(f"⚠️ Hook bank calendar unavailable: {exc}")
+
     override_path = CONFIG_DIR / "topics_override.txt"
     manual_topics = []
 
@@ -182,6 +192,8 @@ def _load_manual_topics() -> list[dict]:
                 "source_type": "hack",
                 "estimated_virality": "manual",
                 "format_hint": "hack",
+                "seed_origin": "manual",
+                "source_platform": "topics_override",
             }
         )
 
@@ -206,7 +218,7 @@ def _normalize_topic(raw: dict, default_source: str) -> dict | None:
     if virality not in ("high", "medium", "low", "manual"):
         virality = "medium"
 
-    return {
+    topic = {
         "topic_title": title,
         "topic_summary": summary,
         "source_type": source_type,
@@ -220,6 +232,19 @@ def _normalize_topic(raw: dict, default_source: str) -> dict | None:
         "engagement_score": float(raw.get("engagement_score") or 0),
         "format_hint": (raw.get("format_hint") or source_type or "hack").strip(),
     }
+    for key in (
+        "seed_origin",
+        "hook_bank_id",
+        "series_arc",
+        "pillar",
+        "adaptation_note",
+        "calendar_week",
+        "calendar_slot",
+        "script_type_hint",
+    ):
+        if raw.get(key) is not None:
+            topic[key] = raw[key]
+    return topic
 
 
 def _parse_topics_from_response(content: str, source_type: str) -> list[dict]:
@@ -380,7 +405,17 @@ async def fetch_topics() -> list[dict]:
         print("   Padding with vibe-coding fallback topics")
         combined = combined + list(FALLBACK_TOPICS)
 
-    combined = filter_topics_for_series(combined, max_off_arc=5)
+    # Keep calendar/manual seeds even if off the active series arc
+    protected = [
+        t for t in combined
+        if t.get("seed_origin") in ("calendar", "manual")
+        or t.get("source_platform") in ("hook_bank", "topics_override")
+        or t.get("estimated_virality") == "manual"
+    ]
+    protected_titles = {t["topic_title"] for t in protected}
+    others = [t for t in combined if t["topic_title"] not in protected_titles]
+    others = filter_topics_for_series(others, max_off_arc=5)
+    combined = protected + others
     final = _ensure_topic_count(combined)
-    print(f"   Research complete: {len(final)} topics (community-first, series-filtered)")
+    print(f"   Research complete: {len(final)} topics (community-first, calendar-protected)")
     return final

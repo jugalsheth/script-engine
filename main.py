@@ -27,17 +27,43 @@ from src.series_calendar import filter_topics_for_series, get_active_series
 
 
 def _select_growth_topics(scored_topics: list[dict], count: int = 8, news_slots: int = 3) -> list[dict]:
-    """Prefer series-aligned hacks/tips; reserve timely social/news (TLDR preferred).
+    """Prefer calendar/manual seeds, then series-aligned timely/fresh pool.
 
-    Target seed split for an 8-pack (journal filled upstream): ~4 fresh / ≤2 outlier / rest evergreen.
-    Outlier sources soft-pad from fresh until a neighbor scraper exists.
+    Target seed split for an 8-pack (journal filled upstream): calendar first,
+    then ~timely news, rest evergreen. Outlier soft-pads from fresh for now.
     """
     series = get_active_series()
+    calendar_pre = [
+        t for t in scored_topics
+        if t.get("seed_origin") == "calendar" or t.get("source_platform") == "hook_bank"
+        or t.get("estimated_virality") == "manual"
+    ]
+    calendar_titles_pre = {t["topic_title"] for t in calendar_pre}
+    non_calendar = [t for t in scored_topics if t["topic_title"] not in calendar_titles_pre]
     if series:
-        print(f"📚 Series: {series.get('title')} — filtering topics to arc")
-        scored_topics = filter_topics_for_series(scored_topics, max_off_arc=2, series=series)
+        print(f"📚 Series: {series.get('title')} — filtering topics to arc (calendar exempt)")
+        non_calendar = filter_topics_for_series(non_calendar, max_off_arc=2, series=series)
+    scored_topics = calendar_pre + non_calendar
 
-    # Boost TLDR into the timely pool
+    calendar = [
+        t for t in scored_topics
+        if t.get("seed_origin") == "calendar" or t.get("source_platform") == "hook_bank"
+        or t.get("estimated_virality") == "manual"
+    ]
+    # Prefer structured calendar over plain manual override
+    calendar.sort(
+        key=lambda t: (
+            0 if t.get("seed_origin") == "calendar" else 1,
+            -float(t.get("engagement_score") or 0),
+            -t.get("match_score", 0),
+        )
+    )
+    for t in calendar:
+        t.setdefault("seed_origin", "calendar" if t.get("hook_bank_id") else "manual")
+
+    calendar_titles = {t["topic_title"] for t in calendar}
+    remaining = [t for t in scored_topics if t["topic_title"] not in calendar_titles]
+
     def _timely_key(t: dict) -> tuple:
         platform = (t.get("source_platform") or "").lower()
         tldr_boost = 0 if platform == "tldr" else 1
@@ -49,30 +75,41 @@ def _select_growth_topics(scored_topics: list[dict], count: int = 8, news_slots:
         )
 
     timely_pool = sorted(
-        [t for t in scored_topics if t.get("source_type") in ("story", "news", "social", "hack")],
+        [t for t in remaining if t.get("source_type") in ("story", "news", "social", "hack")],
         key=_timely_key,
-    )[:news_slots]
+    )[: max(0, news_slots)]
     for t in timely_pool:
         t.setdefault("seed_origin", "fresh")
 
     timely_titles = {t["topic_title"] for t in timely_pool}
     evergreen = sorted(
-        [t for t in scored_topics if t["topic_title"] not in timely_titles],
+        [t for t in remaining if t["topic_title"] not in timely_titles],
         key=lambda t: (t.get("match_score", 0), float(t.get("engagement_score") or 0)),
         reverse=True,
     )
     for t in evergreen:
-        # Reserved outlier bucket — soft-pad from fresh until neighbor scraper exists
         if t.get("seed_origin") == "outlier":
             continue
         t.setdefault("seed_origin", "fresh")
 
-    batch = timely_pool + evergreen
-    selected = batch[:count]
+    # Calendar fills first (up to count), then timely, then evergreen
+    batch: list[dict] = []
+    for pool in (calendar, timely_pool, evergreen):
+        for t in pool:
+            if len(batch) >= count:
+                break
+            if t["topic_title"] in {b["topic_title"] for b in batch}:
+                continue
+            batch.append(t)
+        if len(batch) >= count:
+            break
 
-    # Ensure up to 2 slots tagged outlier when available; else log soft miss
+    selected = batch[:count]
+    cal_n = sum(1 for t in selected if t.get("seed_origin") == "calendar")
+    if cal_n:
+        print(f"   Seed split: {cal_n} calendar + {len(selected) - cal_n} other")
     outlier_n = sum(1 for t in selected if t.get("seed_origin") == "outlier")
-    if outlier_n < 2:
+    if outlier_n < 2 and cal_n == 0:
         print(f"   Seed split: outlier soft-miss ({outlier_n}/2) — padding from fresh")
     return selected
 
@@ -223,6 +260,15 @@ async def main():
         topics_dropped=dropped,
         content_phase=phase,
     )
+
+    try:
+        from src.hook_bank import mark_scripted_from_scripts
+
+        marked = mark_scripted_from_scripts(scripts)
+        if marked:
+            print(f"📅 Hook bank: marked {marked} calendar hook(s) scripted")
+    except Exception as exc:
+        print(f"⚠️ Hook bank status update skipped: {exc}")
 
     print("✅ Done!")
 

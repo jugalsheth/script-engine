@@ -1,56 +1,260 @@
+"""Hook bank + content calendar — promote weekly seeds into topics_override.
+
+Usage:
+  python3 -m src.hook_bank --week 1 --write-override
+  python3 -m src.hook_bank --week 1 --dry-run
+  python3 -m src.hook_bank --status
+  python3 -m src.hook_bank --mark-scripted hook_01 hook_02
+"""
+
 from __future__ import annotations
 
+import argparse
 import json
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
-HOOK_BANK_PATH = DATA_DIR / "hook_bank.json"
+ROOT = Path(__file__).resolve().parent.parent
+CONFIG_DIR = ROOT / "config"
+DATA_DIR = ROOT / "data"
+BANK_PATH = DATA_DIR / "hook_bank.json"
+CALENDAR_PATH = CONFIG_DIR / "content_calendar.json"
+OVERRIDE_PATH = CONFIG_DIR / "topics_override.txt"
 
-
-def _ensure_data_dir() -> None:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    if not HOOK_BANK_PATH.exists():
-        HOOK_BANK_PATH.write_text("[]\n", encoding="utf-8")
-
-
-def load_hooks() -> list:
-    """Read data/hook_bank.json; create with empty list if missing."""
-    _ensure_data_dir()
-    try:
-        content = HOOK_BANK_PATH.read_text(encoding="utf-8")
-        data = json.loads(content)
-        return data if isinstance(data, list) else []
-    except (OSError, json.JSONDecodeError):
-        return []
+FORMAT_TO_SOURCE = {
+    "hack": "hack",
+    "tip": "tip",
+    "build": "build",
+    "confession": "confession",
+    "actionable_news": "news",
+    "news": "news",
+}
 
 
-def save_hooks(new_scripts: list) -> None:
-    """Append new hooks, dedupe by opening_line, write back to disk."""
-    _ensure_data_dir()
-    existing = load_hooks()
-    seen = {h.get("opening_line", "").strip() for h in existing if h.get("opening_line")}
-    today = date.today().isoformat()
+def _now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
 
-    for script in new_scripts:
-        opening_line = (script.get("opening_line") or "").strip()
-        if not opening_line or opening_line in seen:
+
+def load_bank() -> dict:
+    return json.loads(BANK_PATH.read_text(encoding="utf-8"))
+
+
+def save_bank(data: dict) -> None:
+    data["count"] = len(data.get("hooks") or [])
+    BANK_PATH.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def load_calendar() -> dict:
+    return json.loads(CALENDAR_PATH.read_text(encoding="utf-8"))
+
+
+def save_calendar(data: dict) -> None:
+    CALENDAR_PATH.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+
+
+def hooks_by_id(bank: dict | None = None) -> dict[str, dict]:
+    bank = bank or load_bank()
+    return {h["id"]: h for h in bank.get("hooks") or [] if h.get("id")}
+
+
+def slots_for_week(week: int, calendar: dict | None = None) -> list[dict]:
+    calendar = calendar or load_calendar()
+    return [s for s in (calendar.get("slots") or []) if int(s.get("week") or 0) == week]
+
+
+def active_week(calendar: dict | None = None) -> int:
+    calendar = calendar or load_calendar()
+    return int(calendar.get("active_week") or 1)
+
+
+def hook_to_topic(hook: dict, slot: dict | None = None) -> dict[str, Any]:
+    """Emit research-compatible manual seed."""
+    fmt = (hook.get("format_hint") or "hack").lower()
+    script_type = (slot or {}).get("script_type") or fmt.upper()
+    if script_type == "ACTIONABLE_NEWS":
+        source_type = "news"
+        format_hint = "news"
+    else:
+        source_type = FORMAT_TO_SOURCE.get(fmt, "hack")
+        format_hint = fmt if fmt != "actionable_news" else "news"
+
+    title = (hook.get("hook") or "").strip()
+    note = (hook.get("adaptation_note") or "").strip()
+    summary = (
+        f"Calendar hook ({hook.get('pillar')}): {title}. "
+        f"Adaptation: {note}. Broad viral angle + named Cursor/Claude/MCP move + receipt."
+    )
+    return {
+        "topic_title": title[:160],
+        "topic_summary": summary[:500],
+        "source_type": source_type,
+        "estimated_virality": "manual",
+        "format_hint": format_hint,
+        "story_hook": title[:120],
+        "protagonist": "a builder",
+        "tension": note[:200],
+        "payoff": "one concrete tip the viewer can try today",
+        "source_url": "",
+        "source_platform": "hook_bank",
+        "engagement_score": 120.0,
+        "seed_origin": "calendar",
+        "hook_bank_id": hook.get("id"),
+        "series_arc": hook.get("series_arc") or (slot or {}).get("series_id"),
+        "pillar": hook.get("pillar"),
+        "adaptation_note": note,
+        "calendar_week": (slot or {}).get("week"),
+        "calendar_slot": (slot or {}).get("slot"),
+        "script_type_hint": script_type,
+    }
+
+
+def topics_for_week(week: int) -> list[dict]:
+    bank = load_bank()
+    by_id = hooks_by_id(bank)
+    topics: list[dict] = []
+    for slot in slots_for_week(week):
+        hid = slot.get("hook_id")
+        hook = by_id.get(hid or "")
+        if not hook:
+            print(f"⚠️ Missing hook {hid} for week {week}")
             continue
-        existing.append(
-            {
-                "opening_line": opening_line,
-                "hook_type": script.get("hook_type", ""),
-                "date": today,
-            }
-        )
-        seen.add(opening_line)
-
-    HOOK_BANK_PATH.write_text(json.dumps(existing, indent=2) + "\n", encoding="utf-8")
-    print(f"   Hook bank updated ({len(existing)} hooks total)")
+        if hook.get("status") == "scripted":
+            continue
+        topics.append(hook_to_topic(hook, slot))
+    return topics
 
 
-def get_recent_hooks(n: int = 30) -> list[str]:
-    """Return the last n opening_line strings for deduplication."""
-    hooks = load_hooks()
-    lines = [h["opening_line"] for h in hooks if h.get("opening_line")]
-    return lines[-n:]
+def tip_ish_count(topics: list[dict]) -> int:
+    n = 0
+    for t in topics:
+        st = (t.get("script_type_hint") or "").upper()
+        if st:
+            if st in ("HACK", "TIP", "ACTIONABLE_NEWS"):
+                n += 1
+            continue
+        if (t.get("format_hint") or "").lower() in ("hack", "tip", "news"):
+            n += 1
+    return n
+
+
+def write_override(topics: list[dict], *, week: int) -> Path:
+    """Replace topics_override.txt with this week's calendar hooks."""
+    lines = [
+        f"# Calendar week {week} — promoted {_now_iso()}",
+        "# Generated by: python3 -m src.hook_bank --week N --write-override",
+        "# Broad hook lines; generator must add named tool meat + receipt.",
+        "",
+    ]
+    for t in topics:
+        hid = t.get("hook_bank_id") or ""
+        st = t.get("script_type_hint") or t.get("format_hint") or "hack"
+        lines.append(f"# {hid} | {st} | {t.get('pillar')}")
+        lines.append(t["topic_title"])
+        lines.append("")
+    OVERRIDE_PATH.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    return OVERRIDE_PATH
+
+
+def mark_hooks_status(hook_ids: list[str], status: str) -> int:
+    bank = load_bank()
+    wanted = set(hook_ids)
+    updated = 0
+    for h in bank.get("hooks") or []:
+        if h.get("id") in wanted:
+            h["status"] = status
+            h["status_updated_at"] = _now_iso()
+            updated += 1
+    save_bank(bank)
+    return updated
+
+
+def mark_scripted_from_scripts(scripts: list[dict]) -> int:
+    ids = [s.get("hook_bank_id") for s in scripts if s.get("hook_bank_id")]
+    if not ids:
+        return 0
+    return mark_hooks_status([str(i) for i in ids], "scripted")
+
+
+def set_active_week(week: int) -> None:
+    cal = load_calendar()
+    cal["active_week"] = week
+    save_calendar(cal)
+
+
+def status_report() -> str:
+    bank = load_bank()
+    cal = load_calendar()
+    hooks = bank.get("hooks") or []
+    by_status: dict[str, int] = {}
+    for h in hooks:
+        st = h.get("status") or "queued"
+        by_status[st] = by_status.get(st, 0) + 1
+    lines = [
+        f"Hook bank: {len(hooks)} hooks",
+        f"Statuses: {by_status}",
+        f"Active calendar week: {cal.get('active_week')}",
+        f"Week counts: {(cal.get('summary') or {}).get('week_counts')}",
+    ]
+    return "\n".join(lines)
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Promote hook-bank calendar weeks")
+    parser.add_argument("--week", type=int, default=None, help="Calendar week number")
+    parser.add_argument(
+        "--write-override",
+        action="store_true",
+        help="Write topics_override.txt for the week",
+    )
+    parser.add_argument("--dry-run", action="store_true", help="Print topics only")
+    parser.add_argument("--status", action="store_true", help="Print bank/calendar status")
+    parser.add_argument(
+        "--set-active",
+        action="store_true",
+        help="Set content_calendar active_week to --week",
+    )
+    parser.add_argument(
+        "--mark-scripted",
+        nargs="+",
+        metavar="HOOK_ID",
+        help="Mark hook ids as scripted",
+    )
+    args = parser.parse_args(argv)
+
+    if args.status:
+        print(status_report())
+        return 0
+
+    if args.mark_scripted:
+        n = mark_hooks_status(args.mark_scripted, "scripted")
+        print(f"Marked {n} hooks scripted")
+        return 0
+
+    week = args.week if args.week is not None else active_week()
+    topics = topics_for_week(week)
+    tipish = tip_ish_count(topics)
+    print(f"Week {week}: {len(topics)} pending topics (tip/hack/news={tipish})")
+    for t in topics:
+        print(f"  - [{t.get('hook_bank_id')}] {t['topic_title'][:90]}")
+
+    if tipish > 5:
+        print(f"⚠️ tip/hack/news count {tipish} exceeds soft cap 5 — review calendar mix")
+
+    if args.set_active or args.write_override:
+        set_active_week(week)
+        if args.set_active and not args.write_override:
+            print(f"Active week set to {week}")
+
+    if args.write_override:
+        path = write_override(topics, week=week)
+        print(f"Wrote {len(topics)} hooks → {path}")
+        return 0
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
