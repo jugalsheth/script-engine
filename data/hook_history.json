@@ -858,5 +858,45 @@
     "opening_line": "I spent two weeks blaming my agent model. Wrong.",
     "hook_type": "CONFESSION",
     "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I kept copying error messages from my browser into Claude Code by hand.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "Will Cursor's agent mode actually finish your feature \u2014 or just spin forever?",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "Every builder I know plans and ships inside the same tool \u2014 and honestly, that's wrong.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "Will Browser MCP actually let Cursor click your browser \u2014 or is that just hype?",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "Every tool I wired to my OpenAI agent was a custom function.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I kept building the same glue code by hand \u2014 API calls, auth headers, error handling \u2014 every single project.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "Claude Skills or MCP \u2014 which one actually changes how you build?",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I kept adding tools to my agent. One after another. Evals still broke.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-27"
   }
 ]
