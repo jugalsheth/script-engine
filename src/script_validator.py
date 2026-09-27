@@ -500,7 +500,7 @@ def validate_script(
             warnings.append("Missing open_loop_plant — retention sag risk")
             score -= 4
 
-        # Closer must callback opening OR land a receipt — kill slogan stamps
+        # Closer must callback opening OR land a receipt (in closer or final tail)
         closer_check = closer or last
         opening_check2 = opening or first
         if closer_check and opening_check2:
@@ -513,8 +513,18 @@ def validate_script(
                 if len(w) > 2 and w not in _STOPWORDS
             }
             shares = bool(closer_words & open_words)
+            # Also treat shared tool names as a callback
+            tool_share = any(
+                kw in closer_check.lower() and kw in opening_check2.lower()
+                for kw in ("cursor", "claude", "mcp", "agent", "composer")
+            )
             has_receipt = bool(RECEIPT_PATTERN.search(closer_check))
-            if not shares and not has_receipt:
+            if not has_receipt:
+                # Receipt in the closing tail of the spoken script still counts
+                words = spoken.split()
+                tail = " ".join(words[int(len(words) * 0.70) :]) if words else ""
+                has_receipt = bool(RECEIPT_PATTERN.search(tail))
+            if not shares and not tool_share and not has_receipt:
                 errors.append(
                     "ViralTasteGate: loopback_closer must callback opening "
                     "(shared content word) OR land a receipt — no slogan closers"
