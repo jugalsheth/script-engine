@@ -24,7 +24,15 @@ SIGNATURE_PHRASES = [
     "that's not how it works in production",
     "the truth is",
     "get shit done",
+    "that's the move",
+    "watch what happens",
 ]
+
+_STOPWORDS = {
+    "a", "an", "the", "and", "or", "but", "to", "of", "in", "on", "for", "is",
+    "it", "that", "this", "with", "you", "i", "my", "your", "be", "was", "were",
+    "are", "at", "as", "so", "if", "do", "did", "not", "no", "just", "all",
+}
 
 FAKE_STAT_PATTERNS = [
     r"according to (?:the )?(?:bureau of labor|stack overflow|github developer survey)",
@@ -468,6 +476,62 @@ def validate_script(
                 "ViralTasteGate: soft-offer CTA banned — use try this / follow the series only"
             )
             score -= 16
+
+        # Open loop must plant early (retention mechanic)
+        plant = (script.get("open_loop_plant") or "").strip()
+        if plant:
+            if not _phrase_in_script(plant, spoken):
+                errors.append("ViralTasteGate: open_loop_plant must appear verbatim in spoken_script")
+                score -= 10
+            else:
+                words = spoken.split()
+                if words:
+                    plant_l = plant.lower()
+                    spoken_l = spoken.lower()
+                    idx = spoken_l.find(plant_l[: min(24, len(plant_l))])
+                    if idx >= 0:
+                        prefix_words = len(spoken_l[:idx].split())
+                        if prefix_words / max(len(words), 1) > 0.40:
+                            errors.append(
+                                "ViralTasteGate: open_loop_plant must land in first ~40% of script"
+                            )
+                            score -= 8
+        else:
+            warnings.append("Missing open_loop_plant — retention sag risk")
+            score -= 4
+
+        # Closer must callback opening OR land a receipt — kill slogan stamps
+        closer_check = closer or last
+        opening_check2 = opening or first
+        if closer_check and opening_check2:
+            closer_words = {
+                w for w in re.findall(r"[a-z0-9']+", closer_check.lower())
+                if len(w) > 2 and w not in _STOPWORDS
+            }
+            open_words = {
+                w for w in re.findall(r"[a-z0-9']+", opening_check2.lower())
+                if len(w) > 2 and w not in _STOPWORDS
+            }
+            shares = bool(closer_words & open_words)
+            has_receipt = bool(RECEIPT_PATTERN.search(closer_check))
+            if not shares and not has_receipt:
+                errors.append(
+                    "ViralTasteGate: loopback_closer must callback opening "
+                    "(shared content word) OR land a receipt — no slogan closers"
+                )
+                score -= 12
+
+        crust = ((triggers.get("beat_phrases") or {}) if isinstance(triggers, dict) else {}).get("crust") or ""
+        if crust and closer_check and _normalize_for_match(crust) == _normalize_for_match(closer_check):
+            errors.append("ViralTasteGate: beat_phrases.crust must differ from loopback_closer")
+            score -= 8
+
+        ss = (script.get("story_structure") or "").upper()
+        if ss and ss not in ("MAP", "SHARK_TANK", "KITCHEN_NIGHTMARES"):
+            warnings.append(f"Unknown story_structure {ss!r} — expected MAP|SHARK_TANK|KITCHEN_NIGHTMARES")
+            score -= 2
+        elif not ss:
+            script.setdefault("story_structure", "MAP")
 
     score = max(0, min(100, score))
     passed = len(errors) == 0

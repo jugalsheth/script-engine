@@ -34,7 +34,7 @@ video_triggers (object):
     "stat_phrases": [
       {"phrase": "twenty three automated workflows", "display": "23", "label": "AUTOMATED WORKFLOWS"}
     ],
-    "fun_phrases": ["that's normal", "pure building", "finally"],
+    "fun_phrases": ["that's normal", "that's the move", "finally"],
     "energy_words": ["right", "truth", "unless"],
     "broll_phrases": ["data pipeline", "python script", "finance team"],
     "broll_image_descriptions": ["REQUIRED — one specific AI scene per broll_phrase, same array length"],
@@ -52,7 +52,11 @@ recording_cues (array, 5-8 items) — teleprompter sheet for the creator:
   {"second": 12, "phrase": "seventy four percent", "action": "PAUSE before number"}
 
 FUN PHRASE RULES — include 2-3 fun_phrases verbatim in spoken_script from:
-  that's normal, finally, wrong, secret, truth, pure building, failed, insane, wild
+  that's normal, finally, wrong, secret, truth, failed, insane, wild,
+  listen, unless, really, that's the move, that's all it is, watch what happens,
+  one file, do this today
+  NEVER use "pure building" — banned slogan stamp.
+  crust (beat_phrases) MUST differ from the closer line.
 
 BROLL IMAGE RULES (required when broll_phrases present):
   - broll_image_descriptions MUST have the same length as broll_phrases

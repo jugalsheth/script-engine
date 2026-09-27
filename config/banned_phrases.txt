@@ -16,7 +16,11 @@ job search
 in my interviews
 offer negotiation
 at my company
+pure building
+that's pure building
+thats pure building
 
 regex:i analyzed \d+
 regex:i've reviewed over \d+
 regex:\bat my company\b
+regex:\bpure building\b

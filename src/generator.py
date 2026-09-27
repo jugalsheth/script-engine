@@ -45,10 +45,11 @@ JSON_FIELDS = """
   "series_id": "optional — pipeline may overwrite",
   "recording_tip": "Pause before numbers. First line with energy, not presentation voice. One more specific tip.",
   "hook_type": "IDENTITY CALL | CONFESSION | OPEN LOOP | CONTRARIAN STRIKE",
+  "story_structure": "MAP | SHARK_TANK | KITCHEN_NIGHTMARES",
   "opening_line": "the exact first sentence spoken",
   "open_loop_plant": "the teaser line planted early in the script",
   "open_loop_payoff": "how and where the loop resolves",
-  "loopback_closer": "final line that connects back to the hook",
+  "loopback_closer": "final line that callbacks the opening OR lands the receipt — never a slogan stamp",
   "visual_cues": "human-readable summary of graphics (legacy, keep for Telegram)",
   "hook_visual": {
     "tier": "higgsfield | fal | remotion",
@@ -70,11 +71,11 @@ JSON_FIELDS = """
   ],
   "video_triggers": {
     "stat_phrases": [{"phrase": "twenty three workflows", "display": "23", "label": "AUTOMATED WORKFLOWS"}],
-    "fun_phrases": ["that's normal", "pure building"],
+    "fun_phrases": ["that's normal", "that's the move"],
     "energy_words": ["right", "truth"],
     "broll_phrases": ["cursor agent", "claude code terminal"],
     "broll_image_descriptions": ["Cursor IDE agent panel with code diff", "Claude Code terminal with MCP tool call"],
-    "beat_phrases": {"crust": "pure building", "payoff": "here's what makes it worth it"}
+    "beat_phrases": {"crust": "here's the thing", "payoff": "that's the move"}
   },
   "edit_template": "FACE_HOOK_SCREEN_PROOF | CONFESSION_STAT | WALKTHROUGH",
   "recording_cues": [
@@ -89,9 +90,46 @@ JSON_FIELDS = """
 """
 
 FUN_PHRASE_POOL = (
-    "that's normal, finally, wrong, secret, truth, pure building, failed, "
-    "insane, wild, listen, unless, really"
+    "that's normal, finally, wrong, secret, truth, failed, "
+    "insane, wild, listen, unless, really, that's the move, "
+    "that's all it is, watch what happens, one file, do this today"
 )
+
+# Viral story doors — rotate across the batch so the feed never stamps one rhythm.
+STORY_STRUCTURES = ("MAP", "SHARK_TANK", "KITCHEN_NIGHTMARES")
+
+STORY_STRUCTURE_BRIEFS = {
+    "MAP": (
+        "STORY STRUCTURE: MAP (stranger-safe path)\n"
+        "- Front-load the journey: what you tried + which move worked.\n"
+        "- Middle stays flat and clear — one copyable action, not Step stacks.\n"
+        "- End on receipt (minutes / file / visible UI). Callback optional.\n"
+    ),
+    "SHARK_TANK": (
+        "STORY STRUCTURE: SHARK_TANK (binary open loop)\n"
+        "- Plant a binary in the FIRST sentence (will it work / which setting / what's broken).\n"
+        "- open_loop_plant in the first ~10s; WITHHOLD the answer until loopback_closer.\n"
+        "- Middle escalates stakes; payoff = the reveal + receipt.\n"
+    ),
+    "KITCHEN_NIGHTMARES": (
+        "STORY STRUCTURE: KITCHEN_NIGHTMARES (disaster → turnaround)\n"
+        "- Before state → what broke / felt stupid → one fix → proof.\n"
+        "- Prefer hook_type CONFESSION. Struggle beat BEFORE the teach.\n"
+        "- Closer = proof/receipt that echoes the opening pain.\n"
+    ),
+}
+
+DEFAULT_STRUCTURE_BY_TYPE = {
+    "HACK": "MAP",
+    "TIP": "MAP",
+    "BUILD": "KITCHEN_NIGHTMARES",
+    "ACTIONABLE_NEWS": "SHARK_TANK",
+    "CONFESSION": "KITCHEN_NIGHTMARES",
+    "STORY_REACTION": "KITCHEN_NIGHTMARES",
+    "HOT_TAKE": "SHARK_TANK",
+    "EVERGREEN_VALUE": "MAP",
+    "NEWS_REACTION": "SHARK_TANK",
+}
 
 
 def _load_config_file(filename: str) -> str:
@@ -511,10 +549,18 @@ async def _generate_one_script(
     batch_size: int,
     force_story_archetype: str | None = None,
     story_retry_done: bool = False,
+    story_structure: str = "MAP",
 ) -> dict | None:
     """Generate, validate, retry, and voice-rewrite a single script."""
     user_prompt = _build_user_prompt(
-        topic, script_number, recent_hooks, phase, brand_episode, script_type, batch_size,
+        topic,
+        script_number,
+        recent_hooks,
+        phase,
+        brand_episode,
+        script_type,
+        batch_size,
+        story_structure=story_structure,
     )
     if force_story_archetype:
         user_prompt += (
@@ -542,6 +588,7 @@ async def _generate_one_script(
             continue
 
         script = _normalize_script(script)
+        script["story_structure"] = story_structure
         last_result = validate_script(script, topic)
         script = _attach_validation(script, topic, last_result)
 
@@ -567,6 +614,7 @@ async def _generate_one_script(
                 batch_size,
                 force_story_archetype="confession",
                 story_retry_done=True,
+                story_structure=story_structure,
             )
 
         if last_result.passed:
@@ -736,10 +784,14 @@ def _growth_requirements() -> str:
         "   Prompt must show tool UI / mashup result — no purple AI brains.\n"
         "   visual_briefs 1-3. visual_moments 3-5. Max ONE higgsfield asset.\n"
         "8. PUNCH PACK — ≥2 fun_phrases from pool verbatim; beat_phrases.crust in first 15s;\n"
-        "   energy_words; optional early headline/tweet visual_moment for news/hack.\n"
-        "9. Rotate signatures — do NOT default every closer to 'that's all it is.'\n"
-        "10. RECORDING CUES — 5-8 teleprompter beats.\n"
-        "11. EAR TEST — contractions; fragments OK; if it sounds like a memo, rewrite.\n\n"
+        "   crust ≠ closer. energy_words; optional early headline/tweet for news/hack.\n"
+        "9. CLOSER — loopback_closer must CALLBACK opening_line (shared content word)\n"
+        "   OR land a receipt ($, minutes, file, visible UI). NEVER slogan stamps like\n"
+        "   'pure building'. Rotate signatures — max one living-voice signature per script.\n"
+        "10. RHYTHM — long context → short punch → short punch. Rehook/stakes ~5–10s.\n"
+        "    Struggle beat before receipt. Follow the assigned story_structure door.\n"
+        "11. RECORDING CUES — 5-8 teleprompter beats.\n"
+        "12. EAR TEST — contractions; fragments OK; if it sounds like a memo, rewrite.\n\n"
         f'{_video_contract_block()}'
         "- Written in first person, casual, direct\n"
         "- No bullet points in spoken_script — continuous speech\n"
@@ -784,6 +836,63 @@ def _resolve_batch_script_types(topics: list[dict]) -> list[str]:
     return types
 
 
+def _default_structure_for_type(script_type: str) -> str:
+    return DEFAULT_STRUCTURE_BY_TYPE.get((script_type or "").upper(), "MAP")
+
+
+def _resolve_batch_story_structures(script_types: list[str]) -> list[str]:
+    """Assign MAP / SHARK_TANK / KITCHEN_NIGHTMARES with batch diversity."""
+    n = len(script_types)
+    if n == 0:
+        return []
+
+    structures: list[str] = []
+    edu_i = 0
+    for st in script_types:
+        upper = (st or "").upper()
+        if upper in ("CONFESSION", "BUILD", "STORY_REACTION"):
+            structures.append("KITCHEN_NIGHTMARES")
+        elif upper in ("ACTIONABLE_NEWS", "HOT_TAKE", "NEWS_REACTION"):
+            structures.append("SHARK_TANK")
+        else:
+            structures.append("SHARK_TANK" if edu_i % 2 else "MAP")
+            edu_i += 1
+
+    if n >= 4:
+        present = set(structures)
+        for door in STORY_STRUCTURES:
+            if door in present:
+                continue
+            candidates: list[tuple[int, int]] = []
+            for i, s in enumerate(structures):
+                if structures.count(s) <= 1:
+                    continue
+                st = (script_types[i] or "").upper()
+                if st in ("CONFESSION", "BUILD", "STORY_REACTION") and door != "KITCHEN_NIGHTMARES":
+                    continue
+                if st in ("ACTIONABLE_NEWS", "HOT_TAKE", "NEWS_REACTION") and door != "SHARK_TANK":
+                    continue
+                priority = 0 if st in ("HACK", "TIP", "EVERGREEN_VALUE") else 1
+                candidates.append((priority, i))
+            if candidates:
+                candidates.sort()
+                structures[candidates[0][1]] = door
+                present.add(door)
+
+    return structures
+
+
+def _story_structure_block(story_structure: str) -> str:
+    brief = STORY_STRUCTURE_BRIEFS.get(story_structure) or STORY_STRUCTURE_BRIEFS["MAP"]
+    return (
+        f"{brief}"
+        f'- Set JSON field story_structure to "{story_structure}".\n'
+        "- Cadence: longer context sentence. Short hit. Another short hit.\n"
+        "- Rehook/stakes before the teach. Struggle before receipt.\n"
+        "- Closer callbacks opening OR lands receipt — never a recycled slogan.\n"
+    )
+
+
 def _build_user_prompt(
     topic: dict,
     script_number: int,
@@ -792,6 +901,7 @@ def _build_user_prompt(
     brand_episode: int,
     script_type: str,
     batch_size: int,
+    story_structure: str = "MAP",
 ) -> str:
     territory = topic.get("territory", "General")
     hooks_block = (
@@ -804,6 +914,7 @@ def _build_user_prompt(
         if phase == "intro"
         else _growth_requirements()
     )
+    structure_block = _story_structure_block(story_structure)
 
     if topic.get("source_type") == "journal":
         raw_transcript = topic.get("raw_transcript", topic.get("topic_summary", ""))
@@ -836,6 +947,7 @@ def _build_user_prompt(
             f"TERRITORY: {territory}\n"
             f"DOMAIN TAGS: {', '.join(topic.get('domain_tags', []))}\n\n"
             f"{_script_type_requirements(script_type, script_number, batch_size)}\n"
+            f"{structure_block}\n"
             f"creator_take_anchor must reflect the creator's actual angle from the ramble.\n\n"
             f"Avoid reusing any of these recent opening lines: {hooks_block}\n\n"
             f"Return a JSON object with exactly these fields:\n"
@@ -856,6 +968,7 @@ def _build_user_prompt(
         f"SOURCE TYPE: {topic.get('source_type', 'trend')}\n\n"
         f"{_story_context_block(topic)}"
         f"{_script_type_requirements(script_type, script_number, batch_size)}\n"
+        f"{structure_block}\n"
         f"creator_take_anchor must name the specific POV this script embodies.\n\n"
         f"Avoid reusing any of these recent opening lines: {hooks_block}\n\n"
         f"Return a JSON object with exactly these fields:\n"
@@ -892,13 +1005,16 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
     scripts: list[dict] = []
     batch_size = len(topics)
     batch_types = _resolve_batch_script_types(topics)
+    batch_structures = _resolve_batch_story_structures(batch_types)
+    print(f"   Story doors: {dict((s, batch_structures.count(s)) for s in STORY_STRUCTURES)}")
 
     for i, topic in enumerate(topics, start=1):
         brand_episode = videos_published + i if phase == "intro" else i
         script_type = batch_types[i - 1]
+        story_structure = batch_structures[i - 1]
         print(
             f"   Generating script {i}/{len(topics)} "
-            f"[{phase}/{script_type}] {topic['topic_title'][:45]}..."
+            f"[{phase}/{script_type}/{story_structure}] {topic['topic_title'][:45]}..."
         )
         try:
             script = await _generate_one_script(
@@ -911,6 +1027,7 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
                 brand_episode,
                 script_type,
                 batch_size,
+                story_structure=story_structure,
             )
 
             if not script:
@@ -919,6 +1036,7 @@ async def generate_scripts(topics: list[dict], phase: str | None = None) -> list
 
             script["script_number"] = script.get("script_number", i)
             script["script_type"] = script.get("script_type", script_type)
+            script["story_structure"] = script.get("story_structure") or story_structure
             script["territory"] = script.get("territory", topic.get("territory", "General"))
             script["source_topic"] = topic["topic_title"]
             script["source_type"] = topic.get("source_type", "trend")

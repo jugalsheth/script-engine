@@ -104,3 +104,24 @@ Sharp edges beat beige “helpful tips” energy.
 - **Audience wedge:** one builder persona, many tools — don’t niche the first line into oblivion.
 - **Packaging retry:** same seed, swap `edit_template` among FACE_HOOK_SCREEN_PROOF / WALKTHROUGH / CONFESSION_STAT only.
 - **Intention (optional metadata):** growth | nurture | fun — tip monoculture is the failure mode; keep ≥3 non-HACK/TIP in an 8-pack.
+
+---
+
+## Viral 4-layer stack (always)
+
+Every script must land all four — slogan closers do not substitute:
+
+1. **Hook (0–3s)** — verbal + title + visual (complementary or incomplete_cliff)
+2. **Retention mechanic** — open loop / binary / rising stakes before the teach
+3. **Payoff** — high-arousal receipt (awe/relief/steal-this), not a calm summary
+4. **Share + loop** — closer callbacks the opening OR lands the receipt so replay feels seamless
+
+## Story doors — rotate across the batch (`story_structure`)
+
+| Door | Shape | Prefer for |
+|------|-------|------------|
+| MAP | Path up front → one move → receipt | HACK / TIP |
+| SHARK_TANK | Binary in line 1; answer withheld till closer | NEWS / OPEN LOOP |
+| KITCHEN_NIGHTMARES | Before → disaster → turnaround → proof | CONFESSION / BUILD |
+
+Anti-monotony for an 8-pack: ≥1 of each door; crust ≠ closer; no recycled slogan stamps (`pure building` banned). Cadence: longer context → short punch → short punch.

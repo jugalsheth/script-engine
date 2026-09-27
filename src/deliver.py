@@ -36,23 +36,68 @@ def _format_spoken_readable(spoken: str) -> str:
     return "\n".join(_escape(p.strip()) for p in parts if p.strip())
 
 
+def format_teleprompter(
+    spoken: str,
+    *,
+    max_words: int = 8,
+    max_chars: int = 35,
+) -> str:
+    """Format spoken_script for vertical teleprompter paste.
+
+    One thought per short line (~6–10 words / ~25–35 chars).
+    Blank line between sentences = natural pause. No stage directions.
+    """
+    text = (spoken or "").strip()
+    if not text:
+        return ""
+    sentences = re.split(r"(?<=[.!?])\s+", text)
+    blocks: list[str] = []
+    for sent in sentences:
+        words = sent.strip().split()
+        if not words:
+            continue
+        lines: list[str] = []
+        current: list[str] = []
+        for word in words:
+            trial = current + [word]
+            trial_text = " ".join(trial)
+            if current and (len(trial) > max_words or len(trial_text) > max_chars):
+                lines.append(" ".join(current))
+                current = [word]
+            else:
+                current = trial
+        if current:
+            lines.append(" ".join(current))
+        blocks.append("\n".join(lines))
+    return "\n\n".join(blocks)
+
+
 def _format_minimal_script(script: dict) -> str:
     from src.edit_brief import build_edit_brief, format_edit_brief_telegram
 
     number = script.get("script_number", "?")
     territory = _escape(script.get("territory", "General"))
     hook_type = _escape(script.get("hook_type", ""))
+    story = _escape(script.get("story_structure", ""))
     title = _escape(script.get("title_overlay", ""))
-    spoken = _format_spoken_readable(script.get("spoken_script", ""))
+    spoken_raw = script.get("spoken_script", "") or ""
+    teleprompter = format_teleprompter(spoken_raw)
     filename = _escape(script.get("filename_hint", "script_XX_topic.mp4"))
     est_sec = script.get("estimated_seconds", "?")
 
-    hook_suffix = f" · {hook_type}" if hook_type else ""
+    meta_bits = [territory]
+    if hook_type:
+        meta_bits.append(hook_type)
+    if story:
+        meta_bits.append(story)
+    meta = " · ".join(meta_bits)
+
     lines = [
-        f"<b>SCRIPT {number}</b> · {territory}{hook_suffix}",
+        f"<b>SCRIPT {number}</b> · {meta}",
         f"<b>{title}</b>",
         "",
-        spoken,
+        "📋 <b>TELEPROMPTER</b> — copy everything in the box",
+        f"<pre>{_escape(teleprompter)}</pre>",
         "",
         f"📁 <code>{filename}</code> · ~{est_sec}s",
     ]
@@ -166,7 +211,9 @@ def _format_script_block(script: dict) -> str:
     series_note = script.get("series_note")
     title = _escape(script.get("title_overlay", ""))
     subtitle = _escape(script.get("subtitle_overlay", ""))
-    spoken = _escape(script.get("spoken_script", ""))
+    spoken_raw = script.get("spoken_script", "") or ""
+    teleprompter = format_teleprompter(spoken_raw)
+    spoken = _escape(spoken_raw)
     closer = _escape(script.get("loopback_closer", ""))
     caption = _escape(script.get("caption_hook", ""))
     hashtags = _escape(_format_hashtags(script.get("hashtags", [])))
@@ -174,11 +221,14 @@ def _format_script_block(script: dict) -> str:
     delivery_notes = _escape(script.get("delivery_notes", ""))
     retention_notes = _escape(script.get("retention_notes", ""))
     tip = _escape(script.get("recording_tip", ""))
+    story = _escape(script.get("story_structure", ""))
 
     lines = [
         "━━━━━━━━━━━━━━━━━━━━━━",
         f"<b>SCRIPT {number}</b> — {territory} | {hook_type}{phase_tag}",
     ]
+    if story:
+        lines.append(f"🧭 <b>STORY DOOR:</b> {story}")
     if series_note and str(series_note).lower() not in ("null", "none", ""):
         lines.append(_escape(series_note))
     source_url = script.get("source_url")
@@ -194,6 +244,8 @@ def _format_script_block(script: dict) -> str:
         [
             f"📌 <b>TITLE OVERLAY:</b> {title}",
             f"📝 <b>SUBTITLE:</b> {subtitle}",
+            "📋 <b>TELEPROMPTER</b> — copy the box",
+            f"<pre>{_escape(teleprompter)}</pre>",
             f"🎤 <b>SPOKEN SCRIPT:</b>",
             spoken,
             f"🔁 <b>CLOSER:</b> {closer}",

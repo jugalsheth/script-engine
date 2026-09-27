@@ -26,7 +26,8 @@ SPEAKING STYLE:
 - Engineering vocabulary in plain English
 
 SIGNATURE SPOKEN PHRASES (rotate, max 1-2 per script):
-"Right?" | "That's all it is." | "Figure it out." | "The truth is"
+"Right?" | "That's all it is." | "Figure it out." | "The truth is" | "That's the move." | "Watch what happens."
+Never stamp "pure building" — banned slogan.
 
 SCRIPT STRUCTURE — GROWTH:
 HOOK (0–3s) — TRIPLE ALIGNMENT: verbal opening + title_overlay + hook_visual must match.
