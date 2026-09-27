@@ -818,5 +818,45 @@
     "opening_line": "My agent kept failing evals and I blamed the model. Wrong.",
     "hook_type": "CONFESSION",
     "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I kept copy-pasting error messages from my browser into Claude Code. Every single time. That's wrong.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "Will Cursor's agent mode actually finish your feature \u2014 or just break everything?",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I kept rebuilding the same feature over and over.",
+    "hook_type": "CONTRARIAN STRIKE",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "Can Cursor actually control your browser \u2014 or is that just hype?",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I kept wiring tools to my OpenAI agent by hand \u2014 custom functions, custom schemas, every single one.",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I kept building the same fetch logic by hand every single project.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "MCP or Claude Skills \u2014 which one actually changes how you build?",
+    "hook_type": "OPEN LOOP",
+    "date": "2026-09-27"
+  },
+  {
+    "opening_line": "I spent two weeks blaming my agent model. Wrong.",
+    "hook_type": "CONFESSION",
+    "date": "2026-09-27"
   }
 ]
