@@ -1,5 +1,9 @@
 """Hook bank + content calendar — promote weekly seeds into topics_override.
 
+Two stores (do not conflate):
+  data/hook_bank.json     — formal 58-hook catalog + status (object)
+  data/hook_history.json  — recent opening_line dedupe ledger (array)
+
 Usage:
   python3 -m src.hook_bank --week 1 --write-override
   python3 -m src.hook_bank --week 1 --dry-run
@@ -11,7 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -19,6 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CONFIG_DIR = ROOT / "config"
 DATA_DIR = ROOT / "data"
 BANK_PATH = DATA_DIR / "hook_bank.json"
+HISTORY_PATH = DATA_DIR / "hook_history.json"
 CALENDAR_PATH = CONFIG_DIR / "content_calendar.json"
 OVERRIDE_PATH = CONFIG_DIR / "topics_override.txt"
 
@@ -34,6 +39,54 @@ FORMAT_TO_SOURCE = {
 
 def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _ensure_history_file() -> None:
+    """Create empty opening-line ledger if missing. Never touches BANK_PATH."""
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    if not HISTORY_PATH.exists():
+        HISTORY_PATH.write_text("[]\n", encoding="utf-8")
+
+
+def load_hooks() -> list:
+    """Read data/hook_history.json (opening-line dedupe ledger)."""
+    _ensure_history_file()
+    try:
+        data = json.loads(HISTORY_PATH.read_text(encoding="utf-8"))
+        return data if isinstance(data, list) else []
+    except (OSError, json.JSONDecodeError):
+        return []
+
+
+def save_hooks(new_scripts: list) -> None:
+    """Append new opening lines to hook_history.json; never write formal bank."""
+    _ensure_history_file()
+    existing = load_hooks()
+    seen = {h.get("opening_line", "").strip() for h in existing if h.get("opening_line")}
+    today = date.today().isoformat()
+
+    for script in new_scripts:
+        opening_line = (script.get("opening_line") or "").strip()
+        if not opening_line or opening_line in seen:
+            continue
+        existing.append(
+            {
+                "opening_line": opening_line,
+                "hook_type": script.get("hook_type", ""),
+                "date": today,
+            }
+        )
+        seen.add(opening_line)
+
+    HISTORY_PATH.write_text(json.dumps(existing, indent=2) + "\n", encoding="utf-8")
+    print(f"   Hook history updated ({len(existing)} openings total)")
+
+
+def get_recent_hooks(n: int = 30) -> list[str]:
+    """Return the last n opening_line strings for generator deduplication."""
+    hooks = load_hooks()
+    lines = [h["opening_line"] for h in hooks if h.get("opening_line")]
+    return lines[-n:]
 
 
 def load_bank() -> dict:
@@ -192,9 +245,11 @@ def status_report() -> str:
     for h in hooks:
         st = h.get("status") or "queued"
         by_status[st] = by_status.get(st, 0) + 1
+    history_n = len(load_hooks())
     lines = [
         f"Hook bank: {len(hooks)} hooks",
         f"Statuses: {by_status}",
+        f"Opening-line history: {history_n}",
         f"Active calendar week: {cal.get('active_week')}",
         f"Week counts: {(cal.get('summary') or {}).get('week_counts')}",
     ]

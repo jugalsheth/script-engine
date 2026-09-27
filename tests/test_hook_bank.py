@@ -71,6 +71,43 @@ class TestHookBank(unittest.TestCase):
         self.assertEqual(topic["format_hint"], "tip")
         self.assertEqual(topic["hook_bank_id"], "hook_99")
 
+    def test_history_apis_do_not_touch_formal_bank(self):
+        """Regression: generator needs get_recent_hooks/save_hooks; formal bank stays object."""
+        bank_before = json.loads(hook_bank.BANK_PATH.read_text(encoding="utf-8"))
+        self.assertIsInstance(bank_before, dict)
+        self.assertEqual(len(bank_before.get("hooks") or []), 58)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            history = Path(tmp) / "hook_history.json"
+            history.write_text(
+                json.dumps(
+                    [
+                        {"opening_line": "Old hook A", "hook_type": "OPEN LOOP", "date": "2026-01-01"},
+                        {"opening_line": "Old hook B", "hook_type": "CONFESSION", "date": "2026-01-02"},
+                    ]
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(hook_bank, "HISTORY_PATH", history):
+                with mock.patch.object(hook_bank, "DATA_DIR", Path(tmp)):
+                    recent = hook_bank.get_recent_hooks(30)
+                    self.assertEqual(recent, ["Old hook A", "Old hook B"])
+                    hook_bank.save_hooks(
+                        [
+                            {"opening_line": "Old hook B", "hook_type": "X"},
+                            {"opening_line": "Brand new opening", "hook_type": "Y"},
+                        ]
+                    )
+                    recent2 = hook_bank.get_recent_hooks(30)
+                    self.assertEqual(recent2[-1], "Brand new opening")
+                    self.assertEqual(len(recent2), 3)
+
+        bank_after = json.loads(hook_bank.BANK_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(bank_after, bank_before)
+        self.assertTrue(hasattr(hook_bank, "get_recent_hooks"))
+        self.assertTrue(hasattr(hook_bank, "save_hooks"))
+
 
 if __name__ == "__main__":
     unittest.main()
