@@ -1,9 +1,11 @@
 name: Generate Weekly Scripts
 
+# PAUSED 2026-09-28 — pipeline on hold (script quality / transcripts).
+# Re-enable: uncomment schedule below, then `gh workflow enable "Generate Weekly Scripts"`
 on:
-  schedule:
-    - cron: '17 12 * * 0'  # Sundays 8:17am ET (12:17 UTC)
-  workflow_dispatch:  # Allow manual trigger
+  # schedule:
+  #   - cron: '17 12 * * 0'  # Sundays 8:17am ET (12:17 UTC)
+  workflow_dispatch:  # manual only while paused
 
 permissions:
   contents: write
